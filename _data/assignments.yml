@@ -1,59 +1,58 @@
-basics:
-    number: "1"
+-   number: "1"
     category: Basics
     title: Get on GitHub
     components: CodeAnywhere, GitHub setup
     description: "This assignment is very simple.<br/><br/>You will have completed most of it in class by the end of the week.<br/><br/>It involves: 1) setting up a GitHub user account; 2) using that account to log into CodeAnywhere; 3) forking the first assignment repository for practice; 4) taking a brief (6 minutes) questionnaire about yourself."
     link: "https://classroom.github.com/assignment-invitations/79c87ffe0bca6f507160d665f4271941"
-    percent: "20"
-    due: "2016-06-23"
-web:
-    number: "2"
+    percent: "15"
+    due: "2016-08-29"
+    shortdue: "Aug 29"
+-   number: "2"
     category: Web
     title: Build a website
     components: Site published on GitHub Pages
     description: "You will build and deply a web page using GitHub Pages (Jekyll). Most of this assignment will involve creating content in Markdown and editing style in CSS.<br/><br/>The goal is to make your website an attractive place online where you can place information about yourselves, your interests, and your skills. Or your site can be about a project or hobby that you would like to put online. This assignment is intended to help you create an online space that you can actually use while also giving you new skills related to working with web content."
     link: "https://classroom.github.com/assignment-invitations/ef90db5ca0a5943ef3ed5ceb52c82aae"
-    percent: "20"
-    due: "2016-07-07"
-text:
-    number: "3"
+    percent: "15"
+    due: "2016-10-05"
+    shortdue: "Oct 5"
+-   number: "3"
     category: Text
     title: Create documentation
-    components: Create and convert documents from source to multiple output formats
+    components: Create formatted text documents
     description: "This assignment is about converting your plaintext source files into different polished output formats.<br/><br/>You will create and convert a document from a markdown source file into multiple output formats using Pandoc. You will also write a simple script to automate this workflow so that it can be done using any document source specified." 
     link: "https://classroom.github.com/assignment-invitations/69e6999dfd71dc191f0679cbae0c337d"
     percent: "15"
-    due: "2016-07-13"
-data:
-    number: "4"
+    due: "2016-10-27"
+    shortdue: "Oct 27"
+-   number: "4"
     category: Data
     title: Make data
     components: Create and format spreadsheets using scripts
     description: "This assignment aims at strengthening our scripting skills and learning how to create a well-formed dataset to work with. You will extend what you do in this assignment in the next one, so keep that in mind.<br/><br/>You will learn how to aggregate data and script the data generation process. You will create a short questionnaire and then use Bash to script collection of answers. Your script will write the output of that questionnaire to a CSV file.<br/><br/>You will work with your designated teams to complete this assignment."
     link: "https://github.com/jdmar3/task-4-create-data"
     percent: "5"
-    due: "2016-07-15"
-database:
-    number: "5"
+    due: "2016-11-10"
+    shortdue: "Nov 10"
+-   number: "5"
     category: Database
     title: Organize data
     components: Create and script a database 
     description: "This assignment aims at further strengthening our scripting skills and working more closely with a database. In this assignment, you will use scripts and the MySQL shell to create a database and use queries to get information from it.<br/><br/>You will work with your group to modify your data collection script so that it interfaces with a database. You will take the questionnaire script that you developed in your group and make a new version of it that interfaces with a MySQL database.<br/><br/>You will work with your designated teams to complete this assignment."
     link: "https://github.com/jdmar3/task-5-database-interface"
     percent: "15"
-    due: "2016-07-18"
-present:
-    number: "6"
+    due: "2016-11-17"
+    shortdue: "Nov 17"
+-   number: "6"
     category: Present
     title: Be presentable
     components: Create and record a presentation
     description: "This assignment aims to extend your markup skills while also working with creating beautiful presentation materials in a durable and platform-independent framework. You will create a presentation using reveal.js. In addition to creating the presentation, we will record and add audio objects to create a self-narrated, automated presentation that runs more like a documentary or movie."
     link: "https://github.com/jdmar3/task-6-be-presentable"
     percent: "15"
-    due: "2016-07-21"
-participation:
-    number: 
+    due: "2016-12-04"
+    shortdue: "Dec 4"
+-   number: 
     category: Participation
     title: Participation
     components: Come to class; Speak up; Share resources
@@ -61,3 +60,13 @@ participation:
     link: 
     percent: 10
     due: 
+    shortdue: 
+-   number:
+    category: Community
+    title: Community
+    components: "Get involved & learn something"
+    description: "Attend two tech-related community events, including at least one workshop. The first of these is due sometime before Fall break.  Campus events, OIT workshops, and meetup events are examples of the kinds of things I'm looking for. After each event, submit a small writeup about the experience and what you learned." 
+    link: 
+    percent: 10
+    due: 
+    shortdue: "Oct 5, Dec 7"

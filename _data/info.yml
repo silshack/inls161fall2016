@@ -1,19 +1,19 @@
 instructor:
-  link: "http://johndmart.in" 
+  link: "http://elliotthauser.com" 
   alt: "Instructor home page"
   icon: ico-user
-  var: "John D. Martin III"
+  var: "Elliott Hauser"
 email:
-  link: "mailto:john.d.martin.iii@unc.edu"
+  link: "mailto:eah13@email.unc.edu"
   alt: "Email instructor"
   icon: ico-envelope
-  var: "john.d.martin.iii@unc.edu"
+  var: "eah13@email.unc.edu"
 time:
   icon: ico-clock
-  var: "11:30-13:00"
+  var: "3:35-4:50pm"
 days:
   icon: ico-calendar
-  var: "MoTuWeThFr"
+  var: "MoWe"
 location: 
   icon: ico-library
   var: "117 Manning Hall"
