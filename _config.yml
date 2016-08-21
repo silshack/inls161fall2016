@@ -2,9 +2,9 @@
 title: Tools for Information Literacy 
 subtitle: "INLS161-002 Fall 2016"
 description: "Tools and concepts for information literacy. Includes software use and maintenance, computer applications, and networked information systems."
-baseurl: ""
+baseurl: /inls161fall2016
 #baseurl: "http://ils.unc.edu/courses/2016_summerII/inls161_001"
-url: "http://inls161.johndmart.in"
+url:
 #url: http://ils.unc.edu/courses/2016_summerII/inls161_001/
 
 #name: John D. Martin III
