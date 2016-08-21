@@ -1,4 +1,5 @@
 ---
+published: false
 layout: post
 title: "Lab #3: Automation and Scripting"
 category: Text

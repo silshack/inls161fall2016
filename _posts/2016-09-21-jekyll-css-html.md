@@ -1,4 +1,5 @@
 ---
+published: false
 layout: post
 title: "Visual styling for the web"
 category: Web 
@@ -8,6 +9,8 @@ tags:
 - HTML
 - Markdown
 ---
+
+**Reminder:** Your first community engagement activity needs to be completed and written up before Fall Break begins on October 5th.
 
 For most of class today, we will spend time creating our base site and then exploring ways that we can change and customize the style to our liking. 
 

@@ -1,4 +1,5 @@
 ---
+published: false
 layout: post
 title: "Data cleaning and spreadsheet software"
 category: Data

@@ -7,7 +7,6 @@ tags:
 - servers
 - Linux
 - shell commands
-
 ---
 
 Today we'll talk about some of the basic ways that computers work and

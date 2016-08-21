@@ -1,4 +1,5 @@
 ---
+published: false
 layout: post
 title: "Lab #1: Git and GitHub"
 category: Basics

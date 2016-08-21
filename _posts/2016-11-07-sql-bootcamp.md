@@ -1,4 +1,5 @@
 ---
+published: false
 layout: post
 title: "Database software and MySQL"
 category: Data

@@ -1,4 +1,5 @@
 ---
+published: false
 layout: post
 title: "Introduction to scripting"
 category: Text 
