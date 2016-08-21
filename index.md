@@ -2,6 +2,7 @@
 layout: page
 weight: 0
 title: Tools for Information Literacy
+shorttitle: INLS 161
 ---
 
 ## Welcome to INLS 161-001

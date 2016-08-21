@@ -15,5 +15,5 @@ Once you can view the repository, click the "Fork" button in the upper right cor
 
 
 {% include assignment-table.md %} 
- 
+
 {% include assignments.html %}
