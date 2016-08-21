@@ -151,17 +151,24 @@ The last 20 to 30 minutes will be for practice (more) when we have the time and 
 
 # Lab
 
-Fridays will be reserved as a lab session.{% marginnote 'lab' 'I will also make myself available in the lab beginning at 10:30 on Fridays. If you need any extra help or wish to talk about anything, that is a good time to do it. ' %} 
-We will typically have a very short hands-on lesson related to one of your assignment tasks and then time to work through issues in building or completing the assignment. 
+We'll periodically have Lab style class sessions, where we'll complete a hands-on activity related to one of your assignments.
 Sometimes we will have a guest on days like this who will show us something interesting that we can put into practice. 
+
+# Catch Up days
+
+I've built several catch up days into the schedule.  I'll use these to reinforce things that haven't 'clicked' for you yet, 
+get hands-on with another activity, or do something fun such as have a guest speaker if we're ahead of schedule.
 
 {% include syllabus-nav.html %}
 
 # Evaluation
 
-This class has no exams, but there are 6 major tasks that will correspond to one of the major objectives in the course. 
-These include a final presentation which will be made during the scheduled final exam period. 
+This class has no exams, but there are 6 major tasks that will correspond to one of the major objectives in the course, including a final presentation. 
 All of the tasks are interconnected, so it is important to complete the tasks in succession by the due dates listed in the chart below. 
+
+**No Credit Will Be Given For Unexcused Late Work.**  It's very simple: if you think you won't be able to turn in your work on time, contact me ASAP.  If you're getting close
+to the deadline, finish up and send what you have before the deadline.  This is different than most undergraduate courses, but with only 6 assignments neither you or I have time
+for late work. {% marginnote 'late' "I'm putting a note out here so you notice this no credit for late work policy.  **Please** plan ahead so your work is done on time and contact me early if you're running late on an assignment. Also, feel free to turn in work ahead of time." %}
 
 ## Assignment Tasks
 
@@ -173,8 +180,7 @@ Assignment descriptions will be up typically one week before the due date.
 ## Due Dates
 
 Each task is due by the end of the day (midnight) on the date specified. 
-It would be a good idea to complete assignments before that deadline so that you can get a jump on the next section. 
-The last assignment (the recorded/narrated presentation) will be due before the final exam day, but will be presented during the exam day session itself. You will have one chance to make changes after submission. 
+It would be a good idea to complete assignments before that deadline so that you can get a jump on the next section. Also, early is on time, on time is on time, but late without prior approval is a 0.  So why not be early?
 
 ## Submitting Assignments
 
@@ -186,7 +192,7 @@ A snapshot of your work will be automatically collected at midnight on the assig
 You do not have to submit anything manually. 
 You just have to make sure that your assignment is ready and pushed to a repository in your GitHub account. 
 Given this, it is important to pay attention to how I have instructed you to name your repositories in the assignment text. 
-If the name is incorrect, the assignment will not be collected on time. 
+If the name is incorrect, the assignment will not be collected on time and I will deduct a letter grade from the assignment.   
 
 [Information about individual assignments is listed here]({{ site.baseurl }}/assignments/).
 
@@ -196,6 +202,12 @@ In addition to the 6 tasks, participation will be evaluated and included in the 
 Participation, of course, means coming to class: that is mandatory. 
 It also means bringing something to the class by way of discussion or links shared with the rest of the class. 
 Since we are a small class this summer, we will decide on the first day how best to accomplish the sharing of resources. 
+
+## Community engagement
+
+As part of this class you will attend two community events over the course of the semester.  At least one should be a technology tutorial or workshop.  The other can be a second tech workshop or a technology, information, or related meetup or campus organization.  After completing these, you'll submit a short writeup evaluating the experience.
+
+You must complete at least one of these **before Fall Break Starts on October 5th**.
 
 ## Attendance
 
