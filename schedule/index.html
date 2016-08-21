@@ -15,32 +15,42 @@ weight: 5
      var todaydate = moment().format('dddd, D MMM, YYYY');
      
      // insert today into 
-     document.getElementById("todaydate").innerHTML = todaydate
+     document.getElementById("todaydate").innerHTML = todaydate;
     </script>
 
-  <ul class="content-listing ">
-    {% for post in site.posts reversed %}      
-        <li class="listing">
-          <hr class="slender">
-          {% capture datestamp %}{{post.date | date: "%F"}}{% endcapture %}
-          {% capture today %}{{site.time | date: "%F"}}{% endcapture %}
-          <a href="{{ post.url | prepend: site.baseurl }}" ><h1 class="contrast">{{ post.title }}</h1></a>
-          <span class="larger">{{ post.date | date: "%A, %-d %B %Y" }}</span><span class="smaller date contrast" id="todaymark"></span>
-          <br/>
-          <div>{{ post.excerpt }}</div>
-          <br/>
-          <ul class="tags">
-            {% for tag in post.tags %}<li><a href="/topics#{{ tag }}" class="tag">{{ tag | replace: " ", "-" }}</a></li>{% endfor %}
-          </ul>
-        </li>
+    {% for post in site.posts reversed if post.published != 'false'%} 
+    <hr class="slender">
+<div class="table-wrapper" style="width: 100%">
+    <table style="width: 100%; max-width: 100%; border-top: 0px; border-bottom: 0px; margin-right: 0px;">
+      <tbody style="width: 100%">
+        <tr width="100%">
+        {% capture datestamp %}{{post.date | date: "%F"}}{% endcapture %}
+        {% capture today %}{{site.time | date: "%F"}}{% endcapture %}
+          <td style="width: 35%; padding: .5em 0 .5em 0">
+            <a href="{{ post.url | prepend: site.baseurl }}" ><h1 class="contrast" style="margin: 0;">{{ post.title }}</h1></a>
+          </td>
+          <td style="width:21%; padding: .5em 0 .5em 0">
+            <span>{{ post.date | date: "%a, %b %d" }}</span><span class="smaller date contrast" id="todaymark"></span>
+          </td>
+          <td style="width: 53%;">
+            <ul class="tags" style="width: 100%; padding: .5em 0em .5em 0em;">
+                {% for tag in post.tags %}<li><a href="/topics#{{ tag }}" class="tag smaller">{{ tag | replace: " ", "-" }}</a></li>{% endfor %}
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+  </table>
+</div>
+    {% if forloop.last == true %}
+    <hr class="slender">
+    {% endif %}
     
 <script>
-var dateVariable = "2016-07-23";// parsed date string (YYYY-MM-DD is best
-If ((new Date()).setHours(0,0,0,0) == (new Date(dateVariable)).setHours(0,0,0,0)) 
+var dateVariable = "2016-12-07";// parsed date string (YYYY-MM-DD is best
+if ((new Date()).setHours(0,0,0,0) == (new Date(dateVariable)).setHours(0,0,0,0)) 
   { 
     document.getElementsById("todaymark")[0].setAttribute("class", "today");
   }
 </script>
     {% endfor %}
-  </ul>
 
