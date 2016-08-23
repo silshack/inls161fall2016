@@ -1,12 +1,14 @@
 ---
 layout: default
-title: Test your site using Jekyll and CodeAnywhere
+title: Test your site using Jekyll and Cloud9
 nav_exclude: true
 ---
 
+{% comment %} Todo: rewrite for Cloud9 {% endcomment %}
+
 We need to test our code to see if it worked. 
 
-To do this, we will have to access the files locally in our CodeAnywhere and start a webserver. 
+To do this, we will have to access the files locally in our Cloud9 and start a webserver. 
 Luckily, Jekyll is also a webserver.
 
 Go to the SSH terminal and switch into the root directory of your website repository. 
@@ -22,7 +24,7 @@ If the web code that you are testing is not a Jekyll site, or you don't want to 
 This starts a webserver and builds your site.
 Then we need to find the address where you can see your site. 
 
-If you right click on the container in your file tree and select "Info" it will bring up a document with two long links in it toward the bottom. 
+If you right click on the workspace in your file tree and select "Info" it will bring up a document with two long links in it toward the bottom. 
 These links let you see applications that your server is running. 
 
 Click the first link, which looks like this:

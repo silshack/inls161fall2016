@@ -10,6 +10,9 @@ tags:
 - workflows
 ---
 
+
+{% comment %}  Todo: rewrite instructions for Cloud9 {% endcomment %}
+
 Today we will set up a testing workflow and learn how to create branches for adding and changing features on our sites. 
 We will use this to change the visual style the site and create blog posts. 
 
@@ -26,7 +29,7 @@ I've created a repository that has some helper scripts in it.
 It is called `helper-scripts` and is located in the github organization for the class. 
 I will add to it over the course of rest of the semester. 
 
-Open an SSH terminal in your CodeAnywhere container. 
+Open an SSH terminal in your Cloud9 container. 
 Then clone the `helper-scripts` repo.
 
 `git clone git@github.com:inls161/helper-scripts.git`
@@ -36,7 +39,7 @@ Once you have it, descend into the directory.
 `cd helper-scripts`
 
 Then look at the `README.md`. 
-Remember, you can look at this online, in GitHub, or you can look at it in the terminal (or in your CodeAnywhere text editor). 
+Remember, you can look at this online, in GitHub, or you can look at it in the terminal (or in your Cloud9 text editor). 
 
 You'll need to make sure that the `install-gh-pages.sh` file is executable. 
 
@@ -204,9 +207,10 @@ Date:   Thu Jun 30 12:54:27 2016 -0400
 In this way, we can always fix a mistake we have made (or multiple mistakes), even if we've committed and pushed them. 
 This makes git a *very* powerful tool for making sure that you do not lose work.{% marginnote 'nota-bene' '**_Nota bene:_** This is why it is a good rule of thumb to commit early and often. while working on a project.' %}
 
-# For tomorrow
+# For Next Time
 
-We're going to try a slightly different approach tomorrow. 
+We're going to try a slightly different approach next time. 
 I'm going to cluster you in groups based on where you are in the process of completing assignment #1. 
 It is okay if you are still early on: that is fine. 
-I want to be able to collectively help you, though, and that will be easier to do if I know where you are and if you can help each other through tasks that are closer together in the overall workflow. 
+I want to be able to collectively help you, though, and that will be easier to do if I know 
+where you are and if you can help each other through tasks that are closer together in the overall workflow. 

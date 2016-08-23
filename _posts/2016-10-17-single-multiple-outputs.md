@@ -37,11 +37,11 @@ We're going to practice some conversions using Pandoc today. We will also work i
 
 First, we need to get some files. 
 
-Fork and clone this repository into your CodeAnywhere container:
+Fork and clone this repository into your Cloud9 workspace:
 
 https://github.com/inls161/pandoc-practice
 
-Once you have the files in your CodeAnywhere container, I will show you some things in class and then in your groups you will answer and mark up the `example.md` file using the instructions in the file. 
+Once you have the files in your Cloud9 workspace, I will show you some things in class and then in your groups you will answer and mark up the `example.md` file using the instructions in the file. 
 
 ***When you are finished with the questions in file:*** 
 
@@ -106,10 +106,10 @@ You can also use an ODT or OTT for reference:
 
 `pandoc -S --reference-odt=./template.ott -o example.odt example.md`
 
-# For tomorrow
+# For Next Time
 
-Tomorrow, we are going to learn one more output format and then learn how to script all of our outputs together so that we can save ourselves time. 
+Next time, we are going to learn one more output format and then learn how to script all of our outputs together so that we can save ourselves time. 
 
-I would like you to go through the Writing Shell Scripts tutorial by William Shotts for tomorrow.{% sidenote 'shell-scripts' 'Shotts, William, Jr. “Writing Shell Scripts.” LinuxCommand.org. Accessed July 6, 2016. http://linuxcommand.org/lc3_writing_shell_scripts.php.' %} 
+I would like you to go through the Writing Shell Scripts tutorial by William Shotts for next time.{% sidenote 'shell-scripts' 'Shotts, William, Jr. “Writing Shell Scripts.” LinuxCommand.org. Accessed July 6, 2016. http://linuxcommand.org/lc3_writing_shell_scripts.php.' %} 
 This will show you the basics of scripting. 
 The scripts that we will write will be very, very simple, but it is good to have looked over this before we start. 

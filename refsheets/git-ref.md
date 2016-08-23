@@ -8,7 +8,7 @@ nav_exclude: true
 
 ## Set up a workspace
 
-Let's login to our DevBox on CodeAnywhere and make a new workspace. 
+Let's login to our DevBox on Cloud9 and make a new workspace. 
 Then we'll turn that workspace into a Git repository. 
 
 First, make a new directory like we learned the other day. 

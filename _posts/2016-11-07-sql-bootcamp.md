@@ -57,7 +57,7 @@ We wish to avoid that.
 
 # Install MySQL
 
-We will install MySQL so that we can create and explore a database using the SQL shell in our CodeAnywhere containers.
+We will install MySQL so that we can create and explore a database using the SQL shell in our Cloud9 workspaces.
 
 # System maintenance
 
@@ -65,7 +65,7 @@ First update and upgrade all packages:
 
 ```sudo apt-get update && sudo apt-get upgrade```
 
-We will need to make some space on our containers to install MySQL. 
+We will need to make some space on our workspaces to install MySQL. 
 
 We no longer need `unoconv`, so let's get rid of it:
 

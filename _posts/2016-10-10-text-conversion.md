@@ -15,7 +15,7 @@ tags:
 
 This week we will discuss the uses of plaintext and markup for creating formatted documents. 
 
-Today we are going to briefly introduce Pandoc and then tomorrow we are going to see what it can really do with our documents when we learn some interesting switches and tricks. We will also some hand-on-keyboards excercises that will demonstrate the power of using marked-up plaintext for creating formatted documents. 
+Today we are going to briefly introduce Pandoc and then next time we are going to see what it can really do with our documents when we learn some interesting switches and tricks. We will also some hand-on-keyboards excercises that will demonstrate the power of using marked-up plaintext for creating formatted documents. 
 <excerpt/>
 
 All of the tools and tasks that we cover in this course can be used to make our lives easier and our workflows simpler. 
@@ -89,7 +89,7 @@ The workflow goes:
 The toolchain that we have been using is:
 
 ```
-CodeAnywhere text editor [for authoring and editing] > 
+Cloud9 text editor [for authoring and editing] > 
 git [for version control] >
 GitHub [for storage, sharing, and disseminating] >
 Jekyll (via GitHub Pages) [for creating the site files from Markdown inputs] > 
@@ -110,16 +110,16 @@ You can try it out here:
 
 http://pandoc.org/try/
 
-Then we will install it and run it in our CodeAnywhere containers. 
+Then we will install it and run it in our Cloud9 workspaces. 
 
 First things first, we need to install Pandoc. 
-You will need to do this in your CodeAnywhere container.
+You will need to do this in your Cloud9 workspace.
 
 All of the commands for today are linked from the [reference page]({{ site.url }}/refsheets/pandoc-ref/).
 
 # For next time
 
-For tomorrow, I would like you to review a blog post tutorial by Pavel Iosad and the the main documentation page for Pandoc.{% marginnote 'pandoc' 'Iosad, Pavel. “Getting off the Word Standard: Your Academic Life in Plain Text.” Pavel Iosad. Last modified February 2015. http://www.anghyflawn.net/teaching/2015/ilw-pandoc/.<br/><br/>“Pandoc User’s Guide.” Pandoc. Accessed July 5, 2016. http://pandoc.org/README.html.' %}
+For next time, I would like you to review a blog post tutorial by Pavel Iosad and the the main documentation page for Pandoc.{% marginnote 'pandoc' 'Iosad, Pavel. “Getting off the Word Standard: Your Academic Life in Plain Text.” Pavel Iosad. Last modified February 2015. http://www.anghyflawn.net/teaching/2015/ilw-pandoc/.<br/><br/>“Pandoc User’s Guide.” Pandoc. Accessed July 5, 2016. http://pandoc.org/README.html.' %}
 
 I would also like you to have a look at the examples in the link below:
 

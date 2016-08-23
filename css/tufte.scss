@@ -255,14 +255,16 @@ section { padding-top: 1rem;
 article ul{ width: 55%; //width: 45%;
      -webkit-padding-start: 2.5%;
      -webkit-padding-end: 2.5%;
-     list-style-type: none;
 }
 
 ul li ul { width: 100%;
      -webkit-padding-start: 2.5%;
      -webkit-padding-end: 2.5%;
-     list-style-type: none; 
-     text-indent: -2.5%;
+}
+
+li > p {
+    max-width: 100%;
+    width: 100%;
 }
 
 body.cv ul{

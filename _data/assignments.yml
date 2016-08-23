@@ -1,8 +1,8 @@
 -   number: "1"
     category: Basics
     title: Get on GitHub
-    components: CodeAnywhere, GitHub setup
-    description: "This assignment is very simple.<br/><br/>You will have completed most of it in class by the end of the week.<br/><br/>It involves: 1) setting up a GitHub user account; 2) using that account to log into CodeAnywhere; 3) forking the first assignment repository for practice; 4) taking a brief (6 minutes) questionnaire about yourself."
+    components: Cloud9, GitHub setup
+    description: "This assignment is very simple.<br/><br/>You will have completed most of it in class by the end of the week.<br/><br/>It involves: 1) setting up a GitHub user account; 2) using that account to log into Cloud9; 3) create your first assignment repository using the Github Classroom link; 4) taking a brief (6 minutes) questionnaire about yourself."
     link: "https://classroom.github.com/assignment-invitations/79c87ffe0bca6f507160d665f4271941"
     percent: "15"
     due: "2016-08-29"

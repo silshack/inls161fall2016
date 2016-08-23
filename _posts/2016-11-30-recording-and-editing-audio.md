@@ -117,7 +117,7 @@ When you have finished labeling. Select File > Export Multiple... and a dialog w
 
 You should select OGG Vorbis files and under "Name files:" select the middle option, "Numbering before Label/Track Name."
 
-Choose an export location (you'll be uploading these to CodeAnywhere or Github directly). 
+Choose an export location (you'll be uploading these to Cloud9 or Github directly). 
 
 Then press export. 
 
@@ -142,7 +142,7 @@ You should end up with a file list that looks something like this:
 The files should be relatively small. 
 They are just short clips. 
 
-Probably the easiest way to get these files into CodeAnywhere is to zip them up in a ZIP file and then upload them by right clicking on the correct directory in your tree. 
+Probably the easiest way to get these files into Cloud9 is to zip them up in a ZIP file and then upload them by right clicking on the correct directory in your tree. 
 
 Then unzip them into the directory where you want them using the unzip command. 
 
@@ -191,7 +191,7 @@ http://www.saveitoffline.com/
 
 You just put the link to your YouTube video in there and then click the thing underneath the link box and then click to download 360p - MP4. 
 
-Once you have that, make a "video" directory in your container on CodeAnywhere and upload your video into it (remember that the filename cannot contain spaces). Then you need to structure your slide exactly like this, but change the following accordingly:
+Once you have that, make a "video" directory in your workspace on Cloud9 and upload your video into it (remember that the filename cannot contain spaces). Then you need to structure your slide exactly like this, but change the following accordingly:
 
 1. VIDEONAME is the filename of your video file.
 2. STARTTIME is the time in seconds that you want the video to start.

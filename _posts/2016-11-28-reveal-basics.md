@@ -15,7 +15,7 @@ We will also cover converting your text from Markdown into Reveal-ready HTML5 us
 
 # Getting started
 
-First we will need to get a few things in place in our containers. 
+First we will need to get a few things in place in our workspaces. 
 
 ## Fork the customized reveal.js repo
 
@@ -31,7 +31,7 @@ https://github.com/jdmar3/task-6-be-presentable
 Once you have forked, it would be a good idea to change the name of your repository to, say, "presentation," so that you can easily link to the project page later. 
 It will become clear why this is necessary at the end of the assignment.
 
-Finally, clone it to your containers so that you can work on it. 
+Finally, clone it to your workspaces so that you can work on it. 
 
 ## Making sure that you are pushing to gh-pages
 
@@ -180,7 +180,7 @@ This is the nuclear option, which you want to avoid if possible, but if you have
 
 # Next time
 
-For tomorrow, I want you to have a look at some documentation for Audacity and begin creating audio for your presentation.{% sidenote 'audacity' '“Basic Recording and Editing with Audacity - All.” Instructables.com. http://www.instructables.com/id/Basic-recording-and-editing-with-Audacity/.' %} 
+For next time, I want you to have a look at some documentation for Audacity and begin creating audio for your presentation.{% sidenote 'audacity' '“Basic Recording and Editing with Audacity - All.” Instructables.com. http://www.instructables.com/id/Basic-recording-and-editing-with-Audacity/.' %} 
 You do not need sophisticated equipment to record audio. 
 You can record on any smartphone or laptop now. 
 
@@ -193,6 +193,6 @@ This video should help you get started;
 If you install Audacity on your personal laptops, you can use it to record and edit your audio directly. 
 You can download audacity and read more documentation on the audacity homepage.{% marginnote 'audacity-home' 'Welcome to Audacity. http://www.audacityteam.org' %}
 
-We will work together on editing audio in class tomorrow. 
+We will work together on editing audio in class next time. 
 
 

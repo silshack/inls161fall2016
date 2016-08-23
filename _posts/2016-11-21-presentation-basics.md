@@ -113,7 +113,7 @@ It is not even a terribly sophisticated example.
 
 # Next time
 
-I want you to review the materials above and come to class tomorrow prepared to work in your presentation team. 
+I want you to review the materials above and come to class next time prepared to work in your presentation team. 
 
 Look over the repository for the presentation assignment and read through the `README.md` and `INSTRUCTIONS.md` files contained there:
 

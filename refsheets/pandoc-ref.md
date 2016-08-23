@@ -6,7 +6,7 @@ nav_exclude: true
 
 ## Installing Pandoc
 
-To install Pandoc in your CodeAnywhere DevBox, use the following command:
+To install Pandoc in your Cloud9 DevBox, use the following command:
 
 `sudo apt-get install pandoc`
 

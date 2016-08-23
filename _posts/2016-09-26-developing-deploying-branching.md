@@ -77,7 +77,7 @@ A typical development workflow might conceptually look like this:
 
 # Next time
 
-We're going to learn tomorrow how to incorporate branching, testing, and merging by setting up a development workflow like the one described above. 
+We're going to learn next time how to incorporate branching, testing, and merging by setting up a development workflow like the one described above. 
 
 To prepare for this, I would like you to read the Gist linked in the margin, but I would also like you to do some searching online about how different developers managed their workflows. {sidenote 'workflow' 'blackfalcon. “Git Basics - a General Workflow.” Gist. Accessed June 29, 2016. https://gist.github.com/blackfalcon/8428401.'}
 To this end you might Google things like "development workflow" or "project development."

@@ -20,9 +20,9 @@ In the mean time, we will cover some of the basics of scripting in order to be a
 # Texlive
 
 The TeX (or LaTeX) distribution that we are using in conjunction with Pandoc is called "TeXLive." 
-This software is in our CodeAnywhere container's repositories. 
+This software is in our Cloud9 workspace's repositories. 
 
-It is very large, so we are only going to install the base package to avoid running out of space on our CodeAnywhere containers. 
+It is very large, so we are only going to install the base package to avoid running out of space on our Cloud9 workspaces. 
 We have a total of 2GB of space. 
 TeXLive should take up an extra ~650MB of space. 
 
@@ -33,7 +33,7 @@ To check to see how much space we have, we can run this command in a terminal:
 It will look something like this:
 
 ```
-cabox@box-codeanywhere:~/workspace$ df -h
+tommytester:~/workspace (master) $ df -h
 Filesystem          Size  Used Avail Use% Mounted on
 /vz/private/669416  2.0G  1.1G  953M  54% /
 none                128M  4.0K  128M   1% /dev
@@ -42,7 +42,7 @@ none                 26M   52K   26M   1% /run
 none                5.0M     0  5.0M   0% /run/lock
 none                128M     0  128M   0% /run/shm
 none                100M     0  100M   0% /run/user
-cabox@box-codeanywhere:~/workspace$
+tommytester:~/workspace (master) $
 ```
 
 Make a mental note of the number in the first line of output. 
@@ -50,7 +50,7 @@ I have 953MB available.
 
 ## Installation
 
-Now, to get TeXLive installed on our CodeAnywhere containers, we'll need to use apt-get{% sidenote 'apt-get' '“AptGet/Howto.” Ubuntu Documentation - Community Help Wiki. https://help.ubuntu.com/community/AptGet/Howto.' %} just like we did for Pandoc:
+Now, to get TeXLive installed on our Cloud9 workspaces, we'll need to use apt-get{% sidenote 'apt-get' '“AptGet/Howto.” Ubuntu Documentation - Community Help Wiki. https://help.ubuntu.com/community/AptGet/Howto.' %} just like we did for Pandoc:
 
 ```sudo apt-get install texlive```
 
@@ -86,7 +86,7 @@ Creating scripts is often a trial and error process, though, and can feel frustr
 ## How to do it?
 
 In class today, we'll go over some basic scripting. 
-We'll use William Shotts' tutorial.Writing Shell Scripts tutorial by William Shotts for tomorrow.{% sidenote 'shell-scripts' 'Shotts, William, Jr. “Writing Shell Scripts.” LinuxCommand.org. Accessed July 6, 2016. http://linuxcommand.org/lc3_writing_shell_scripts.php.' %} 
+We'll use William Shotts' tutorial.Writing Shell Scripts tutorial by William Shotts for next time.{% sidenote 'shell-scripts' 'Shotts, William, Jr. “Writing Shell Scripts.” LinuxCommand.org. Accessed July 6, 2016. http://linuxcommand.org/lc3_writing_shell_scripts.php.' %} 
 
 A basic Bash script is simply a list of commands in a file. 
 
@@ -109,12 +109,12 @@ This command sets the execute flag for user, group, and anyone in the permission
 They should look like this if you list the files with long output:
 
 ```
-cabox@box-codeanywhere:~/workspace/helper-scripts$ ls -lah
+tommytester:~/workspace/helper-scripts (master) $ ls -lah
 total 64K                                   
 drwxr-xr-x 3 cabox cabox 4.0K Jul  7 12:44 .
 drwxrwxr-x 5 cabox cabox 4.0K Jul  7 10:02 ..
 -rwxr-xr-x 1 cabox cabox  104 Jul  7 12:50 hello-world.sh 
-cabox@box-codeanywhere:~/workspace/helper-scripts$ 
+tommytester:~/workspace/helper-scripts (master) $
 ```
 
 We also need to add a "shebang" to our script to tell Bash to execute this file. Inside the `hello-world.sh` file, put this on the first line:
@@ -134,9 +134,9 @@ Try it:
 You should see this in the command line:
 
 ```
-cabox@box-codeanywhere:~/workspace/helper-scripts$ echo "Hello, world!"
+tommytester:~/workspace/helper-scripts (master) $ echo "Hello, world!"
 Hello, world!
-cabox@box-codeanywhere:~/workspace/helper-scripts$
+tommytester:~/workspace/helper-scripts (master) $
 ```
 
 Now we will add this command to our script: 
@@ -151,9 +151,9 @@ echo "Hello, world!"
 Now when we run this script, we will see the same output as from our earlier `echo` command on `STDOUT`:
 
 ```
-cabox@box-codeanywhere:~/workspace/helper-scripts$ ./hello-world.sh
+tommytester:~/workspace/helper-scripts (master) $ ./hello-world.sh
 Hello, world!
-cabox@box-codeanywhere:~/workspace/helper-scripts$
+tommytester:~/workspace/helper-scripts (master) $
 ```
 
 Note the `./` in front of the script's filename in the above command. 
@@ -163,9 +163,9 @@ The excecute path is just a list of directories from which we are allowed to exe
 To see your path, use the following command: 
 
 ```
-cabox@box-codeanywhere:~/workspace/helper-scripts$ echo $PATH 
+tommytester:~/workspace/helper-scripts (master) $ echo $PATH 
 /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
-cabox@box-codeanywhere:~/workspace/helper-scripts$
+tommytester:~/workspace/helper-scripts (master) $
 ```
 
 These are all the directories from which you can execute a program. 
@@ -185,14 +185,14 @@ echo "Hello, jdmar3!"
 Now if we run this, we will see all of this output:
 
 ```
-cabox@box-codeanywhere:~/workspace/helper-scripts$ ./hello-world.sh
+tommytester:~/workspace/helper-scripts (master) $ ./hello-world.sh
 Hello, world!
 Hello, jdmar3!
-cabox@box-codeanywhere:~/workspace/helper-scripts$
+tommytester:~/workspace/helper-scripts (master) $
 ```
 
-## Tomorrow
+## Next Time
 
-We will pick up where we left off tomorrow during lab and get to work creating our scripts for the next assignment. 
+We will pick up where we left off next time during lab and get to work creating our scripts for the next assignment. 
 Please review the tutorial on writing shell scripts again.{% sidenote 'shell-scripts' 'Shotts, William, Jr. “Writing Shell Scripts.” LinuxCommand.org. Accessed July 6, 2016. http://linuxcommand.org/lc3_writing_shell_scripts.php.' %} 
 Also, we'll use another tutorial so that we can learn to create prompts for user input.{% sidenote 'user-input' 'Chadwick, Ryan. “User Input - Bash Scripting Tutorial.” Ryan’s Tutorials. http://ryanstutorials.net/bash-scripting-tutorial/bash-input.php.' %}

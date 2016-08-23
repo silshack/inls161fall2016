@@ -14,7 +14,7 @@ weight: 9
 
 ## Linux (Ubuntu)
 
-{% marginnote 'unix' '**Linux** is one such UNIX clone originally invented in 1991 by Linus Torvalds. It is now among the most widely used operating systems in the world. If you have used the Internet, you have interacted with Linux perhaps without even realizing it. Your CodeAnywhere containers run Ubuntu Linux.' %}
+{% marginnote 'unix' '**Linux** is one such UNIX clone originally invented in 1991 by Linus Torvalds. It is now among the most widely used operating systems in the world. If you have used the Internet, you have interacted with Linux perhaps without even realizing it. Your Cloud9 workspaces run Ubuntu Linux.' %}
 
 <a href="http://linuxcommand.org/tlcl.php" target="_blank">The Linux Command Line - William E. Shotts, Jr.</a>
 
@@ -118,7 +118,7 @@ weight: 9
 
 ### Using Jekyll to test web code
 
-[Test your site using Jekyll and CodeAnywhere]({{ site.baseurl }}/refsheets/jekyll-testing/)
+[Test your site using Jekyll and Cloud9]({{ site.baseurl }}/refsheets/jekyll-testing/)
 
 # Document processing
 

@@ -17,7 +17,7 @@ We do this in preparation for creating personal websites that will be hosted by 
 
 # Fork
 
-The first thing that we are going to do today is fork some code that will allow us to have something to work with in CodeAnywhere later.
+The first thing that we are going to do today is fork some code that will allow us to have something to work with in Cloud9 later.
 We'll use this as an opportunity to get wome web code and see what that looks like. 
 
 You are not committing to anything today: this is just for practice. 
@@ -37,13 +37,13 @@ After a few seconds you will be taken to the repo page for the copy that you hav
 Once there, click the big green "Clone or Download" button, select "Use SSH," and copy the resulting link. {% marginnote 'clone' '![Click the "fork" button.](/assets/ref-images/clone.png)' %} 
 It will look like the link in the image on the right. 
 
-Then, switch over to CodeAnywhere, make sure you're logged in, and then right click on your container and open and SSH terminal from the menu. 
+Then, switch over to Cloud9, make sure you're logged in, and then right click on your workspace and open and SSH terminal from the menu. 
 
 In your "workspace" directory, type the following command, and paste your link in after, so that it looks like this: 
 
 `git clone git@github.com:YOUR-GITHUB-USERNAME/jekyll-starter-theme.git`
 
-This makes a copy of the repository that you just forked to your local workspace in CodeAnywhere. 
+This makes a copy of the repository that you just forked to your local workspace in Cloud9. 
 This is called cloning. 
 
 Then descend into the directory:

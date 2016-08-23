@@ -80,9 +80,10 @@ These readings are more general pieces about computing and information technolog
 
 ## Session Notes
 
-Pay attention to the [schedule]({{ site.baseurl }}/schedule/). 
-Session notes will be posted prior to each class and you would do well to look over the links before coming to class. 
-If there is something that you should before coming to class, it will be included on the session notes for the session prior to the class you will be preparing for.
+Pay attention to the [schedule]({{ site.baseurl }}/schedule/). Skim over them before coming to class. 
+I may not get to everything in the class notes and
+In addition, readings or activities will be listed in the margin session notes for the subsequent class.  
+Please read, skim, or otherwise do what these margin notes say to do with the resource
 
 ## Linked Resources
 
@@ -196,18 +197,33 @@ If the name is incorrect, the assignment will not be collected on time and I wil
 
 [Information about individual assignments is listed here]({{ site.baseurl }}/assignments/).
 
-## Participation
+## Participation PACT
 
-In addition to the 6 tasks, participation will be evaluated and included in the evaluation scheme. 
-Participation, of course, means coming to class: that is mandatory. 
-It also means bringing something to the class by way of discussion or links shared with the rest of the class. 
-Since we are a small class this summer, we will decide on the first day how best to accomplish the sharing of resources. 
+'Participation' in this class is an umbrella term for these four characteristics:
+
+* Preparation
+* Attendance
+* Communication
+* Timeliness
+
+When you, I, and your classmates do each of these things together we set the stage
+for an awesome experience for everyone!  These are also key professional and academic
+skills that 
 
 ## Community engagement
 
-As part of this class you will attend two community events over the course of the semester.  At least one should be a technology tutorial or workshop.  The other can be a second tech workshop or a technology, information, or related meetup or campus organization.  After completing these, you'll submit a short writeup evaluating the experience.
+We don't learn in a vacuum! There're many awesome tech communities and evens, on
+UNC's campus and beyond.  My goal is to help expose you to these communities in the
+hope that they'll deepen your learning, expand your horizons, and encourage you 
+to connect with others about technology beyond the end of the semester.
 
-You must complete at least one of these **before Fall Break Starts on October 5th**.
+For this part of your grade, you will attend two community events over the course of the semester.  
+At least one should be a technology tutorial or workshop.  The other can be a second tech 
+workshop OR a technology, information, or related meetup or campus organization.  After 
+completing these, you'll submit a short writeup evaluating the experience.
+
+You must complete at least one of these **before Fall Break Starts on October 5th**. The second is 
+due by the last day of class.
 
 ## Attendance
 
@@ -221,7 +237,7 @@ Attendance is mandatory. Absence will affect your grade in the class. There is n
 
 | Percentage            | Grade UG            | Grade G           | What it means |  
 |:-------|:---------|:--------|:------------- |  
-| 95>    | A        | H       | Highest level mastery of course content |
+| &gt;95    | A        | H       | Highest level mastery of course content |
 | 92-94  | A-       | H       | |
 | 87-91  | B+       | P       | |
 | 83-86  | B        | P       | Totally acceptable performance |
@@ -231,7 +247,7 @@ Attendance is mandatory. Absence will affect your grade in the class. There is n
 | 70-72  | C-       | L       | Marginal performance in course requirements |  
 | 67-69  | D+       | L       | |
 | 60-66  | D        | L       | |
-| \<60   | F        | F       | For whatever reasons, an unacceptable performance | 
+| &lt;60   | F        | F       | For whatever reasons, an unacceptable performance | 
 
 ## Grades and Progress
 
@@ -249,7 +265,7 @@ Grades will be made available on a rolling basis.
 
 Instructors and students at the University of North Carolina at Chapel Hill adhere to the Code of Student Conduct. 
 Accordingly, you all should recognize that most software applications available in the computer lab are copyrighted and cannot be copied.
-We will primarily use open source software for this course, which does allow for copying. 
+We will primarily use open source software for this course, which does allow for copying and modification. 
 It is important to know the difference and heed the terms of software licences. 
 
 We can learn much from each other and we will do that. 

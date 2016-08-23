@@ -15,7 +15,13 @@ computing in the context of operating systems, UNIX, and Linux.
 
 In class we will also start with some hands-on-keyboards practice with
 moving around the shell and manipulating files. 
-<excerpt/>
+<excerpt>
+
+# Discussion
+
+* One or two observations from the readings?
+* Questions about the shell? (We'll address them at the end)
+
 
 # Clients
 
@@ -29,8 +35,10 @@ client. When you you talk to Siri or Alexa or Google Now or whatever
 creepy robot voice you talk to, your are talking to a client which sends
 your request out to a server for processing.
 
-Very little in the networked world operates locally, and that is as it
-should be.
+Very little in the networked world operates locally, and that is as it {% marginnote 'aol' '<img src="http://1u88jj3r4db2x4txp44yqfj1.wpengine.netdna-cdn.com/wp-content/uploads/2013/03/aol-cd.jpg"> You used to have to install software to get on the network.  Now you probably use a network to install all of your software.' %}
+should be.  Before the world was so networked, we'd have to send each
+other programs, documents, and the like on floppy disks or CDs. It's 
+WAY better to be able to get things over the network.
 
 # Servers
 
@@ -69,7 +77,7 @@ them to your client (a.k.a., your browser) and then all of that
 information gets prettified and placed on your screen so that it can go
 into your eyeballs and then your brain.
 
-## Questions to keep in mind: {#questions-to-keep-in-mind:}
+## Questions to keep in mind:
 
 1.  Why do we use this model?
 2.  What are the advantages?
@@ -98,10 +106,11 @@ I will not go too deeply into the history of Linux and UNIX, except to
 say a few things and explain why we are using these as our primary
 platforms for operation.{% marginnote 'unix' 'UNIX history<br/><br/>[![UNIX History](https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Unix_history-simple.svg/200px-Unix_history-simple.svg.png)](https://upload.wikimedia.org/wikipedia/commons/7/77/Unix_history-simple.svg)' %} 
 
-UNIX is a general purpose, multitasking, multi-user operating system
+UNIX is a **general purpose**, **multitasking**, **multi-user** operating system
 designed in the 1970s at Bell Labs.
 The name "UNIX" now refers to a whole family of operating
-systems.
+systems that share basic characteristics.  Your phone probably runs
+a UNIX-like operating system, as do most of the websites you visit (including this one!).
 
 UNIX serves as the precursor to a complete, independent clone thereof
 called "Linux."{% marginnote 'linux' 'A timeline of Linux distributions<br/><br/>[![GNU/Linux Family Tree](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Linux_Distribution_Timeline.svg/200px-Linux_Distribution_Timeline.svg.png)](https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg)' %} Linux was developed initially in 1991 by a student at
@@ -119,12 +128,12 @@ there. All are Free and Open Source Software, which means that you can
 download the source code, compile it yourself, and run it on any system
 you like. Below is a family tree of all existing GNU/Linux
 distributions. Have a look to see if you can find Ubuntu, the system
-that we are most likely using on our CodeAnywhere Dev Boxes.
+that we are most likely using on our Cloud9 Dev Boxes.
 
 Operating systems are complex, as is their history, and I am afraid that
 I cannot do justice to it here. This history (and a general history of
 personal computing) is best told in a long essay by science-fiction
-author, Neal Stephenson.{% sidenote '' 'Stephenson, N. (1999). [In the beginning was the command line](http://www.cryptonomicon.com/beginning.html).' %}
+author, Neal Stephenson.{% sidenote '' '**Recommended Reading:** Stephenson, N. (1999). [In the beginning was the command line](http://www.cryptonomicon.com/beginning.html).' %}
 
 Read that piece at some point, if you have a chance. It's fascinating,
 exceedingly well-written, and a reasonably easy read.
@@ -157,11 +166,11 @@ able to say that you don't know how to do that.
 
 # For the next session
 
-Look at Joseph Wynn's "Hacker's Guide".{% sidenote 'githacker' 'Wynn, Joseph. “A Hacker’s Guide to Git.” Wildly Innacurate. Last modified May 25, 2014. <http://wildlyinaccurate.com/a-hackers-guide-to-git/>.' %}
+Look at Joseph Wynn's "Hacker's Guide".{% sidenote 'githacker' '**Reading:** Wynn, Joseph. “A Hacker’s Guide to Git.” Wildly Innacurate. Last modified May 25, 2014. <http://wildlyinaccurate.com/a-hackers-guide-to-git/>.' %}
 It is a really useful tutorial for new users of git who want to know ways to get things done with it.
 
-I would also like you to look at Roger Dudler's simple git tutorial.{% sidenote 'gitnoshit' 'Dudler, Roger. “Git: The Simple Guide.” Git: The Simple Guide. Last modified 2015. <http://rogerdudler.github.io/git-guide/>.' %}
+I would also like you to look at Roger Dudler's simple git tutorial.{% sidenote 'gitnoshit' '**Reading:** Dudler, Roger. “Git: The Simple Guide.” Git: The Simple Guide. Last modified 2015. <http://rogerdudler.github.io/git-guide/>.' %}
 It is the best and fastest way to get you up to speed using git.
 
-We will also return to "Learning the Shell"{% sidenote 'shell' 'Shotts, William, Jr. “Learning the Shell.” LinuxCommand.org. <http://linuxcommand.org/lc3_learning_the_shell.php>.' %} for more command line fun. 
+We will also return to "Learning the Shell"{% sidenote 'shell' '**Refresh:** Shotts, William, Jr. “Learning the Shell.” LinuxCommand.org. <http://linuxcommand.org/lc3_learning_the_shell.php>.' %} for more command line fun. 
 We'll do some more exploring once we are up to speed with git as well.

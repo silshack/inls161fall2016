@@ -48,7 +48,7 @@ To clone the repository, select and copy the text in the box illustrated below:
 
 ![Clone]({{ site.baseurl }}/refsheets/ref-images/clone.png)
 
-Then go to CodeAnywhere and open a terminal in your DevBox. 
+Then go to Cloud9 and open a terminal in your DevBox. 
 
 Type the following and then paste in the URL of the repository that you have copied to the clipboard. 
 
