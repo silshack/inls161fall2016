@@ -2,6 +2,7 @@
 layout: page
 title: Syllabus
 weight: 3
+topbar: true
 ---
 
 ## About the Course

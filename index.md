@@ -3,15 +3,16 @@ layout: page
 weight: 0
 title: Tools for Information Literacy
 shorttitle: INLS 161
+topbar: true
 ---
 
 ## Welcome to INLS 161-002
 
 {% include info.md %}
 
-{% newthought 'This site houses' %} the course files and syllabus for INLS 161-001, Tools for Information Literacy.
+{% newthought 'This site houses' %} the course files and syllabus for INLS 161-002, Tools for Information Literacy.
 
-The course runs from 20 June 2016 to 25 July 2016. 
+The course runs from 24 August to 7 December, 2016. 
 
 The class runs Monday-Thursday (except holidays), 11:00-12:30 in Manning Hall, room 117 (the computer lab inside the SILS library).
 

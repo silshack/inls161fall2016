@@ -2,6 +2,7 @@
 layout: page
 title: Assignments
 weight: 7
+topbar: true
 ---
 
 Links to assignments will be listed here as they are posted. 
