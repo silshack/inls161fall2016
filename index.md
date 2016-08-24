@@ -5,7 +5,7 @@ title: Tools for Information Literacy
 shorttitle: INLS 161
 ---
 
-## Welcome to INLS 161-001
+## Welcome to INLS 161-002
 
 {% include info.md %}
 
