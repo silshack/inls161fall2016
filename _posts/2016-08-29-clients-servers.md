@@ -17,10 +17,20 @@ In class we will also start with some hands-on-keyboards practice with
 moving around the shell and manipulating files. 
 <excerpt>
 
+# Q&A
+
+* Did the assignment not make sense to you? You jumped the gun.  See [this version of the assignment](https://github.com/eah13/task1-version-control) and it'll make more sense.  To the six people who got the old version of the assignment, no need to re-do it, and good job for working ahead.  But bad job for not hearing me say "Don't do assignment one yet because it's not ready yet" :)
+* If you worked ahead and got a non-updated version of the assignment that included a broken Qualtrix link, you'll need to go to [github.com/inls161](http://github.com/inls161), [delete your repo](https://help.github.com/articles/deleting-a-repository/), and re-click the link to the assignment to get a fresh copy.
+* Thanks to those of you who contacted me with questions when the assignment copy you got didn't make sense: great Communication!q
+* Don't feel bad if you worked ahead, just fix it :)
+* I'll try to write everything you need to remember in these notes.  Between that and our PACT we shouldn't run into many problems.
+
 # Discussion
 
+* A note: No one knows everything (including me!)
 * One or two observations from the readings?
 * Questions about the shell? (We'll address them at the end)
+* When things in the reading don't make sense, be **resourceful**.  Know that there is an answer, or at least a series of questions that will make it make sense to you.  Formulate your questions and try to answer them on your own or bring them to class.
 
 
 # Clients
