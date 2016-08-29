@@ -24,10 +24,11 @@ moving around the shell and manipulating files.
 * Thanks to those of you who contacted me with questions when the assignment copy you got didn't make sense: great Communication!q
 * Don't feel bad if you worked ahead, just fix it :)
 * I'll try to write everything you need to remember in these notes.  Between that and our PACT we shouldn't run into many problems.
+* What's a [fork?](https://github.com/eah13/task1-version-control)
 
 # Discussion
 
-* A note: No one knows everything (including me!)
+* A note: No one knows everything (including me!). Knowing how to find out is the most important thing.
 * One or two observations from the readings?
 * Questions about the shell? (We'll address them at the end)
 * When things in the reading don't make sense, be **resourceful**.  Know that there is an answer, or at least a series of questions that will make it make sense to you.  Formulate your questions and try to answer them on your own or bring them to class.
