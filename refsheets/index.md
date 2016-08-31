@@ -5,6 +5,28 @@ weight: 9
 topbar: true
 ---
 
+## Reference sheets from in-class activities
+
+* [Command line]({{ site.baseurl }}/refsheets/remote-ref)
+* [Git local]({{ site.baseurl }}/refsheets/git-ref/)
+* [Github remote]({{ site.baseurl }}/refsheets/github-ref/)
+* [Basic git workflow cheatsheet]({{ site.baseurl }}/refsheets/basic-git-workflow-cheatsheet.pdf/)
+* [Pandoc]({{ site.baseurl }}/refsheets/pandoc-ref/)
+
+
+# All the things
+
+Web developer Rico Sta. Cruz has published all of his own cheatsheets on his website. 
+They are all quite excellent and can serve as a useful reference for anyone just starting out in tech. 
+Check them out. 
+
+<a href="http://ricostacruz.com/cheatsheets/" target="_blank">Cheatsheets - Rico Sta. Cruz</a>
+
+Cheatography has over 2,500 cheatsheets available for various languages, platforms, markups, etc. 
+They are user-contributed and freely available. 
+
+<a href="https://www.cheatography.com/" target="_blank">Cheatography</a>
+
 # Operating systems and tools
 
 ## UNIX
@@ -57,11 +79,9 @@ topbar: true
 
 <a href="https://www.atlassian.com/git/tutorials/" target="_blank">Git Tutorials and Training - Atlassian</a>
 
-## Reference sheets from in-class activities
+### Reference sheets from in-class activities
 
-[Git local]({{ site.baseurl }}/refsheets/git-ref/)
-
-[Basic git workflow cheatsheet]({{ site.baseurl }}/refsheets/basic-git-workflow-cheatsheet.pdf/)
+[Git remote]({{ site.baseurl }}/refsheets/git-ref/)
 
 ## GitHub
 
@@ -188,15 +208,3 @@ The help/manpage file for Pandoc is linked here: <a href="http://pandoc.org/READ
 
 <a href="https://www.libreoffice.org/get-help/documentation/" target="_blank">LibreOffice Documentation for all Packages</a>
 
-# All the things
-
-Web developer Rico Sta. Cruz has published all of his own cheatsheets on his website. 
-They are all quite excellent and can serve as a useful reference for anyone just starting out in tech. 
-Check them out. 
-
-<a href="http://ricostacruz.com/cheatsheets/" target="_blank">Cheatsheets - Rico Sta. Cruz</a>
-
-Cheatography has over 2,500 cheatsheets available for various languages, platforms, markups, etc. 
-They are user-contributed and freely available. 
-
-<a href="https://www.cheatography.com/" target="_blank">Cheatography</a>

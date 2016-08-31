@@ -13,26 +13,38 @@ Then we'll turn that workspace into a Git repository.
 
 First, make a new directory like we learned the other day. 
 
-`mkdir mynewproject`
+{% highlight bash %}
+mkdir mynewproject
+{% endhighlight %}
 
 Then move into that directory and create some files. 
 
-`cd mynewproject`
-`touch file1 file2 file3 file4`
+{% highlight bash %}
+cd mynewproject
+touch file1 file2 file3 file4
+{% endhighlight %}
 
 Make a subdirectory of the directory we just created and are currently in. 
 
-`mkdir ./newsubdirectory`
+{% highlight bash %}
+mkdir ./newsubdirectory
+{% endhighlight %}
 
 Make some files there.
 
-`touch newsubdirectory/newfile1 newsubdirectory/newfile2`
+{% highlight bash %}
+touch newsubdirectory/newfile1 newsubdirectory/newfile2
+{% endhighlight %}
 
 Add some text to the files, either with an echo command or with nano (or another editor).
 
-`echo "Hello, world!" > file1`
-`echo "Here is some more text." > file2`
-`echo "Even more text." > newsubdirectory/newfile1`
+{% highlight bash %}
+{% raw %}
+echo "Hello, world!" > file1
+echo "Here is some more text." > file2
+echo "Even more text." > newsubdirectory/newfile1
+{% endraw %}
+{% endhighlight %}
 
 Now that we have some stuff to work with, let's turn this directory into a Git repository. 
 
@@ -40,21 +52,27 @@ Now that we have some stuff to work with, let's turn this directory into a Git r
 
 Make sure that you are in the correct directory. 
 
-`pwd` should output `/home/cabox/workspace`.
+`pwd` should output `/home/ubuntu/workspace`.
 
 The initialize your repository:
 
-`git init`
+{% highlight bash %}
+git init
+{% endhighlight %}
 
 That command told Git to start tracking the changes made in this directory from now on. 
 If you do the following command you will see a ne subdirectory `.git` in the workspace:
 
-`ls -lah`
+{% highlight bash %}
+ls -lah
+{% endhighlight %}
 
 The `ls` command we know, these switches that we added after tell us more information about the directory that we have listed. 
 You can look at what the switches do by looking at the help for ls:
 
-`ls --help` 
+{% highlight bash %}
+ls --help
+{% endhighlight %} 
 
 We can also now see all of the hidden files in the directory. 
 If a file or directory name has a period in front of it, then it will be hidden. 
@@ -69,12 +87,16 @@ If you do not add a file, it will not show up in your repository, which is good 
 There is a specific way to tell git to ignore files which we will learn later. 
 For now let's just add everything. 
 
-`git add .`
+{% highlight bash %}
+git add .
+{% endhighlight %}
 
 That command adds everything in the current directory including subdirectories.
 If you want to be absolutely sure that you don't miss anything, use the following:
 
-`git add *`
+{% highlight bash %}
+git add *
+{% endhighlight %}
 
 That tells git to expand all file and directory names and add them. 
 
@@ -86,7 +108,9 @@ Committing is sort of like "save as."
 It tells Git that we want to keep these changes as a new version. 
 This is why we call this task version control. 
 
-`git commit -a -m "first commit"`
+{% highlight bash %}
+git commit -a -m "first commit"
+{% endhighlight %}
 
 Let's break this down a bit. 
 The first switch `-a` tells git to record all the changes made. 
@@ -96,11 +120,19 @@ This is very useful for keeping your workflow in order.
 
 Make a change to a file:
 
-`echo "I'm changing this file to have a new line." > file3`
+{% highlight bash %}
+{% raw %}
+echo "I'm changing this file to have a new line." > file3
+{% endraw %}
+{% endhighlight %}
 
 Then commit that change;
 
-`git commit -a -m "I changed a file."`
+{% highlight bash %}
+{% raw %}
+git commit -a -m "I changed a file."
+{% endraw %}
+{% endhighlight %}
 
 The output from that command should show you that there has been a change (insertion) to that file.
 
@@ -109,38 +141,50 @@ The output from that command should show you that there has been a change (inser
 Now that we have some things committed, let's see what else we can do. 
 First we'll create a branch. 
 
-`git checkout -b newbranch`
+{% highlight bash %}
+git checkout -b newbranch
+{% endhighlight %}
 
 This command creates and moves us into a new branch of the same workspace. 
 Let's delete some files. 
 Let's delete that whole subdirectory. 
 
-`rm -rI newsubdirectory`
-`ls`
+{% highlight bash %}
+rm -rI newsubdirectory
+ls
+{% endhighlight %}
 
 We should see that the subdirectory is now gone. 
 
 Let's switch back to the master branch and see if it has changed. 
 
-`git checkout master`
-`ls -lah`
+{% highlight bash %}
+git checkout master
+ls -lah
+{% endhighlight %}
 
 Hmmm. It looks like they are still gone. What's going on here?
 
 Aha! We didn't commit our changes. Switch back into the new branch:
 
-`git checkout newbranch`
+{% highlight bash %}
+git checkout newbranch
+{% endhighlight %}
 
 And commit:
 
-`git commit -a -m "I deleted some things."
+{% highlight bash %}
+git commit -a -m "I deleted some things."
+{% endhighlight %}
 
 The output should show you your deletions. 
 
 *Now* let's switch to the master branch: 
 
-`git checkout master`
-`ls`
+{% highlight bash %}
+git checkout master
+ls
+{% endhighlight %}
 
 *Et voila,* our deleted files are still there in our master branch. 
 This is because Git preserves all of the information about what has happened in the workspace as well as all of the files in the workspace across all changes. 
@@ -148,7 +192,9 @@ This is because Git preserves all of the information about what has happened in 
 One last thing with branches. 
 If we want to see a list of all of our branches, we can:
 
-`git branch --list`
+{% highlight bash %}
+git branch --list
+{% endhighlight %}
 
 This will show us the names of all of the branches that we have created and also which one we are currently in. 
 
@@ -156,7 +202,9 @@ This will show us the names of all of the branches that we have created and also
 
 So now, let's look at what we did:
 
-`git log`
+{% highlight bash %}
+git log
+{% endhighlight %}
 
 This command gives us a list of all of the transactions we have made. 
 Try out some of the other log commands in the Git Simple Guide and see how else you can display this information. 
