@@ -105,14 +105,14 @@ Once you have made those changes, then **Save** the file and we will push it bac
 
 Note: The dot in the tab tells you you haven't saved the file yet. `Ctrl-s` or File > Save will do this for you.  Git can't see your changes until you save. 
 
-![Unsaved changes](https://github.com/silshack/inls161fall2016/blob/gh-pages//assets/ref-images/saving.png?raw=true)
+![Unsaved changes]({{ site.baseurl }}/assets/ref-images/saving.png)
 
 # Push
 
 Confirm that you've saved with our friend `git status`.  You should see that `_config.yml` has been modified.
 
 So in order to record these changes and get them into our remote repo on GitHub, we have to first go through the normal commit process. 
-First, add the files:  {% marginnote 'v' 'The <code>-v</code> flag stands for 'verbose' and makes git tell you explictly what it's doing.  I'm having you use it here to learn more about what's going on when you use <code>git add</code>  %}
+First, add the files:  {% marginnote 'v' 'The <code>-v</code> flag stands for 'verbose' and makes git tell you explictly what it&apos;s doing.  I'm having you use it here to learn more about what&apos;s going on when you use <code>git add</code>  %}
 
 {% highlight bash %}
 git add -v _config.yml
@@ -141,9 +141,15 @@ Try going to the address that corresponds to the GH pages site associated with t
 
 And there you should see a site with the title and subtitle that you assigned in the `_config.yml` file.
 
+Here's Tommytester's site:
+
+![Example site]({{ site.baseurl }}/assets/ref-images/tommy.png)
+
 # For next time
 
-I would like you to have a look at some tutorials and guides to **Markdown** for next time. 
+Feel free to play around with your new Jekyll site to practice your new skills.  Try modifying `one.md`, `two.md`, or `three.html`.  Try creating a new `.md` or `.html` file.  Add, commit, and push your changes then refresh to see what they look like.  If you know some CSS, try modifying `css/style.css` to change the look or colors of your page.  We'll create a new workspace for future projects, so no worries if you break things.  If you want, create an entirely new workspace and repeat everything from **Clone** onwards.  You'll need to `push -f` to overwrite your previous commits to your fork.  Don't worry if you get stuck- you can always delete your fork entirely, create a new workspace, and start from the beginning.  It's all good practice!
+
+I would like you to have a look at some tutorials and guides to **Markdown** for next time. Markdown is a lightwieght way of writing HTML that doesn't require a bunch of angle brackets.  Both Jekyll and pandoc, which we'll learn later, use Markdown to generate content for us and it's widely used accross the Web (including on Github in the comments, etc.).
 
 Kirk Strobeck's page describes the origin and intent of Markdown, and provides links to useful resources. {% marginnote 'strobeck' '**Reading:** “What is Markdown?” Ken Strobeck. <a href="http://whatismarkdown.com/">http://whatismarkdown.com/</a>.' %} 
 
