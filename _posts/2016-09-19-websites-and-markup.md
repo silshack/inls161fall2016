@@ -13,7 +13,7 @@ tags:
 
 This week's tasks will involve some very simple coding (markup, really) and continued exploration and use of our system administration skills. 
 
-Last Friday we learned how to set up a very basic website using Jekyll and GitHub pasges. 
+Last in the git and Github lab we learned how to set up a very basic website using Jekyll and GitHub pasges. 
 This week we will expand on that significantly, learn how to use markup to change the style of our content, and then learn to publish content to the web. 
 <excerpt/>
 
@@ -61,9 +61,9 @@ Markdown:
 
 The above examples render the same thing when parsed. Which would you rather use? 
 
-We will go over some of the basics in class today, but I would also like you to review the resources listed here independently, outside of class. {% sidenote 'markdown' '“Mastering Markdown.” GitHub Guides. Last modified January 15, 2014. Accessed June 27, 2016. https://guides.github.com/features/mastering-markdown/.<br/><br/>This guide is oriented toward GitHub, but the skills represented there extend well beyond that context.' %}
+We will go over some of the basics in class today, but I would also like you to review the resources listed here independently, outside of class. {% sidenote 'markdown' '**Review**: “Mastering Markdown.” GitHub Guides. Last modified January 15, 2014. Accessed June 27, 2016. https://guides.github.com/features/mastering-markdown/.<br/><br/>This guide is oriented toward GitHub, but the skills represented there extend well beyond that context.' %}
 
-We will work interchangeably in HTML and Markdown over the course of this week.
+We will work interchangeably in HTML and Markdown over the course of this next section.
 
 # HTML5
 
@@ -81,9 +81,7 @@ When we write Markdown and then post it to GitHub, a system actually translates 
 
 # For next time
 
-I would like you to look at this tutorial about creating a website using Jekyll and GitHub Pages. 
-
-Clark, Barry. “Build A Blog With Jekyll And GitHub Pages – Smashing Magazine.” Smashing Magazine. Last modified August 1, 2014. Accessed June 27, 2016. https://www.smashingmagazine.com/2014/08/build-blog-jekyll-github-pages/.
+I would like you to look at this tutorial about creating a website using Jekyll and GitHub Pages. {% marginnote 'tutorial' '**Reading**: Clark, Barry. “Build A Blog With Jekyll And GitHub Pages – Smashing Magazine.” Smashing Magazine. Last modified August 1, 2014. Accessed June 27, 2016. https://www.smashingmagazine.com/2014/08/build-blog-jekyll-github-pages/.' %}
 
 We have already done this in a very rudimentary way, but we will do it again to create a better final product. 
 

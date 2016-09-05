@@ -12,6 +12,9 @@ tags:
 
 Today we're going to learn how to fork, clone, and push changes to a repository on GitHub using git. 
 We do this in preparation for creating personal websites that will be hosted by GitHub pages. 
+
+Everything we do today will be in a throw-away workspace, so feel free to experiment *after* completing the 
+instructions here.
 <excerpt/>
 
 # Fork
