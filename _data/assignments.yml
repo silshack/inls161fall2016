@@ -7,6 +7,8 @@
     percent: "15"
     due: "2016-08-29"
     shortdue: "Aug 29"
+    published: true
+    done: true
 -   number: "2"
     category: Web
     title: Build a website
@@ -16,6 +18,7 @@
     percent: "15"
     due: "2016-10-05"
     shortdue: "Oct 5"
+    published: true
 -   number: "3"
     category: Text
     title: Create documentation
@@ -25,6 +28,7 @@
     percent: "15"
     due: "2016-10-27"
     shortdue: "Oct 27"
+    published: false
 -   number: "4"
     category: Data
     title: Make data
@@ -34,6 +38,7 @@
     percent: "5"
     due: "2016-11-10"
     shortdue: "Nov 10"
+    published: false
 -   number: "5"
     category: Database
     title: Organize data
@@ -43,6 +48,7 @@
     percent: "15"
     due: "2016-11-17"
     shortdue: "Nov 17"
+    published: false
 -   number: "6"
     category: Present
     title: Be presentable
@@ -52,6 +58,7 @@
     percent: "15"
     due: "2016-12-04"
     shortdue: "Dec 4"
+    published: false
 -   number: 
     category: Participation
     title: Participation
@@ -61,6 +68,7 @@
     percent: 10
     due: 
     shortdue: 
+    published: true
 -   number:
     category: Community
     title: Community
@@ -70,3 +78,4 @@
     percent: 10
     due: 
     shortdue: "Oct 5, Dec 7"
+    published: true

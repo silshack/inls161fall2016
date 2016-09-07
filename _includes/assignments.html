@@ -1,8 +1,6 @@
-
-
 {% for ass in site.data.assignments %}
 
-<h1>{% if ass.number %}Assignment&nbsp;{{ ass.number }}:&nbsp;{% endif %}{{ ass.title }}</h1>
+<h1>{% if ass.number %}Assignment&nbsp;{{ ass.number }}:&nbsp;{% endif %}{{ ass.title }} {% if ass.done %}- Done!{% endif %}</h1>
 
   {% if site.mothballed and ass.number %}
   {% comment %}Site is mothballed: Link to mothballed assignments in assignments directory{% endcomment %}
@@ -19,16 +17,26 @@
     {{ ass.description }}
   </p>
 {% endif %}
+
+{% if ass.published %}
+{% if ass.done %}
+<p>
+  This Assignment is done!
+</p>
+{% else %}
 {% if ass.link %}
   <p>
     Link to assignment instructions: {{ ass.link }}
   </p>
 {% endif %}
+{% endif %}{% endif %}
+
 {% if ass.percent %}
   <p>
     {% if ass.number %}This assignment{% else %}{{ ass.title }}{% endif %} is worth {{ ass.percent }}% of your final grade. {% if ass.due %}It is due on {{ ass.due | date: "%A, %-d %B %Y" }} at midnight.{% endif %}
   </p>
 {% endif %}
   
-  {% endif%}
+
+{% endif %}
 {% endfor %}
