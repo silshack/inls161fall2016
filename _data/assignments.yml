@@ -18,7 +18,7 @@
     percent: "15"
     due: "2016-10-05"
     shortdue: "Oct 5"
-    published: true
+    published: false
 -   number: "3"
     category: Text
     title: Create documentation
