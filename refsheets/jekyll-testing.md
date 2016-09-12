@@ -9,6 +9,12 @@ We need to test our code to see if it worked.
 To do this, we will have to access the files locally in our Cloud9 and start a webserver. 
 Luckily, Jekyll is also a webserver.
 
+Make sure you have jekyll installed:
+
+{% hightlight bash %}
+gem install github-pages
+{% endhighlight %}
+
 Go to the terminal and switch into the root directory of your website repository. 
 
 Something like: `cd jekyll-starter-theme`
