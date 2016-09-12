@@ -17,6 +17,13 @@ Everything we do today will be in a throw-away workspace, so feel free to experi
 instructions here.
 <excerpt/>
 
+# Q&A
+
+* Why I don't use Sakai
+* What's my grade?
+
+
+
 # Fork
 
 The first thing that we are going to do today is fork some code that will allow us to have something to work with in Cloud9 later.
@@ -148,9 +155,16 @@ Here's Tommytester's site:
 
 ![Example site]({{ site.baseurl }}/assets/ref-images/tommy.png)
 
+
+# Advanced
+
+If you're done and would like to try out something new, follow the instructions [here]({{ site.baseurl }}/refsheets/jekyll-testing/) to run a copy of your site on cloud9.  This is what we'll all be doing eventually, so you're getting ahead.  It's way faster to be able to make a change in Cloud9 and view it immediately rather than pushing to Github all the time.
+
+Once your site is up, try changing some of the html pages, saving, then refreshing the Cloud9 preview.  You should see your changes.  Practice your HTML, Markdown, or CSS!
+
 # For next time
 
-Feel free to play around with your new Jekyll site to practice your new skills.  Try modifying `one.md`, `two.md`, or `three.html`.  Try creating a new `.md` or `.html` file.  Add, commit, and push your changes then refresh to see what they look like.  If you know some CSS, try modifying `css/style.css` to change the look or colors of your page.  We'll create a new workspace for future projects, so no worries if you break things.  If you want, create an entirely new workspace and repeat everything from **Clone** onwards.  You'll need to `push -f` to overwrite your previous commits to your fork.  Don't worry if you get stuck- you can always delete your fork entirely, create a new workspace, and start from the beginning.  It's all good practice!
+Please play around with your new Jekyll site to practice your new skills.  Try modifying `one.md`, `two.md`, or `three.html`.  Try creating a new `.md` or `.html` file.  Add, commit, and push your changes then refresh to see what they look like.  If you know some CSS, try modifying `css/style.css` to change the look or colors of your page.  We'll create a new workspace for future projects, so no worries if you break things.  If you want, create an entirely new workspace and repeat everything from **Clone** onwards.  You may need to `push -f` to overwrite your previous commits to your fork.  Don't worry if you get stuck- you can always delete your fork off of Github entirely, create a new workspace, and start from the beginning.  It's all good practice!
 
 I would like you to have a look at some tutorials and guides to **Markdown** for next time. Markdown is a lightwieght way of writing HTML that doesn't require a bunch of angle brackets.  Both Jekyll and pandoc, which we'll learn later, use Markdown to generate content for us and it's widely used accross the Web (including on Github in the comments, etc.).
 

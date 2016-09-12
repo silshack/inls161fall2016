@@ -12,6 +12,7 @@ topbar: true
 * [Github remote]({{ site.baseurl }}/refsheets/github-ref/)
 * [Basic git workflow cheatsheet]({{ site.baseurl }}/refsheets/basic-git-workflow-cheatsheet.pdf/)
 * [Pandoc]({{ site.baseurl }}/refsheets/pandoc-ref/)
+* [Jekyll]({{ site.baseurl }}/refsheets/jekyll-testing/)
 
 
 # All the things
