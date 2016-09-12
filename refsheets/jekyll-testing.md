@@ -11,7 +11,7 @@ Luckily, Jekyll is also a webserver.
 
 Make sure you have jekyll installed:
 
-{% hightlight bash %}
+{% highlight bash %}
 gem install github-pages
 {% endhighlight %}
 
