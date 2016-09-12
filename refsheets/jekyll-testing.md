@@ -22,7 +22,7 @@ Something like: `cd jekyll-starter-theme`
 And then run the following command. 
 
 {% highlight bash %}
-jekyll serve --host=$IP --port=$PORT --drafts --watch` 
+jekyll serve --host=$IP --port=$PORT --drafts --watch
 {% endhighlight %}
 
 If the web code that you are testing is not a Jekyll site, or you don't want to see drafts, you can remove the `--drafts` switch.
