@@ -223,7 +223,7 @@ At least one should be a technology tutorial or workshop.  The other can be a se
 workshop OR a technology, information, or related meetup or campus organization.  After 
 completing these, you'll submit a short writeup evaluating the experience.
 
-You must complete at least one of these **before Fall Break Starts on October 5th**. The second is 
+You must complete at least one of these **before Fall Break Starts on October 19th**. The second is 
 due by the last day of class.
 
 ## Attendance

@@ -1,5 +1,4 @@
 ---
-published: false
 layout: post
 title: "Visual styling for the web"
 category: Web 
@@ -10,12 +9,16 @@ tags:
 - Markdown
 ---
 
-**Reminder:** Your first community engagement activity needs to be completed and written up before Fall Break begins on October 5th.
+**Reminder:** Your first community engagement activity needs to be completed and written up before Fall Break begins on October 19th.
 
 For most of class today, we will spend time creating our base site and then exploring ways that we can change and customize the style to our liking. 
 
 We'll learn a little bit about CSS and about linking resources so that they show up where we want them. 
 <excerpt/>
+
+# Q&A
+
+* It's time to get started on Assignment #2! Link to follow
 
 # Jekyll
 
