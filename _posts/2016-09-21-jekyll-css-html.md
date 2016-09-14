@@ -18,15 +18,11 @@ We'll learn a little bit about CSS and about linking resources so that they show
 
 # Q&A
 
-* It's time to get started on Assignment #2! Link to follow
+* It's time to get started on Assignment #2! Come to class having selected a theme for your blog, and with it cloned into a new Cloud9 workspace (not forked!) and in a brand new Github repo.
+* Start Assignment 2 by clicking the github classroom link on the Assignments tab if you haven't already.  The Readme in the repo you'll get when you do that has the full details of the assignment, but don't race ahead.  We'll do much of the work together.
+* Approach this work creatively! There were some really neat sites that came out of the last class and I hope this will be an opportunity for you to learn neat things and express yourself.
 
-# Jekyll
-
-Once you have chosen a Jekyll theme for your site, we will need to fork the theme, make appropriate changes to turn it into our own, and then we can get to work on customizing the look and feel of the site. 
-
-When we make changes to Jekyll's configuration, we are ostensibly telling it where to find different necessary files for rendering the site, like our CSS file. 
-
-Let's take a look at different ways of linking. 
+ 
 
 # Linking
 
@@ -77,10 +73,20 @@ Whenever a website looks like anything other than just a blank page, there is CS
 
 We will continue to use a combination of Markdown, HTML5 and CSS3 to construct our very own web pages. 
 
+# Embedding with iframes
+
+iframes are a way of loading one site within another.  They're really cool.
+
+For instance, Trinket embeds let you put interactive code anywhere.  Here's an embed that lets me generate pairs for this class:
+
+<iframe src="https://trinket.io/embed/python/0556f1a69d" width="100%" height="406" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+Google Maps, SoundCloud, YouTube and whole host of other neat sites have embeds.  The embed code is usually available in the 'Share' dialogs.  Some embeds are created with Javascript and have a `<script>` tag.  Think about how you can enhance your site with cool embeds.
+
 # For next time
 
 I want you to continue to work with your site and actually begin creating some content: write a blog post. 
 
 This involves having an idea, making an outline of what you want to say about that idea, committing some text, referencing outside information, and maybe putting a picture in to give a visual anchor to your text.
 
-I would also like you to move through the W3Schools HTML5 and CSS3 tutorials on your own, outside of class.{% sidenote 'css-tutorial' '“HTML Tutorial.” W3Schools. http://www.w3schools.com/html/default.asp.<br/><br/>“CSS Tutorial.” W3Schools. http://www.w3schools.com/css/default.asp.' %}
+I would also like you to move through the W3Schools HTML5 and CSS3 tutorials on your own, outside of class.{% sidenote 'css-tutorial' '**Read:** “HTML Tutorial.” W3Schools. http://www.w3schools.com/html/default.asp.<br/><br/>“CSS Tutorial.” W3Schools. http://www.w3schools.com/css/default.asp.' %}

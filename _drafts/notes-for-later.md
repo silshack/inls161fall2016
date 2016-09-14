@@ -12,7 +12,9 @@ tags:
 
 http://jekyllthemes.org/themes/basic/
 
-http://jekyllthemes.org/themes/trading/
+https://github.com/henrythemes/jekyll-bootstrap-theme/
+
+https://github.com/henrythemes/jekyll-minimal-theme/
 
 http://jekyllthemes.org/themes/devjournal/
 

@@ -1,5 +1,4 @@
 ---
-published: false
 layout: post
 title: "Websites, Markup, and Markdown"
 category: Web
@@ -85,19 +84,23 @@ I would like you to look at this tutorial about creating a website using Jekyll 
 
 We have already done this in a very rudimentary way, but we will do it again to create a better final product. 
 
-Please also look at these themes and choose one for your site. Some have dynamic navigation (those are listed first == easy). You will modify them heavily. 
+## Homework: Pick a theme
 
-## Some easy themes
+Spend some time going through these and selecting one you like.  I'll help you customize it so it works with Github pages.  If you've got experience with web design or want to be more adventurous, check some of the more challenging themes.  They should all be a similar level of difficulty after the initial setup.  We're not using any of the more complicated Jekyll plugins that you have to pre-build.
+
+### Some easy themes
 
 http://jekyllthemes.org/themes/basic/
 
-http://jekyllthemes.org/themes/trading/
+https://github.com/henrythemes/jekyll-bootstrap-theme/
+
+https://github.com/henrythemes/jekyll-minimal-theme/
 
 http://jekyllthemes.org/themes/devjournal/
 
 http://jekyllthemes.org/themes/gravity/
 
-## More challenging themes
+### More challenging themes
 
 http://jekyllthemes.org/themes/jekyll-clean/
 
@@ -111,6 +114,13 @@ http://jekyllthemes.org/themes/blackdoc/
 
 http://jekyllthemes.org/themes/daktilo/
 
+### Clone and make a new repo for your site
+
+Once you have chosen a Jekyll theme for your site, **Clone** it, make a new repository for it that you own, **Push** to that repository (following the instructions that pop up when you make a new repo), make appropriate changes to turn it into our own, and then you can get to work on customizing the look and feel of the site. 
+
+When we make changes to Jekyll's configuration, we are ostensibly telling it where to find different necessary files for rendering the site, like our CSS file. 
+
+Let's take a look at different ways of linking.
 Good advice: 
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">&quot;Write the best code possible today and be completely unattached to it and willing to delete it tomorrow.&quot;<a href="https://t.co/mBAJhip0KP">https://t.co/mBAJhip0KP</a></p>&mdash; Adam Wathan (@adamwathan) <a href="https://twitter.com/adamwathan/status/747429538930393088">June 27, 2016</a></blockquote>
