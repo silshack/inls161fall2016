@@ -163,7 +163,7 @@ http://jekyllthemes.org/themes/daktilo/
 
 ### Clone and make a new repo for your site
 
-Once you have chosen a Jekyll theme for your site, **Clone** it. 
+Once you have chosen a Jekyll theme for your site, **Clone** it into a fresh **Blank** Cloud9 workspace. 
 
 Later, together, we will make a new repository for it that you own, **Push** to that repository (following the instructions that pop up when you make a new repo), make appropriate changes to turn it into our own, and then you can get to work on customizing the look and feel of the site. 
 
