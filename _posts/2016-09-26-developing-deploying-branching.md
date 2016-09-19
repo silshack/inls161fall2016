@@ -1,5 +1,4 @@
 ---
-published: false
 layout: post
 title: "Developing and Deploying"
 category: Web
@@ -17,29 +16,39 @@ We will also use this opportunity to discuss the development > testing > deploym
 
 We'll be using Barry Clark's tutorial as a reference, so you'll want to have that pulled up in a separate window so that you can switch back and forth to it. 
 
-# Fork
+# Clone
 
-We will do the same thing that we have previously done in GitHub and fork our chosen theme into our account as a starting place. 
+We will do the same thing that we have previously done in GitHub and clone our chosen theme into our account as a starting place. 
 
 That should be relatively straightforward now.
 
 # Configure
 
-Once we have the base theme forked, we need to make sure that the site is going to show up at the right address. 
+Once we have the base theme cloned, we need to make sure that the site is going to show up at the right address. 
 
-The address that we want is `http://YOUR-GITHUB-USERNAME.github.io`. This is the default user site address for GitHub pages. 
+The address that we want is `http://YOUR-GITHUB-USERNAME.github.io`. This is the default user site address for GitHub pages.
 
 GH Pages will serve this site from code in the master branch of a repository in your account named the same as the fully qualified domain name (FQDN) or just the full URL to our desired site. 
 
-Therefore, if your GH Pages user site defaults to `http://YOUR-GITHUB-USERNAME.github.io` then we have to make a repository in your account titled `YOUR-GITHUB-USERNAME.github.io`. 
-The easiest way to do this is to just change the name of the theme repository that we just forked so that it matches what we need. 
+Therefore, if your GH Pages user site defaults to `http://YOUR-GITHUB-USERNAME.github.io` then we have to make a repository in your account titled `YOUR-GITHUB-USERNAME.github.io`. Do so, and you'll see the new repo page from github.
 
-To do this, click the settings tab on your repository page, enter a new name under "Repository name," and then click "Rename."
+One final thing: since we cloned the repo, `origin` is currently set to the old location.  Now that you have a new repo with a new `.git` URL, we can change where the tag `origin` points to:
+
+```
+# Change origin's URL
+git remote set-url origin [paste URL here]
+
+# then verify the new URL is there:
+git remote -v
+```
+
+Great! an initial `git push` and your code should be up on github.  You should see it at your special URL.  Tommy's is http://tommytester.github.io
+
+If that's not working for you, we've got to dive into config quickly.
 
 ## \_config.yml
 
-Once we are there, we should be able to look into `_config.yml` file right in GitHub and make sure that our site settings are correct.
-We will likely have to change three variables, if they exist: `path`, `url`, and `baseurl`.
+Open `_config.yml` in Cloud9. We will likely have to change three variables, if they exist: `path`, `url`, and `baseurl`.
 These will be different for different themes, so we'll look over this together in class. Basic principles are as follows:
 
 You want `url` to match the desired URL for your site: `http://YOUR-GITHUB-USERNAME.github.io`.
@@ -49,7 +58,7 @@ For the GH Pages user site, it needs to have no value. You can either delete tha
 
 `path: ""`
 
-The same is true for `baseurl`.
+The same is true for `baseurl`: it should be blank or not exist.
 
 All that these do is tell Jekyll where things are when it is trying to build the site. 
 Remember, linking is dynamic in the build process, so Jekyll is trying to figure out how to tell your browser where to find stuff that it needs to render the site. 
@@ -79,7 +88,6 @@ A typical development workflow might conceptually look like this:
 
 We're going to learn next time how to incorporate branching, testing, and merging by setting up a development workflow like the one described above. 
 
-To prepare for this, I would like you to read the Gist linked in the margin, but I would also like you to do some searching online about how different developers managed their workflows. {sidenote 'workflow' 'blackfalcon. “Git Basics - a General Workflow.” Gist. Accessed June 29, 2016. https://gist.github.com/blackfalcon/8428401.'}
+To prepare for this, I would like you to read the Gist linked in the margin, but I would also like you to do some searching online about how different developers managed their workflows. {sidenote 'workflow' '**Reading:** blackfalcon. “Git Basics - a General Workflow.” Gist. Accessed June 29, 2016. https://gist.github.com/blackfalcon/8428401.'}
 To this end you might Google things like "development workflow" or "project development."
-See what you can find. 
-There is a ton of relevant information on this topic out in the Internet.
+See what you can find - there are a lot of different ways that teams and companies do these things. 
