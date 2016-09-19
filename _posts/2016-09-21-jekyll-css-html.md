@@ -19,10 +19,8 @@ We'll learn a little bit about CSS and about linking resources so that they show
 # Q&A
 
 * It's time to get started on Assignment #2! Come to class having selected a theme for your blog, and with it cloned into a new Cloud9 workspace (not forked!) and in a brand new Github repo.
-* Start Assignment 2 by clicking the github classroom link on the Assignments tab if you haven't already.  The Readme in the repo you'll get when you do that has the full details of the assignment, but don't race ahead.  We'll do much of the work together.
+* Start Assignment 2 by clicking the github classroom link on the Assignments tab if you haven't already.  The Readme in the repo you'll get when you do that has the full details of the assignment. Read ahead but don't race ahead.  We'll do much of the work together.
 * Approach this work creatively! There were some really neat sites that came out of the last class and I hope this will be an opportunity for you to learn neat things and express yourself.
-
- 
 
 # Linking
 
@@ -85,8 +83,24 @@ Google Maps, SoundCloud, YouTube and whole host of other neat sites have embeds.
 
 # For next time
 
-I want you to continue to work with your site and actually begin creating some content: write a blog post. 
+I want you to continue to work with your site and actually begin creating some content: write your first real blog post for this class. 
 
-This involves having an idea, making an outline of what you want to say about that idea, committing some text, referencing outside information, and maybe putting a picture in to give a visual anchor to your text.
+This involves having an idea, making an outline of what you want to say about that idea, committing some text, referencing outside information, and maybe putting a picture in to give a visual anchor to your text.  You'll probably be writing about commands and code a lot.  Use inline code blocks to reference commands like `cd` and full codeblocks to call out or sequence commands:
 
-I would also like you to move through the W3Schools HTML5 and CSS3 tutorials on your own, outside of class.{% sidenote 'css-tutorial' '**Read:** “HTML Tutorial.” W3Schools. http://www.w3schools.com/html/default.asp.<br/><br/>“CSS Tutorial.” W3Schools. http://www.w3schools.com/css/default.asp.' %}
+```
+pwd
+cd ~
+```
+
+Add a language name to enable syntax highlighting on these fenced code blocks. 
+
+You can also use jekyll's built-in `\{\% highlight \%\}` tag to add spiffy syntax highlighting to your code the old school way. Learn more here: [https://jekyllrb.com/docs/templates/#code-snippet-highlighting](https://jekyllrb.com/docs/templates/#code-snippet-highlighting)
+
+{% highlight html %}
+<h1>Syntax Highlighing in Jekyll</h1>
+
+<p>It's <strong>really</strong> cool!</p>
+{% endhighlight %}
+
+
+I would also like you to move through the W3Schools HTML5 and CSS3 tutorials on your own, outside of class.{% sidenote 'css-tutorial' '**Read:** “HTML Tutorial.” W3Schools. http://www.w3schools.com/html/default.asp.<br/><br/>“CSS Tutorial.” W3Schools. http://www.w3schools.com/css/default.asp.' %}  Go quickly if this is all review for you (though you should learn a thing or two!) and set aside some real time for them if this is all new to you.
