@@ -51,6 +51,7 @@ This week we will expand on that significantly, learn how to use markup to chang
 Why did we do multiple commits?  **Let's Revert some color changes!** I need a volunteer.
 
 In class mini-exercise:
+
 * get jekyll running with `jekyll serve --host $IP --port $port`
 * get another terminal open
 * `git log` and get the first few characters of the commit where you made colors changes
