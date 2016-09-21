@@ -16,54 +16,8 @@ We will also use this opportunity to discuss the development > testing > deploym
 
 We'll be using Barry Clark's tutorial as a reference, so you'll want to have that pulled up in a separate window so that you can switch back and forth to it. 
 
-# Clone
 
-We will do the same thing that we have previously done in GitHub and clone our chosen theme into our account as a starting place. 
-
-That should be relatively straightforward now.
-
-# Configure
-
-Once we have the base theme cloned, we need to make sure that the site is going to show up at the right address. 
-
-The address that we want is `http://YOUR-GITHUB-USERNAME.github.io`. This is the default user site address for GitHub pages.
-
-GH Pages will serve this site from code in the master branch of a repository in your account named the same as the fully qualified domain name (FQDN) or just the full URL to our desired site. 
-
-Therefore, if your GH Pages user site defaults to `http://YOUR-GITHUB-USERNAME.github.io` then we have to make a repository in your account titled `YOUR-GITHUB-USERNAME.github.io`. Do so, and you'll see the new repo page from github.
-
-One final thing: since we cloned the repo, `origin` is currently set to the old location.  Now that you have a new repo with a new `.git` URL, we can change where the tag `origin` points to:
-
-```
-# Change origin's URL
-git remote set-url origin [paste URL here]
-
-# then verify the new URL is there:
-git remote -v
-```
-
-Great! an initial `git push` and your code should be up on github.  You should see it at your special URL.  Tommy's is http://tommytester.github.io
-
-If that's not working for you, we've got to dive into config quickly.
-
-## \_config.yml
-
-Open `_config.yml` in Cloud9. We will likely have to change three variables, if they exist: `path`, `url`, and `baseurl`.
-These will be different for different themes, so we'll look over this together in class. Basic principles are as follows:
-
-You want `url` to match the desired URL for your site: `http://YOUR-GITHUB-USERNAME.github.io`.
-
-`path` specifies a path where files are held. 
-For the GH Pages user site, it needs to have no value. You can either delete that line, comment it, or just put a set of double quotes to specify that Jekyll should not try to rewrite the links and append a subdirectory. It will look like this:
-
-`path: ""`
-
-The same is true for `baseurl`: it should be blank or not exist.
-
-All that these do is tell Jekyll where things are when it is trying to build the site. 
-Remember, linking is dynamic in the build process, so Jekyll is trying to figure out how to tell your browser where to find stuff that it needs to render the site. 
-
-## Test
+## Testing
 
 Once you have your config set accordingly, then you should be able to look at your site at `http://YOUR-GITHUB-USERNAME.github.io`. 
 Don't worry if it doesn't work or if something looks weird. 
@@ -83,6 +37,10 @@ A typical development workflow might conceptually look like this:
 5. Get feedback about new feature and integrate suggestions if necessary
 6. Merge new feature into main workflow
 7. New feature is live in production
+
+# More on How Jekyll Works
+
+Let's look into more about how Jekyll works together. `_posts`, `_layouts`, `_includes` oh my!
 
 # Next time
 

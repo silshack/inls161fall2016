@@ -81,9 +81,75 @@ For instance, Trinket embeds let you put interactive code anywhere.  Here's an e
 
 Google Maps, SoundCloud, YouTube and whole host of other neat sites have embeds.  The embed code is usually available in the 'Share' dialogs.  Some embeds are created with Javascript and have a `<script>` tag.  Think about how you can enhance your site with cool embeds.
 
+# Theme Cleanup
+
+I got a little ahead of myself last time.
+
+So far you've:
+
+* Picked a theme
+* Cloned that theme to a new Cloud9 Workspace (if you forked it, see below)
+* Made an empty repository on github called `[username].github.io`
+
+Now we need to:
+
+* install jekyll on the new workspace with `gem install github-pages`
+* Configure the new site (see below)
+* still in the workspace, change `origin` to point to the new
+
+# If You Forked Up
+
+Everyone forks up sometimes.  I want your new repo to be on its own, not a fork of the theme's repo, because that will be easier later.
+
+Make sure you've cloned your code to Cloud9.  Delete the forked repo on Github.  Make a new empty one titled as I described above. Now you should be able to continue as if you'd cloned, making sure to change the remote url below.
+
+# Configure
+
+Once we have the base theme cloned, we need to make sure that the site is going to show up at the right address. 
+
+The address that we want is `http://YOUR-GITHUB-USERNAME.github.io`. This is the default user site address for GitHub pages.
+
+GH Pages will serve this site from code in the master branch of a repository in your account named the same as the fully qualified domain name (FQDN) or just the full URL to our desired site. 
+
+Therefore, if your GH Pages user site defaults to `http://YOUR-GITHUB-USERNAME.github.io` then we have to make a repository in your account titled `YOUR-GITHUB-USERNAME.github.io`. That's why we did that.
+
+Now we need to push the code to this new repo.  Since we cloned the repo, `origin` is currently set to the old location.  Now that you have a new repo with a new `.git` URL, we can change where the tag `origin` points to:
+
+```
+# Change origin's URL
+git remote set-url origin [paste URL here]
+
+# then verify the new URL is there:
+git remote -v
+```
+
+Great! an initial `git push` and your code should be up on github.  You should see it at your special URL.  Tommy's is http://tommytester.github.io
+
+If that's not working for you, we've got to dive into config quickly.
+
+## \_config.yml
+
+After running `jekyll serve --host $IP --port $PORT` you may notice some broken links or missing styles.  We'll now fix these together.
+
+Open `_config.yml` in Cloud9. We will likely have to change three variables, if they exist: `path`, `url`, and `baseurl`.
+These will be different for different themes, so we'll look over this together in class. Basic principles are as follows:
+
+You want `url` to match the desired URL for your site: `http://YOUR-GITHUB-USERNAME.github.io`.
+
+`path` specifies a path where files are held. 
+For the GH Pages user site, it needs to have no value. You can either delete that line, comment it, or just put a set of double quotes to specify that Jekyll should not try to rewrite the links and append a subdirectory. It will look like this:
+
+`path: ""`
+
+The same is true for `baseurl`: it should be blank or not exist.
+
+All that these do is tell Jekyll where things are when it is trying to build the site. 
+Remember, linking is dynamic in the build process, so Jekyll is trying to figure out how to tell your browser where to find stuff that it needs to render the site. 
+
+
 # For next time
 
-I want you to continue to work with your site and actually begin creating some content: write your first real blog post for this class. 
+I want you to continue to work with your site and actually begin creating some content: write your first real blog post for this class. You'll do this just as you did before, creating a file in the `_posts` diurectory, following Jekyll's naming conventions for the filename.
 
 This involves having an idea, making an outline of what you want to say about that idea, committing some text, referencing outside information, and maybe putting a picture in to give a visual anchor to your text.  You'll probably be writing about commands and code a lot.  Use inline code blocks to reference commands like `cd` and full codeblocks to call out or sequence commands:
 
