@@ -23,9 +23,20 @@ We'll be using Barry Clark's tutorial as a reference, so you'll want to have tha
 * Your post for today should be about what you've learned in the class so far and any reflections you have.  If you didn't do that,
 don't panic, just fix it.  If you did do that, you're one step closer to being done with Assignment 2 :)
 
+## Pair Up!
+
+Show your partner:
+
+* Your c9users.io site with post
+* Your commit(s) making the post on Cloud9
+* Your commit(s) on Github.com
+* Your post on github.io
+
+Together: quickly compile any questions you aren't able to resolve together.
+
 ## Testing
 
-Once you have your config set accordingly, then you should be able to look at your site at `http://YOUR-GITHUB-USERNAME.github.io`. 
+Now that you have your config set accordingly, then you should be able to look at your site at `http://YOUR-GITHUB-USERNAME.github.io`. 
 Don't worry if it doesn't work or if something looks weird. 
 Nothing is broken in those cases, you'll just need to troublshoot to figure out what is wrong. This is part of the developmet workflow. 
 
