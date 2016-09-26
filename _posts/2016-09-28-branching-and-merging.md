@@ -41,12 +41,14 @@ Find your CSS file.
 
 This file might have either `.css` or `.scss` as an extension.
 
-Once you have found it you should make a small change to it.
+Once you have found it you should make a small but visible change to it.
 Change the background color, for instance.
 
 Once that is done, you can add and commit those changes: 
 
 `git add -v * && git commit -a -m "edited css to different background color`
+
+You can type those commands separately but the `&&` is a fancy way of saying "and then do...". It will only do the second thing if there were no errors in the first command.
 
 # Test your branch
 
@@ -69,11 +71,14 @@ Check your development server to see if your changes worked or not.
 
 # Comparing and Merging
 
-To compare your changes with what you had before, make sure all your changes are committed with `git status` (If they're not committed they'll follow you around from branch to branch). Then `git chekcout master` and view your development site.  You should see the old version of the site after a refresh.  If everything looks good, you can `git merge testing` to merge your `testing` commits into `master`.  Then a final refresh should show that your master branch looks like testing did!
+To compare your changes with what you had before, make sure all your changes are committed with `git status` (If they're not committed they'll follow you around from branch to branch). Then `git chekcout master` and view your development site.  You should see the old version of the site after a refresh.  If everything looks good, you can `git merge testing` to merge your `testing` commits into `master`.  Then a final refresh of your `c9users.io` should show that your master branch looks like testing did!
 
-If they did, and you like them, you can merge them back into the `master` branch and then they will be live on your site when you push them up to GitHub. Go ahead and `git push origin master` and view them on your live github site.
+Remember: whatever branch you're on will be what jekyll will serve at c9users.io. But only commits that are on the `master` branch
+and get pushed to github.com will show up on github.io.
 
-If you want to kill the preview, press `CTRL+C` in the SSH terminal where jekyll is running. 
+If you like yourt changes, you can push them up to GitHub. Go ahead and `git push origin master` and view them on your live github site.
+
+If you want to kill the preview, press `CTRL+C` in the terminal where jekyll is running. 
 
 # Roll back a change
 
@@ -121,6 +126,20 @@ Date:   Thu Jun 30 12:54:27 2016 -0400
 
 In this way, we can always fix a mistake we have made (or multiple mistakes), even if we've committed and pushed them. 
 This makes git a *very* powerful tool for making sure that you do not lose work.{% marginnote 'nota-bene' '**_Nota bene:_** This is why it is a good rule of thumb to commit early and often. while working on a project.' %}
+
+# Cleaning up commit history
+
+If you made lots of little commits and want to clean them up, you can `git reset` back to a specific commit in the past, 
+usually at the start o a big feature or change you jsut made. Doing this
+will leave all of your changes to files, and you can see them with `git status` and `git diff .`.  It just erases the commits that describe the changes. This lets you make a clean commit history
+if you have lots of little changes.  That way, you can commit often while you're working, then reset and commit cleanly before you push.
+
+**A word of caution**: in general, it's bad practice to `reset` commits you've already pushed to github.  It's OK to do in this
+class if you have to but when you're working in the real world it's a no-no, since it rewrites shared history and can cause bad conflicts
+with your coworkers' code.
+
+If you do reset commits you've already pushed, you'll have to `git push -f` to get the new history up to github.  This will permanently
+erase the old commits (though the changes to your code should remain if you didn't remove them).
 
 # For Next Time
 

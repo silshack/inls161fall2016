@@ -14,17 +14,16 @@
     title: Build a website
     components: Site published on GitHub Pages
     description: "You will build and deply a web page using GitHub Pages (Jekyll). Most of this assignment will involve creating content in Markdown and editing style in CSS.<br/><br/>The goal is to make your website an attractive place online where you can place information about yourselves, your interests, and your skills. Or your site can be about a project or hobby that you would like to put online. This assignment is intended to help you create an online space that you can actually use while also giving you new skills related to working with web content."
-    link: "https://classroom.github.com/assignment-invitations/ef90db5ca0a5943ef3ed5ceb52c82aae"
+    link: "/inls161fall2016/assignments/assignment2"
     percent: "15"
     due: "2016-10-05"
     shortdue: "Oct 5"
-    published: false
+    published: true
 -   number: "3"
     category: Text
     title: Create documentation
     components: Create formatted text documents
     description: "This assignment is about converting your plaintext source files into different polished output formats.<br/><br/>You will create and convert a document from a markdown source file into multiple output formats using Pandoc. You will also write a simple script to automate this workflow so that it can be done using any document source specified." 
-    link: "https://classroom.github.com/assignment-invitations/69e6999dfd71dc191f0679cbae0c337d"
     percent: "15"
     due: "2016-10-27"
     shortdue: "Oct 27"
