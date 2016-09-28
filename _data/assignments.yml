@@ -72,9 +72,9 @@
     category: Community
     title: Community
     components: "Get involved & learn something"
-    description: "Attend two tech-related community events, including at least one workshop. The first of these is due sometime before Fall break.  Campus events, OIT workshops, and meetup events are examples of the kinds of things I'm looking for. After each event, submit a small writeup about the experience and what you learned." 
+    description: "Attend two tech-related community events, including at least one workshop. The first of these is due sometime before Fall break.  Campus events, OIT workshops, and meetup events are examples of the kinds of things I'm looking for. After each event, submit a small writeup about the experience and what you learned.  This writeup should be a **page** on your website" 
     link: 
     percent: 10
     due: 
-    shortdue: "Oct 5, Dec 7"
+    shortdue: "Oct 19, Dec 7"
     published: true

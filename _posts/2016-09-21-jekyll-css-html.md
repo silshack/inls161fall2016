@@ -160,7 +160,7 @@ cd ~
 
 Add a language name to enable syntax highlighting on these fenced code blocks. 
 
-You can also use jekyll's built-in `\{\% highlight \%\}` tag to add spiffy syntax highlighting to your code the old school way. Learn more here: [https://jekyllrb.com/docs/templates/#code-snippet-highlighting](https://jekyllrb.com/docs/templates/#code-snippet-highlighting)
+You can also use jekyll's built-in `{% raw %}{% highlight %}{% endraw %}` tag to add spiffy syntax highlighting to your code the old school way. Learn more here: [https://jekyllrb.com/docs/templates/#code-snippet-highlighting](https://jekyllrb.com/docs/templates/#code-snippet-highlighting)
 
 {% highlight html %}
 <h1>Syntax Highlighing in Jekyll</h1>

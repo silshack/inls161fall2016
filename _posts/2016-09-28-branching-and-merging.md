@@ -15,6 +15,11 @@ We will use this to change the visual style the site and create blog posts.
 This session will be mostly hands-on. 
 <excerpt/>
 
+# Q & A
+
+* First event writeup now due Weds before Fall break, Oct 19.  Your writeup should be a **page** on your site.  This should be accessible from the index page of your site.  Make sure this is committed and displaying on your github.io site before the end of the day on that Wednesday.
+
+
 # Create a branch
 
 To create, or "checkout" a new branch, we can follow Roger Dudler's guide again.{% sidenote 'gitnoshit' 'Dudler, Roger. “Git: The Simple Guide.” Git: The Simple Guide. Last modified 2015. <http://rogerdudler.github.io/git-guide/>.<br/><br/>Also check this resource out for help with branching and merging: Chacon, Scott, and Ben Straub. “Basic Branching and Merging.” In ProGit. New York, New York: Apress, 2014. https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging.' %}
@@ -37,7 +42,7 @@ A neat trick is that you can use `git checkout -` to go to whatever branch you w
 
 # Edit your CSS 
 
-Find your CSS file. 
+Find your CSS file. You've done this before, but make a small but obvious change now for the purposes of seeing what branching can do.
 
 This file might have either `.css` or `.scss` as an extension.
 
@@ -141,6 +146,42 @@ with your coworkers' code.
 If you do reset commits you've already pushed, you'll have to `git push -f` to get the new history up to github.  This will permanently
 erase the old commits (though the changes to your code should remain if you didn't remove them).
 
+# Merging a branch on Github
+
+OK.  We know how to merge things on the command line.  Now let's make a change to `testing`, push it up to github, do the merge there, then `pull` it back down to our master on Cloud9.
+
+I've put instructions in the below as comments.  You don't need to type them.
+
+```
+git checkout testing     # if you're not there already
+
+# Make an obvious change to your CSS again
+
+git add .
+git commit -m "Another obvious CSS change"
+
+git push origin testing  # This makes a new testing branch on github.com.
+```
+
+Now go to your repo on github.com. Github has noticed that you've pushed a branch and will ask you if you want to create a pull request.  Click to do this.
+
+When creating a pull request, describe the change you made in complete sentences.  
+
+Once the pull request is made, you can have a discussion about the changes, view them, etc.  This is the basis of collaborating with others on github.
+
+Click the Merge button at the bottom.  The default settings are fine.
+
+Congrats!  You've merged the commit to master on github.com and should be able to see it on github.io.
+
+The final thing is to pull the change back down to Cloud9.  
+
+```
+git checkout master    # if not already there
+git pull origin master # gets the new commit
+```
+
+Done!
+
 # For Next Time
 
 We're going to try a slightly different approach next time. 
@@ -148,3 +189,5 @@ I'm going to cluster you in groups based on where you are in the process of comp
 It is okay if you are still early on: that is fine. 
 I want to be able to collectively help you, though, and that will be easier to do if I know 
 where you are and if you can help each other through tasks that are closer together in the overall workflow. 
+
+For the rest of class, continue to work on your sites and initial reflection post.
