@@ -1,5 +1,4 @@
 ---
-published: false
 layout: post
 title: "Single input, multiple outputs"
 category: Text
