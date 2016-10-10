@@ -6,19 +6,13 @@ nav_exclude: true
 
 ## Installing Pandoc
 
-Start a new Clou9 workspace called `assignment3` or something like that.
+Start a new **Blank** Clou9 workspace called `assignment3` or something like that.
 
 To install Pandoc in your Cloud9 DevBox, use the following command:
 
 ```
-sudo apt-get update
-sudo apt-get install pandoc
-```
-
-If you are going to be compiling a document with citations then you will also want to install pandoc-citeproc:
-
-```
-sudo apt-get install pandoc-citeproc
+wget https://github.com/jgm/pandoc/releases/download/1.15.1/pandoc-1.15.1-1-amd64.deb
+sudo dpkg -i pandoc-1.15.1-1-amd64.deb
 ```
 
 Et voila. Installed. 
@@ -30,7 +24,7 @@ Et voila. Installed.
 Clone some example files then `cd` into the new directory:
 
 ```
-git clone git@github.com:silshack/pandoc-ex.git
+git clone https://github.com/silshack/pandoc-ex.git
 cd pandoc-ex
 ```
 
@@ -40,12 +34,30 @@ Convert a Markdown file to HTML:
 pandoc -o output.html example.md
 ```
 
+The `-o` flag should immediately precede the name of the **output** file.  The other file is interpreted as an argument, i.e. the **input**.
+
+### View or download the output with SimpleHTTPServer
+
+With many files, you can preview them in cloud9.  You can View HTML files and dowload other file types by starting a simple server in your project directory:
+
+* Open a new Terminal
+* `cd pandoc-ex`
+* `python -m SimpleHTTPServer $PORT` (Case sensitive)
+* Go to your Application (via the Share menu)
+* Click on the file (in this case `output.html`)
+
+When we get to ODT and DOCX, this is how yuou'll download them to check them out.
+
+### Converting from URLs
+
 Pandoc reads the filetype from the extension in normal usage. 
 If you want to convert a file directly from a URL, you will have to specify the filetype. This converts a webpage from (`-f`) HTML to (`-t`) Markdown:
 
 ```
 pandoc -f html -t markdown https://silshack.github.io/inls161fall2016/syllabus/
 ```
+
+Since we didn't specify the `-o`utput, it just prints the result to the terminal.  Modify the above command with the `-o` flag to output to `syllabus.md`. (You could also do this with bash by using the `>` command. Remember that from the beginning of the command line?)
 
 You can make sure that certain things, like quotes and em-dashes, get read and formatted propery by specifying the "Smart" switch (a capital `-S` or `--smart`):
 
@@ -70,22 +82,11 @@ pandoc -o output.docx example.md
 pandoc -o output.odt example.md
 ```
 
-If you wish to convert between two different word processor filetypes, we might have to get a little creative. 
-We learned in class that if we issue the following command, we get errors related to file encoding and the conversion will not work. 
+If you wish to convert between two different word processor filetypes:
 
 ```
 pandoc -o output.docx example.odt
 ```
-
-If, however, we add an intermediary step, say through HTML, we can get the output that we want. Try it like this instead: 
-
-```
-pandoc -o tmp.html example.odt
-pandoc -o output.docx tmp.html
-```
-
-This preserves the formatting and extracts the text from the ODT as an HTML file and then converts that HTML into DOCX. 
-We do not have the weird encoding errors this way, and we don't have to mess with pipes. 
 
 Filter a document through a template file:
 
@@ -100,6 +101,8 @@ If it is a file called `template.docx` and is located in the same directory as y
 pandoc -S --reference-docx=./template.docx -o example.docx example.md
 ```
 
+There are no templates in the example files we cloned but we'll use these later
+
 You can also use an ODT or OTT for reference:
 
 ```
@@ -108,4 +111,6 @@ pandoc -S --reference-odt=./template.ott -o example.odt example.md
 
 # More example files
 
-<a href="{{ site.baseurl }}/refsheets/examples/#formatted-text-files" target="_blank">Link to the example files.</a>
+<a href="{{ site.baseurl }}/refsheets/examples/#formatted-text-files" target="_blank">Link to some example files.</a>
+
+Play around with these!

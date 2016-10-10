@@ -10,6 +10,20 @@ tags:
 - conversion
 ---
 
+# Q&A
+
+* Grading has started
+* [An exceptional site](https://tfrahm.github.io) - Heavily customized, Javascript sparkles throughout, special fonts 
+* [A great reflection](https://aehaney.github.io/blogging/about/2016/09/24/first-blog-post.html) - Personal, detailed, and thoughtful. *Uses markdown to render `code` and `commands`*
+* [A great commit history](https://github.com/colergibson/colergibson.github.io/commits/master) - Detailed, logical, well-explained
+* In the background: Create a new **Blank** Cloud9 workspace called `assignment3`
+
+# Readings
+
+Did you do today's readings? {% marginnote 'word' '**Reading**: Wiens, John A. “Word Processing versus Writing.” The Auk 100 (1983): 758. https://sora.unm.edu/sites/default/files/journals/auk/v100n03/p0758-p0758.pdf.<br/><br/>**Reading**: Caleb McDaniel, W. “Why (and How) I Wrote My Academic Book in Plain Text | W. Caleb McDaniel.” Last modified September 28, 2012. http://wcm1.web.rice.edu/my-academic-book-in-plain-text.html.<br/><br/>**Reading:** Stross, Charlie. “Why Microsoft Word Must Die.” Charlie’s Diary. Last modified October 12, 2013. http://www.antipope.org/charlie/blog-static/2013/10/why-microsoft-word-must-die.html.' %}  
+
+Make sure you read any readings at the bottom of each class's notes and go over the next class's notes.  We're going to be moving a little faster from now on and it's up to you to make sure you don't get left behind.
+
 # Plaintext, markup, and formatted text
 
 This week we will discuss the uses of plaintext and markup for creating formatted documents. 
@@ -114,7 +128,7 @@ Then we will install it and run it in our Cloud9 workspaces.
 First things first, we need to install Pandoc. 
 You will need to do this in your Cloud9 workspace.
 
-All of the commands for today are linked from the [reference page]({{ site.url }}/refsheets/pandoc-ref/).
+All of the commands for today are linked from the [reference page]({{ site.baseurl }}/refsheets/pandoc-ref/).
 
 # For next time
 
