@@ -1,19 +1,3 @@
----
-layout: default
-title: The United States' Constitution
-author:  Founding Fathers
-gutenberg-release-date: 1975-12-01  
-gutenberg-release-number: 5
-orig-post-date: This file was first posted on August 19, 2003
-prev-update: 2006-04-14
-last-update: 2015-04-01
-edition: 11
-language: English
-editor: John D. Martin III
-source: http://www.gutenberg.org/cache/epub/5/pg5.txt
-nav_exclude: true
----
-
 # THE CONSTITUTION OF THE UNITED STATES OF AMERICA, 1787
 
 ![Image of U.S. Constitution from http://www.archives.gov/exhibits/charters/images/charters_exhibit_zoom_images/constitution_1_of_4_630.jpg](http://www.archives.gov/exhibits/charters/images/charters_exhibit_zoom_images/constitution_1_of_4_630.jpg)
