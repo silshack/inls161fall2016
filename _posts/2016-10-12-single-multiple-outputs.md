@@ -9,7 +9,12 @@ tags:
 - LaTeX
 ---
 
-We've briefly discussed Pandoc now. 
+# Q&A
+
+* Assignment 3 is up!
+
+We've briefly discussed Pandoc now and last time we got hands-on with it. Today we'll go over what we did in class last time, but a little slower.
+
 It bills itself as the "Universal Document Converter." 
 This is reasonably true, but it might require some creative combinations of switches within Pandoc commands as well as multiple commands strung together or intermediate commands to get the desired output. 
 
@@ -42,14 +47,40 @@ https://github.com/inls161/pandoc-practice
 
 Once you have the files in your Cloud9 workspace, I will show you some things in class and then in your groups you will answer and mark up the `example.md` file using the instructions in the file. 
 
+## Revisiting the Constitution
+
+Let's convert markdown to PDF, via HTML.  The `&&` in the middle of this large command means "and then".  It's equivalent to typing in each command sequentially but this way the second command will only execute if the first does, without errors. Plus it's all in one line.  
+
+We go into HTML first to preserve some of the table formatting.  If you have conversion errors in your documents, try stringing commands together like this.
+
+```
+pandoc -S --title="THE CONSTITUTION OF THE UNITED STATES OF AMERICA, 1787" -o usconstitution.html usconstitution.md && pandoc -S --toc -o usconstitution.pdf usconstitution.html
+```
+
+The above won't work, complaining that we don't have `pdflatex`.  This is part of a collection of tools called TeXLive. So now we get to use the APT package manager to install it:
+
+```
+sudo apt-get install texlive
+```
+
+Type `which pdflatex` to verify it's now installed and run the command above.
+
+
+Last time we didn't have the template file to make a good looking ODT file.  Now we do:
+
+```
+pandoc -S --reference-odt=apa.ott -o usconstitution-apa.odt usconstitution.md
+```
+
+
 ***When you are finished with the questions in file:*** 
 
-1. I want you to change the name of the file to your GitHub username. 
+1. I want you to change the name of the file to your GitHub username. Tommy's would be `tommytester.md`.
 2. You will then work as a group to convert the file to HTML, DOCX, and ODT formats, per the instructions in class. I also want you to open the files on your lab computers so you can see what you have done. 
 3. Then I want you to add, commit, and push your changes. 
 4. Finally, you will create a pull request in GitHub to get these files back into my original repository.  
 
-## Basic Pandoc commands
+## Basic Pandoc commands (Review)
 
 {% marginnote 'pandoc-commands' 'All Pandoc commands are documented here: http://pandoc.org/README.html<br/><br/>A good set of example commands exists here: http://pandoc.org/demos.html' %}
 
@@ -74,12 +105,12 @@ pandoc -S -o example.html example.md
 
 There are a host of other commands in the documentation. Be sure to try them out. 
 
-## Specific file commands
+## Specific file commands (Review)
 
 Convert your markdown to HTML:
 
 ```
-pandoc -o example.html exampld.md
+pandoc -o example.html example.md
 ```
 
 If you wish to convert to a DOCX or ODT file:
@@ -92,23 +123,7 @@ pandoc -o example.docx example.md
 pandoc -o example.odt example.md
 ```
 
-If you wish to convert between two different word processor filetypes, we might have to get a little creative. 
-We learned in class that if we issue the following command, we get errors related to file encoding and the conversion will not work. 
-
-```
-pandoc -o example.docx example.odt
-```
-
-If, however, we add an intermediary step, say through HTML, we can get the output that we want. Try it like this instead: 
-
-```
-pandoc -o example.docx example-tmp.html && pandoc -o example.odt example-tmp.html
-```
-
-This preserves the formatting and extracts the text from the DOCX as an HTML file and then converts that HTML into ODT. 
-We do not have the weird encoding errors this way, and we don't have to mess with pipes. 
-
-Filter a document through a template file:
+Filter a document through a template file (template file must already exist):
 
 ```
 pandoc -S --reference-docx=FILE -o example.docx example.md
