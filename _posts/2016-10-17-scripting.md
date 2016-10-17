@@ -10,48 +10,24 @@ tags:
 - Scripts
 ---
 
+# Q&A
+
+* Wednesday: optional Website hack day.  Come swankify your site and/or address my constructive criticism!
+* Community Event writeups due **via email**.  Post them to your website and send me the link I should look at by midnight Weds.  Many of you have made special sections or pages for your event writeups.  If you haven't, think about how to incorporate these into your site gracefully.
+
 Today we will learn how to convert our plaintext Markdown into a PDF. 
 To do this we will have to install some more software, which may take a while. 
 
 In the mean time, we will cover some of the basics of scripting in order to be able to automate our workflows a little bit better. 
 <excerpt/>
 
-# Texlive
+# Install TeXLive
 
-The TeX (or LaTeX) distribution that we are using in conjunction with Pandoc is called "TeXLive." 
-This software is in our Cloud9 workspace's repositories. 
-
-It is very large, so we are only going to install the base package to avoid running out of space on our Cloud9 workspaces. 
-We have a total of 2GB of space. 
-TeXLive should take up an extra ~650MB of space. 
-
-To check to see how much space we have, we can run this command in a terminal:
-
-```df -h```
-
-It will look something like this:
+You've probably already done this, but just in case:
 
 ```
-tommytester:~/workspace (master) $ df -h
-Filesystem          Size  Used Avail Use% Mounted on
-/vz/private/669416  2.0G  1.1G  953M  54% /
-none                128M  4.0K  128M   1% /dev
-none                4.0K     0  4.0K   0% /sys/fs/cgroup
-none                 26M   52K   26M   1% /run
-none                5.0M     0  5.0M   0% /run/lock
-none                128M     0  128M   0% /run/shm
-none                100M     0  100M   0% /run/user
-tommytester:~/workspace (master) $
+sudo apt-get install texlive
 ```
-
-Make a mental note of the number in the first line of output. 
-I have 953MB available. 
-
-## Installation
-
-Now, to get TeXLive installed on our Cloud9 workspaces, we'll need to use apt-get{% sidenote 'apt-get' '“AptGet/Howto.” Ubuntu Documentation - Community Help Wiki. https://help.ubuntu.com/community/AptGet/Howto.' %} just like we did for Pandoc:
-
-```sudo apt-get install texlive```
 
 That will output a bunch of stuff and tell us how much the installation will take up on disk. 
 See if the number is smaller than your available space and then type `Y` and hit enter if you have enough space. 
@@ -62,15 +38,11 @@ This may take a while.
 If that command does not work, it is likely because you need to update your software source repositories and upgrade your installed software packages. 
 You can do that with two commands:
 
-```sudo apt-get update```
+```
+sudo apt-get update
+```
 
-This updates the sources. Follow it with;
-
-```sudo apt-get dist-upgrade```
-
-This actually downloads and installs updates to the already-installed software. 
-
-In the mean time, we can look at scripting. 
+This updates the sources. 
 
 # Scripting
 
@@ -85,11 +57,9 @@ Creating scripts is often a trial and error process, though, and can feel frustr
 ## How to do it?
 
 In class today, we'll go over some basic scripting. 
-We'll use William Shotts' tutorial.Writing Shell Scripts tutorial by William Shotts for next time.{% sidenote 'shell-scripts' 'Shotts, William, Jr. “Writing Shell Scripts.” LinuxCommand.org. Accessed July 6, 2016. http://linuxcommand.org/lc3_writing_shell_scripts.php.' %} 
+We'll use William Shotts' tutorial, Writing Shell Scripts tutorial by William Shotts for next time.{% sidenote 'shell-scripts' 'Shotts, William, Jr. “Writing Shell Scripts.” LinuxCommand.org. Accessed July 6, 2016. http://linuxcommand.org/lc3_writing_shell_scripts.php.' %} 
 
-A basic Bash script is simply a list of commands in a file. 
-
-The lines in the file get executed sequentially and then at the end of the file Bash stops, or waits depending on what the file tells it to do. 
+A basic Bash script is simply a list of commands in a file. It's as if you typed them line-by-line after each ones finishes. The lines in the file get executed sequentially and then at the end of the file Bash stops, or waits depending on what the file tells it to do. 
 
 ### Execution
 
@@ -98,29 +68,35 @@ If this is not the case, then we have to call a shell in the command line in ord
 
 To create a basic Bash shell script, just touch a new file and give it the extension `.sh`:
 
-```touch hello-world.sh```
+```
+touch hello-world.sh
+```
 
 Then we'll make it executable:
 
-```chmod +x hello-world.sh```
+```
+chmod +x hello-world.sh
+```
 
 This command sets the execute flag for user, group, and anyone in the permissions. 
-They should look like this if you list the files with long output:
+They should look like this if you list the files with long output (`ls -al`):
 
 ```
-tommytester:~/workspace/helper-scripts (master) $ ls -lah
+tommytester:~/workspace (master) $ ls -lah
 total 64K                                   
 drwxr-xr-x 3 cabox cabox 4.0K Jul  7 12:44 .
 drwxrwxr-x 5 cabox cabox 4.0K Jul  7 10:02 ..
 -rwxr-xr-x 1 cabox cabox  104 Jul  7 12:50 hello-world.sh 
-tommytester:~/workspace/helper-scripts (master) $
+tommytester:~/workspace (master) $
 ```
 
-We also need to add a "shebang" to our script to tell Bash to execute this file. Inside the `hello-world.sh` file, put this on the first line:
+We also need to add a "shebang" to our script to tell Bash how to execute this file. Inside the `hello-world.sh` file, put this on the first line:
 
 ```
 #!/bin/bash
 ```
+
+Shebangs can also point to other things, like `python` or `ruby`.  Once you learn those languages you can make scripts with them exactly like this but with a special shebang.  The shebang will need to point to the Python or Ruby binary, which is usually in `/usr/bin/python` or `/usr/bin/ruby` so add that after your she (`#`) bang (`!`).
 
 ### Echo
 
@@ -128,17 +104,19 @@ Now, we're going to make this script say hello to the world and hello to us.
 We do this by using the `echo` command, which outputs whatever you tell it as text to `STDOUT`. 
 Try it:
 
-```echo "Hello, world!"```
+```
+echo "Hello, world!"
+```
 
 You should see this in the command line:
 
 ```
-tommytester:~/workspace/helper-scripts (master) $ echo "Hello, world!"
+tommytester:~/workspace (master) $ echo "Hello, world!"
 Hello, world!
-tommytester:~/workspace/helper-scripts (master) $
+tommytester:~/workspace (master) $
 ```
 
-Now we will add this command to our script: 
+Now we will add this command to our script.  Notice there's a **comment** above the command, telling the humans what's up.  The computer ignores comments: 
 
 ```
 #!/bin/bash
@@ -150,9 +128,9 @@ echo "Hello, world!"
 Now when we run this script, we will see the same output as from our earlier `echo` command on `STDOUT`:
 
 ```
-tommytester:~/workspace/helper-scripts (master) $ ./hello-world.sh
+tommytester:~/workspace (master) $ ./hello-world.sh
 Hello, world!
-tommytester:~/workspace/helper-scripts (master) $
+tommytester:~/workspace (master) $
 ```
 
 Note the `./` in front of the script's filename in the above command. 
@@ -162,12 +140,12 @@ The excecute path is just a list of directories from which we are allowed to exe
 To see your path, use the following command: 
 
 ```
-tommytester:~/workspace/helper-scripts (master) $ echo $PATH 
+tommytester:~/workspace (master) $ echo $PATH 
 /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
-tommytester:~/workspace/helper-scripts (master) $
+tommytester:~/workspace (master) $
 ```
 
-These are all the directories from which you can execute a program. 
+These are all the directories where the terminal will look when you try to run a program or script.  If something isn't in any of these directories, the `.` will tell the terminal to look in your current location. 
 
 Finally, we want to add a "Hello!" to ourselves, and use our GitHub username. 
 We will add the same command as before, substituting our GitHub username for world, so that the script looks like this (I've used my own name here):
@@ -184,13 +162,28 @@ echo "Hello, jdmar3!"
 Now if we run this, we will see all of this output:
 
 ```
-tommytester:~/workspace/helper-scripts (master) $ ./hello-world.sh
+tommytester:~/workspace (master) $ ./hello-world.sh
 Hello, world!
 Hello, jdmar3!
-tommytester:~/workspace/helper-scripts (master) $
+tommytester:~/workspace (master) $
 ```
 
+## Other Scripting Ideas
+
+Scripts can do anything you can do! For instance, you might make a script that takes you to a certain directory then lists the files there:
+
+```
+cd ~/workspace/myproject
+echo "Entered ~/workspace/myproject.  Found these files and direcotries:"
+ls -al
+```
+
+Make some custom scripts that do thing you know how to do using the instructions above.  Play around with this.  As you've probably guessed, next time we'll be writing some scripts to automate pandoc.
+
+
 ## Next Time
+
+If you finish early or need some ideas for your scripts, go through the resources below and try out the examples.  If you'd like to get a jump on next time, go back through the class notes and try to automate some of our previous activities.
 
 We will pick up where we left off next time during lab and get to work creating our scripts for the next assignment. 
 Please review the tutorial on writing shell scripts again.{% sidenote 'shell-scripts' 'Shotts, William, Jr. “Writing Shell Scripts.” LinuxCommand.org. Accessed July 6, 2016. http://linuxcommand.org/lc3_writing_shell_scripts.php.' %} 
