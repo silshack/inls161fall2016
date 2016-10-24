@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: post
 title: "Lab #3: Automation and Scripting"
 category: Text
@@ -36,7 +36,7 @@ echo "Hello, $GHUSERNAME!"
 Now if we run the script, it will pause and ask us for input:
 
 ```
-cabox@box-codeanywhere:~/workspace/helper-scripts$ ./hello-world.sh
+ubuntu:~/workspace$ ./hello-world.sh
 Hello, world!
 Who are you?
 ```
@@ -46,7 +46,7 @@ If I type my GitHub username and press enter, then Bash will read it and put it 
 ```
 jdmar3
 Hello, jdmar3!
-cabox@box-codeanywhere:~/workspace/helper-scripts$ 
+ubuntu:~/workspace$ 
 ```
 
 ## Setting a variable 
@@ -69,10 +69,10 @@ echo "Hello, $GHUSERNAME!"
 If we run this the Bash will output the value we set in place of the variable name:
 
 ```
-cabox@box-codeanywhere:~/workspace/helper-scripts$ ./hello-world.sh
+ubuntu:~/workspace$ ./hello-world.sh
 Hello, world!
 Hello, jdmar3!
-cabox@box-codeanywhere:~/workspace/helper-scripts$ 
+ubuntu:~/workspace$ 
 ```
 
 ## Accepting a variable from command line input
@@ -93,29 +93,23 @@ echo "Hello, $GHUSERNAME!"
 Now when we run the script, we will have to specify the username directly after the name of the script. 
 
 ```
-cabox@box-codeanywhere:~/workspace/helper-scripts$ ./hello-world.sh jdmar3
+ubuntu:~/workspace$ ./hello-world.sh jdmar3
 Hello, world!
 Hello, jdmar3!
-cabox@box-codeanywhere:~/workspace/helper-scripts$ 
+ubuntu:~/workspace$ 
 ```
 
 If you change the input, you will see it change in the output now:
 
 ```
-cabox@box-codeanywhere:~/workspace/helper-scripts$ ./hello-world.sh YOUR-GITHUB-USERNAME
+ubuntu:~/workspace$ ./hello-world.sh YOUR-GITHUB-USERNAME
 Hello, world!
 Hello, YOUR-GITHUB-USERNAME!
-cabox@box-codeanywhere:~/workspace/helper-scripts$ 
+ubuntu:~/workspace$ 
 ```
 
-# Lab
+# Rest of Class: Work on Assignment 3
 
 You can use the techniques above to create a script to automate your document conversion workflow. 
 Use the assignment text to make sure that you have gotten each of the required parts to work properly. 
 
-# For next week
-
-Next week we will use similar methods to help to automate the collection and formatting of data in flat data tables. 
-Through this we will learn more about pipes and redirecting output.{% sidenote 'csv' 'Connelly, Brian. “Working with CSVs on the Command Line.” http://bconnelly.net/. Last modified September 23, 2013. http://bconnelly.net/working-with-csvs-on-the-command-line/.' %} 
-
-We will then learn how to use data tables to create a more complex database, which we will be able to query to see relationships between different variables.{% sidenote 'sql' 'Sverdlov, Etel. “A Basic MySQL Tutorial.” DigitalOcean. Last modified June 12, 2012. https://www.digitalocean.com/community/tutorials/a-basic-mysql-tutorial.'%} 

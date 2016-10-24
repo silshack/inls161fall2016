@@ -24,7 +24,7 @@
     title: Create documentation
     components: Create formatted text documents
     description: "This assignment is about converting your plaintext source files into different polished output formats.<br/><br/>You will create and convert a document from a markdown source file into multiple output formats using Pandoc. You will also write a simple script to automate this workflow so that it can be done using any document source specified." 
-    link: "https://classroom.github.com/assignment-invitations/69e6999dfd71dc191f0679cbae0c337d"
+    link: "/inls161fall2016/assignments/assignment3/"
     percent: "15"
     due: "2016-10-27"
     shortdue: "Oct 27"
