@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: post
 title: "Handling data"
 category: Data
@@ -74,7 +74,7 @@ The columns will represent a specifically defined aspect of data that we gather 
 
 <p>We&#39;ll start with a list of data. </p>
 
-<p>Open a new file and name it with your GitHub user account and the extension .list. </p>
+<p>Create an assignment 4 workspace on Cloud9.  Open a new file and name it with your GitHub user account and the extension .list. </p>
 
 <p>Mine will be <code>jdmar3.list</code>. </p>
 
