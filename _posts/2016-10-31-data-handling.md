@@ -80,22 +80,22 @@ The columns will represent a specifically defined aspect of data that we gather 
 
 <p>Inside the file, I want you to give one-word or numerical answers to the following (as specified), in this order, each on their own line:</p>
 
-<p>What is your GitHub username?
-How tall are you (in centimeters)?
-What time did you wake up this morning (in 24-hour/military time: e.g., 06:30)?
-How many semesters do you have left in your degree program? 
-Approximately how far is your home city/town away from UNC/Chapel Hill (in km)?</p>
+* What is your GitHub username?
+* How tall are you (in centimeters)?
+* What time did you wake up this morning (in 24-hour/military time: e.g., 06:30)?
+* How many semesters do you have left in your degree program? 
+* Approximately how far is your home city/town away from UNC/Chapel Hill (in km)?
 
 <p>If any answer doesn&#39;t apply to you, type <code>NA</code> (&quot;not applicable&quot;).</p>
 
 <p>My file will look like this:</p>
-<div class="highlight"><pre><code class="language-" data-lang="">jdmar3
+<div class="highlight"><pre><code class="language-" data-lang="">eah13
 175.26
-06:45
+06:00
 2
-1,129.3
+344.4
 </code></pre></div>
-<p>Very simple. </p>
+<p>We now have semi-structured data! Very simple. </p>
 
 <h3 id="comma-separated-values-(csv)">Comma Separated Values (CSV)</h3>
 
@@ -130,9 +130,9 @@ We can use programs on top of this to manipulate that output. </p>
 
 <p><code>paste -d, -s example.list &gt; example.csv</code> </p>
 
-<p>This will take the output from the first part of the command and overwrite the CSV file specified in the second part. </p>
+This will take the output from the first part of the command and overwrite the CSV file specified in the second part.
 
-<p>This command will append the output to the file instead of overwriting it:</p>
+<p>Sometimes you don't want to overwrite a file each time.  In that case, this command will append the output to the file instead of overwriting it:</p>
 
 <p><code>paste -d, -s example.list &gt; example.csv</code></p>
 
@@ -147,15 +147,87 @@ You&#39;ll find it on your keyboard as SHIFT+.</p>
 
 <p><code>cat example.csv | wc -l</code></p>
 
+    
+
+<h1>Groups</h1>
+
+<p>We're grouping up for the next assignment. Here are the groups:</p>
+
+<p><pre><code>
+HigFig
+tfrahm
+kelhammer
+===
+gma96
+minorfires
+jpanken
+===
+aehaney
+brynnaw
+ErinGray19
+===
+celineyuwono
+cjayscue
+ohreagano
+===
+colergibson
+gavvy
+jamiemramos
+===
+emmacai
+jpueb96
+dylanjtastet
+===
+efcline
+sanjkris
+sarecht
+===
+danielevanday
+cltomli
+ectomli
+===
+pillaim
+ldinkins
+</code></pre></p>
+ 
+
+<p>For this first part of the assignment it's very important that you each use unique filenames and don't modify each other's files.  Otherwise we'll get conflicts, which will be a bummer.  When you're in your groups: </p>
+
+<ul>
+<li>pick and awesome but easy to type group name</li>
+<li>have <strong>one</strong> person create a shared repository titled <code>group-name-assignment-4</code>. Obvs insert your real group name. <strong>Check the box to add a Readme so that the repository is cloneable</strong>.  Add all group members to that repository so that they have <strong>commit</strong> access</li>
+<li>Have each member <strong>clone</strong> the new repository to their <code>assignment4</code> workspace.</li>
+<li>run <code>paste -d, -s tommytester.list &amp;gt; tommytester.csv</code>, swapping in your username for tommy's</li>
+<li>Each member move the csv file they made into their version of the repository</li>
+<li>Everyone <code>git status</code> to make sure all you've done is add one file then add, commit and push.  If youve made other changes, undo them.</li>
+<li>Everyone pull</li>
+</ul>
+
+
+<p>Everyone should now have a file for each group member, named after their github username. Once you're all there, move on:</p>
+
+<ul>
+<li>Each group member pass all of your group members' csv files as arguments to <code>cat</code> and then <strong>redirect</strong> that to <code>youusername-all.csv</code>. </li>
+<li>Make sure no one gets left behind and that everyone's filename is unique. if <code>git status</code> tells you you've done more than make one new file, undo those changes.</li>
+<li>Everyone add, commit and push your new csv files </li>
+<li>Everyone pull</li>
+</ul>
+
+
+
+<p>Your repository (and your Cloud9 workspaces) should have one base CSV file for each group member and one `-all` csv file for each member.</p>
+
+<p>Alright we've got some basic collaboration done, hopefully without conflicts!  You can use the rest of class to work on Assignment 4.</p>
+
 <h1 id="for-next-time">For next time</h1>
 
-<p>Tomorrow, we are going to work in groups to learn to create and aggregate data using scripts.
+<p>Next time, we are going to work in groups to learn to create and aggregate data using scripts.
 In your groups, you will write a script that asks the above questions of the user and then appends their answer to a CSV file. 
 This will be the basis of the next asssignment, which will be a group assignment. </p>
 
 <p>I would like you to review some commands for working with a CSV file including how pipes work.<label for='csv' class='margin-toggle sidenote-number'></label><input type='checkbox' id='csv' class='margin-toggle'/><span class='sidenote'>Connelly, Brian. “Working with CSVs on the Command Line.” <a href="http://bconnelly.net/">http://bconnelly.net/</a>. Last modified September 23, 2013. <a href="http://bconnelly.net/working-with-csvs-on-the-command-line/">http://bconnelly.net/working-with-csvs-on-the-command-line/</a>. </span> </p>
 
-<p>I would also like you to watch the following video on working with CSV files. I think that it might be very helpful. Try watching it once and then following along a second time. </p>
+<p>I would also like you to watch the following video on working with CSV files. I think that it might be very helpful for those of you who are interested in the extra credit. Try watching it once and then following along a second time. </p>
 
 <div class="video-container">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/OecFFZpIkDc" frameborder="0" allowfullscreen></iframe>

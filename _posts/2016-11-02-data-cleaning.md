@@ -42,7 +42,20 @@ It will also be a good idea to have a look at the LibreOffice documentation to f
 
 Finally, here is a compendium of all of the functions available to you in LibreOffice Calc: https://help.libreoffice.org/Calc/Spreadsheet_Functions
 
+# Opening a CSV in LibreOffice Calc
+
+* Download one of your group's large CSV files
+* Open it in LibreOffice Calc
+* Edit some of the fields
+* Save it as 'gh-uname-office.csv', inserting your username
+* Upload it to your cloud9 Workspace
+* Open it in Cloud9.  See, it's just a plaintext file!  If you see gibberish you probably didn't save as a CSV, so follow the above steps again.
+
 # For next time
 
 We're going to break into databases next time and have a MySQL crash course. 
 I would like you to look over some basic MySQL tutorials on your own so that we are prepared to dig into this.{% sidenote 'sql' 'Sverdlov, Etel. “A Basic MySQL Tutorial.” DigitalOcean. Last modified June 12, 2012. https://www.digitalocean.com/community/tutorials/a-basic-mysql-tutorial.'%} 
+
+# Rest of Class
+
+Get into your groups and work on Assignment 4! It's due Sunday at midnight.

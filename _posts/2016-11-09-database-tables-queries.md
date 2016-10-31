@@ -2,7 +2,7 @@
 published: false
 layout: post
 title: "Databases, tables, queries, and relationships"
-category: Data
+category: Databases
 tags: 
 - database
 - tables

@@ -2,7 +2,7 @@
 published: false
 layout: post
 title: "Database software and MySQL"
-category: Data
+category: Databases
 tags: 
 - database
 - SQL
@@ -59,38 +59,28 @@ We wish to avoid that.
 
 We will install MySQL so that we can create and explore a database using the SQL shell in our Cloud9 workspaces.
 
-# System maintenance
+# New Workspace
 
-First update and upgrade all packages:
+Create an `assignment5` workspace and update all packages:
 
-```sudo apt-get update && sudo apt-get upgrade```
-
-We will need to make some space on our workspaces to install MySQL. 
-
-We no longer need `unoconv`, so let's get rid of it:
-
-```sudo apt-get remove unoconv```
-
-When that is done, we can remove all of its dependencies:
-
-```sudo apt-get autoremove --purge```
-
-And then just for good measure, let's clean out our package cache:
-
-```sudo apt-get autoclean && sudo apt-get clean```
+```sudo apt-get update```
 
 # Install the MySQL client and server packages
 
 Then we have to install one dependency, without which the install will fail:
 
-```sudo apt-get install bsdutils```
+```
+sudo apt-get install bsdutils
+```
 
 Then install both the MySQL server and client packages in separate commands. 
 
-```sudo apt-get install mysql-server```
+```
+sudo apt-get install mysql-server
+```
 
 This will ask you to create a password for the MySQL root user. 
-Since we are only trying things out today and not installing this for the purpose of running a real SQL server, just put ```changethis``` as the root password. 
+Since we are only trying things out today and not installing this for the purpose of running a real SQL server, just put `password` as the root password. 
 
 Then install the client:
 
@@ -98,7 +88,7 @@ Then install the client:
 
 # For next time
 
-Tomorrow, we will return to databases and discuss the conceptual and theoretical underpinnings of what we worked on today. 
+Next time we will return to databases and discuss the conceptual and theoretical underpinnings of what we worked on today. 
 I would like you to read something about databases.{% sidenote 'db' '“What Is a Database?” BBC Guides. http://www.bbc.co.uk/guides/z8yk87h.' %}
 
 We will look at other resources and tutorials in class as well. 

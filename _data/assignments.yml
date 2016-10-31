@@ -34,11 +34,11 @@
     title: Make data
     components: Create and format spreadsheets using scripts
     description: "This assignment aims at strengthening our scripting skills and learning how to create a well-formed dataset to work with. You will extend what you do in this assignment in the next one, so keep that in mind.<br/><br/>You will learn how to aggregate data and script the data generation process. You will create a short questionnaire and then use Bash to script collection of answers. Your script will write the output of that questionnaire to a CSV file.<br/><br/>You will work with your designated teams to complete this assignment."
-    link: "https://github.com/jdmar3/task-4-create-data"
+    link: "/inls161fall2016/assignments/assignment4/"
     percent: "5"
-    due: "2016-11-10"
-    shortdue: "Nov 10"
-    published: false
+    due: "2016-11-6"
+    shortdue: "Nov 6"
+    published: true
 -   number: "5"
     category: Database
     title: Organize data
