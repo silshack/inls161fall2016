@@ -228,7 +228,7 @@ Now you have exited from the MySql prompt.
 This command will run the query in quotes:
 
 ```
-mysql -u root -p -H -e "SELECT AVG(RetailPrice) AS 'Average Price', MIN(RetailPrice) AS 'Lowest Price', MAX(RetailPrice) AS 'Highest Price' FROM tblBook;" booksinfo
+mysql -u tommytester -p -H -e "SELECT AVG(RetailPrice) AS 'Average Price', MIN(RetailPrice) AS 'Lowest Price', MAX(RetailPrice) AS 'Highest Price' FROM tblBook;" booksinfo
 ```
 
 # MYSQL Scripting
@@ -238,15 +238,14 @@ We've been typing all of these commands into a prompt. We can also make MySQL sc
 Put this text into a file called `query.sql`:
 
 ```
-#!/usr/bin/mysql
-
+USE booksinfo;
 SELECT AVG(RetailPrice) AS 'Average Price', MIN(RetailPrice) AS 'Lowest Price', MAX(RetailPrice) AS 'Highest Price' FROM tblBook;
 ```
 
-Then `chmod +x` this file and type
+Then type
 
 ```
-source query.sql
+mysql -u tommytester -p < query.sql
 ```
 
 from the command line to run your script. This is equivalent to the command above but using scripts may be useful if you're going to be entering complex commands.  Also, remember that scripts can call other scripts!
@@ -255,11 +254,15 @@ from the command line to run your script. This is equivalent to the command abov
 
 To export your whole database so that you can use it elsewhere (i.e., transfer it to a different server) do the following command:
 
-```mysqldump -u root -p booksinfo > booksinfo.sql```
+```
+mysqldump -u tommytester -p booksinfo > booksinfo.sql
+```
 
-If you want to then import that same database somewhere else, the command is very similar. The direction changes, and instead of the specialized ```mysqldump``` command, you use just the standard MySQL client command:
+If you want to then **import** that same database somewhere else, the command is very similar. The direction changes, and instead of the specialized ```mysqldump``` command, you use just the standard MySQL client command:
 
-```mysql -u root -p booksinfo < booksinfo.sql```
+```
+mysql -u tommytester -p booksinfo < booksinfo.sql
+```
 
 # Next time
 

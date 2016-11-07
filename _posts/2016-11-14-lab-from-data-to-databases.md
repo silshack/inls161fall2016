@@ -23,43 +23,13 @@ I would suggest looking at the the manual page for the MySQL client to see what 
 You will be expected in class to be looking up other resources as well. 
 If you find something useful, share it with me and I will put links here.
 
-# Next week
+# Using Mysql on Cloud9
 
-On Monday we are going to begin talking about presentations and creating good presentation materials in earnest. 
+Cloud9 has already set up a username and password for you.  Your password is blank and your username is your github username:
 
-I would like you to read/deep skim Edward Tufte's piece on the stupidity of PowerPoint.{% sidenote 'powerpoint' 'Tufte, Edward R. The Cognitive Style of Powerpoint: Pitching Out Corrupts Within. Cheshire, Connecticut: Graphics Press, 2011. http://users.ha.uth.gr/tgd/pt0501/09/Tufte.pdf.' %} 
+```
+mysql --user=tommytester
+```
 
-## Exemplars
+You can then add whatever flags and arguments are needed for your scripts.  You may need to set a password for all your group's users, and either way you'll either need to create the same user for everyone in your group in mysql or ask the person running their script for their mysql username to customize the command.  Either approach is fine.
 
-I would also like you to view the following video of a talk by Lawrence Lessig.
-We will look at parts of this in class as well, but it would be good if you could sit down and view the whole thing over the course of the weekend.
-It exists in four parts linked below.
-
-<div class="video-container">
-  <iframe width="420" height="315" src="https://www.youtube.com/embed/Qk_5UccWm3o" frameborder="0" allowfullscreen></iframe>
-</div>
-<div class="video-container">
-  <iframe width="420" height="315" src="https://www.youtube.com/embed/piLXKUE_Bzo" frameborder="0" allowfullscreen></iframe>
-</div>
-<div class="video-container">
-  <iframe width="420" height="315" src="https://www.youtube.com/embed/ajv0Lxaqoys" frameborder="0" allowfullscreen></iframe>
-</div>
-<div class="video-container">
-<iframe width="420" height="315" src="https://www.youtube.com/embed/xSbWG2LFrOk" frameborder="0" allowfullscreen></iframe>
-</div>
-
-## Reveal.js
-
-We will be using reveal.js to create presentations. 
-Please click through this demo presentation and see what is possible to do with it.{% sidenote 'reveal' 'El Hattab, Hakim. Reveal.js: The HTML5 Presentation Framework. http://lab.hakim.se/reveal-js/#/.' %} 
-You can also view the source code for the demo presentation. 
-We will look at this together in detail. 
-
-## Thought leaders and TED Talks
-
-You should also give the following video a watch.
-It will help put into perspective what is really happening when we watch TED Talks and similar presentations. 
-
-<div class="video-container">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/_ZBKX-6Gz6A" frameborder="0" allowfullscreen></iframe>
-</div>

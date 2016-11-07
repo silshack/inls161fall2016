@@ -69,7 +69,9 @@ sudo apt-get update
 
 # Install the MySQL client and server packages
 
-Then we have to install one dependency, without which the install will fail:
+You probably already have all of these installed by default.  But just in case, here is how you'd install mysql on linux.
+
+First we have to install one dependency, without which the install will fail:
 
 ```
 sudo apt-get install bsdutils
@@ -80,9 +82,6 @@ Then install both the MySQL server and client packages in separate commands.
 ```
 sudo apt-get install mysql-server
 ```
-
-This will ask you to create a password for the MySQL root user. 
-Since we are only trying things out today and not installing this for the purpose of running a real SQL server, just put `password` as the root password. 
 
 Then install the client:
 
