@@ -210,7 +210,7 @@ show tables;
 Look at what is in the new table:
 
 ```
-SELECT * FROM qryPrices
+SELECT * FROM qryPrices;
 ```
 
 It should match the output from when you ran the query before. 
