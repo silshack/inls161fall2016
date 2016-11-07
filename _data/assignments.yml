@@ -44,11 +44,11 @@
     title: Organize data
     components: Create and script a database 
     description: "This assignment aims at further strengthening our scripting skills and working more closely with a database. In this assignment, you will use scripts and the MySQL shell to create a database and use queries to get information from it.<br/><br/>You will work with your group to modify your data collection script so that it interfaces with a database. You will take the questionnaire script that you developed in your group and make a new version of it that interfaces with a MySQL database.<br/><br/>You will work with your designated teams to complete this assignment."
-    link: "https://github.com/jdmar3/task-5-database-interface"
+    link: "/inls161fall2016/assignments/assignment5/"
     percent: "15"
     due: "2016-11-17"
     shortdue: "Nov 17"
-    published: false
+    published: true
 -   number: "6"
     category: Present
     title: Be presentable

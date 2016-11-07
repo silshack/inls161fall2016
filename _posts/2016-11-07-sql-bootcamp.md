@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: post
 title: "Database software and MySQL"
 category: Databases
@@ -63,7 +63,9 @@ We will install MySQL so that we can create and explore a database using the SQL
 
 Create an `assignment5` workspace and update all packages:
 
-```sudo apt-get update```
+```
+sudo apt-get update
+```
 
 # Install the MySQL client and server packages
 
@@ -84,7 +86,202 @@ Since we are only trying things out today and not installing this for the purpos
 
 Then install the client:
 
-```sudo apt-get install mysql-client```
+```
+sudo apt-get install mysql-client
+```
+
+# SQL Boot Camp: Part 1
+
+## Get some data
+
+Let's download some CSV files that I prepared with a list of books in them. 
+
+```
+wget http://inls161.johndmart.in/raw-material/tblBook.csv
+``` 
+
+```
+wget http://inls161.johndmart.in/raw-material/tblPub.csv
+```
+
+## Enable imports
+
+Later we're going to import some data. First we need to enable this.  Type:
+
+```
+sudo nano /etc/mysql/my.cnf
+```
+
+Use your **cursor** to go down to a line that says `[mysqld]`.  Directly under that line, add this:
+
+```
+secure-file-priv = ""
+```
+
+Press `Ctrl-X` to exit nano, the `Y` to save and `Enter` to confirm the file name.
+
+Now we'll restart Mysql:
+
+```
+mysql-ctl restart
+```
+
+It's very important to type everything exactly in configuration files.  If you run into something like `ERROR 1290 (HY000): The MySQL server is running with the --secure-file-priv option so it cannot execute this statement` below, come back up here and do this again more carefully.
+
+# The MySQL prompt
+
+Once we are all installed, use the ```mysql-ctl``` command to get into the ```mysql>``` prompt:
+
+```
+mysql-ctl cli
+```
+
+This specifies that you want the MySQL prompt (or **c**ommand **l**ine ***i**nterface). 
+
+Next let's create a new DB. Make sure that your prompt looks like this:
+
+```
+mysql> 
+```
+
+If it does, then you can type:
+
+```
+CREATE DATABASE booksinfo;
+```
+
+Commands in the mysql> prompt are *case-sensitive,* so pay attention to the case of the commands. 
+
+Let's list our DBs:
+
+```
+SHOW databases;
+```
+
+We should see the DB with the name that we created in the list. Let's move into it:
+
+```
+USE booksinfo;
+```
+
+## Add tables
+
+Now we have to create two tables so that we can import data from our CSV files. The things inside the parentheses are
+
+```
+CREATE TABLE tblBook (ID INT, 
+                      Title VARCHAR(255), 
+                      Date INT, 
+                      RetailPrice DECIMAL(5,2), 
+                      Copies INT, 
+                      ShelfNumber VARCHAR(255), 
+                      PubID INT);
+```
+
+```
+CREATE TABLE tblPub (ID INT, 
+                     Publisher VARCHAR(255), 
+                     City VARCHAR(255), 
+                     State VARCHAR(255), 
+                     Country VARCHAR(255));
+```
+
+See what tables we have just created:
+
+```
+SHOW tables;
+```
+
+Let's import some tables from the files we downloaded earlier.  
+
+```
+LOAD DATA INFILE '/home/ubuntu/workspace/tblBook.csv' INTO TABLE tblBook FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"';
+```
+
+This should give us some output. 
+If we notice a warning, type the following to view the warnings:
+
+```
+SHOW WARNINGS;
+```
+
+So, it looks like we have a missing date. 
+No big deal. 
+We'll deal with that later. 
+Let's import our other table. 
+
+```
+LOAD DATA INFILE '/home/ubuntu/workspace/tblPub.csv' INTO TABLE tblPub FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"';
+```
+
+Let's see what is in our tables:
+
+```
+SHOW COLUMNS FROM tblBook;
+```
+
+```
+SHOW COLUMNS FROM tblPub;
+```
+
+We'll notice that we have no key set for either table. 
+We need to do this, right?
+
+```
+ALTER TABLE tblBook ADD PRIMARY KEY (ID);
+```
+
+Now look at the table again and see that it has changed:
+
+```
+SHOW COLUMNS FROM tblBook;
+```
+
+Now do the same for the other table:
+
+```
+SHOW COLUMNS FROM tblPub;
+```
+
+```
+ALTER TABLE tblPub ADD PRIMARY KEY (ID);
+```
+
+```
+SHOW COLUMNS FROM tblPub;
+```
+
+You should see that the `ID` column now has `Pri` in its `Key` field.
+
+## Define relationships
+
+We need to tell MySQL that the PubID column in tblBook refers to the primary key in tblPub. This action is called a constraint and the reference is called a foreign key. 
+
+```
+ALTER TABLE tblBook ADD CONSTRAINT fk_PubID FOREIGN KEY (PubID) REFERENCES tblPub(ID) ON UPDATE NO ACTION;
+```
+
+Let's look at our columns again:
+
+```
+SHOW COLUMNS FROM tblBook;
+```
+
+You'll notice that the `Key` column now has `MUL` for `PubID`. 
+This means that we are using that column as an index as well as the primary key column. 
+This new index just happens to be non-unique. 
+
+# Get this right!
+
+If your tables, columns, etc don't look *exactly* like tommytesters, you may need to start over on your own to get it right.
+
+To start over, make sure you're in the mysql prompt (or get there again with `mysql-ctl cli` and `USE booksinfo`) and type 
+
+```
+DROP TABLE tblBook tblPub;
+```
+
+to delete both tables. Then continue the instructions above from `USE booksinfo` on.
 
 # For next time
 
