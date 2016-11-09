@@ -51,6 +51,13 @@ You will need to do the following for this assignment to be considered complete.
   - dump the MySQL database into a .sql file in your repository directory with the rest of your files after it has been modified with next data
 6. Run your script several times to collect data.
 
+**Bonuses**:
+
+* Use SQL `INSERT` statements to put data into your database instead of loading a CSV file
+* Display nicely formatted tables of all the data in your database at the end
+* Provide a user interface to import and export data via dumps.  These imports should append data if able
+
+
 ### Individually:
 
 1. Sync your repository fork with the main fork at the end of the work (Look here for how to do this: <https://help.github.com/articles/syncing-a-fork/>).

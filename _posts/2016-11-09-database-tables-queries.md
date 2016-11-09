@@ -86,7 +86,7 @@ mysql-ctl cli
 then, from mysql:
 
 ```
-USE booksinfo
+USE booksinfo;
 ```
 
 We're ready to pick up where we left off.
