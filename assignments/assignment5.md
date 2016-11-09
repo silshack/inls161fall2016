@@ -41,7 +41,7 @@ You will need to do the following for this assignment to be considered complete.
 
 ### As a team:
 
-1. **Clone** your original script and .csv files from assignment 4 in this repository. Then `cd` into **that new directory** and `rm-rf .git` to remove the assignment 4 git tracking.  **Do not do this in your assignment 5 repository**.
+1. **Clone** your original script and .csv files from assignment 4 in this repository. Then `cd` into **that new directory** and `rm -rf .git` to remove the assignment 4 git tracking.  **Do not do this in your assignment 5 repository**.
 2. Make a branch with an archived version of your first questionnaire script.
 3. Switch back into the master branch to work on this assignment.
 4. Create a database that has the appropriate variables and variable types (this might be an accessory script or a conditional statement in your script).
