@@ -56,6 +56,7 @@ You will need to do the following for this assignment to be considered complete.
 * Use SQL `INSERT` statements to put data into your database instead of loading a CSV file
 * Display nicely formatted tables of all the data in your database at the end
 * Provide a user interface to import and export data via dumps.  These imports should append data if able
+* Make another **table** in your database to store information about the **users** who complete your survey. Once you have this table, figure out how to **join** it with their responses when you print out the data you've collected.
 
 
 ### Individually:
