@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: post
 title: "Adding audio for narration and video to your slides"
 category: Present
@@ -22,11 +22,11 @@ Today we are going to work with Audacity to create and edit some audio to embed 
 Look for the correct installer at the download site for Audacity's current version. 
 DMG for Mac and EXE for windows. 
 
-http://www.audacityteam.org/download/
+[http://www.audacityteam.org/download/](http://www.audacityteam.org/download/)
 
 Install the software as you normally would install something. 
 
-Specific instructions here, if you need to troubleshoot: http://manual.audacityteam.org/o/man/faq_installation_and_plug_ins.html
+Specific instructions here, if you need to troubleshoot: [http://manual.audacityteam.org/o/man/faq_installation_and_plug_ins.html](http://manual.audacityteam.org/o/man/faq_installation_and_plug_ins.html)
 
 ## Installing Vorbis
 
@@ -38,7 +38,7 @@ The codec is free and open-source software, which makes it more flexible than so
 
 If Audacity does not offer it as an option for export, then you can download and install it from here:
 
-http://www.vorbis.com/setup/
+[http://www.vorbis.com/setup/](http://www.vorbis.com/setup/)
 
 # Recording audio
 
@@ -60,7 +60,7 @@ It will allow you to open the whole project with all of your audio saved in it.
 
 Look here for documentation about getting started recording your audio: 
 
-http://manual.audacityteam.org/o/quick_help.html
+[http://manual.audacityteam.org/o/quick_help.html](http://manual.audacityteam.org/o/quick_help.html)
 
 ## Recording chunks of audio for each slide
 
@@ -180,7 +180,7 @@ Just to make sure that it is clear, the way that you add audio to a slide is by 
 
 The `data-audio-src` takes care of adding the audio link so that it will play automatically. 
 
-# Adding an autoplay video to a slide
+# Optional: Adding an autoplay video to a slide
 
 Unfortunately, the YouTube autoplay feature for Reveal.js is broken at the moment because of a change to the YouTube API. 
 However, there is a workaround which involves converting/downloading YouTube videos as MP4s and then using the `video` HTML5 element to handle them in a Reveal.js slide.
@@ -212,7 +212,7 @@ Once you have your `index.html` file converted and you want to polish up the fin
 
 Think of the markdown file as a draft for content (`<aside class="notes">`) and structure (headers indicate where each slide begins). 
 
-Use the reveal demo presentation find slide with things that you would like to be able to do in your presentation: 
+Use the reveal demo presentation to find slides with things that you would like to be able to do in your presentation: 
 
 http://lab.hakim.se/reveal-js/
 
@@ -225,15 +225,19 @@ It has A TON of really helpful info from simple stuff to very advanced things:
 
 https://github.com/hakimel/reveal.js/blob/master/README.md
 
+We won't cover all that Reveal can do, but you've got great skiulls of discovering and using new technologies.  Put them to use and learn the fun things this tool can do!
+
 ## Testing
 
 Remember to commit and test your changes so you don't lose anything. 
 
-To test locally, consult the refsheet for testing using Jekyll:
+To test locally, the easy way is to right-click `index.html` and select Preview.  Or, for style points, use python's SimpleHTTPServer. Run this from the root of your repo:
 
-{{ site.baseurl }}/refsheets/jekyll-testing/
+```
+python -m SimpleHTTPServer $PORT
+```
 
-To test on GitHub, make sure it is pushed to GitHub and that you have added the config line for the gh-pages branch [from yesterday]({{ site.baseurl }}/present/2016/07/19/reveal-basics/#making-sure-that-you-are-pushing-to-gh-pages). 
+To test on GitHub, make sure it is pushed to GitHub and that you're pushing to the gh-pages branch. 
 
 You should then be able to go to an address that looks like the following, and see your presentation:
 
@@ -243,11 +247,10 @@ http://YOUR-GITHUB-USERNAME.github.io/YOUR-PRESENTATION-REPONAME/
 
 # Next time
 
-We have arrived at the last normal session of class. 
+We have arrived at the last normal session of class. Next time we'll have a catchup day. In this session we will work on troubleshooting your presentations. 
 
-In this session we will work on troubleshooting your presentations. 
 
-We will also talk as a group about the skillsets that you have gathered throughout this course. 
+On the last day of class we'll get retrospective and perhaps a little sentimental about how far we've come. And we'll troubleshoot if there are any lingering problems. We will also talk as a group about the skillsets that you have gathered throughout this course. 
 This is an important discussion because it will orient you to the kinds of things that you can say about your skills on a resume or CV. 
 
 We will also discuss other future classes that you might want to take if you are interested in a particular aspect of this course. 

@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: post
 title: "Reveal.js"
 category: Present
@@ -15,73 +15,29 @@ We will also cover converting your text from Markdown into Reveal-ready HTML5 us
 
 # Getting started
 
+**Sit with your partner today**.
+
 First we will need to get a few things in place in our workspaces. 
-
-## Fork the customized reveal.js repo
-
-Fork the assignment repo on Github. All of the files that you will need in order to use reveal.js are contained in it. 
-
-Since you are working in teams, you might want to maintain one repo while working and then create a fork in your individual accounts when you are finished with the assignment. 
-If you are sharing a single repo, remember to add your teammate as a contributor.
-
-The assignment repo is located here: 
-
-https://github.com/jdmar3/task-6-be-presentable
-
-Once you have forked, it would be a good idea to change the name of your repository to, say, "presentation," so that you can easily link to the project page later. 
-It will become clear why this is necessary at the end of the assignment.
-
-Finally, clone it to your workspaces so that you can work on it. 
 
 ## Making sure that you are pushing to gh-pages
 
 If you do not do this, your reveal.js presentation will not show up at the correct address. 
 
-Open .git/config and look for the `[remote "origin"]` section. 
+I've set `gh-pages` as the default branch, so that's what you should be on by default.  If you make new branches for testing, `git checkout gh-pages` to come back home and, from `gh-pages`, `git merge mynewbranch` if you want to merge in your tested changes.
 
-Then add the following two lines into that section:
+**Second partner** (the one who didn't create the initial repo) test this setup by running 
 
-```
-	push = +refs/heads/master:refs/heads/gh-pages
-	push = +refs/heads/master:refs/heads/master
-```
-
-So that the whole file should look something like this example:
-
-```
-[core]
-	repositoryformatversion = 0
-	filemode = true
-	bare = false
-	logallrefupdates = true
-[remote "origin"]
-	url = git@github.com:YOUR-USERNAME/YOUR-REPO-NAME.git
-	fetch = +refs/heads/*:refs/remotes/origin/*
-	push = +refs/heads/master:refs/heads/gh-pages
-	push = +refs/heads/master:refs/heads/master
-[branch "master"]
-	remote = origin
-	merge = refs/heads/master
+```bash
+./build-presentation.hs example
 ```
 
-Then we need to create a new branch. 
-This is necessary for github-pages to be able to generate a project page for us. 
-The branch must be called gh-pages. 
+to create a new index.html from `example.md`.  Then add and commit those changes (remember to `git status` to make sure you'e gotten everything), then `git pull`.  You should see a site [like this](https://tommytester.github.io/assignment-6/#/) at first-partners-user-name.github.io/repo-name.  Congrats!  You're hooked up to display your presentation via github.  As you go, you can **push** to see what things look like.
 
-`git checkout gh-pages`
-
-Let's add, commit and push that just to be sure that it all worked and that our new branch was added. 
-
-Alright. 
-
-We have a new branch and our new branch is going to be synced with our master branch. 
-So, we can switch back to master for everything else now. 
-
-`git checkout master`
+Remember, we'll be collaborating on this, so try to segment the locations each partner edits, **pull** often, and resolve any conflicts git can't figure out how to.
 
 # Creating and converting markdown to Reveal-ready HTML5
 
-Once you have settled on a topic, create the text of your presentation simliar to the `example.md` file found in this directory. 
+Once you have settled on a topic, have **one partner** create a draft text of your presentation simliar to the `example.md` file found in this directory. 
 
 You can name it whatever you like. 
 
@@ -134,11 +90,14 @@ To use it, inkove the script and supply it with the name of your markdown file w
 
 This will output `index.html` in the same directory. 
 
+# Push & Pull
+
+At this point the second partner has created a draft markdown file and built HTML from it.  Save, Add, Commit, and push those changes.  The other partner can now pull.
+
+
 # Add audio
 
 Once you have the HTML5 file for your presentation, you will need to add audio. 
-
-We will go over in class how to create, edit, and then upload audio for this purpose. 
 
 To get reveal.js to play that audio as a part of your slideshow, you simply need to add the data-audio-src attribute to the `<section>` tag that was created in the conversion of your source file, like this:
 
@@ -152,7 +111,7 @@ To get reveal.js to play that audio as a part of your slideshow, you simply need
 
 That attribute specifies the relative path to the audio files that correspond to each of your slides. 
 You can also add audio to fragments. 
-We will look at this in class. 
+We will look at some of this in class. 
 
 # Experiment with style. 
 
@@ -193,6 +152,6 @@ This video should help you get started;
 If you install Audacity on your personal laptops, you can use it to record and edit your audio directly. 
 You can download audacity and read more documentation on the audacity homepage.{% marginnote 'audacity-home' 'Welcome to Audacity. http://www.audacityteam.org' %}
 
-We will work together on editing audio in class next time. 
+We will work together on editing audio in class next time. Don't go too far in creating all of your audio: you'll need your text finalized so you won't have to re-do it a lot.
 
 

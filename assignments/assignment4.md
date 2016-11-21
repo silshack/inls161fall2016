@@ -48,4 +48,4 @@ Bonuses:
 - Particularly robust text interface to your program.  For instance, you might want to let the user choose what CSV filename to use and whether to overwrite or append to it. (For the exercise you should all choose the same CSV file)
 - Successfully use functions, for, if, or other features of Bash that we haven't covered in class
 - Use branches, **Pull Requests**  and comments on github for collaboration.
-- Print out all of the datal, nicely formatted and colored, in the CSV after user input is completed
+- Print out all of the data, nicely formatted and colored, in the CSV after user input is completed

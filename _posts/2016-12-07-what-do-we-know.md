@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: post
 title: "Wrap-up: what do we know now?"
 category: Present
@@ -46,4 +46,4 @@ The exam period for this class is {{ site.data.dates.exam.time }} on {{ site.dat
 You are all required to attend the exam session. 
 We will be viewing everyone's presentations with Q&A to follow. 
 
-This should not take the entire time alotted, but plan for at least an hour and half to be safe. 
+This should not take the entire time alotted, but plan for at least an hour or two to be safe. 

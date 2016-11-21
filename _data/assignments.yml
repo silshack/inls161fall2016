@@ -54,11 +54,11 @@
     title: Be presentable
     components: Create and record a presentation
     description: "This assignment aims to extend your markup skills while also working with creating beautiful presentation materials in a durable and platform-independent framework. You will create a presentation using reveal.js. In addition to creating the presentation, we will record and add audio objects to create a self-narrated, automated presentation that runs more like a documentary or movie."
-    link: "https://github.com/jdmar3/task-6-be-presentable"
+    link: "/inls161fall2016/assignments/assignment6/"
     percent: "15"
     due: "2016-12-04"
     shortdue: "Dec 4"
-    published: false
+    published: true
 -   number: 
     category: Participation
     title: Participation

@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: post
 title: "Presentation Basics"
 category: Present
@@ -27,7 +27,7 @@ This is all very bad.{% sidenote 'worst' 'Purewal, Sarah Jacobsson. “The World
 
 The typical mode for preparing presentations these days seems to be oriented toward allowing anyone to give a presentation, provided that they have the slide deck in front of them. 
 
-The more cynical among us have come to call this exercise PowerPoint karaoke. 
+The more cynical among us have come to call this exercise PowerPoint Karaoke. 
 
 ## The problem
 
@@ -43,7 +43,7 @@ That same knife can also be used as a weapon.
 Like with all of the other tools that we have used, the end product has to do with how we use them. 
 Our intentions drive what happens more than the tools we use. 
 
-A rather hilarious example of how a major speech may have gone very differently, had the speaker been compelled to use PowerPoint in today's typical style: 
+A rather hilarious example we saw earlier in the class of how a major speech may have gone very differently, had the speaker been compelled to use PowerPoint in today's typical style: 
 
 [The Gettysburg PowerPoint Presentation - Peter Norvig](http://www.norvig.com/Gettysburg/index.htm) 
 
@@ -52,7 +52,7 @@ A rather hilarious example of how a major speech may have gone very differently,
 Edward Tufte is a statistician and artist and Professor Emeritus at Yale University. 
 If you ever have a chance to go to one of his workshops, you absolultely should do so. 
 
-Have a look through his website: http://www.edwardtufte.com
+Have a look through his website: [http://www.edwardtufte.com](http://www.edwardtufte.com)
 
 Tufte has led the charge for years that in order to communicate research and ideas, we need to pay close attention to aesthetics. 
 
@@ -87,7 +87,7 @@ We want to aim for this kind of scripted presentation for our final projects in 
 ## Getting a Network the World Needs
 
 Lessig talks on a wide variety of topics, but copyright is among his favorite. 
-This longish talk is an exemplary presentation. 
+This longish talk is an exemplary presentation. Video skim it when you have time.
 
 <div class="video-container">
   <iframe width="420" height="315" src="https://www.youtube.com/embed/Qk_5UccWm3o" frameborder="0" allowfullscreen></iframe>
@@ -104,17 +104,21 @@ This longish talk is an exemplary presentation.
 
 ## Reveal.js
 
-I have taken the libery of creating a response to Norvig's stylistic blunder, here:
+As we saw earlier, John Marin has re-imagined the Gettysburg address using the tools we'll learn for Assignment 6:
 
 [The Gettysburg Reveal.js Presentation - John D. Martin III](http://johndmart.in/inls161-revealjs-template/#/)
 
 This presentation is an example of what is possible with reveal.js. 
 It is not even a terribly sophisticated example. 
 
+# Groups
+
+Take `<5` minutes to think individually about what topic you might like to tackle and determine if you'd like to work with someone specific on this project. I recommend *not* working with someone specific, as being paired with a random person is more representative of what collaboration in a professional setting is like.  But, especially if you're both interested in the same topic, working with someone specific might be beneficial.
+
+Everyone who doesn't pick a partner will be randomly assigned one and the rest of the class will be spent in groups.
+
+By the beginning of next class, you should have created & cloned your repos!  This means doing everything under the **One partner:** heading.  Don't race ahead yet: spend any extra time on picking a topic and collecting links and media for your presentation.
+
 # Next time
 
-I want you to review the materials above and come to class next time prepared to work in your presentation team. 
-
-Look over the repository for the presentation assignment and read through the `README.md` and `INSTRUCTIONS.md` files contained there:
-
-[Assignment \#6: Be Presentable](https://github.com/jdmar3/task-6-be-presentable)
+Get into your groups and read over [assignment 6](/inls161fall2016/assignments/assignment), pick a topic, and start to plan out your work together. I want you to review the materials above and come to class next time prepared to work in your presentation team. 
