@@ -56,8 +56,8 @@
     description: "This assignment aims to extend your markup skills while also working with creating beautiful presentation materials in a durable and platform-independent framework. You will create a presentation using reveal.js. In addition to creating the presentation, we will record and add audio objects to create a self-narrated, automated presentation that runs more like a documentary or movie."
     link: "/inls161fall2016/assignments/assignment6/"
     percent: "15"
-    due: "2016-12-04"
-    shortdue: "Dec 4"
+    due: "2016-12-05"
+    shortdue: "Dec 5"
     published: true
 -   number: 
     category: Participation
