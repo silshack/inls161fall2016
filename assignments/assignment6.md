@@ -39,7 +39,7 @@ First, pick a cool team name.
 ### One partner:
 
 1. Have one partner make a new blank github repository. You can title it whatever you want.
-2. Clone [this base repository](https://github.com/jdmar3/task-6-be-presentable/tree/5e0fbc87374c0f779f60df98e754a0610616abe6).  You can clone it into whichever workspace you want, but you'll need Pandoc installed.  *I suggest you 'clone' (on Cloud9) your Assignment 3 workspace, since that already has everyhting you need installed.*
+2. Clone [this base repository](https://github.com/eah13/task-6-be-presentable/tree/5e0fbc87374c0f779f60df98e754a0610616abe6).  You can clone it into whichever workspace you want, but you'll need Pandoc installed.  *I suggest you 'clone' (on Cloud9) your Assignment 3 workspace, since that already has everyhting you need installed.*
 3. Follow the github instructions to change the remote url of the repository to point to your new repository. note: you'll need to use `git remote set-url origin <url>` instead of `git remote add origin <url>`
 4. Add your other partner as a collaborator on the Github repo.  Have them clone the repository iunto whichever workspace they want (and make sure they have pandoc installed).
 

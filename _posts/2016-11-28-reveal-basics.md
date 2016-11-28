@@ -13,6 +13,18 @@ Today we will look at Reveal.js more closely and start working with it in your p
 We will also cover converting your text from Markdown into Reveal-ready HTML5 using our old friend, Pandoc.
 <excerpt/>
 
+# Q&A
+
+* I'm still sick and grading still isn't finished. Sorry!
+* There is an error in the Assignment 6 instructions.  Most (all?) of you downloaded John's version.  I made some updates, mostly deleting the Readme. Thanks to Git it should be easy to fix.
+  * Check to see if your Readme has a bunch of instructions in it.  If so, you don't have my updates and need to do the below.
+  * Have **one** partner `git pull https://github.com/eah13/task-6-be-presentable.git gh-pages` to get the updates
+  * Then, from the **master** branch have that same partner `git branch -m gh-pages` to change
+  * Again, same partner: `git push origin gh-pages` to push the updates you got from me
+  * On github, go into settings and make `gh-pages` the default branch if it isn't already.
+  * All other parnter(s) `git branch -m gh-pages` from master to also rename the default branch, then `git pull origin gh-pages` to get the updates.
+* Sorry for that.  All the stuff I did in my fork of John's repo was supposed to prevent us from having to do all of that.
+
 # Getting started
 
 **Sit with your partner today**.
@@ -23,12 +35,12 @@ First we will need to get a few things in place in our workspaces.
 
 If you do not do this, your reveal.js presentation will not show up at the correct address. 
 
-I've set `gh-pages` as the default branch, so that's what you should be on by default.  If you make new branches for testing, `git checkout gh-pages` to come back home and, from `gh-pages`, `git merge mynewbranch` if you want to merge in your tested changes.
+In my fork, I set `gh-pages` as the default branch (and if you cloned the old repo, you fixed this above), so that's what you should be on by default.  If you make new branches for testing, `git checkout gh-pages` to come back home and, from `gh-pages`, `git merge mynewbranch` if you want to merge in your tested changes.
 
-**Second partner** (the one who didn't create the initial repo) test this setup by running 
+**Second partner** (the one who didn't create the initial repo) make sure you've **pulled** any updates from your partner test this setup by running 
 
 ```bash
-./build-presentation.hs example
+./build-presentation.sh example
 ```
 
 to create a new index.html from `example.md`.  Then add and commit those changes (remember to `git status` to make sure you'e gotten everything), then `git pull`.  You should see a site [like this](https://tommytester.github.io/assignment-6/#/) at first-partners-user-name.github.io/repo-name.  Congrats!  You're hooked up to display your presentation via github.  As you go, you can **push** to see what things look like.
