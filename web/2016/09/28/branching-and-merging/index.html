@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Tools for Information Literacy&nbsp;|&nbsp;Branching and Merging</title>
+  <meta name="description" content="Today we will set up a testing workflow and learn how to create branches for adding and changing features on our sites. We will use this to change the visual...">
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+    <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+  
+  <!-- Load Moment.js for dates if option set in /_data/optins.yml file-->
+  
+    <script type="text/javascript" src="//momentjs.com/downloads/moment.js"></script> 
+   
+  
+  
+    <script type="text/javascript" src="//storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/datejs/date.js"></script>
+  
+
+  <link rel="stylesheet" href="/inls161fall2016/css/tufte.css"> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css" />
+  <link rel="icon" href="/inls161fall2016/assets/img/favicon.ico" type="image/x-icon" />
+
+  
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+	<a href="/inls161fall2016/"><img class="badge" src="/inls161fall2016/assets/img/161icon.png" alt="UNC"></a>
+	
+	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+		    
+		      <a href="/inls161fall2016/">INLS 161</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/syllabus/">Syllabus</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/schedule/">Schedule</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/assignments/">Assignments</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/refsheets/">Reference</a>
+		    
+	    
+  	
+	</nav>
+</header>
+    <article class="group">
+<h1>Branching and Merging</h1>
+
+
+
+<p class="subtitle"><span id="date">Wednesday, 28 September 2016</span><span class="smaller date contrast"></span></p>
+
+<script>
+var date = document.getElementById("span")[0];
+alert(p.childNodes[1].textContent)
+</script>
+
+<p>Today we will set up a testing workflow and learn how to create branches for adding and changing features on our sites. 
+We will use this to change the visual style the site and create blog posts. </p>
+
+<p>This session will be mostly hands-on. 
+<excerpt/></p>
+
+<h1 id="q-amp-a">Q &amp; A</h1>
+
+<ul>
+<li>First event writeup now due Weds before Fall break, Oct 19.  Your writeup should be a <strong>page</strong> on your site.  This should be accessible from the index page of your site.  Make sure this is committed and displaying on your github.io site before the end of the day on that Wednesday.</li>
+</ul>
+
+<h1 id="create-a-branch">Create a branch</h1>
+
+<p>To create, or &quot;checkout&quot; a new branch, we can follow Roger Dudler&#39;s guide again.<label for='gitnoshit' class='margin-toggle sidenote-number'></label><input type='checkbox' id='gitnoshit' class='margin-toggle'/><span class='sidenote'>Dudler, Roger. “Git: The Simple Guide.” Git: The Simple Guide. Last modified 2015. <a href="http://rogerdudler.github.io/git-guide/">http://rogerdudler.github.io/git-guide/</a>.<br/><br/>Also check this resource out for help with branching and merging: Chacon, Scott, and Ben Straub. “Basic Branching and Merging.” In ProGit. New York, New York: Apress, 2014. <a href="https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging">https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging</a>. </span></p>
+
+<p><code>git checkout -b testing</code></p>
+
+<p>This creates a new branch and switches us into it.</p>
+
+<p>If we want to see our existing branches and see where we are, type:</p>
+
+<p><code>git branch -l</code> or <code>git branch --list</code></p>
+
+<p>Once here we can make changes without disturbing the <code>master</code> branch, which should have our running code in it. </p>
+
+<p>To switch between branches, simply type (mutatis mutandis):</p>
+
+<p><code>git checkout BRANCH-NAME</code></p>
+
+<p>A neat trick is that you can use <code>git checkout -</code> to go to whatever branch you were previously on.</p>
+
+<h1 id="edit-your-css">Edit your CSS</h1>
+
+<p>Find your CSS file. You&#39;ve done this before, but make a small but obvious change now for the purposes of seeing what branching can do.</p>
+
+<p>This file might have either <code>.css</code> or <code>.scss</code> as an extension.</p>
+
+<p>Once you have found it you should make a small but visible change to it.
+Change the background color, for instance.</p>
+
+<p>Once that is done, you can add and commit those changes: </p>
+
+<p><code>git add -v * &amp;&amp; git commit -a -m &quot;edited css to different background color</code></p>
+
+<p>You can type those commands separately but the <code>&amp;&amp;</code> is a fancy way of saying &quot;and then do...&quot;. It will only do the second thing if there were no errors in the first command.</p>
+
+<h1 id="test-your-branch">Test your branch</h1>
+
+<p>We are still in the <code>testing</code> branch. 
+We need to test our code to see if it worked. </p>
+
+<p>To do this, we will have to access the files locally and start a webserver. 
+Go back to the SSH terminal and check to see that the earlier script finished its work. You&#39;ll know because you will see a prompt and blinking cursor at the bottom. </p>
+
+<p>Switch into the root directory of your website repository if you were somewhere else. </p>
+
+<p><code>cd ../YOUR-GITHUB-USERNAME.github.io</code></p>
+
+<p>And then run the following command. </p>
+
+<p><code>jekyll serve --host $IP --port $PORT</code></p>
+
+<p>This starts a webserver and builds your site.
+Check your development server to see if your changes worked or not. </p>
+
+<h1 id="comparing-and-merging">Comparing and Merging</h1>
+
+<p>To compare your changes with what you had before, make sure all your changes are committed with <code>git status</code> (If they&#39;re not committed they&#39;ll follow you around from branch to branch). Then <code>git chekcout master</code> and view your development site.  You should see the old version of the site after a refresh.  If everything looks good, you can <code>git merge testing</code> to merge your <code>testing</code> commits into <code>master</code>.  Then a final refresh of your <code>c9users.io</code> should show that your master branch looks like testing did!</p>
+
+<p>Remember: whatever branch you&#39;re on will be what jekyll will serve at c9users.io. But only commits that are on the <code>master</code> branch
+and get pushed to github.com will show up on github.io.</p>
+
+<p>If you like yourt changes, you can push them up to GitHub. Go ahead and <code>git push origin master</code> and view them on your live github site.</p>
+
+<p>If you want to kill the preview, press <code>CTRL+C</code> in the terminal where jekyll is running. </p>
+
+<h1 id="roll-back-a-change">Roll back a change</h1>
+
+<p>We can roll back most changes.<label for='revert' class='margin-toggle sidenote-number'></label><input type='checkbox' id='revert' class='margin-toggle'/><span class='sidenote'>jaw6. “How to Undo (almost) Anything with Git.” GitHub. Last modified June 8, 2015. <a href="https://github.com/blog/2019-how-to-undo-almost-anything-with-git">https://github.com/blog/2019-how-to-undo-almost-anything-with-git</a>. </span> 
+The simplest way to do this it to just revert the last commit, which we did before in class. Here&#39;s a review:</p>
+
+<p><code>git revert &lt;SHA&gt;</code></p>
+
+<p><code>&lt;SHA&gt;</code> above refers to the SHA-1 checksum of the git commit. 
+If you look at the git log for a set of recent commits you will see this:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">cabox@box-codeanywhere:~/workspace/inls161.github.io$ git log
+commit 98816f674673b2f6143db724edf71f34f471f164
+Author: john.d.martin.iii &lt;john.d.martin.iii@gmail.com&gt;
+Date:   Thu Jun 30 12:01:06 2016 -0400
+
+    changed the color of black
+
+commit c8cc9f57e5a0e43f38ffb7a21aacb72ded8f7778
+Author: john.d.martin.iii &lt;john.d.martin.iii@gmail.com&gt;
+Date:   Thu Jun 30 11:16:42 2016 -0400
+
+    edit index
+
+commit a2937da7d6052d953e4cbedb1c4df0a0300d7993
+Author: john.d.martin.iii &lt;john.d.martin.iii@gmail.com&gt;
+Date:   Thu Jun 30 11:14:40 2016 -0400
+</code></pre></div>
+<p>The SHA-1 checksum identifies each git commit as unique. </p>
+
+<p>If we run <code>git revert 98816f674673b2f6143db724edf71f34f471f164 -m &#39;&quot;Revert &quot;changed the color of black&quot;&#39;</code>, which is the SHA-1 checksum of the last commit listed above, and then run <code>git log</code> we will see that the output tells us that we reverted the last commit: </p>
+<div class="highlight"><pre><code class="language-" data-lang="">cabox@box-codeanywhere:~/workspace/inls161.github.io$ git log
+commit e73f76956fdd29c2cc0c92e6433be3669fccc155
+Author: john.d.martin.iii &lt;john.d.martin.iii@gmail.com&gt;
+Date:   Thu Jun 30 12:54:27 2016 -0400
+
+    Revert "changed the color of black"
+
+    This reverts commit 98816f674673b2f6143db724edf71f34f471f164.
+</code></pre></div>
+<p>In this way, we can always fix a mistake we have made (or multiple mistakes), even if we&#39;ve committed and pushed them. 
+This makes git a <em>very</em> powerful tool for making sure that you do not lose work.<label for='nota-bene' class='margin-toggle'> &#8853;</label><input type='checkbox' id='nota-bene' class='margin-toggle'/><span class='marginnote'><strong><em>Nota bene:</em></strong> This is why it is a good rule of thumb to commit early and often. while working on a project. </span></p>
+
+<h1 id="cleaning-up-commit-history">Cleaning up commit history</h1>
+
+<p>If you made lots of little commits and want to clean them up, you can <code>git reset</code> back to a specific commit in the past, 
+usually at the start o a big feature or change you jsut made. Doing this
+will leave all of your changes to files, and you can see them with <code>git status</code> and <code>git diff .</code>.  It just erases the commits that describe the changes. This lets you make a clean commit history
+if you have lots of little changes.  That way, you can commit often while you&#39;re working, then reset and commit cleanly before you push.</p>
+
+<p><strong>A word of caution</strong>: in general, it&#39;s bad practice to <code>reset</code> commits you&#39;ve already pushed to github.  It&#39;s OK to do in this
+class if you have to but when you&#39;re working in the real world it&#39;s a no-no, since it rewrites shared history and can cause bad conflicts
+with your coworkers&#39; code.</p>
+
+<p>If you do reset commits you&#39;ve already pushed, you&#39;ll have to <code>git push -f</code> to get the new history up to github.  This will permanently
+erase the old commits (though the changes to your code should remain if you didn&#39;t remove them).</p>
+
+<h1 id="merging-a-branch-on-github">Merging a branch on Github</h1>
+
+<p>OK.  We know how to merge things on the command line.  Now let&#39;s make a change to <code>testing</code>, push it up to github, do the merge there, then <code>pull</code> it back down to our master on Cloud9.</p>
+
+<p>I&#39;ve put instructions in the below as comments.  You don&#39;t need to type them.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">git checkout testing     # if you're not there already
+
+# Make an obvious change to your CSS again
+
+git add .
+git commit -m "Another obvious CSS change"
+
+git push origin testing  # This makes a new testing branch on github.com.
+</code></pre></div>
+<p>Now go to your repo on github.com. Github has noticed that you&#39;ve pushed a branch and will ask you if you want to create a pull request.  Click to do this.</p>
+
+<p>When creating a pull request, describe the change you made in complete sentences.  </p>
+
+<p>Once the pull request is made, you can have a discussion about the changes, view them, etc.  This is the basis of collaborating with others on github.</p>
+
+<p>Click the Merge button at the bottom.  The default settings are fine.</p>
+
+<p>Congrats!  You&#39;ve merged the commit to master on github.com and should be able to see it on github.io.</p>
+
+<p>The final thing is to pull the change back down to Cloud9.  </p>
+<div class="highlight"><pre><code class="language-" data-lang="">git checkout master    # if not already there
+git pull origin master # gets the new commit
+</code></pre></div>
+<p>Done!</p>
+
+<h1 id="for-next-time">For Next Time</h1>
+
+<p>We&#39;re going to try a slightly different approach next time. 
+I&#39;m going to cluster you in groups based on where you are in the process of completing assignment #1. 
+It is okay if you are still early on: that is fine. 
+I want to be able to collectively help you, though, and that will be easier to do if I know 
+where you are and if you can help each other through tasks that are closer together in the overall workflow. </p>
+
+<p>For the rest of class, continue to work on your sites and initial reflection post.</p>
+
+
+<p>
+  <br/>
+  <ul class="tags">
+    <li><a href="/topics#git" class="tag">git</a></li><li><a href="/topics#GitHub" class="tag">GitHub</a></li><li><a href="/topics#web development" class="tag">web-development</a></li><li><a href="/topics#workflows" class="tag">workflows</a></li>
+  </ul> 
+</p>
+    </article>
+    <span class="print-footer">Branching and Merging - September 28, 2016 - </span>
+    <footer>
+  <div class="blognav">
+    
+      <a class="prev" href="/inls161fall2016/web/2016/09/26/developing-deploying-branching/">&laquo;&nbsp;<span class="smaller">Previous:</span>&nbsp;Developing and Deploying</a>
+    
+    
+      <a class="next" href="/inls161fall2016/web/2016/10/03/web-lab/"><span class="smaller">Next:</span>&nbsp;Troubleshooting&nbsp;&raquo;</a>
+    
+  </div>
+  <hr class="slender">
+  <ul class="footer-links">
+    
+    
+      <li>
+        <a href="http://elliotthauser.com" title="Instructor home page"><span class="ico-user"></span>&nbsp;Elliott Hauser</a>
+      </li>
+    
+    
+      <li>
+        <a href="mailto:eah13@email.unc.edu" title="Email instructor"><span class="ico-envelope"></span>&nbsp;eah13@email.unc.edu</a>
+      </li>
+    
+    
+      <li>
+        <span class="ico-clock"></span>&nbsp;3:35-4:50pm
+      </li>
+    
+    
+      <li>
+        <span class="ico-calendar"></span>&nbsp;MoWe
+      </li>
+    
+    
+      <li>
+        <span class="ico-library"></span>&nbsp;117 Manning Hall
+      </li>
+    
+    
+      <li>
+        <a href="https://sakai.unc.edu/portal/site/inls161s216" title="UNC Sakai site for this course"><span class="ico-target"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="https://github.com/inls161" title="GitHub organization for this course"><span class="ico-github"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="https://inls161.slack.com" title="Join the Slack conversations for this course"><span class="ico-slack"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="/feed" title="Add RSS feed"><span class="ico-rss"></span></a>
+      </li>
+      
+  </ul>
+<div class="credits">
+  <span>TOOLS FOR INFORMATION LITERACY &nbsp;&nbsp;|&nbsp;&nbsp; INLS161-002 Fall 2016
+    <br/> 
+  <span class="smaller">Tools and concepts for information literacy. Includes software use and maintenance, computer applications, and networked information systems.</span>
+  <br/><br/>
+  <span class="smaller"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_US">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 Unported License</a>.</span>
+  <br/>
+  <span class="smaller"><a href="/inls161fall2016/credits/">Content &copy; 2016 Elliott Hauser</a></span>
+</div>  
+</footer>
+  </body>
+</html>

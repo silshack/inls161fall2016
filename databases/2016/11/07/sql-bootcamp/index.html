@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Tools for Information Literacy&nbsp;|&nbsp;Database software and MySQL</title>
+  <meta name="description" content="Today we will jump head-first into working with databases as an extension of our discussions earlier in the week about data.  ">
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+    <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+  
+  <!-- Load Moment.js for dates if option set in /_data/optins.yml file-->
+  
+    <script type="text/javascript" src="//momentjs.com/downloads/moment.js"></script> 
+   
+  
+  
+    <script type="text/javascript" src="//storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/datejs/date.js"></script>
+  
+
+  <link rel="stylesheet" href="/inls161fall2016/css/tufte.css"> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css" />
+  <link rel="icon" href="/inls161fall2016/assets/img/favicon.ico" type="image/x-icon" />
+
+  
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+	<a href="/inls161fall2016/"><img class="badge" src="/inls161fall2016/assets/img/161icon.png" alt="UNC"></a>
+	
+	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+		    
+		      <a href="/inls161fall2016/">INLS 161</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/syllabus/">Syllabus</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/schedule/">Schedule</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/assignments/">Assignments</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/refsheets/">Reference</a>
+		    
+	    
+  	
+	</nav>
+</header>
+    <article class="group">
+<h1>Database software and MySQL</h1>
+
+
+
+<p class="subtitle"><span id="date">Monday, 7 November 2016</span><span class="smaller date contrast"></span></p>
+
+<script>
+var date = document.getElementById("span")[0];
+alert(p.childNodes[1].textContent)
+</script>
+
+<p>Today we will jump head-first into working with databases as an extension of our discussions earlier in the week about data.<br>
+<excerpt/></p>
+
+<p>A &quot;database&quot; is a collection of information, arranged or organized in some meaningful way so as to aid the retrieval of that information. 
+The types of information stored in databases vary based on the purpose and application. </p>
+
+<p>When we refer to databases now, we usually mean electronic databases or DataBase Management Systems (DBMS). 
+However, databases can exist in a number of non-electonic forms (and have for much of human history).</p>
+
+<p>What are some examples of non-electronic databases?</p>
+
+<h1 id="what-goes-into-a-database">What goes into a database?</h1>
+
+<p>Pieces of information, or objects, are stored in a database in a structured way. 
+The objects are sorted into classes according to type. 
+This approach is referred to as &quot;object-oriented,&quot; which we have briefly touched on over the course of the semester. </p>
+
+<p>When data are entered into a database, each object, or chunk of information, is assigned a class that allows for sorting and recall. </p>
+
+<h2 id="how-does-the-information-go-in">How does the information go in?</h2>
+
+<p>There are a number of different ways to get data into a database. </p>
+
+<p>We can import tables directly from files. 
+We can also input data one at a time using an entry form. 
+We will do both of these things over the next few days. </p>
+
+<p>Today we will start by experimenting with opening the CSV we made the other day as a table. </p>
+
+<h2 id="electronic-dbms">Electronic DBMS</h2>
+
+<p>There are myriad choices for DMBS implementations. 
+A commonly used system is called MySQL, which is based in a database language called SQL (Structured Query Language). </p>
+
+<p>You will also hear of NoSQL databases, such as MongoDB. 
+These use an entirely different internal logic to store and recall data that that of SQL-based systems. </p>
+
+<p>There are a great many front-end user interfaces for these systems. 
+MSAccess has been used for years for all sorts of applications. </p>
+
+<p>We will use the LibreOffice Base package. 
+It is an open-source analog to Access and will allow us to do the same things. 
+One major benefit of this is that we will be able to open our database without being locked to MSAccess. 
+At present, there is no way to open an Access DB in another program. 
+We wish to avoid that. </p>
+
+<h1 id="install-mysql">Install MySQL</h1>
+
+<p>We will install MySQL so that we can create and explore a database using the SQL shell in our Cloud9 workspaces.</p>
+
+<h1 id="new-workspace">New Workspace</h1>
+
+<p>Create an <code>assignment5</code> workspace and update all packages:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">sudo apt-get update
+</code></pre></div>
+<h1 id="install-the-mysql-client-and-server-packages">Install the MySQL client and server packages</h1>
+
+<p>You probably already have all of these installed by default.  But just in case, here is how you&#39;d install mysql on linux.</p>
+
+<p>First we have to install one dependency, without which the install will fail:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">sudo apt-get install bsdutils
+</code></pre></div>
+<p>Then install both the MySQL server and client packages in separate commands. </p>
+<div class="highlight"><pre><code class="language-" data-lang="">sudo apt-get install mysql-server
+</code></pre></div>
+<p>Then install the client:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">sudo apt-get install mysql-client
+</code></pre></div>
+<h1 id="sql-boot-camp-part-1">SQL Boot Camp: Part 1</h1>
+
+<h2 id="get-some-data">Get some data</h2>
+
+<p>Let&#39;s download some CSV files that I prepared with a list of books in them. </p>
+<div class="highlight"><pre><code class="language-" data-lang="">wget http://inls161.johndmart.in/raw-material/tblBook.csv
+</code></pre></div><div class="highlight"><pre><code class="language-" data-lang="">wget http://inls161.johndmart.in/raw-material/tblPub.csv
+</code></pre></div>
+<h2 id="enable-imports">Enable imports</h2>
+
+<p>Later we&#39;re going to import some data. First we need to enable this.  Type:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">sudo nano /etc/mysql/my.cnf
+</code></pre></div>
+<p>Use your <strong>cursor</strong> to go down to a line that says <code>[mysqld]</code>.  Directly under that line, add this:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">secure-file-priv = ""
+</code></pre></div>
+<p>Press <code>Ctrl-X</code> to exit nano, the <code>Y</code> to save and <code>Enter</code> to confirm the file name.</p>
+
+<p>Now we&#39;ll restart Mysql:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">mysql-ctl restart
+</code></pre></div>
+<p>It&#39;s very important to type everything exactly in configuration files.  If you run into something like <code>ERROR 1290 (HY000): The MySQL server is running with the --secure-file-priv option so it cannot execute this statement</code> below, come back up here and do this again more carefully.</p>
+
+<h1 id="the-mysql-prompt">The MySQL prompt</h1>
+
+<p>Once we are all installed, use the <code>mysql-ctl</code> command to get into the <code>mysql&gt;</code> prompt:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">mysql-ctl cli
+</code></pre></div>
+<p>This specifies that you want the MySQL prompt (or <strong>c</strong>ommand <strong>l</strong>ine <em>**i</em>*nterface). </p>
+
+<p>Next let&#39;s create a new DB. Make sure that your prompt looks like this:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">mysql&gt; 
+</code></pre></div>
+<p>If it does, then you can type:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">CREATE DATABASE booksinfo;
+</code></pre></div>
+<p>Commands in the mysql&gt; prompt are <em>case-sensitive,</em> so pay attention to the case of the commands. </p>
+
+<p>Let&#39;s list our DBs:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">SHOW databases;
+</code></pre></div>
+<p>We should see the DB with the name that we created in the list. Let&#39;s move into it:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">USE booksinfo;
+</code></pre></div>
+<h2 id="add-tables">Add tables</h2>
+
+<p>Now we have to create two tables so that we can import data from our CSV files. The things inside the parentheses are</p>
+<div class="highlight"><pre><code class="language-" data-lang="">CREATE TABLE tblBook (ID INT, 
+                      Title VARCHAR(255), 
+                      Date INT, 
+                      RetailPrice DECIMAL(5,2), 
+                      Copies INT, 
+                      ShelfNumber VARCHAR(255), 
+                      PubID INT);
+</code></pre></div><div class="highlight"><pre><code class="language-" data-lang="">CREATE TABLE tblPub (ID INT, 
+                     Publisher VARCHAR(255), 
+                     City VARCHAR(255), 
+                     State VARCHAR(255), 
+                     Country VARCHAR(255));
+</code></pre></div>
+<p>See what tables we have just created:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">SHOW tables;
+</code></pre></div>
+<p>Let&#39;s import some tables from the files we downloaded earlier.  </p>
+<div class="highlight"><pre><code class="language-" data-lang="">LOAD DATA INFILE '/home/ubuntu/workspace/tblBook.csv' INTO TABLE tblBook FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"';
+</code></pre></div>
+<p>This should give us some output. 
+If we notice a warning, type the following to view the warnings:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">SHOW WARNINGS;
+</code></pre></div>
+<p>So, it looks like we have a missing date. 
+No big deal. 
+We&#39;ll deal with that later. 
+Let&#39;s import our other table. </p>
+<div class="highlight"><pre><code class="language-" data-lang="">LOAD DATA INFILE '/home/ubuntu/workspace/tblPub.csv' INTO TABLE tblPub FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"';
+</code></pre></div>
+<p>Let&#39;s see what is in our tables:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">SHOW COLUMNS FROM tblBook;
+</code></pre></div><div class="highlight"><pre><code class="language-" data-lang="">SHOW COLUMNS FROM tblPub;
+</code></pre></div>
+<p>We&#39;ll notice that we have no key set for either table. 
+We need to do this, right?</p>
+<div class="highlight"><pre><code class="language-" data-lang="">ALTER TABLE tblBook ADD PRIMARY KEY (ID);
+</code></pre></div>
+<p>Now look at the table again and see that it has changed:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">SHOW COLUMNS FROM tblBook;
+</code></pre></div>
+<p>Now do the same for the other table:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">SHOW COLUMNS FROM tblPub;
+</code></pre></div><div class="highlight"><pre><code class="language-" data-lang="">ALTER TABLE tblPub ADD PRIMARY KEY (ID);
+</code></pre></div><div class="highlight"><pre><code class="language-" data-lang="">SHOW COLUMNS FROM tblPub;
+</code></pre></div>
+<p>You should see that the <code>ID</code> column now has <code>Pri</code> in its <code>Key</code> field.</p>
+
+<h2 id="define-relationships">Define relationships</h2>
+
+<p>We need to tell MySQL that the PubID column in tblBook refers to the primary key in tblPub. This action is called a constraint and the reference is called a foreign key. </p>
+<div class="highlight"><pre><code class="language-" data-lang="">ALTER TABLE tblBook ADD CONSTRAINT fk_PubID FOREIGN KEY (PubID) REFERENCES tblPub(ID) ON UPDATE NO ACTION;
+</code></pre></div>
+<p>Let&#39;s look at our columns again:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">SHOW COLUMNS FROM tblBook;
+</code></pre></div>
+<p>You&#39;ll notice that the <code>Key</code> column now has <code>MUL</code> for <code>PubID</code>. 
+This means that we are using that column as an index as well as the primary key column. 
+This new index just happens to be non-unique. </p>
+
+<h1 id="get-this-right">Get this right!</h1>
+
+<p>If your tables, columns, etc don&#39;t look <em>exactly</em> like tommytesters, you may need to start over on your own to get it right.</p>
+
+<p>To start over, make sure you&#39;re in the mysql prompt (or get there again with <code>mysql-ctl cli</code> and <code>USE booksinfo</code>) and type </p>
+<div class="highlight"><pre><code class="language-" data-lang="">DROP TABLE tblBook tblPub;
+</code></pre></div>
+<p>to delete both tables. Then continue the instructions above from <code>USE booksinfo</code> on.</p>
+
+<h1 id="for-next-time">For next time</h1>
+
+<p>Next time we will return to databases and discuss the conceptual and theoretical underpinnings of what we worked on today. 
+I would like you to read something about databases.<label for='db' class='margin-toggle sidenote-number'></label><input type='checkbox' id='db' class='margin-toggle'/><span class='sidenote'>“What Is a Database?” BBC Guides. <a href="http://www.bbc.co.uk/guides/z8yk87h">http://www.bbc.co.uk/guides/z8yk87h</a>. </span></p>
+
+<p>We will look at other resources and tutorials in class as well. </p>
+
+
+<p>
+  <br/>
+  <ul class="tags">
+    <li><a href="/topics#database" class="tag">database</a></li><li><a href="/topics#SQL" class="tag">SQL</a></li><li><a href="/topics#MySQL" class="tag">MySQL</a></li>
+  </ul> 
+</p>
+    </article>
+    <span class="print-footer">Database software and MySQL - November 7, 2016 - </span>
+    <footer>
+  <div class="blognav">
+    
+      <a class="prev" href="/inls161fall2016/data/2016/11/02/data-cleaning/">&laquo;&nbsp;<span class="smaller">Previous:</span>&nbsp;Data cleaning and spreadsheet software</a>
+    
+    
+      <a class="next" href="/inls161fall2016/databases/2016/11/09/database-tables-queries/"><span class="smaller">Next:</span>&nbsp;Databases, tables, queries, and relationships&nbsp;&raquo;</a>
+    
+  </div>
+  <hr class="slender">
+  <ul class="footer-links">
+    
+    
+      <li>
+        <a href="http://elliotthauser.com" title="Instructor home page"><span class="ico-user"></span>&nbsp;Elliott Hauser</a>
+      </li>
+    
+    
+      <li>
+        <a href="mailto:eah13@email.unc.edu" title="Email instructor"><span class="ico-envelope"></span>&nbsp;eah13@email.unc.edu</a>
+      </li>
+    
+    
+      <li>
+        <span class="ico-clock"></span>&nbsp;3:35-4:50pm
+      </li>
+    
+    
+      <li>
+        <span class="ico-calendar"></span>&nbsp;MoWe
+      </li>
+    
+    
+      <li>
+        <span class="ico-library"></span>&nbsp;117 Manning Hall
+      </li>
+    
+    
+      <li>
+        <a href="https://sakai.unc.edu/portal/site/inls161s216" title="UNC Sakai site for this course"><span class="ico-target"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="https://github.com/inls161" title="GitHub organization for this course"><span class="ico-github"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="https://inls161.slack.com" title="Join the Slack conversations for this course"><span class="ico-slack"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="/feed" title="Add RSS feed"><span class="ico-rss"></span></a>
+      </li>
+      
+  </ul>
+<div class="credits">
+  <span>TOOLS FOR INFORMATION LITERACY &nbsp;&nbsp;|&nbsp;&nbsp; INLS161-002 Fall 2016
+    <br/> 
+  <span class="smaller">Tools and concepts for information literacy. Includes software use and maintenance, computer applications, and networked information systems.</span>
+  <br/><br/>
+  <span class="smaller"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_US">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 Unported License</a>.</span>
+  <br/>
+  <span class="smaller"><a href="/inls161fall2016/credits/">Content &copy; 2016 Elliott Hauser</a></span>
+</div>  
+</footer>
+  </body>
+</html>

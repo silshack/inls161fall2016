@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Tools for Information Literacy&nbsp;|&nbsp;Reveal.js</title>
+  <meta name="description" content="Today we will look at Reveal.js more closely and start working with it in your presentation teams. We will also cover converting your text from Markdown into...">
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+    <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+  
+  <!-- Load Moment.js for dates if option set in /_data/optins.yml file-->
+  
+    <script type="text/javascript" src="//momentjs.com/downloads/moment.js"></script> 
+   
+  
+  
+    <script type="text/javascript" src="//storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/datejs/date.js"></script>
+  
+
+  <link rel="stylesheet" href="/inls161fall2016/css/tufte.css"> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css" />
+  <link rel="icon" href="/inls161fall2016/assets/img/favicon.ico" type="image/x-icon" />
+
+  
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+	<a href="/inls161fall2016/"><img class="badge" src="/inls161fall2016/assets/img/161icon.png" alt="UNC"></a>
+	
+	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+		    
+		      <a href="/inls161fall2016/">INLS 161</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/syllabus/">Syllabus</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/schedule/">Schedule</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/assignments/">Assignments</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/refsheets/">Reference</a>
+		    
+	    
+  	
+	</nav>
+</header>
+    <article class="group">
+<h1>Reveal.js</h1>
+
+
+
+<p class="subtitle"><span id="date">Monday, 28 November 2016</span><span class="smaller date contrast"></span></p>
+
+<script>
+var date = document.getElementById("span")[0];
+alert(p.childNodes[1].textContent)
+</script>
+
+<p>Today we will look at Reveal.js more closely and start working with it in your presentation teams. 
+We will also cover converting your text from Markdown into Reveal-ready HTML5 using our old friend, Pandoc.
+<excerpt/></p>
+
+<h1 id="q-amp-a">Q&amp;A</h1>
+
+<ul>
+<li>I&#39;m still sick and grading still isn&#39;t finished. Sorry!</li>
+<li>There is an error in the Assignment 6 instructions.  Most (all?) of you downloaded John&#39;s version.  I made some updates, mostly deleting the Readme. Thanks to Git it should be easy to fix.
+
+<ul>
+<li>Check to see if your Readme has a bunch of instructions in it.  If so, you don&#39;t have my updates and need to do the below.</li>
+<li>Have <strong>one</strong> partner <code>git pull https://github.com/eah13/task-6-be-presentable.git gh-pages</code> to get the updates</li>
+<li>Then, from the <strong>master</strong> branch have that same partner <code>git branch -m gh-pages</code> to change</li>
+<li>Again, same partner: <code>git push origin gh-pages</code> to push the updates you got from me</li>
+<li>On github, go into settings and make <code>gh-pages</code> the default branch if it isn&#39;t already.</li>
+<li>All other parnter(s) <code>git branch -m gh-pages</code> from master to also rename the default branch, then <code>git pull origin gh-pages</code> to get the updates.</li>
+</ul></li>
+<li>Sorry for that.  All the stuff I did in my fork of John&#39;s repo was supposed to prevent us from having to do all of that.</li>
+</ul>
+
+<h1 id="getting-started">Getting started</h1>
+
+<p><strong>Sit with your partner today</strong>.</p>
+
+<p>First we will need to get a few things in place in our workspaces. </p>
+
+<h2 id="making-sure-that-you-are-pushing-to-gh-pages">Making sure that you are pushing to gh-pages</h2>
+
+<p>If you do not do this, your reveal.js presentation will not show up at the correct address. </p>
+
+<p>In my fork, I set <code>gh-pages</code> as the default branch (and if you cloned the old repo, you fixed this above), so that&#39;s what you should be on by default.  If you make new branches for testing, <code>git checkout gh-pages</code> to come back home and, from <code>gh-pages</code>, <code>git merge mynewbranch</code> if you want to merge in your tested changes.</p>
+
+<p><strong>Second partner</strong> (the one who didn&#39;t create the initial repo) make sure you&#39;ve <strong>pulled</strong> any updates from your partner test this setup by running </p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">./build-presentation.sh example
+</code></pre></div>
+<p>to create a new index.html from <code>example.md</code>.  Then add and commit those changes (remember to <code>git status</code> to make sure you&#39;e gotten everything), then <code>git pull</code>.  You should see a site <a href="https://tommytester.github.io/assignment-6/#/">like this</a> at first-partners-user-name.github.io/repo-name.  Congrats!  You&#39;re hooked up to display your presentation via github.  As you go, you can <strong>push</strong> to see what things look like.</p>
+
+<p>Remember, we&#39;ll be collaborating on this, so try to segment the locations each partner edits, <strong>pull</strong> often, and resolve any conflicts git can&#39;t figure out how to.</p>
+
+<h1 id="creating-and-converting-markdown-to-reveal-ready-html5">Creating and converting markdown to Reveal-ready HTML5</h1>
+
+<p>Once you have settled on a topic, have <strong>one partner</strong> create a draft text of your presentation simliar to the <code>example.md</code> file found in this directory. </p>
+
+<p>You can name it whatever you like. </p>
+
+<h2 id="metadata">Metadata</h2>
+
+<p>You have to add the preamble at the top as follows (with your info substituted accordingly):</p>
+<div class="highlight"><pre><code class="language-" data-lang="">% TITLE
+% NAME
+% DATE
+</code></pre></div>
+<p>This will generate your first slide, with the title, your name, and the date.</p>
+
+<h2 id="individual-slides-from-text">Individual slides from text</h2>
+
+<p>Each top level markdown header in the file will become a slide. 
+The text in the header will be included in the slide. 
+This is only a draft, though, so you can of course change this later. </p>
+
+<h2 id="speaker-notes">Speaker notes</h2>
+
+<p>The <code>&lt;aside class=&quot;notes&quot;&gt;</code> tags should be used to wrap the long form text of your actual presentation. 
+These will show up in the speaker notes interface embedded in reveal.js.</p>
+
+<p>This is also the text you will record. </p>
+
+<p>Any text outside of the <code>&lt;aside&gt;</code> tags will be shown on the screen in your actual presentation slides. </p>
+
+<p>Again, you can change this later. </p>
+
+<h1 id="convert-your-presentation">Convert your presentation</h1>
+
+<p>I have taken the liberty of creating a template for you to make translating this into HTML5 a lot easier. </p>
+
+<p>All you need to do is run Pandoc, as follows, on your markdown source file, once it is finished. </p>
+
+<p><code>pandoc -t revealjs --template=template-index.html -s --variable theme=&quot;black&quot; --variable transition=&quot;slide&quot; --variable revealjs-url=&quot;./&quot; YOUR-MARKDOWN-FILENAME.md -o index.html</code></p>
+
+<p>This will give you the HTML5 you can work with in polishing your presentation. </p>
+
+<p>You can also use the script that is in the repository named <code>build-presentation.sh</code> if you change the varialbles appropriately. 
+The current version has the defaults as listed above. 
+To use it, inkove the script and supply it with the name of your markdown file with NO EXTENSION, like this:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">./build-presentation.sh MY-FILENAME
+</code></pre></div>
+<p>This will output <code>index.html</code> in the same directory. </p>
+
+<h1 id="push-amp-pull">Push &amp; Pull</h1>
+
+<p>At this point the second partner has created a draft markdown file and built HTML from it.  Save, Add, Commit, and push those changes.  The other partner can now pull.</p>
+
+<h1 id="add-audio">Add audio</h1>
+
+<p>Once you have the HTML5 file for your presentation, you will need to add audio. </p>
+
+<p>To get reveal.js to play that audio as a part of your slideshow, you simply need to add the data-audio-src attribute to the <code>&lt;section&gt;</code> tag that was created in the conversion of your source file, like this:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;section id="my-slide" class="slide level1" data-audio-src="audio/1.0.ogg"&gt;
+  &lt;h2&gt;
+    My slide
+  &lt;/h2&gt;
+&lt;/section&gt;
+</code></pre></div>
+<p>That attribute specifies the relative path to the audio files that correspond to each of your slides. 
+You can also add audio to fragments. 
+We will look at some of this in class. </p>
+
+<h1 id="experiment-with-style">Experiment with style.</h1>
+
+<p>You can change a whole bunch of things about the style of individual slides. 
+You can add background images and video if you want. 
+It is possible to change the color and many other attributes as well. </p>
+
+<p>You should experiment with all of this, but remember to use git to track your changes as you work. 
+Make a small change and then add and commit it using git, just like we have been doing. </p>
+<div class="highlight"><pre><code class="language-" data-lang="">git add -v .
+git commit -a -m "I made a small change"
+git push
+</code></pre></div>
+<p>Then test. If you don&#39;t like the change, you can always roll it back. </p>
+
+<p>If you do this, then you will be able to fix things easily if you break something by reverting your last commit. If you are testing locally, you don&#39;t have to push your changes. Just commit them. You will still be able to roll them back using the git revert command.</p>
+
+<h1 id="when-all-else-fails">When all else fails</h1>
+
+<p>In the end, if you really get stuck, you can always start over again and convert from markdown. 
+This is the nuclear option, which you want to avoid if possible, but if you have made changes that you can&#39;t remember and can&#39;t get back to a working presentation, it&#39;s always avaialable.</p>
+
+<h1 id="next-time">Next time</h1>
+
+<p>For next time, I want you to have a look at some documentation for Audacity and begin creating audio for your presentation.<label for='audacity' class='margin-toggle sidenote-number'></label><input type='checkbox' id='audacity' class='margin-toggle'/><span class='sidenote'>“Basic Recording and Editing with Audacity - All.” Instructables.com. <a href="http://www.instructables.com/id/Basic-recording-and-editing-with-Audacity/">http://www.instructables.com/id/Basic-recording-and-editing-with-Audacity/</a>. </span> 
+You do not need sophisticated equipment to record audio. 
+You can record on any smartphone or laptop now. </p>
+
+<p>This video should help you get started;</p>
+
+<div class="video-container">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2gM12DIIwA0" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<p>If you install Audacity on your personal laptops, you can use it to record and edit your audio directly. 
+You can download audacity and read more documentation on the audacity homepage.<label for='audacity-home' class='margin-toggle'> &#8853;</label><input type='checkbox' id='audacity-home' class='margin-toggle'/><span class='marginnote'>Welcome to Audacity. <a href="http://www.audacityteam.org">http://www.audacityteam.org</a> </span></p>
+
+<p>We will work together on editing audio in class next time. Don&#39;t go too far in creating all of your audio: you&#39;ll need your text finalized so you won&#39;t have to re-do it a lot.</p>
+
+
+<p>
+  <br/>
+  <ul class="tags">
+    <li><a href="/topics#reveal.js" class="tag">reveal.js</a></li><li><a href="/topics#presentations" class="tag">presentations</a></li><li><a href="/topics#pandoc" class="tag">pandoc</a></li>
+  </ul> 
+</p>
+    </article>
+    <span class="print-footer">Reveal.js - November 28, 2016 - </span>
+    <footer>
+  <div class="blognav">
+    
+      <a class="prev" href="/inls161fall2016/present/2016/11/21/presentation-basics/">&laquo;&nbsp;<span class="smaller">Previous:</span>&nbsp;Presentation Basics</a>
+    
+    
+      <a class="next" href="/inls161fall2016/present/2016/11/30/recording-and-editing-audio/"><span class="smaller">Next:</span>&nbsp;Adding audio for narration and video to your slides&nbsp;&raquo;</a>
+    
+  </div>
+  <hr class="slender">
+  <ul class="footer-links">
+    
+    
+      <li>
+        <a href="http://elliotthauser.com" title="Instructor home page"><span class="ico-user"></span>&nbsp;Elliott Hauser</a>
+      </li>
+    
+    
+      <li>
+        <a href="mailto:eah13@email.unc.edu" title="Email instructor"><span class="ico-envelope"></span>&nbsp;eah13@email.unc.edu</a>
+      </li>
+    
+    
+      <li>
+        <span class="ico-clock"></span>&nbsp;3:35-4:50pm
+      </li>
+    
+    
+      <li>
+        <span class="ico-calendar"></span>&nbsp;MoWe
+      </li>
+    
+    
+      <li>
+        <span class="ico-library"></span>&nbsp;117 Manning Hall
+      </li>
+    
+    
+      <li>
+        <a href="https://sakai.unc.edu/portal/site/inls161s216" title="UNC Sakai site for this course"><span class="ico-target"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="https://github.com/inls161" title="GitHub organization for this course"><span class="ico-github"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="https://inls161.slack.com" title="Join the Slack conversations for this course"><span class="ico-slack"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="/feed" title="Add RSS feed"><span class="ico-rss"></span></a>
+      </li>
+      
+  </ul>
+<div class="credits">
+  <span>TOOLS FOR INFORMATION LITERACY &nbsp;&nbsp;|&nbsp;&nbsp; INLS161-002 Fall 2016
+    <br/> 
+  <span class="smaller">Tools and concepts for information literacy. Includes software use and maintenance, computer applications, and networked information systems.</span>
+  <br/><br/>
+  <span class="smaller"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_US">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 Unported License</a>.</span>
+  <br/>
+  <span class="smaller"><a href="/inls161fall2016/credits/">Content &copy; 2016 Elliott Hauser</a></span>
+</div>  
+</footer>
+  </body>
+</html>

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Tools for Information Literacy&nbsp;|&nbsp;Lab #1: Git and GitHub</title>
+  <meta name="description" content="Today we&#39;re going to learn how to fork, clone, and push changes to a repository on GitHub using git. We do this in preparation for creating personal webs...">
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+    <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+  
+  <!-- Load Moment.js for dates if option set in /_data/optins.yml file-->
+  
+    <script type="text/javascript" src="//momentjs.com/downloads/moment.js"></script> 
+   
+  
+  
+    <script type="text/javascript" src="//storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/datejs/date.js"></script>
+  
+
+  <link rel="stylesheet" href="/inls161fall2016/css/tufte.css"> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css" />
+  <link rel="icon" href="/inls161fall2016/assets/img/favicon.ico" type="image/x-icon" />
+
+  
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+	<a href="/inls161fall2016/"><img class="badge" src="/inls161fall2016/assets/img/161icon.png" alt="UNC"></a>
+	
+	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+		    
+		      <a href="/inls161fall2016/">INLS 161</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/syllabus/">Syllabus</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/schedule/">Schedule</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/assignments/">Assignments</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/refsheets/">Reference</a>
+		    
+	    
+  	
+	</nav>
+</header>
+    <article class="group">
+<h1>Lab #1: Git and GitHub</h1>
+
+
+
+<p class="subtitle"><span id="date">Monday, 12 September 2016</span><span class="smaller date contrast"></span></p>
+
+<script>
+var date = document.getElementById("span")[0];
+alert(p.childNodes[1].textContent)
+</script>
+
+<p>Today we&#39;re going to learn how to fork, clone, and push changes to a repository on GitHub using git. 
+We do this in preparation for creating personal websites that will be hosted by GitHub pages. </p>
+
+<p>Everything we do today will be in a throw-away workspace, so feel free to experiment <em>after</em> completing the 
+instructions here.
+<excerpt/></p>
+
+<h1 id="q-amp-a">Q&amp;A</h1>
+
+<ul>
+<li>Why I don&#39;t use Sakai</li>
+<li>What&#39;s my grade?</li>
+</ul>
+
+<h1 id="fork">Fork</h1>
+
+<p>The first thing that we are going to do today is fork some code that will allow us to have something to work with in Cloud9 later.
+We&#39;ll use this as an opportunity to get wome web code and see what that looks like. </p>
+
+<p>You are not committing to anything today: this is just for practice. 
+We&#39;ll start by going to this repo:</p>
+
+<p><a href="https://github.com/henrythemes/jekyll-starter-theme">https://github.com/henrythemes/jekyll-starter-theme</a></p>
+
+<p>This is the repo for a very, very simple Jekyll web theme. 
+We will us this as a starter theme to practice with. </p>
+
+<p>Once you are at the above repo, click the <strong>Fork</strong> button and select your username when prompted to make a copy of the repo in your account.<label for='fork' class='margin-toggle'> &#8853;</label><input type='checkbox' id='fork' class='margin-toggle'/><span class='marginnote'><img src="https://github.com/silshack/inls161fall2016/blob/gh-pages//assets/ref-images/fork.png?raw=true" alt="Click the &quot;fork&quot; button."> </span> </p>
+
+<p>If you get a window asking where you want to fork the repo to, select your github username.  After a few seconds you will be taken to the repo page for the copy that you have made in your Github account. </p>
+
+<h1 id="clone">Clone</h1>
+
+<p>Once there, click the big green <strong>Clone or Download</strong> button, make sure you&#39;re using HTTPS (the default), and copy the resulting link. <label for='clone' class='margin-toggle'> &#8853;</label><input type='checkbox' id='clone' class='margin-toggle'/><span class='marginnote'><img src="https://github.com/silshack/inls161fall2016/blob/gh-pages//assets/ref-images/clone.png?raw=true" alt="Click the &quot;Clone&quot; button."> </span> 
+It will look like the link in the image on the right. </p>
+
+<p>Then, switch over to Cloud9, make sure you&#39;re logged in, and go to a terminal. </p>
+
+<p>Make sure you&#39;re in your &quot;workspace&quot; directory with <code>pwd</code>.  If not, type <code>cd ~/workspace</code>. Then type the following command, and paste your link in after, so that it looks like this: <label for='cloned' class='margin-toggle'> &#8853;</label><input type='checkbox' id='cloned' class='margin-toggle'/><span class='marginnote'><img src="https://github.com/silshack/inls161fall2016/blob/gh-pages//assets/ref-images/cloned.png?raw=true" alt="Successful cloning."><br>Successful cloning </span> </p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">git clone https://github.com/YOUR-GITHUB-USERNAME-GOES-HERE/jekyll-starter-theme.git</code></pre></figure>
+
+<p>This makes a copy of the repository that you just forked to your local workspace in Cloud9. 
+This is called cloning. </p>
+
+<p>Then descend into the directory:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cd </span>jekyll-starter-theme</code></pre></figure>
+
+<p>And explore what is in there:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">ls -lah</code></pre></figure>
+
+<h1 id="add-amp-commit">Add &amp; Commit</h1>
+
+<p>You should see a <code>_config.yml</code> file somewhere in the directory. 
+This file is filled with variables that Jekyll reads to structure the information made by your webpage. </p>
+
+<p>The basic structure of variables for Jekyll is:</p>
+
+<p><code>variable-name:   &quot;variable value&quot;</code></p>
+
+<p>I want you to change the title variable to your name or whatever you like.
+Change the subtitle as well. You can open <code>_config.yml</code> by double-clicking it or by
+typing <code>c9 _config.yml</code></p>
+
+<p>From this:<label for='apostrophe' class='margin-toggle'> &#8853;</label><input type='checkbox' id='apostrophe' class='margin-toggle'/><span class='marginnote'><img src="https://github.com/silshack/inls161fall2016/blob/gh-pages//assets/ref-images/apostrophe.png?raw=true" alt="Apostrophes."><br>If you use an apostrophe, surround them in <code>&quot;&quot;</code> so you don&apos;t confuse Jekyll. </span> </p>
+<div class="highlight"><pre><code class="language-" data-lang=""># site.title
+
+title:    'Jekyll Starter Theme'
+subtitle: 'Another Minimalistic Static Site Quick Starter Theme'
+</code></pre></div>
+<p>To something like this:</p>
+<div class="highlight"><pre><code class="language-" data-lang=""># site.title
+
+title:    'YOUR-NAME-HERE'
+subtitle: 'Some subtitle I just made up!'
+</code></pre></div>
+<p>Then I want you to change the <code>url</code> variable so that this will show up at the address associated with your GitHub repo.</p>
+
+<p>So change this: </p>
+
+<p><code>url:   &#39;http://henrythemes.github.io/jekyll-starter-theme&#39;</code></p>
+
+<p>To this:</p>
+
+<p><code>url:   &#39;http://YOUR-GITHUB-USERNAME.github.io/jekyll-starter-theme&#39;</code></p>
+
+<p>Once you have made those changes, then <strong>Save</strong> the file and we will push it back up to GitHub.</p>
+
+<p>Note: The dot in the tab tells you you haven&#39;t saved the file yet. <code>Ctrl-s</code> or File &gt; Save will do this for you.  Git can&#39;t see your changes until you save. </p>
+
+<p><img src="/inls161fall2016/assets/ref-images/saving.png" alt="Unsaved changes"></p>
+
+<h1 id="push">Push</h1>
+
+<p>Confirm that you&#39;ve saved with our friend <code>git status</code>.  You should see that <code>_config.yml</code> has been modified.</p>
+
+<p>So in order to record these changes and get them into our remote repo on GitHub, we have to first go through the normal commit process. 
+First, add the files:  <label for='v' class='margin-toggle'> &#8853;</label><input type='checkbox' id='v' class='margin-toggle'/><span class='marginnote'>The <code>-v</code> flag stands for verbose and makes git tell you explictly what it&apos;s doing.  Im </span></p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">git add -v _config.yml</code></pre></figure>
+
+<p>Then commit the changes (remember to leave a message for yourself):</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">git commit -a -m <span class="s2">"updated config with new title and URL"</span></code></pre></figure>
+
+<p>Then we have to push the changes upstream:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">git push</code></pre></figure>
+
+<p>And that should be that. </p>
+
+<h1 id="github-pages">GitHub Pages</h1>
+
+<p>You should be able to see this web code rendered as a webpage now. 
+Try going to the address that corresponds to the GH pages site associated with this repository. It will look like this:</p>
+
+<p><code>https://YOUR-GITHUB-USERNAME.github.io/jekyll-starter-theme/</code></p>
+
+<p>And there you should see a site with the title and subtitle that you assigned in the <code>_config.yml</code> file.</p>
+
+<p>Here&#39;s Tommytester&#39;s site:</p>
+
+<p><img src="/inls161fall2016/assets/ref-images/tommy.png" alt="Example site"></p>
+
+<h1 id="advanced">Advanced</h1>
+
+<p>If you&#39;re done and would like to try out something new, follow the instructions <a href="/inls161fall2016/refsheets/jekyll-testing/">here</a> to run a copy of your site on cloud9.  This is what we&#39;ll all be doing eventually, so you&#39;re getting ahead.  It&#39;s way faster to be able to make a change in Cloud9 and view it immediately rather than pushing to Github all the time.</p>
+
+<p>Once your site is up, try changing some of the html pages, saving, then refreshing the Cloud9 preview.  You should see your changes.  Practice your HTML, Markdown, or CSS!</p>
+
+<h1 id="for-next-time">For next time</h1>
+
+<p>Please play around with your new Jekyll site to practice your new skills.  Try modifying <code>one.md</code>, <code>two.md</code>, or <code>three.html</code>.  Try creating a new <code>.md</code> or <code>.html</code> file.  Add, commit, and push your changes then refresh to see what they look like.  If you know some CSS, try modifying <code>css/style.css</code> to change the look or colors of your page.  We&#39;ll create a new workspace for future projects, so no worries if you break things.  If you want, create an entirely new workspace and repeat everything from <strong>Clone</strong> onwards.  You may need to <code>push -f</code> to overwrite your previous commits to your fork.  Don&#39;t worry if you get stuck- you can always delete your fork off of Github entirely, create a new workspace, and start from the beginning.  It&#39;s all good practice!</p>
+
+<p>I would like you to have a look at some tutorials and guides to <strong>Markdown</strong> for next time. Markdown is a lightwieght way of writing HTML that doesn&#39;t require a bunch of angle brackets.  Both Jekyll and pandoc, which we&#39;ll learn later, use Markdown to generate content for us and it&#39;s widely used accross the Web (including on Github in the comments, etc.).</p>
+
+<p>Kirk Strobeck&#39;s page describes the origin and intent of Markdown, and provides links to useful resources. <label for='strobeck' class='margin-toggle'> &#8853;</label><input type='checkbox' id='strobeck' class='margin-toggle'/><span class='marginnote'><strong>Reading:</strong> “What is Markdown?” Ken Strobeck. <a href="http://whatismarkdown.com/"><a href="http://whatismarkdown.com/">http://whatismarkdown.com/</a></a>. </span> </p>
+
+<p>Dan Harper gives a good introduction to how Markdown is used and what it looks like in the wild. <label for='harper' class='margin-toggle'> &#8853;</label><input type='checkbox' id='harper' class='margin-toggle'/><span class='marginnote'><strong>Reading:</strong> “Markdown: the Ins and Outs” Dan Harper. <a href="http://code.tutsplus.com/tutorials/markdown-the-ins-and-outs--net-25482"><a href="http://code.tutsplus.com/tutorials/markdown-the-ins-and-outs--net-25482">http://code.tutsplus.com/tutorials/markdown-the-ins-and-outs--net-25482</a></a>. </span> </p>
+
+
+<p>
+  <br/>
+  <ul class="tags">
+    <li><a href="/topics#version control" class="tag">version-control</a></li><li><a href="/topics#git" class="tag">git</a></li><li><a href="/topics#GitHub" class="tag">GitHub</a></li><li><a href="/topics#Jekyll" class="tag">Jekyll</a></li><li><a href="/topics#web design" class="tag">web-design</a></li>
+  </ul> 
+</p>
+    </article>
+    <span class="print-footer">Lab #1: Git and GitHub - September 12, 2016 - </span>
+    <footer>
+  <div class="blognav">
+    
+      <a class="prev" href="/inls161fall2016/basics/2016/09/07/networks/">&laquo;&nbsp;<span class="smaller">Previous:</span>&nbsp;Networks</a>
+    
+    
+      <a class="next" href="/inls161fall2016/web/2016/09/14/catchup1/"><span class="smaller">Next:</span>&nbsp;Catchup Day #1&nbsp;&raquo;</a>
+    
+  </div>
+  <hr class="slender">
+  <ul class="footer-links">
+    
+    
+      <li>
+        <a href="http://elliotthauser.com" title="Instructor home page"><span class="ico-user"></span>&nbsp;Elliott Hauser</a>
+      </li>
+    
+    
+      <li>
+        <a href="mailto:eah13@email.unc.edu" title="Email instructor"><span class="ico-envelope"></span>&nbsp;eah13@email.unc.edu</a>
+      </li>
+    
+    
+      <li>
+        <span class="ico-clock"></span>&nbsp;3:35-4:50pm
+      </li>
+    
+    
+      <li>
+        <span class="ico-calendar"></span>&nbsp;MoWe
+      </li>
+    
+    
+      <li>
+        <span class="ico-library"></span>&nbsp;117 Manning Hall
+      </li>
+    
+    
+      <li>
+        <a href="https://sakai.unc.edu/portal/site/inls161s216" title="UNC Sakai site for this course"><span class="ico-target"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="https://github.com/inls161" title="GitHub organization for this course"><span class="ico-github"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="https://inls161.slack.com" title="Join the Slack conversations for this course"><span class="ico-slack"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="/feed" title="Add RSS feed"><span class="ico-rss"></span></a>
+      </li>
+      
+  </ul>
+<div class="credits">
+  <span>TOOLS FOR INFORMATION LITERACY &nbsp;&nbsp;|&nbsp;&nbsp; INLS161-002 Fall 2016
+    <br/> 
+  <span class="smaller">Tools and concepts for information literacy. Includes software use and maintenance, computer applications, and networked information systems.</span>
+  <br/><br/>
+  <span class="smaller"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_US">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 Unported License</a>.</span>
+  <br/>
+  <span class="smaller"><a href="/inls161fall2016/credits/">Content &copy; 2016 Elliott Hauser</a></span>
+</div>  
+</footer>
+  </body>
+</html>

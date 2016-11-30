@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Tools for Information Literacy&nbsp;|&nbsp;Remote Operation Reference</title>
+  <meta name="description" content="Tools and concepts for information literacy. Includes software use and maintenance, computer applications, and networked information systems.">
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+    <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+  
+  <!-- Load Moment.js for dates if option set in /_data/optins.yml file-->
+  
+    <script type="text/javascript" src="//momentjs.com/downloads/moment.js"></script> 
+   
+  
+  
+    <script type="text/javascript" src="//storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/datejs/date.js"></script>
+  
+
+  <link rel="stylesheet" href="/inls161fall2016/css/tufte.css"> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css" />
+  <link rel="icon" href="/inls161fall2016/assets/img/favicon.ico" type="image/x-icon" />
+
+  
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+	<a href="/inls161fall2016/"><img class="badge" src="/inls161fall2016/assets/img/161icon.png" alt="UNC"></a>
+	
+	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+		    
+		      <a href="/inls161fall2016/">INLS 161</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/syllabus/">Syllabus</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/schedule/">Schedule</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/assignments/">Assignments</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/refsheets/">Reference</a>
+		    
+	    
+  	
+	</nav>
+</header>
+    <article class="group">
+<h1>Remote Operation Reference</h1>
+<p class="subtitle"></p>
+
+<h1 id="remote-operation-reference">Remote Operation Reference</h1>
+
+<p>Dollar sign ($) in the command prompt means that you are in a user shell. </p>
+
+<p>What directory am I in right now?</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">pwd</span></code></pre></figure>
+
+<p>Make me a new directory right here:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">mkdir mydirectory</code></pre></figure>
+
+<p>Move into that new directory that I just made:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cd </span>mydirectory</code></pre></figure>
+
+<p>Show me what is in this directory:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">ls</code></pre></figure>
+
+<p>Show me more information about what is in this directory:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">ls -lah</code></pre></figure>
+
+<p>Make a new blank file with this name:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">touch myfile</code></pre></figure>
+
+<p>Output this on the command line:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">"Hello, world!"</span></code></pre></figure>
+
+<p>Put that thing that I just said into the file I made before:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">"Hello, world!"</span> &gt; myfile</code></pre></figure>
+
+<p>Put this other thing that I want to say into the same file on a new line:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">"This is another line."</span> &gt;&gt; myfile</code></pre></figure>
+
+<p>Show me what is in that file:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">cat myfile</code></pre></figure>
+
+<p>Put this thing I want to say into a totally new file:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">"This is a third line."</span> &gt; myfile2</code></pre></figure>
+
+<p>Put the stuff in this new file on a new line in my old file:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">cat myfile2 &gt;&gt; myfile</code></pre></figure>
+
+<p>Make a backup copy of that file:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">cp myfile myfile.bck</code></pre></figure>
+
+<p>Rename the old file to a new thing:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">mv myfile mynewfile</code></pre></figure>
+
+<p>Remove that other file that I created:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">rm myfile2</code></pre></figure>
+
+<p>Become a SUPERUSER:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo COMMAND</code></pre></figure>
+
+<p>Become the ROOT user: </p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo su</code></pre></figure>
+
+<p>Search for this software package:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">apt-cache search nano</code></pre></figure>
+
+<p>Install that software package (text editor):</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo apt-get install nano</code></pre></figure>
+
+<p>Install a different editor:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo apt-get install vim</code></pre></figure>
+
+<p>Install yet another text editor:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo apt-get install emacs23</code></pre></figure>
+
+<p>Open my file in that editor:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">nano mynewfile</code></pre></figure>
+
+
+    </article>
+    <span class="print-footer">Remote Operation Reference - </span>
+    <footer>
+  <div class="blognav">
+    
+    
+  </div>
+  <hr class="slender">
+  <ul class="footer-links">
+    
+    
+      <li>
+        <a href="http://elliotthauser.com" title="Instructor home page"><span class="ico-user"></span>&nbsp;Elliott Hauser</a>
+      </li>
+    
+    
+      <li>
+        <a href="mailto:eah13@email.unc.edu" title="Email instructor"><span class="ico-envelope"></span>&nbsp;eah13@email.unc.edu</a>
+      </li>
+    
+    
+      <li>
+        <span class="ico-clock"></span>&nbsp;3:35-4:50pm
+      </li>
+    
+    
+      <li>
+        <span class="ico-calendar"></span>&nbsp;MoWe
+      </li>
+    
+    
+      <li>
+        <span class="ico-library"></span>&nbsp;117 Manning Hall
+      </li>
+    
+    
+      <li>
+        <a href="https://sakai.unc.edu/portal/site/inls161s216" title="UNC Sakai site for this course"><span class="ico-target"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="https://github.com/inls161" title="GitHub organization for this course"><span class="ico-github"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="https://inls161.slack.com" title="Join the Slack conversations for this course"><span class="ico-slack"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="/feed" title="Add RSS feed"><span class="ico-rss"></span></a>
+      </li>
+      
+  </ul>
+<div class="credits">
+  <span>TOOLS FOR INFORMATION LITERACY &nbsp;&nbsp;|&nbsp;&nbsp; INLS161-002 Fall 2016
+    <br/> 
+  <span class="smaller">Tools and concepts for information literacy. Includes software use and maintenance, computer applications, and networked information systems.</span>
+  <br/><br/>
+  <span class="smaller"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_US">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 Unported License</a>.</span>
+  <br/>
+  <span class="smaller"><a href="/inls161fall2016/credits/">Content &copy; 2016 Elliott Hauser</a></span>
+</div>  
+</footer>
+  </body>
+</html>

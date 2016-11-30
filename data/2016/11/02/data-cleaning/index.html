@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Tools for Information Literacy&nbsp;|&nbsp;Data cleaning and spreadsheet software</title>
+  <meta name="description" content="Today we&#39;re going to look at one common way of manipulating CSV and other data files: the spreadsheet. ">
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+    <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+  
+  <!-- Load Moment.js for dates if option set in /_data/optins.yml file-->
+  
+    <script type="text/javascript" src="//momentjs.com/downloads/moment.js"></script> 
+   
+  
+  
+    <script type="text/javascript" src="//storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/datejs/date.js"></script>
+  
+
+  <link rel="stylesheet" href="/inls161fall2016/css/tufte.css"> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css" />
+  <link rel="icon" href="/inls161fall2016/assets/img/favicon.ico" type="image/x-icon" />
+
+  
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+	<a href="/inls161fall2016/"><img class="badge" src="/inls161fall2016/assets/img/161icon.png" alt="UNC"></a>
+	
+	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+		    
+		      <a href="/inls161fall2016/">INLS 161</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/syllabus/">Syllabus</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/schedule/">Schedule</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/assignments/">Assignments</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/refsheets/">Reference</a>
+		    
+	    
+  	
+	</nav>
+</header>
+    <article class="group">
+<h1>Data cleaning and spreadsheet software</h1>
+
+
+
+<p class="subtitle"><span id="date">Wednesday, 2 November 2016</span><span class="smaller date contrast"></span></p>
+
+<script>
+var date = document.getElementById("span")[0];
+alert(p.childNodes[1].textContent)
+</script>
+
+<p>Today we&#39;re going to look at one common way of manipulating CSV and other data files: the spreadsheet. 
+<excerpt/></p>
+
+<h1 id="csv-to-spreadsheet">CSV to spreadsheet</h1>
+
+<p>Spreadsheets appear to operate in a very simple manner, storing data in rows and columns just like any other table, but looks can be deceiving. </p>
+
+<p>Just like with DOCX and ODT files when compared with plaintext files, spreadsheets hide a lot of metadata underneath what appears on the surface. </p>
+
+<p>Unlike with the relationship between plaintext and interface-wrapped formatted text files, it is more difficult to get all of the information out of the spreadsheet. </p>
+
+<p>As mentioned in the piece by Paul Ford, spreadsheets can hide a lot of things from us, including errors. 
+If our code to perform the same kinds of operations is visible to us, it is easier to check for errors. </p>
+
+<p>That said, spreadsheets are a powerful tool and should be used in certain tasks in preference over other tools. </p>
+
+<p>Once you have learned to do basic math in a spreadsheet, there is absolutely no reason to ever use a calculator (or calculator app) for instance.</p>
+
+<h1 id="caveats-and-pitfalls-of-using-spreadsheets">Caveats and pitfalls of using spreadsheets</h1>
+
+<p>This forum post is a good guide to things that you should be aware of when using spreadsheets:</p>
+
+<p><a href="https://forum.openoffice.org/en/forum/viewtopic.php?t=39529">https://forum.openoffice.org/en/forum/viewtopic.php?t=39529</a></p>
+
+<p>It pertains to OpenOffice, which is the productivity suite that LibreOffice was forked from some years ago. 
+OpenOffice is now owned by Oracle and some of the community was not happy with licensing changes that had occured, so they jumped ship and moved their development to LibreOffice under the umbrella of the Open Document Foundation. 
+The software still operates similarly enough that the information is relevant to us. 
+This is because both suites use ODF at their core. </p>
+
+<p>It will also be a good idea to have a look at the LibreOffice documentation to familiarize yourself with it as a reference: <a href="https://www.libreoffice.org/get-help/documentation/">https://www.libreoffice.org/get-help/documentation/</a></p>
+
+<p>Finally, here is a compendium of all of the functions available to you in LibreOffice Calc: <a href="https://help.libreoffice.org/Calc/Spreadsheet_Functions">https://help.libreoffice.org/Calc/Spreadsheet_Functions</a></p>
+
+<h1 id="opening-a-csv-in-libreoffice-calc">Opening a CSV in LibreOffice Calc</h1>
+
+<ul>
+<li>Download one of your group&#39;s large CSV files</li>
+<li>Open it in LibreOffice Calc</li>
+<li>Edit some of the fields</li>
+<li>Save it as &#39;gh-uname-office.csv&#39;, inserting your username</li>
+<li>Upload it to your cloud9 Workspace</li>
+<li>Open it in Cloud9.  See, it&#39;s just a plaintext file!  If you see gibberish you probably didn&#39;t save as a CSV, so follow the above steps again.</li>
+</ul>
+
+<h1 id="for-next-time">For next time</h1>
+
+<p>We&#39;re going to break into databases next time and have a MySQL crash course. 
+I would like you to look over some basic MySQL tutorials on your own so that we are prepared to dig into this.<label for='sql' class='margin-toggle sidenote-number'></label><input type='checkbox' id='sql' class='margin-toggle'/><span class='sidenote'>Sverdlov, Etel. “A Basic MySQL Tutorial.” DigitalOcean. Last modified June 12, 2012. <a href="https://www.digitalocean.com/community/tutorials/a-basic-mysql-tutorial">https://www.digitalocean.com/community/tutorials/a-basic-mysql-tutorial</a>. </span> </p>
+
+<h1 id="rest-of-class">Rest of Class</h1>
+
+<p>Get into your groups and work on Assignment 4! It&#39;s due Sunday at midnight.</p>
+
+
+<p>
+  <br/>
+  <ul class="tags">
+    <li><a href="/topics#CSV" class="tag">CSV</a></li><li><a href="/topics#data" class="tag">data</a></li><li><a href="/topics#spreadsheets" class="tag">spreadsheets</a></li>
+  </ul> 
+</p>
+    </article>
+    <span class="print-footer">Data cleaning and spreadsheet software - November 2, 2016 - </span>
+    <footer>
+  <div class="blognav">
+    
+      <a class="prev" href="/inls161fall2016/data/2016/10/31/data-handling/">&laquo;&nbsp;<span class="smaller">Previous:</span>&nbsp;Handling data</a>
+    
+    
+      <a class="next" href="/inls161fall2016/databases/2016/11/07/sql-bootcamp/"><span class="smaller">Next:</span>&nbsp;Database software and MySQL&nbsp;&raquo;</a>
+    
+  </div>
+  <hr class="slender">
+  <ul class="footer-links">
+    
+    
+      <li>
+        <a href="http://elliotthauser.com" title="Instructor home page"><span class="ico-user"></span>&nbsp;Elliott Hauser</a>
+      </li>
+    
+    
+      <li>
+        <a href="mailto:eah13@email.unc.edu" title="Email instructor"><span class="ico-envelope"></span>&nbsp;eah13@email.unc.edu</a>
+      </li>
+    
+    
+      <li>
+        <span class="ico-clock"></span>&nbsp;3:35-4:50pm
+      </li>
+    
+    
+      <li>
+        <span class="ico-calendar"></span>&nbsp;MoWe
+      </li>
+    
+    
+      <li>
+        <span class="ico-library"></span>&nbsp;117 Manning Hall
+      </li>
+    
+    
+      <li>
+        <a href="https://sakai.unc.edu/portal/site/inls161s216" title="UNC Sakai site for this course"><span class="ico-target"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="https://github.com/inls161" title="GitHub organization for this course"><span class="ico-github"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="https://inls161.slack.com" title="Join the Slack conversations for this course"><span class="ico-slack"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="/feed" title="Add RSS feed"><span class="ico-rss"></span></a>
+      </li>
+      
+  </ul>
+<div class="credits">
+  <span>TOOLS FOR INFORMATION LITERACY &nbsp;&nbsp;|&nbsp;&nbsp; INLS161-002 Fall 2016
+    <br/> 
+  <span class="smaller">Tools and concepts for information literacy. Includes software use and maintenance, computer applications, and networked information systems.</span>
+  <br/><br/>
+  <span class="smaller"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_US">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 Unported License</a>.</span>
+  <br/>
+  <span class="smaller"><a href="/inls161fall2016/credits/">Content &copy; 2016 Elliott Hauser</a></span>
+</div>  
+</footer>
+  </body>
+</html>

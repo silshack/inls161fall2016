@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Tools for Information Literacy&nbsp;|&nbsp;Websites, Markup, and Markdown</title>
+  <meta name="description" content="This week&#39;s tasks will involve some very simple coding (markup, really) and continued exploration and use of our system administration skills. Last in th...">
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+    <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+  
+  <!-- Load Moment.js for dates if option set in /_data/optins.yml file-->
+  
+    <script type="text/javascript" src="//momentjs.com/downloads/moment.js"></script> 
+   
+  
+  
+    <script type="text/javascript" src="//storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/datejs/date.js"></script>
+  
+
+  <link rel="stylesheet" href="/inls161fall2016/css/tufte.css"> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css" />
+  <link rel="icon" href="/inls161fall2016/assets/img/favicon.ico" type="image/x-icon" />
+
+  
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+	<a href="/inls161fall2016/"><img class="badge" src="/inls161fall2016/assets/img/161icon.png" alt="UNC"></a>
+	
+	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+		    
+		      <a href="/inls161fall2016/">INLS 161</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/syllabus/">Syllabus</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/schedule/">Schedule</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/assignments/">Assignments</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/refsheets/">Reference</a>
+		    
+	    
+  	
+	</nav>
+</header>
+    <article class="group">
+<h1>Websites, Markup, and Markdown</h1>
+
+
+
+<p class="subtitle"><span id="date">Monday, 19 September 2016</span><span class="smaller date contrast"></span></p>
+
+<script>
+var date = document.getElementById("span")[0];
+alert(p.childNodes[1].textContent)
+</script>
+
+<p>This week&#39;s tasks will involve some very simple coding (markup, really) and continued exploration and use of our system administration skills. </p>
+
+<p>Last in the git and Github lab we learned how to set up a very basic website using Jekyll and GitHub pasges. 
+This week we will expand on that significantly, learn how to use markup to change the style of our content, and then learn to publish content to the web. 
+<excerpt/></p>
+
+<h1 id="q-amp-a">Q&amp;A</h1>
+
+<ul>
+<li>Servers and their purposes:
+
+<ul>
+<li>github.com hosts our code and <strong>cloneable</strong> github repositories</li>
+<li>github.io builds &amp; hosts our websites</li>
+<li>c9users.io will show our site <strong>if <code>jekyll serve</code></strong> is running.  This process in the server starts a temporary server which will show code you haven&#39;t committed or pushed yet.  Push your code to github.com and github.io will display it for you. If your github.io site didn&#39;t have the final version of your code (i.e. you didn&#39;t commit &amp; push it), I had to evaluate whatever was there.</li>
+</ul></li>
+<li>What I was looking for:
+
+<ul>
+<li>3 posts</li>
+<li>customized colors</li>
+<li>(at least) 4 commits separating these things</li>
+</ul></li>
+</ul>
+
+<p><img src="/inls161fall2016/assets/img/post-commits.png" alt=""></p>
+
+<ul>
+<li>More on this today, but in Markdown, spaces matter:</li>
+</ul>
+<div class="highlight"><pre><code class="language-" data-lang="">#This is a hashtag in front of a sentence
+
+# This is a h1 heading in markdown
+
+...end of some text.
+* this is not a list
+
+...end of some text.
+
+* this is a list (note empty lines above and below)
+
+</code></pre></div>
+<ul>
+<li>What do <em>you</em> need to understand to move forward? Get help and get that out of the way.</li>
+<li>Something take you a long time? Practice, practice, practice!</li>
+</ul>
+
+<p>Why did we do multiple commits?  <strong>Let&#39;s Revert some color changes!</strong> I need a volunteer.</p>
+
+<p>In class mini-exercise:</p>
+
+<ul>
+<li>get jekyll running with <code>jekyll serve --host $IP --port $port</code></li>
+<li>get another terminal open</li>
+<li><code>git log</code> and get the first few characters of the commit where you made colors changes</li>
+<li>Add a commit (maybe adding a word to a post) after your colors changes if you don&#39;t already have one.  This is so you can see that we can revert a commit even after other ones have been made.</li>
+<li>Run <code>git revert [commit hash]</code></li>
+<li>this will revert the commit (as a new commit itself)bring up nano and an autogenerated commit message. <code>Ctrl-x</code> leaves.  If you made changes, <code>y</code> says yes you want to save and confirm the filename with <code>Enter</code></li>
+<li>Start with just one colors commit if you have multiples.  But yuo can repeat the process for others outside of class.</li>
+<li><code>git log</code> to see what happened</li>
+<li>Check your c9users.io site to see your un-colored site!</li>
+<li>Commit in revertable chunks!</li>
+</ul>
+
+<p>Now, let&#39;s learn some things about markup. </p>
+
+<h1 id="markup-and-markdown">Markup and Markdown</h1>
+
+<p>Mark*<em>up</em>* has been used over the last several decades to enhance plaintext for web use. </p>
+
+<p>Today we will consider some of the basics. </p>
+
+<p>Markdown is a markup language, but designed to be as simple and human-readable as possible. 
+We had a brief introduction to it last week when we established our first repositories on GitHub. </p>
+
+<h2 id="why-are-we-learning-markdown">Why are we learning Markdown?</h2>
+
+<p>For starters, Markdown is easier to use than HTML or other markup languages. 
+It doesn&#39;t require complicated tags, which have a high potential for typographical error. </p>
+
+<p>Jon Mitchell posits the three following good and compelling reasons that everyone should learn Markdown:<label for='reasons' class='margin-toggle sidenote-number'></label><input type='checkbox' id='reasons' class='margin-toggle'/><span class='sidenote'>Mitchell, Jon. “3 Reasons Why Everyone Needs to Learn Markdown - ReadWrite.” ReadWrite. Last modified April 17, 2012. <a href="http://readwrite.com/2012/04/17/why-you-need-to-learn-markdown/">http://readwrite.com/2012/04/17/why-you-need-to-learn-markdown/</a>. </span></p>
+
+<ol>
+<li>It is easy to read. </li>
+<li>You will make fewer errors.</li>
+<li>It helps us to get rid of buggy, crashy, loss-prone content management systems (CMS). </li>
+</ol>
+
+<p>All of the above boils down to a simple comparison that Mitchell makes:</p>
+
+<p>HTML:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;h1&gt;Why &lt;em&gt;you&lt;/em&gt; should use Markdown to write your next blog post&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=”http://daringfireball.net/projects/markdown/”&gt;Markdown&lt;/a&gt; is just so dang legible, it will make your &lt;em&gt;whole life&lt;/em&gt; easier. &lt;strong&gt;I promise.&lt;/strong&gt;&lt;/p&gt;
+</code></pre></div>
+<p>Markdown:</p>
+<div class="highlight"><pre><code class="language-" data-lang=""># Why *you* should use Markdown to write your next blog post
+
+[Markdown][1] is just so dang legible, it will make your *whole life* easier. **I promise.**
+
+[1]: http://daringfireball.net/projects/markdown/basics
+</code></pre></div>
+<p>The above examples render the same thing when parsed. Which would you rather write?  Which is easier to read? </p>
+
+<p>We will go over some of the basics in class today, but I would also like you to review the resources listed here independently, outside of class. <label for='markdown' class='margin-toggle sidenote-number'></label><input type='checkbox' id='markdown' class='margin-toggle'/><span class='sidenote'><strong>Review</strong>: “Mastering Markdown.” GitHub Guides. Last modified January 15, 2014. Accessed June 27, 2016. <a href="https://guides.github.com/features/mastering-markdown/">https://guides.github.com/features/mastering-markdown/</a>.<br/><br/>This guide is oriented toward GitHub, but the skills represented there extend well beyond that context. </span></p>
+
+<p>We will work interchangeably in HTML and Markdown over the course of this next section.</p>
+
+<h1 id="html5">HTML5</h1>
+
+<p>HTML is an initialism for &quot;HyperText Markup Language.&quot;</p>
+
+<p>&quot;Hypertext&quot; is text that contains links to other text.<label for='markup-history' class='margin-toggle sidenote-number'></label><input type='checkbox' id='markup-history' class='margin-toggle'/><span class='sidenote'>Keith, Jeremy. “A Brief History of Markup.” A List Apart 305 (May 4, 2010). <a href="http://alistapart.com/article/a-brief-history-of-markup">http://alistapart.com/article/a-brief-history-of-markup</a>. </span>
+The Web, as we know it, relies on hypertext to for us to communicate with systems and with other humans. 
+It is the medium of Web content.</p>
+
+<p>HTML5 is the latest iteration of a standard related to the writing of web content.
+Web markup has a long history over the last few decades, beginning with Tim Berners-Lee, one of the fathers of the modern web (and the inventor of HTML).
+Berners-Lee proposed the creation of an information management system for the European Agency for Nuclear Research (CERN) in the late 1980&#39;s.<label for='html-origin' class='margin-toggle sidenote-number'></label><input type='checkbox' id='html-origin' class='margin-toggle'/><span class='sidenote'>Berners-Lee, Tim. Information Management: A Proposal. European Agency for Nuclear Research (CERN), March 1989. Accessed June 27, 2016. <a href="https://www.w3.org/History/1989/proposal.html">https://www.w3.org/History/1989/proposal.html</a>. </span> </p>
+
+<p>When we write Markdown and then post it to GitHub, a system actually translates it into HTML5. </p>
+
+<h1 id="for-next-time">For next time</h1>
+
+<p>I would like you to look at this tutorial about creating a website using Jekyll and GitHub Pages. <label for='tutorial' class='margin-toggle'> &#8853;</label><input type='checkbox' id='tutorial' class='margin-toggle'/><span class='marginnote'><strong>Reading</strong>: Clark, Barry. “Build A Blog With Jekyll And GitHub Pages – Smashing Magazine.” Smashing Magazine. Last modified August 1, 2014. Accessed June 27, 2016. <a href="https://www.smashingmagazine.com/2014/08/build-blog-jekyll-github-pages/">https://www.smashingmagazine.com/2014/08/build-blog-jekyll-github-pages/</a>. </span></p>
+
+<p>We have already done this in a very rudimentary way, but we will do it again to create a better final product. </p>
+
+<h2 id="homework-pick-a-theme">Homework: Pick a theme</h2>
+
+<p>Spend some time going through these and selecting one you like.  I&#39;ll help you customize it so it works with Github pages.  If you&#39;ve got experience with web design or want to be more adventurous, check some of the more challenging themes.  They should all be a similar level of difficulty after the initial setup.  We&#39;re not using any of the more complicated Jekyll plugins that you have to pre-build.</p>
+
+<h3 id="some-easy-themes">Some easy themes</h3>
+
+<p><a href="http://jekyllthemes.org/themes/basic/">http://jekyllthemes.org/themes/basic/</a></p>
+
+<p><a href="https://github.com/henrythemes/jekyll-bootstrap-theme/">https://github.com/henrythemes/jekyll-bootstrap-theme/</a></p>
+
+<p><a href="https://github.com/henrythemes/jekyll-minimal-theme/">https://github.com/henrythemes/jekyll-minimal-theme/</a></p>
+
+<p><a href="http://jekyllthemes.org/themes/devjournal/">http://jekyllthemes.org/themes/devjournal/</a></p>
+
+<p><a href="http://jekyllthemes.org/themes/gravity/">http://jekyllthemes.org/themes/gravity/</a></p>
+
+<h3 id="more-challenging-themes">More challenging themes</h3>
+
+<p><a href="http://jekyllthemes.org/themes/jekyll-clean/">http://jekyllthemes.org/themes/jekyll-clean/</a></p>
+
+<p><a href="http://jekyllthemes.org/themes/thinkspace/">http://jekyllthemes.org/themes/thinkspace/</a></p>
+
+<p><a href="http://jekyllthemes.org/themes/vitae/">http://jekyllthemes.org/themes/vitae/</a></p>
+
+<p><a href="http://jekyllthemes.org/themes/dbyll/">http://jekyllthemes.org/themes/dbyll/</a></p>
+
+<p><a href="http://jekyllthemes.org/themes/blackdoc/">http://jekyllthemes.org/themes/blackdoc/</a></p>
+
+<p><a href="http://jekyllthemes.org/themes/daktilo/">http://jekyllthemes.org/themes/daktilo/</a></p>
+
+<h3 id="clone-and-make-a-new-repo-for-your-site">Clone and make a new repo for your site</h3>
+
+<p>Once you have chosen a Jekyll theme for your site, <strong>Clone</strong> it into a fresh <strong>Blank</strong> Cloud9 workspace. </p>
+
+<p>Later, together, we will make a new repository for it that you own, <strong>Push</strong> to that repository (following the instructions that pop up when you make a new repo), make appropriate changes to turn it into our own, and then you can get to work on customizing the look and feel of the site. </p>
+
+<p>When we make changes to Jekyll&#39;s configuration, we are ostensibly telling it where to find different necessary files for rendering the site, like our CSS file. </p>
+
+<p>Good advice: </p>
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">&quot;Write the best code possible today and be completely unattached to it and willing to delete it tomorrow.&quot;<a href="https://t.co/mBAJhip0KP">https://t.co/mBAJhip0KP</a></p>&mdash; Adam Wathan (@adamwathan) <a href="https://twitter.com/adamwathan/status/747429538930393088">June 27, 2016</a></blockquote>
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<p>
+  <br/>
+  <ul class="tags">
+    <li><a href="/topics#websites" class="tag">websites</a></li><li><a href="/topics#markup" class="tag">markup</a></li><li><a href="/topics#markdown" class="tag">markdown</a></li><li><a href="/topics#html" class="tag">html</a></li><li><a href="/topics#css" class="tag">css</a></li>
+  </ul> 
+</p>
+    </article>
+    <span class="print-footer">Websites, Markup, and Markdown - September 19, 2016 - </span>
+    <footer>
+  <div class="blognav">
+    
+      <a class="prev" href="/inls161fall2016/web/2016/09/14/catchup1/">&laquo;&nbsp;<span class="smaller">Previous:</span>&nbsp;Catchup Day #1</a>
+    
+    
+      <a class="next" href="/inls161fall2016/web/2016/09/21/jekyll-css-html/"><span class="smaller">Next:</span>&nbsp;Visual styling for the web&nbsp;&raquo;</a>
+    
+  </div>
+  <hr class="slender">
+  <ul class="footer-links">
+    
+    
+      <li>
+        <a href="http://elliotthauser.com" title="Instructor home page"><span class="ico-user"></span>&nbsp;Elliott Hauser</a>
+      </li>
+    
+    
+      <li>
+        <a href="mailto:eah13@email.unc.edu" title="Email instructor"><span class="ico-envelope"></span>&nbsp;eah13@email.unc.edu</a>
+      </li>
+    
+    
+      <li>
+        <span class="ico-clock"></span>&nbsp;3:35-4:50pm
+      </li>
+    
+    
+      <li>
+        <span class="ico-calendar"></span>&nbsp;MoWe
+      </li>
+    
+    
+      <li>
+        <span class="ico-library"></span>&nbsp;117 Manning Hall
+      </li>
+    
+    
+      <li>
+        <a href="https://sakai.unc.edu/portal/site/inls161s216" title="UNC Sakai site for this course"><span class="ico-target"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="https://github.com/inls161" title="GitHub organization for this course"><span class="ico-github"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="https://inls161.slack.com" title="Join the Slack conversations for this course"><span class="ico-slack"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="/feed" title="Add RSS feed"><span class="ico-rss"></span></a>
+      </li>
+      
+  </ul>
+<div class="credits">
+  <span>TOOLS FOR INFORMATION LITERACY &nbsp;&nbsp;|&nbsp;&nbsp; INLS161-002 Fall 2016
+    <br/> 
+  <span class="smaller">Tools and concepts for information literacy. Includes software use and maintenance, computer applications, and networked information systems.</span>
+  <br/><br/>
+  <span class="smaller"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_US">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 Unported License</a>.</span>
+  <br/>
+  <span class="smaller"><a href="/inls161fall2016/credits/">Content &copy; 2016 Elliott Hauser</a></span>
+</div>  
+</footer>
+  </body>
+</html>

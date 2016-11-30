@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Tools for Information Literacy&nbsp;|&nbsp;Networks Reference Sheet</title>
+  <meta name="description" content="Tools and concepts for information literacy. Includes software use and maintenance, computer applications, and networked information systems.">
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+    <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+  
+  <!-- Load Moment.js for dates if option set in /_data/optins.yml file-->
+  
+    <script type="text/javascript" src="//momentjs.com/downloads/moment.js"></script> 
+   
+  
+  
+    <script type="text/javascript" src="//storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/datejs/date.js"></script>
+  
+
+  <link rel="stylesheet" href="/inls161fall2016/css/tufte.css"> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css" />
+  <link rel="icon" href="/inls161fall2016/assets/img/favicon.ico" type="image/x-icon" />
+
+  
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+	<a href="/inls161fall2016/"><img class="badge" src="/inls161fall2016/assets/img/161icon.png" alt="UNC"></a>
+	
+	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+		    
+		      <a href="/inls161fall2016/">INLS 161</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/syllabus/">Syllabus</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/schedule/">Schedule</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/assignments/">Assignments</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/refsheets/">Reference</a>
+		    
+	    
+  	
+	</nav>
+</header>
+    <article class="group">
+<h1>Networks Reference Sheet</h1>
+<p class="subtitle"></p>
+
+<h1 id="networks-reference-sheet">Networks Reference Sheet</h1>
+
+<h2 id="information-about-users">Information about users</h2>
+
+<p>Show who is logged on and what they are doing:</p>
+
+<p><code>w</code></p>
+
+<p>Give me information about myself on this host:</p>
+
+<p><code>whoami</code></p>
+
+<p>Give me information about another user:</p>
+
+<p><code>finger user</code></p>
+
+<h2 id="network-information">Network information</h2>
+
+<p>Elicit a response from a host somewhere:</p>
+
+<p><code>ping unc.edu</code></p>
+
+<p><em>ping</em> will continue forever if we let it. 
+So, to kill the process, press CTRL+C. 
+This will stop ping and give us a summary of what it found. 
+We can also specify a count and then ping will only run that number of times before it stops and reports out.</p>
+
+<p><code>ping -c 10 unc.edu</code></p>
+
+<p>You&#39;ll need to install some of these tools as they are not part of the standard DevBox install. 
+<em>Dig</em> is part of the <em>dnsutils</em> package in Ubuntu. 
+You can figure this out by searching for it like this:</p>
+
+<p><code>apt-cache search dig | grep DNS</code></p>
+
+<p>The command above searches for dig, which will return results that have the words &quot;digital&quot; and &quot;digest&quot; if you don&#39;t attempt to narrow the field somewhat. 
+Since we know that dig has something to do with DNS, it seems like a good candidate to narrow the results. 
+We use a pipe separator (|) and <em>grep</em> to return only results that match on our query of &quot;dig&quot; that also mention &quot;DNS&quot; somewhere either in the package name or short description. 
+DNSutils pops up right at the top, along with all of the other more advanced versions of DNSutils. 
+It is probably a safe bet that the dig command will be rolled into DNSutils, so let&#39;s install it. </p>
+
+<p><code>sudo apt-get install dnsutils</code></p>
+
+<p><em>Whois</em> and <em>nmap</em> are also not installed on your DevBox, so let&#39;s go ahead and install those as well. 
+You can install two or more packages using the same command:</p>
+
+<p><code>sudo apt-get install whois nmap</code></p>
+
+<p>Now we should be ready to go. Let&#39;s find out some stuff about unc.edu.
+Find some information about that host from the whois directory:</p>
+
+<p><code>whois unc.edu</code></p>
+
+<p>Look up the DNS registry information for this hostname:</p>
+
+<p><code>dig unc.edu</code></p>
+
+<p>Since we know the IP address for unc.edu now, lets do a reverse lookup on it.
+Look up the hostname for this IP address:</p>
+
+<p><code>dig -x 152.19.230.139</code></p>
+
+<p>Let&#39;s look up vpn.unc.edu and see if it is the same as the main webserver IP address:</p>
+
+<p><code>dig vpn.unc.edu</code></p>
+
+<p>Tell me what ports are open on this host:</p>
+
+<p><code>nmap unc.edu</code></p>
+
+<p>Get me this file and download it here:</p>
+
+<p><code>wget http://rogerdudler.github.io/git-guide/files/git_cheat_sheet.pdf</code></p>
+
+
+    </article>
+    <span class="print-footer">Networks Reference Sheet - </span>
+    <footer>
+  <div class="blognav">
+    
+    
+  </div>
+  <hr class="slender">
+  <ul class="footer-links">
+    
+    
+      <li>
+        <a href="http://elliotthauser.com" title="Instructor home page"><span class="ico-user"></span>&nbsp;Elliott Hauser</a>
+      </li>
+    
+    
+      <li>
+        <a href="mailto:eah13@email.unc.edu" title="Email instructor"><span class="ico-envelope"></span>&nbsp;eah13@email.unc.edu</a>
+      </li>
+    
+    
+      <li>
+        <span class="ico-clock"></span>&nbsp;3:35-4:50pm
+      </li>
+    
+    
+      <li>
+        <span class="ico-calendar"></span>&nbsp;MoWe
+      </li>
+    
+    
+      <li>
+        <span class="ico-library"></span>&nbsp;117 Manning Hall
+      </li>
+    
+    
+      <li>
+        <a href="https://sakai.unc.edu/portal/site/inls161s216" title="UNC Sakai site for this course"><span class="ico-target"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="https://github.com/inls161" title="GitHub organization for this course"><span class="ico-github"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="https://inls161.slack.com" title="Join the Slack conversations for this course"><span class="ico-slack"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="/feed" title="Add RSS feed"><span class="ico-rss"></span></a>
+      </li>
+      
+  </ul>
+<div class="credits">
+  <span>TOOLS FOR INFORMATION LITERACY &nbsp;&nbsp;|&nbsp;&nbsp; INLS161-002 Fall 2016
+    <br/> 
+  <span class="smaller">Tools and concepts for information literacy. Includes software use and maintenance, computer applications, and networked information systems.</span>
+  <br/><br/>
+  <span class="smaller"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_US">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 Unported License</a>.</span>
+  <br/>
+  <span class="smaller"><a href="/inls161fall2016/credits/">Content &copy; 2016 Elliott Hauser</a></span>
+</div>  
+</footer>
+  </body>
+</html>

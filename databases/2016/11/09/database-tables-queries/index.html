@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Tools for Information Literacy&nbsp;|&nbsp;Databases, tables, queries, and relationships</title>
+  <meta name="description" content="Today we will continue with our discussion of databases and then learn ALL THE SQL. ">
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+    <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+  
+  <!-- Load Moment.js for dates if option set in /_data/optins.yml file-->
+  
+    <script type="text/javascript" src="//momentjs.com/downloads/moment.js"></script> 
+   
+  
+  
+    <script type="text/javascript" src="//storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/datejs/date.js"></script>
+  
+
+  <link rel="stylesheet" href="/inls161fall2016/css/tufte.css"> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css" />
+  <link rel="icon" href="/inls161fall2016/assets/img/favicon.ico" type="image/x-icon" />
+
+  
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+	<a href="/inls161fall2016/"><img class="badge" src="/inls161fall2016/assets/img/161icon.png" alt="UNC"></a>
+	
+	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+		    
+		      <a href="/inls161fall2016/">INLS 161</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/syllabus/">Syllabus</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/schedule/">Schedule</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/assignments/">Assignments</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/refsheets/">Reference</a>
+		    
+	    
+  	
+	</nav>
+</header>
+    <article class="group">
+<h1>Databases, tables, queries, and relationships</h1>
+
+
+
+<p class="subtitle"><span id="date">Wednesday, 9 November 2016</span><span class="smaller date contrast"></span></p>
+
+<script>
+var date = document.getElementById("span")[0];
+alert(p.childNodes[1].textContent)
+</script>
+
+<p>Today we will continue with our discussion of databases and then learn ALL THE SQL. </p>
+
+<p><img src="/assets/img/learnallthesql.jpg" alt="LEARN ALL THE SQL">
+<excerpt/></p>
+
+<h1 id="parts-of-a-database">Parts of a database</h1>
+
+<h2 id="tables">Tables</h2>
+
+<p>The basic storage template in a database is a table. </p>
+
+<p>This is simply a set of data arranged into columns and rows. 
+Just like with the data that we generated previously, the rows represent lists of information that are related to a specific thing. </p>
+
+<p>The rows in our tables are called &quot;records.&quot;</p>
+
+<p>The columns then represent the types of information that we are organizing. </p>
+
+<p>Tables on their own are fine for storing a collection of data, but what if we have a lot of repeating data that we do not want to have to store over and over again in the same table?</p>
+
+<h2 id="relationships">Relationships</h2>
+
+<p>The primary method of reducing this sort of data is by creating more tables and then defining relationships between them. 
+This is why we refer to this type of database as &quot;relational.&quot;<label for='Harkins, Susan. “Relational Databases: Defining Relationships between Database Tables.” TechRepublic. Last modified April 30, 2003. http://www.techrepublic.com/article/relational-databases-defining-relationships-between-database-tables/.<br/><br/>Harkins, Susan. “Relational Databases: The Inspiration behind the Theory.” TechRepublic. Last modified April 2, 2003. <a href="http://www.techrepublic.com/article/relational-databases-the-inspiration-behind-the-theory/">http://www.techrepublic.com/article/relational-databases-the-inspiration-behind-the-theory/</a>.<br/><br/>The whole TechRepublic series on relational databases is useful. It would be worthwhile to read all of it. &#39; class=&#39;margin-toggle sidenote-number&#39;&gt;</label><input type='checkbox' id='Harkins, Susan. “Relational Databases: Defining Relationships between Database Tables.” TechRepublic. Last modified April 30, 2003. http://www.techrepublic.com/article/relational-databases-defining-relationships-between-database-tables/.<br/><br/>Harkins, Susan. “Relational Databases: The Inspiration behind the Theory.” TechRepublic. Last modified April 2, 2003. <a href="http://www.techrepublic.com/article/relational-databases-the-inspiration-behind-the-theory/">http://www.techrepublic.com/article/relational-databases-the-inspiration-behind-the-theory/</a>.<br/><br/>The whole TechRepublic series on relational databases is useful. It would be worthwhile to read all of it. &#39; class=&#39;margin-toggle&#39;/&gt;<span class='sidenote'> </span></p>
+
+<p>There are three categories of relationship:</p>
+
+<ul>
+<li>One-to-One: Each record in a table has only one relationship to one other record in another table</li>
+<li>One-to-Many: Each record (by primary key) in a table can have zero, one, or many relationships to records in other tables. </li>
+<li>Many-to-Many: Each record in a table can have any number of (or zero) relationships to records in other tables. </li>
+</ul>
+
+<p>Can you think of any examples of relationships like this? </p>
+
+<h3 id="primary-keys">Primary Keys</h3>
+
+<p>A primary key, as mentioned above, is a designator associated with each record that distinguishes it from all other records. 
+When creating a table with a one-to-many relationship, you will need to create a primary key for each new record. </p>
+
+<p>What are some possible pieces of existing information that might be used as a primary key?</p>
+
+<p>What might be some problems with using an existing piece of information as a primary key?</p>
+
+<h2 id="queries">Queries</h2>
+
+<p>Queries take a set of instructions and use them to sort and categorize data across multiple variables and tables. </p>
+
+<p>We will look at different possibilities for queries and try some together in class. </p>
+
+<p>When we define relationships in the query designer, you&#39;ll notice that there are different joins available to you. </p>
+
+<h2 id="joins">Joins</h2>
+
+<p>These are logical inclusion/exclusion criteria for your query at the table level. 
+It is a good idea to have some understanding of what they do on a logical level.<label for='joins' class='margin-toggle sidenote-number'></label><input type='checkbox' id='joins' class='margin-toggle'/><span class='sidenote'>Moffatt, C. L. “Visual Representation of SQL Joins.” CodeProject. <a href="http://www.codeproject.com/Articles/33052/Visual-Representation-of-SQL-Joins">http://www.codeproject.com/Articles/33052/Visual-Representation-of-SQL-Joins</a>.<br/><br/>This visual  guide can help you to better understand each join and what they do. </span> </p>
+
+<p>Today, we will only use right joins in our example queries. </p>
+
+<p>Why would we do that? Which table is going to be on the Right?</p>
+
+<p><img src="http://www.w3schools.com/sql/img_rightjoin.gif" alt="">
+<img src="http://www.w3schools.com/sql/img_leftjoin.gif" alt="">
+<img src="http://www.w3schools.com/sql/img_innerjoin.gif" alt=""></p>
+
+<h1 id="sql-boot-camp-part-2">SQL Boot Camp Part 2</h1>
+
+<h2 id="get-back-in">Get back in</h2>
+
+<p>Get back in to mysql.  From the bash command line:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">mysql-ctl cli
+</code></pre></div>
+<p>then, from mysql:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">USE booksinfo;
+</code></pre></div>
+<p>We&#39;re ready to pick up where we left off.</p>
+
+<h2 id="summary-queries">Summary Queries</h2>
+
+<p>Since we have our data in place from last time, let&#39;s summarize it a bit. </p>
+<div class="highlight"><pre><code class="language-" data-lang="">SELECT COUNT(*) FROM tblBook;
+</code></pre></div>
+<p>What if we want to see the first ten rows in tblBook by Date?</p>
+<div class="highlight"><pre><code class="language-" data-lang="">SELECT * FROM tblBook ORDER BY Date LIMIT 10;
+</code></pre></div>
+<p>Let&#39;s look at only books published after 1980;</p>
+<div class="highlight"><pre><code class="language-" data-lang="">SELECT * FROM tblBook WHERE Date &gt; 1980 ORDER BY Date;
+</code></pre></div>
+<p>And count them:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">SELECT COUNT(*) FROM tblBook WHERE Date &gt; 1980 ORDER BY Date;
+</code></pre></div>
+<p>How about only books published in 1980?</p>
+<div class="highlight"><pre><code class="language-" data-lang="">SELECT * FROM tblBook WHERE Date = 1980 ORDER BY ShelfNumber;
+</code></pre></div>
+<p>Let&#39;s find out how much our books cost:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">SELECT AVG(RetailPrice) FROM tblBook;
+</code></pre></div><div class="highlight"><pre><code class="language-" data-lang="">SELECT MIN(RetailPrice) FROM tblBook;
+</code></pre></div><div class="highlight"><pre><code class="language-" data-lang="">SELECT MAX(RetailPrice) FROM tblBook;
+</code></pre></div>
+<p>Let&#39;s summarize all of that together.</p>
+<div class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">SELECT</span> 
+<span class="k">AVG</span><span class="p">(</span><span class="n">RetailPrice</span><span class="p">)</span> <span class="k">AS</span> <span class="s1">'Average Price'</span><span class="p">,</span>
+<span class="k">MIN</span><span class="p">(</span><span class="n">RetailPrice</span><span class="p">)</span> <span class="k">AS</span> <span class="s1">'Lowest Price'</span><span class="p">,</span>
+<span class="k">MAX</span><span class="p">(</span><span class="n">RetailPrice</span><span class="p">)</span> <span class="k">AS</span> <span class="s1">'Highest Price'</span>
+<span class="k">FROM</span> <span class="n">tblBook</span><span class="p">;</span>
+</code></pre></div>
+<h2 id="join-queries">Join Queries</h2>
+
+<p>If we want to use the real power of tables, we need to <code>JOIN</code> them, then search across them. I want to list out all the books in the list that were published by Oxford University Press. </p>
+<div class="highlight"><pre><code class="language-" data-lang="">SELECT * FROM tblBook b RIGHT JOIN tblPub p ON b.PubID = p.ID WHERE p.Publisher = 'Oxford University Press';
+</code></pre></div>
+<p>How many locations does OUP have? </p>
+<div class="highlight"><pre><code class="language-" data-lang="">SELECT COUNT(*) FROM tblPub WHERE Publisher = 'Oxford University Press';
+</code></pre></div>
+<p>Where are they?</p>
+<div class="highlight"><pre><code class="language-" data-lang="">SELECT * FROM tblPub WHERE Publisher = 'Oxford University Press';
+</code></pre></div>
+<p>What if I only want the books published by OUP&#39;s US office? 
+I have to specify an additional criterion. </p>
+<div class="highlight"><pre><code class="language-" data-lang="">SELECT * FROM tblBook b RIGHT JOIN tblPub p ON b.PubID = p.ID WHERE p.Publisher = 'Oxford University Press' AND p.Country = 'US';
+</code></pre></div>
+<p>I wonder if books cost more from the OUP GB location than from the OUP US location.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">SELECT AVG(RetailPrice) FROM tblBook b RIGHT JOIN tblPub p ON b.PubID = p.ID WHERE p.Publisher = 'Oxford University Press' AND p.Country = 'GB';
+</code></pre></div><div class="highlight"><pre><code class="language-" data-lang="">SELECT AVG(RetailPrice) FROM tblBook b RIGHT JOIN tblPub p ON b.PubID = p.ID WHERE p.Publisher = 'Oxford University Press' AND p.Country = 'US';
+</code></pre></div>
+<h1 id="output-from-mysql-queries-as-tables">Output from MySQL queries as tables</h1>
+
+<p>We can take any of the above queries and output the results to a table. </p>
+
+<p>We need to add <code>CREATE TABLE qryName</code> to the front of any of our query commands. </p>
+
+<p>Here is an example using our price summary from above (Again do this all on one line):</p>
+<div class="highlight"><pre><code class="language-" data-lang="">CREATE TABLE qryPrices SELECT AVG(RetailPrice) AS 'Average Price', 
+                              MIN(RetailPrice) AS 'Lowest Price', 
+                              MAX(RetailPrice) AS 'Highest Price' 
+                              FROM tblBook;
+</code></pre></div>
+<p>See if it worked by listing the tables:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">show tables;
+</code></pre></div>
+<p>Look at what is in the new table:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">SELECT * FROM qryPrices;
+</code></pre></div>
+<p>It should match the output from when you ran the query before. </p>
+
+<h2 id="output-from-mysql-queries-in-other-formats">Output from MySQL queries in other formats</h2>
+
+<p>We can output all of this stuff outside of our MySQL prompt shell (in a normal shell).</p>
+
+<p>Let&#39;s ask for the summary of book prices in HTML and then we can try some other queries if we have time. </p>
+
+<p><code>quit</code> to exit the MySQL prompt.</p>
+
+<p>Now you have exited from the MySql prompt.</p>
+
+<p>This command will run the query in quotes:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">mysql -u tommytester -p -H -e "SELECT AVG(RetailPrice) AS 'Average Price', MIN(RetailPrice) AS 'Lowest Price', MAX(RetailPrice) AS 'Highest Price' FROM tblBook;" booksinfo
+</code></pre></div>
+<h1 id="mysql-scripting">MYSQL Scripting</h1>
+
+<p>We&#39;ve been typing all of these commands into a prompt. We can also make MySQL scripts!  This may come in handy if you have certain commands that you need to run multiple times.</p>
+
+<p>Put this text into a file called <code>query.sql</code>:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">USE booksinfo;
+SELECT AVG(RetailPrice) AS 'Average Price', MIN(RetailPrice) AS 'Lowest Price', MAX(RetailPrice) AS 'Highest Price' FROM tblBook;
+</code></pre></div>
+<p>Then type</p>
+<div class="highlight"><pre><code class="language-" data-lang="">mysql -u tommytester -p &lt; query.sql
+</code></pre></div>
+<p>from the command line to run your script. This is equivalent to the command above but using scripts may be useful if you&#39;re going to be entering complex commands.  Also, remember that scripts can call other scripts!</p>
+
+<h1 id="exporting-and-importing">Exporting and Importing</h1>
+
+<p>To export your whole database so that you can use it elsewhere (i.e., transfer it to a different server) do the following command:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">mysqldump -u tommytester -p booksinfo &gt; booksinfo.sql
+</code></pre></div>
+<p>If you want to then <strong>import</strong> that same database somewhere else, the command is very similar. The direction changes, and instead of the specialized <code>mysqldump</code> command, you use just the standard MySQL client command:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">mysql -u tommytester -p booksinfo &lt; booksinfo.sql
+</code></pre></div>
+<h1 id="next-time">Next time</h1>
+
+<p>You are going to work in your groups to create a new script, based on your last assignment, that will write the data you have collected into a MySQL database. That assignment will be the focus of our lab session. </p>
+
+
+<p>
+  <br/>
+  <ul class="tags">
+    <li><a href="/topics#database" class="tag">database</a></li><li><a href="/topics#tables" class="tag">tables</a></li><li><a href="/topics#queries" class="tag">queries</a></li><li><a href="/topics#SQL" class="tag">SQL</a></li><li><a href="/topics#MySQL" class="tag">MySQL</a></li>
+  </ul> 
+</p>
+    </article>
+    <span class="print-footer">Databases, tables, queries, and relationships - November 9, 2016 - </span>
+    <footer>
+  <div class="blognav">
+    
+      <a class="prev" href="/inls161fall2016/databases/2016/11/07/sql-bootcamp/">&laquo;&nbsp;<span class="smaller">Previous:</span>&nbsp;Database software and MySQL</a>
+    
+    
+      <a class="next" href="/inls161fall2016/databases/2016/11/14/lab-from-data-to-databases/"><span class="smaller">Next:</span>&nbsp;From data to database&nbsp;&raquo;</a>
+    
+  </div>
+  <hr class="slender">
+  <ul class="footer-links">
+    
+    
+      <li>
+        <a href="http://elliotthauser.com" title="Instructor home page"><span class="ico-user"></span>&nbsp;Elliott Hauser</a>
+      </li>
+    
+    
+      <li>
+        <a href="mailto:eah13@email.unc.edu" title="Email instructor"><span class="ico-envelope"></span>&nbsp;eah13@email.unc.edu</a>
+      </li>
+    
+    
+      <li>
+        <span class="ico-clock"></span>&nbsp;3:35-4:50pm
+      </li>
+    
+    
+      <li>
+        <span class="ico-calendar"></span>&nbsp;MoWe
+      </li>
+    
+    
+      <li>
+        <span class="ico-library"></span>&nbsp;117 Manning Hall
+      </li>
+    
+    
+      <li>
+        <a href="https://sakai.unc.edu/portal/site/inls161s216" title="UNC Sakai site for this course"><span class="ico-target"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="https://github.com/inls161" title="GitHub organization for this course"><span class="ico-github"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="https://inls161.slack.com" title="Join the Slack conversations for this course"><span class="ico-slack"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="/feed" title="Add RSS feed"><span class="ico-rss"></span></a>
+      </li>
+      
+  </ul>
+<div class="credits">
+  <span>TOOLS FOR INFORMATION LITERACY &nbsp;&nbsp;|&nbsp;&nbsp; INLS161-002 Fall 2016
+    <br/> 
+  <span class="smaller">Tools and concepts for information literacy. Includes software use and maintenance, computer applications, and networked information systems.</span>
+  <br/><br/>
+  <span class="smaller"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_US">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 Unported License</a>.</span>
+  <br/>
+  <span class="smaller"><a href="/inls161fall2016/credits/">Content &copy; 2016 Elliott Hauser</a></span>
+</div>  
+</footer>
+  </body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Tools for Information Literacy</title>
+  <meta name="description" content="Tools and concepts for information literacy. Includes software use and maintenance, computer applications, and networked information systems.">
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+    <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+  
+  <!-- Load Moment.js for dates if option set in /_data/optins.yml file-->
+  
+    <script type="text/javascript" src="//momentjs.com/downloads/moment.js"></script> 
+   
+  
+  
+    <script type="text/javascript" src="//storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/datejs/date.js"></script>
+  
+
+  <link rel="stylesheet" href="/inls161fall2016/css/tufte.css"> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css" />
+  <link rel="icon" href="/inls161fall2016/assets/img/favicon.ico" type="image/x-icon" />
+
+  
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+	<a href="/inls161fall2016/"><img class="badge" src="/inls161fall2016/assets/img/161icon.png" alt="UNC"></a>
+	
+	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+		    
+		      <a href="/inls161fall2016/">INLS 161</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/syllabus/">Syllabus</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/schedule/">Schedule</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/assignments/">Assignments</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/refsheets/">Reference</a>
+		    
+	    
+  	
+	</nav>
+</header>
+    <article class="group">
+<h1></h1>
+<p class="subtitle"></p>
+
+<h1 id="task-4-create-data">Task #4 - Create data</h1>
+
+<p>This assignment aims at strengthening our scripting skills and learning how to create a well-formed dataset to work with. </p>
+
+<p>We will extend what we do in this assignment in the next one, so keep that in mind.</p>
+
+<p>We will create a short questionnaire and then use Bash to script collection of answers.</p>
+
+<h2 id="skillsets">Skillsets</h2>
+
+<p>You will be exposed to the following skillsets;</p>
+
+<ol>
+<li>Scripting user input</li>
+<li>Saving data to csv file</li>
+</ol>
+
+<h2 id="expectations">Expectations</h2>
+
+<p>I expect you to work in your teams to create a script that will take input from users and then store their responses to a CSV file.
+It must aggregate the responses of multiple users and therefore needs to have some form of disambiguation involved in the data generation process. </p>
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<p>The only thing that you will need is Bash and text files, all of which are available in CodeAnywhere.</p>
+
+<h2 id="instructions">Instructions</h2>
+
+<p>You will need to do the following for this assignment to be considered complete. </p>
+
+<ol>
+<li>Have <strong>one</strong> person move all of your classwork related files (i.e. not the below) into a folder called &#39;prep&#39;.  Have them add and commit and push these changes, then everyone else pull them.  This will clean up your repository.</li>
+<li>Create a list of five questions.</li>
+<li>Write a script that will do the following:
+
+<ul>
+<li>Ask each question of the user running the script.</li>
+<li>Accept text input from the user and write each answer as a variable.</li>
+<li>Write a random string of characters to a variable as a unique identifier.  <strong>You will need to use our readings and/or other resources to choose a method for doing this.</strong></li>
+<li>Write the datestamp to a variable.  Same as above you&#39;ll need to research and select one of the many ways of doing this.</li>
+<li>Append all answers and other data to a CSV file.<br></li>
+</ul></li>
+<li>Commit and push the script and CSV file to your shared repository. Beware of running into conflicts here. <a href="https://help.github.com/articles/resolving-a-merge-conflict-from-the-command-line/">Resolve them</a> if you do.</li>
+<li>Once the script is done, have each group member <strong>pull</strong> the finished script <strong>one at a time</strong> and run it twice, giving different answers each time.  Then they should add, commit and push their results.  You&#39;ll need each group member to notify the others when it&#39;s time for them to pull and run the script.  This will build up a CSV file with commits from each member.</li>
+<li>Each group member should submit a <strong>separate</strong> reflection post detailing how the group approached the problem and their individual&#39;s role in creating the script above.  The reflection should detail any challenges, confusions, and lightbulbs that went on during the process. It should also link to your github repository and any specific files or commits you&#39;d like to discuss.</li>
+<li>Each group member email me a link to their reflection.</li>
+</ol>
+
+<p>Bonuses:</p>
+
+<ul>
+<li>Particularly robust text interface to your program.  For instance, you might want to let the user choose what CSV filename to use and whether to overwrite or append to it. (For the exercise you should all choose the same CSV file)</li>
+<li>Successfully use functions, for, if, or other features of Bash that we haven&#39;t covered in class</li>
+<li>Use branches, <strong>Pull Requests</strong>  and comments on github for collaboration.</li>
+<li>Print out all of the data, nicely formatted and colored, in the CSV after user input is completed</li>
+</ul>
+
+
+    </article>
+    <span class="print-footer"> - </span>
+    <footer>
+  <div class="blognav">
+    
+    
+  </div>
+  <hr class="slender">
+  <ul class="footer-links">
+    
+    
+      <li>
+        <a href="http://elliotthauser.com" title="Instructor home page"><span class="ico-user"></span>&nbsp;Elliott Hauser</a>
+      </li>
+    
+    
+      <li>
+        <a href="mailto:eah13@email.unc.edu" title="Email instructor"><span class="ico-envelope"></span>&nbsp;eah13@email.unc.edu</a>
+      </li>
+    
+    
+      <li>
+        <span class="ico-clock"></span>&nbsp;3:35-4:50pm
+      </li>
+    
+    
+      <li>
+        <span class="ico-calendar"></span>&nbsp;MoWe
+      </li>
+    
+    
+      <li>
+        <span class="ico-library"></span>&nbsp;117 Manning Hall
+      </li>
+    
+    
+      <li>
+        <a href="https://sakai.unc.edu/portal/site/inls161s216" title="UNC Sakai site for this course"><span class="ico-target"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="https://github.com/inls161" title="GitHub organization for this course"><span class="ico-github"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="https://inls161.slack.com" title="Join the Slack conversations for this course"><span class="ico-slack"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="/feed" title="Add RSS feed"><span class="ico-rss"></span></a>
+      </li>
+      
+  </ul>
+<div class="credits">
+  <span>TOOLS FOR INFORMATION LITERACY &nbsp;&nbsp;|&nbsp;&nbsp; INLS161-002 Fall 2016
+    <br/> 
+  <span class="smaller">Tools and concepts for information literacy. Includes software use and maintenance, computer applications, and networked information systems.</span>
+  <br/><br/>
+  <span class="smaller"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_US">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 Unported License</a>.</span>
+  <br/>
+  <span class="smaller"><a href="/inls161fall2016/credits/">Content &copy; 2016 Elliott Hauser</a></span>
+</div>  
+</footer>
+  </body>
+</html>

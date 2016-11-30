@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Tools for Information Literacy&nbsp;|&nbsp;Troubleshooting</title>
+  <meta name="description" content="This lab session will be primarily dedicated to helping you work out kinks and wrinkles in the process of getting your site online and completing the second ...">
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+    <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+  
+  <!-- Load Moment.js for dates if option set in /_data/optins.yml file-->
+  
+    <script type="text/javascript" src="//momentjs.com/downloads/moment.js"></script> 
+   
+  
+  
+    <script type="text/javascript" src="//storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/datejs/date.js"></script>
+  
+
+  <link rel="stylesheet" href="/inls161fall2016/css/tufte.css"> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css" />
+  <link rel="icon" href="/inls161fall2016/assets/img/favicon.ico" type="image/x-icon" />
+
+  
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+	<a href="/inls161fall2016/"><img class="badge" src="/inls161fall2016/assets/img/161icon.png" alt="UNC"></a>
+	
+	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+		    
+		      <a href="/inls161fall2016/">INLS 161</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/syllabus/">Syllabus</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/schedule/">Schedule</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/assignments/">Assignments</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/refsheets/">Reference</a>
+		    
+	    
+  	
+	</nav>
+</header>
+    <article class="group">
+<h1>Troubleshooting</h1>
+
+
+
+<p class="subtitle"><span id="date">Monday, 3 October 2016</span><span class="smaller date contrast"></span></p>
+
+<script>
+var date = document.getElementById("span")[0];
+alert(p.childNodes[1].textContent)
+</script>
+
+<p>This lab session will be primarily dedicated to helping you work out kinks and wrinkles in the process of getting your site online and completing the second assignment. 
+If you are already very far along, then this is an opportunity for you to finish your work. 
+<excerpt/></p>
+
+<h1 id="q-amp-a">Q&amp;A</h1>
+
+<ul>
+<li>Who&#39;s close to done?</li>
+</ul>
+
+<h1 id="testing">Testing</h1>
+
+<p>In software development it&#39;s very important to actively test your work.  Here are some basic user tests you should do on your site:</p>
+
+<ul>
+<li>Can I see the post(s) from the index of the site?</li>
+<li>Can I navigate to the pages from there?</li>
+<li>When I navigate to each page, does it display correctly?</li>
+<li>When I navigate to each post does it display correctly?</li>
+<li>Is all of the information in my layouts (twitter, email, copyright, etc) correct for me? (if not, fix or remove it)</li>
+</ul>
+
+<p>Ideally your development environment replicates production to the point that you don&#39;t need to test in both places.  But, especially in the beginning, it&#39;s important to make sure that all your links, etc. work on github.io like they do in your c9users.io site.</p>
+
+<h1 id="troubleshooting">Troubleshooting</h1>
+
+<p>In addition to completing your site and the assignment at hand, we will start looking at ways that you can teach yourself how to fix problems that happen. 
+You will always run into issues, no matter what you are working on. 
+This will never stop. Getting good at resolving issues that come up is synonymous with being a coder.</p>
+
+<p>At that point, you have two options: </p>
+
+<ol>
+<li>Wait for someone to help you. </li>
+<li>Figure it out on your own. </li>
+</ol>
+
+<p>Guess which one goes further in the course of your academic and work lives.</p>
+
+<h2 id="sources-of-information-are-myriad">Sources of information are myriad</h2>
+
+<p>It is really difficult to recommend places to get help with troubleshooting online. 
+This is not because they are so few, but because they are so many. </p>
+
+<p>The best approach is to actually see what information you can get directly from the error interaction and then move on from there. </p>
+
+<p>Read the error and try to understand it in plain language. 
+That may work some of the time. </p>
+
+<p>Some error systems give VERY helpful errors that include suggestions for ways to fix what has gone wrong. 
+Git is like this.
+If you have a git error, most of the time, it will tell you what has gone wrong and how you can fix it. 
+Usually you just have to read it and do what it says. Though, make sure that you don&#39;t just blindly do what 
+it says.  Sometimes you&#39;re trying to do something you shouldn&#39;t like commit changes to the <code>_site</code> directory and it is just helping you do that.</p>
+
+<p>Sometimes error messages will be more obtuse: this is a legitimate and well-known fact. </p>
+
+<p>If you catch an error that doesn&#39;t make sense to you, try at the very least to figure out what it means or to what it is referring. </p>
+
+<h2 id="google-it">Google it</h2>
+
+<p>Take this error, for example:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">error: Entry '&lt;fileName&gt;' would be overwritten by merge. Cannot merge. (Changes in staging area)
+</code></pre></div>
+<p>This is not particularly helpful. 
+I could pore over the git documentation for this, or I could take a more reasonable path and <a href="http://lmgtfy.com/?q=error%3A+Entry+%27%3CfileName%3E%27+would+be+overwritten+by+merge.+Cannot+merge.+(Changes+in+staging+area)">Google it</a>. </p>
+
+<p>As you can see, there is a fair amount of information immediately available that will help you cirvumvent that error. </p>
+
+<p>Take this approach first and keep these things in mind:</p>
+
+<ol>
+<li>Be careful: not all information is good. </li>
+<li>Learn to spot the difference. </li>
+<li>READ.</li>
+</ol>
+
+<p><a href="http://stackoverflow.org">Stack Overflow</a> is generally a useful resource for recovering from errors. 
+It is well curated and lots of people use it to figure things out. </p>
+
+<h2 id="jekyll-errors">Jekyll errors</h2>
+
+<p>Keep an eye on your Jekyll process.  It will spit out errors there that may explain why your site isn&#39;t showing up the way you expect it to.  Remember, some times you&#39;ll need to restart your Jekyll process if you&#39;ve changed the way it should set itself up.</p>
+
+<h2 id="merge-conflicts">Merge Conflicts</h2>
+
+<p>If you&#39;re unable to <code>git push</code>, this usually means you somehow got commits up to Github that aren&#39;t on your current branch.  You&#39;ll need to <code>git pull</code> to merge those commits, then you can <code>git push</code>.  If git can&#39;t automatically figure out how to merge the changes, it will tell you where the conflicts are and you&#39;ll need to merge them yourself.  Merge conflicts can also happen when you try to merge a local branch.</p>
+
+<p>Basically, just keep calm and make all the files look the way they should.  Git will insert a bunch of ugly <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code>=============</code> and <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code> to help you see the conflicts.  Delete all of this and leave only the version of the enclosed code you want to keep.</p>
+
+<p>More:</p>
+
+<ul>
+<li><a href="https://githowto.com/resolving_conflicts">Basic walkthough</a></li>
+<li><a href="https://help.github.com/articles/resolving-a-merge-conflict-from-the-command-line/">Github&#39;s merge conflict docs</a></li>
+</ul>
+
+<h2 id="swakifying-your-site">Swakifying Your Site</h2>
+
+<p>Many of you are very far along with your sites. Don&#39;t stop experimenting!  Here are some ideas for you to keep improving your site even after the standard </p>
+
+<ul>
+<li>Basic: Add links to resources you&#39;ve found outside of class that you think are helpful.</li>
+<li>Intermediate: Add a hosted photo album to your page as an embed, with digrams or other images you found helpful from the class</li>
+<li>Advanced: Add <a href="https://github.com/simeydotme/jQuery-canvas-sparkles">JQuery powered sparkles</a> to your site. For this to work, you&#39;ll need some <code>&lt;script&gt;</code> tags to load Jquery, this library, then some javascript telling this library what HTML elements to make sparkle.  JQuery is just Javascript, but a little easier to read and write.  You select elements by putting a CSS selector somewhere, like this code selecting all <code>h1</code> elements:</li>
+</ul>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">$</span><span class="p">(</span><span class="s2">"h1"</span><span class="p">).</span><span class="nx">sparkle</span><span class="p">();</span>
+</code></pre></div>
+<p>The <code>.sparkle();</code> tells the library we loaded to make the element sparkle.  You&#39;ll need to tell Javascript when to do this, so add this <code>&lt;script&gt;</code> element to the very bottom, before the <code>&lt;/body&gt;</code> close tag:</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html">
+<span class="nt">&lt;script&gt;</span>
+  <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s2">"h1"</span><span class="p">).</span><span class="nx">sparkle</span><span class="p">();</span>
+  <span class="p">});</span>
+<span class="nt">&lt;/script&gt;</span>
+
+</code></pre></div>
+<p>That should make <code>h1</code> elements sparkle when you mouse over them.</p>
+
+<h2 id="for-next-time">For Next Time</h2>
+
+<p>Keep working on your sites! Weds your Assignment 2 is due and that class will be the last chance I have to help you so bring your questions!  I&#39;ll probably have an optional activity for those who are done and want to swankify further.</p>
+
+
+<p>
+  <br/>
+  <ul class="tags">
+    <li><a href="/topics#troubleshooting" class="tag">troubleshooting</a></li><li><a href="/topics#websites" class="tag">websites</a></li><li><a href="/topics#trial and error" class="tag">trial-and-error</a></li>
+  </ul> 
+</p>
+    </article>
+    <span class="print-footer">Troubleshooting - October 3, 2016 - </span>
+    <footer>
+  <div class="blognav">
+    
+      <a class="prev" href="/inls161fall2016/web/2016/09/28/branching-and-merging/">&laquo;&nbsp;<span class="smaller">Previous:</span>&nbsp;Branching and Merging</a>
+    
+    
+      <a class="next" href="/inls161fall2016/web/2016/10/05/catchup2/"><span class="smaller">Next:</span>&nbsp;Catchup Day #2&nbsp;&raquo;</a>
+    
+  </div>
+  <hr class="slender">
+  <ul class="footer-links">
+    
+    
+      <li>
+        <a href="http://elliotthauser.com" title="Instructor home page"><span class="ico-user"></span>&nbsp;Elliott Hauser</a>
+      </li>
+    
+    
+      <li>
+        <a href="mailto:eah13@email.unc.edu" title="Email instructor"><span class="ico-envelope"></span>&nbsp;eah13@email.unc.edu</a>
+      </li>
+    
+    
+      <li>
+        <span class="ico-clock"></span>&nbsp;3:35-4:50pm
+      </li>
+    
+    
+      <li>
+        <span class="ico-calendar"></span>&nbsp;MoWe
+      </li>
+    
+    
+      <li>
+        <span class="ico-library"></span>&nbsp;117 Manning Hall
+      </li>
+    
+    
+      <li>
+        <a href="https://sakai.unc.edu/portal/site/inls161s216" title="UNC Sakai site for this course"><span class="ico-target"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="https://github.com/inls161" title="GitHub organization for this course"><span class="ico-github"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="https://inls161.slack.com" title="Join the Slack conversations for this course"><span class="ico-slack"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="/feed" title="Add RSS feed"><span class="ico-rss"></span></a>
+      </li>
+      
+  </ul>
+<div class="credits">
+  <span>TOOLS FOR INFORMATION LITERACY &nbsp;&nbsp;|&nbsp;&nbsp; INLS161-002 Fall 2016
+    <br/> 
+  <span class="smaller">Tools and concepts for information literacy. Includes software use and maintenance, computer applications, and networked information systems.</span>
+  <br/><br/>
+  <span class="smaller"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_US">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 Unported License</a>.</span>
+  <br/>
+  <span class="smaller"><a href="/inls161fall2016/credits/">Content &copy; 2016 Elliott Hauser</a></span>
+</div>  
+</footer>
+  </body>
+</html>

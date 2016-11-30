@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Tools for Information Literacy&nbsp;|&nbsp;Visual styling for the web</title>
+  <meta name="description" content="Reminder: Your first community engagement activity needs to be completed and written up before Fall Break begins on October 19th.For most of class today, we ...">
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+    <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+  
+  <!-- Load Moment.js for dates if option set in /_data/optins.yml file-->
+  
+    <script type="text/javascript" src="//momentjs.com/downloads/moment.js"></script> 
+   
+  
+  
+    <script type="text/javascript" src="//storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/datejs/date.js"></script>
+  
+
+  <link rel="stylesheet" href="/inls161fall2016/css/tufte.css"> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css" />
+  <link rel="icon" href="/inls161fall2016/assets/img/favicon.ico" type="image/x-icon" />
+
+  
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+	<a href="/inls161fall2016/"><img class="badge" src="/inls161fall2016/assets/img/161icon.png" alt="UNC"></a>
+	
+	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+		    
+		      <a href="/inls161fall2016/">INLS 161</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/syllabus/">Syllabus</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/schedule/">Schedule</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/assignments/">Assignments</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/refsheets/">Reference</a>
+		    
+	    
+  	
+	</nav>
+</header>
+    <article class="group">
+<h1>Visual styling for the web</h1>
+
+
+
+<p class="subtitle"><span id="date">Wednesday, 21 September 2016</span><span class="smaller date contrast"></span></p>
+
+<script>
+var date = document.getElementById("span")[0];
+alert(p.childNodes[1].textContent)
+</script>
+
+<p><strong>Reminder:</strong> Your first community engagement activity needs to be completed and written up before Fall Break begins on October 19th.</p>
+
+<p>For most of class today, we will spend time creating our base site and then exploring ways that we can change and customize the style to our liking. </p>
+
+<p>We&#39;ll learn a little bit about CSS and about linking resources so that they show up where we want them. 
+<excerpt/></p>
+
+<h1 id="q-amp-a">Q&amp;A</h1>
+
+<ul>
+<li>It&#39;s time to get started on Assignment #2! Come to class having selected a theme for your blog, and with it cloned into a new Cloud9 workspace (not forked!) and in a brand new Github repo.</li>
+<li>Start Assignment 2 by clicking the github classroom link on the Assignments tab if you haven&#39;t already.  The Readme in the repo you&#39;ll get when you do that has the full details of the assignment. Read ahead but don&#39;t race ahead.  We&#39;ll do much of the work together.</li>
+<li>Approach this work creatively! There were some really neat sites that came out of the last class and I hope this will be an opportunity for you to learn neat things and express yourself.</li>
+</ul>
+
+<h1 id="linking">Linking</h1>
+
+<p>Linking is what makes the Internet what it is in terms of how information is organized. 
+Without links, we would have to know the location of every single thing we wish to get to. 
+We would have to index everything: that is, we would need a list. 
+Linking allows us to move between resources, call and embed resources within one another, and in some cases find resources based on their relationships. </p>
+
+<h3 id="relative-and-absolute-paths">Relative and absolute paths</h3>
+
+<p>We have choices about how we can link to resources. </p>
+
+<p>Let&#39;s look at the links in the examples on the last page:</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"css/styles.css"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"js/scripts.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"images/pretty.img"</span> <span class="na">alt=</span><span class="s">"A pretty picture"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"index.html"</span> <span class="na">title=</span><span class="s">"Home"</span><span class="nt">&gt;</span>Return home.<span class="nt">&lt;/a&gt;</span>
+</code></pre></div>
+<p>These are all examples of relative paths. 
+This means that they assume that the files referenced here are located near our index page. </p>
+
+<p>If we were to represent the same links with absolute paths, we would have to add the domain name / hostname also. 
+See below:</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"http://www.somewebsite.com/css/styles.css"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"http://www.somewebsite.com/js/scripts.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://www.somewebsite.com/images/pretty.img"</span> <span class="na">alt=</span><span class="s">"A pretty picture"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://www.somewebsite.com/index.html"</span> <span class="na">title=</span><span class="s">"Home"</span><span class="nt">&gt;</span>Return home.<span class="nt">&lt;/a&gt;</span>
+</code></pre></div>
+<p>Let&#39;s consider the advantages and disadvantages of each of these approaches and ask these questions:</p>
+
+<ol>
+<li>What happens if we have to change our doman name or move to a different server?</li>
+<li>Is there perhaps a way to automate such a change and still provide an absolute path?</li>
+</ol>
+
+<p>Let&#39;s move on to working with visual elements.</p>
+
+<h1 id="css">CSS</h1>
+
+<p>CSS is an acronym for &quot;Cascading Style Sheet.&quot;</p>
+
+<p>If HTML is the medium for web content, then CSS is the medium for the visual styling of the web. 
+Whenever a website looks like anything other than just a blank page, there is CSS involved. </p>
+
+<p>We will continue to use a combination of Markdown, HTML5 and CSS3 to construct our very own web pages. </p>
+
+<h1 id="embedding-with-iframes">Embedding with iframes</h1>
+
+<p>iframes are a way of loading one site within another.  They&#39;re really cool.</p>
+
+<p>For instance, Trinket embeds let you put interactive code anywhere.  Here&#39;s an embed that lets me generate pairs for this class:</p>
+
+<iframe src="https://trinket.io/embed/python/0556f1a69d" width="100%" height="406" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+<p>Google Maps, SoundCloud, YouTube and whole host of other neat sites have embeds.  The embed code is usually available in the &#39;Share&#39; dialogs.  Some embeds are created with Javascript and have a <code>&lt;script&gt;</code> tag.  Think about how you can enhance your site with cool embeds.</p>
+
+<h1 id="theme-cleanup">Theme Cleanup</h1>
+
+<p>I got a little ahead of myself last time.</p>
+
+<p>So far you&#39;ve:</p>
+
+<ul>
+<li>Picked a theme</li>
+<li>Cloned that theme to a new Cloud9 Workspace (if you forked it, see below)</li>
+<li>Made an empty repository on github called <code>[username].github.io</code></li>
+</ul>
+
+<p>Now we need to:</p>
+
+<ul>
+<li>install jekyll on the new workspace with <code>gem install github-pages</code></li>
+<li>Configure the new site (see below)</li>
+<li>still in the workspace, change <code>origin</code> to point to the new</li>
+</ul>
+
+<h1 id="if-you-forked-up">If You Forked Up</h1>
+
+<p>Everyone forks up sometimes.  I want your new repo to be on its own, not a fork of the theme&#39;s repo, because that will be easier later.</p>
+
+<p>Make sure you&#39;ve cloned your code to Cloud9.  Delete the forked repo on Github.  Make a new empty one titled as I described above. Now you should be able to continue as if you&#39;d cloned, making sure to change the remote url below.</p>
+
+<h1 id="configure">Configure</h1>
+
+<p>Once we have the base theme cloned, we need to make sure that the site is going to show up at the right address. </p>
+
+<p>The address that we want is <code>http://YOUR-GITHUB-USERNAME.github.io</code>. This is the default user site address for GitHub pages.</p>
+
+<p>GH Pages will serve this site from code in the master branch of a repository in your account named the same as the fully qualified domain name (FQDN) or just the full URL to our desired site. </p>
+
+<p>Therefore, if your GH Pages user site defaults to <code>http://YOUR-GITHUB-USERNAME.github.io</code> then we have to make a repository in your account titled <code>YOUR-GITHUB-USERNAME.github.io</code>. That&#39;s why we did that.</p>
+
+<p>Now we need to push the code to this new repo.  Since we cloned the repo, <code>origin</code> is currently set to the old location.  Now that you have a new repo with a new <code>.git</code> URL, we can change where the tag <code>origin</code> points to:</p>
+<div class="highlight"><pre><code class="language-" data-lang=""># Change origin's URL
+git remote set-url origin [paste URL here]
+
+# then verify the new URL is there:
+git remote -v
+</code></pre></div>
+<p>Great! an initial <code>git push</code> and your code should be up on github.  You should see it at your special URL.  Tommy&#39;s is <a href="http://tommytester.github.io">http://tommytester.github.io</a></p>
+
+<p>If that&#39;s not working for you, we&#39;ve got to dive into config quickly.</p>
+
+<h2 id="_config-yml">_config.yml</h2>
+
+<p>After running <code>jekyll serve --host $IP --port $PORT</code> you may notice some broken links or missing styles.  We&#39;ll now fix these together.</p>
+
+<p>Open <code>_config.yml</code> in Cloud9. We will likely have to change three variables, if they exist: <code>path</code>, <code>url</code>, and <code>baseurl</code>.
+These will be different for different themes, so we&#39;ll look over this together in class. Basic principles are as follows:</p>
+
+<p>You want <code>url</code> to match the desired URL for your site: <code>http://YOUR-GITHUB-USERNAME.github.io</code>.</p>
+
+<p><code>path</code> specifies a path where files are held. 
+For the GH Pages user site, it needs to have no value. You can either delete that line, comment it, or just put a set of double quotes to specify that Jekyll should not try to rewrite the links and append a subdirectory. It will look like this:</p>
+
+<p><code>path: &quot;&quot;</code></p>
+
+<p>The same is true for <code>baseurl</code>: it should be blank or not exist.</p>
+
+<p>All that these do is tell Jekyll where things are when it is trying to build the site. 
+Remember, linking is dynamic in the build process, so Jekyll is trying to figure out how to tell your browser where to find stuff that it needs to render the site. </p>
+
+<h1 id="for-next-time">For next time</h1>
+
+<p>I want you to continue to work with your site and actually begin creating some content: write your first real blog post for this class. You&#39;ll do this just as you did before, creating a file in the <code>_posts</code> diurectory, following Jekyll&#39;s naming conventions for the filename.</p>
+
+<p>This involves having an idea, making an outline of what you want to say about that idea, committing some text, referencing outside information, and maybe putting a picture in to give a visual anchor to your text.  You&#39;ll probably be writing about commands and code a lot.  Use inline code blocks to reference commands like <code>cd</code> and full codeblocks to call out or sequence commands:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">pwd
+cd ~
+</code></pre></div>
+<p>Add a language name to enable syntax highlighting on these fenced code blocks. </p>
+
+<p>You can also use jekyll&#39;s built-in <code>{% highlight %}</code> tag to add spiffy syntax highlighting to your code the old school way. Learn more here: <a href="https://jekyllrb.com/docs/templates/#code-snippet-highlighting">https://jekyllrb.com/docs/templates/#code-snippet-highlighting</a></p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h1&gt;</span>Syntax Highlighing in Jekyll<span class="nt">&lt;/h1&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>It's <span class="nt">&lt;strong&gt;</span>really<span class="nt">&lt;/strong&gt;</span> cool!<span class="nt">&lt;/p&gt;</span></code></pre></figure>
+
+<p>I would also like you to move through the W3Schools HTML5 and CSS3 tutorials on your own, outside of class.<label for='css-tutorial' class='margin-toggle sidenote-number'></label><input type='checkbox' id='css-tutorial' class='margin-toggle'/><span class='sidenote'><strong>Read:</strong> “HTML Tutorial.” W3Schools. <a href="http://www.w3schools.com/html/default.asp">http://www.w3schools.com/html/default.asp</a>.<br/><br/>“CSS Tutorial.” W3Schools. <a href="http://www.w3schools.com/css/default.asp">http://www.w3schools.com/css/default.asp</a>. </span>  Go quickly if this is all review for you (though you should learn a thing or two!) and set aside some real time for them if this is all new to you.</p>
+
+
+<p>
+  <br/>
+  <ul class="tags">
+    <li><a href="/topics#Jekyll" class="tag">Jekyll</a></li><li><a href="/topics#CSS" class="tag">CSS</a></li><li><a href="/topics#HTML" class="tag">HTML</a></li><li><a href="/topics#Markdown" class="tag">Markdown</a></li>
+  </ul> 
+</p>
+    </article>
+    <span class="print-footer">Visual styling for the web - September 21, 2016 - </span>
+    <footer>
+  <div class="blognav">
+    
+      <a class="prev" href="/inls161fall2016/web/2016/09/19/websites-and-markup/">&laquo;&nbsp;<span class="smaller">Previous:</span>&nbsp;Websites, Markup, and Markdown</a>
+    
+    
+      <a class="next" href="/inls161fall2016/web/2016/09/26/developing-deploying-branching/"><span class="smaller">Next:</span>&nbsp;Developing and Deploying&nbsp;&raquo;</a>
+    
+  </div>
+  <hr class="slender">
+  <ul class="footer-links">
+    
+    
+      <li>
+        <a href="http://elliotthauser.com" title="Instructor home page"><span class="ico-user"></span>&nbsp;Elliott Hauser</a>
+      </li>
+    
+    
+      <li>
+        <a href="mailto:eah13@email.unc.edu" title="Email instructor"><span class="ico-envelope"></span>&nbsp;eah13@email.unc.edu</a>
+      </li>
+    
+    
+      <li>
+        <span class="ico-clock"></span>&nbsp;3:35-4:50pm
+      </li>
+    
+    
+      <li>
+        <span class="ico-calendar"></span>&nbsp;MoWe
+      </li>
+    
+    
+      <li>
+        <span class="ico-library"></span>&nbsp;117 Manning Hall
+      </li>
+    
+    
+      <li>
+        <a href="https://sakai.unc.edu/portal/site/inls161s216" title="UNC Sakai site for this course"><span class="ico-target"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="https://github.com/inls161" title="GitHub organization for this course"><span class="ico-github"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="https://inls161.slack.com" title="Join the Slack conversations for this course"><span class="ico-slack"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="/feed" title="Add RSS feed"><span class="ico-rss"></span></a>
+      </li>
+      
+  </ul>
+<div class="credits">
+  <span>TOOLS FOR INFORMATION LITERACY &nbsp;&nbsp;|&nbsp;&nbsp; INLS161-002 Fall 2016
+    <br/> 
+  <span class="smaller">Tools and concepts for information literacy. Includes software use and maintenance, computer applications, and networked information systems.</span>
+  <br/><br/>
+  <span class="smaller"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_US">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 Unported License</a>.</span>
+  <br/>
+  <span class="smaller"><a href="/inls161fall2016/credits/">Content &copy; 2016 Elliott Hauser</a></span>
+</div>  
+</footer>
+  </body>
+</html>

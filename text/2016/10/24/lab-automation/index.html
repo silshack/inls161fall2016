@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Tools for Information Literacy&nbsp;|&nbsp;Lab #3: Automation and Scripting</title>
+  <meta name="description" content="Today we are going to go over more scripting tricks this morning and then work on our next assignment for the remainder of the session. ">
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+    <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+  
+  <!-- Load Moment.js for dates if option set in /_data/optins.yml file-->
+  
+    <script type="text/javascript" src="//momentjs.com/downloads/moment.js"></script> 
+   
+  
+  
+    <script type="text/javascript" src="//storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/datejs/date.js"></script>
+  
+
+  <link rel="stylesheet" href="/inls161fall2016/css/tufte.css"> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css" />
+  <link rel="icon" href="/inls161fall2016/assets/img/favicon.ico" type="image/x-icon" />
+
+  
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+	<a href="/inls161fall2016/"><img class="badge" src="/inls161fall2016/assets/img/161icon.png" alt="UNC"></a>
+	
+	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+		    
+		      <a href="/inls161fall2016/">INLS 161</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/syllabus/">Syllabus</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/schedule/">Schedule</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/assignments/">Assignments</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/refsheets/">Reference</a>
+		    
+	    
+  	
+	</nav>
+</header>
+    <article class="group">
+<h1>Lab #3: Automation and Scripting</h1>
+
+
+
+<p class="subtitle"><span id="date">Monday, 24 October 2016</span><span class="smaller date contrast"></span></p>
+
+<script>
+var date = document.getElementById("span")[0];
+alert(p.childNodes[1].textContent)
+</script>
+
+<p>Today we are going to go over more scripting tricks this morning and then work on our next assignment for the remainder of the session. 
+<excerpt/></p>
+
+<p>We will use a few online tutorials for reference.<label for='shell-scripts' class='margin-toggle sidenote-number'></label><input type='checkbox' id='shell-scripts' class='margin-toggle'/><span class='sidenote'>Shotts, William, Jr. “Writing Shell Scripts.” LinuxCommand.org. Accessed July 6, 2016. <a href="http://linuxcommand.org/lc3_writing_shell_scripts.php">http://linuxcommand.org/lc3_writing_shell_scripts.php</a>.<br/><br/>Chadwick, Ryan. “User Input - Bash Scripting Tutorial.” Ryan’s Tutorials. <a href="http://ryanstutorials.net/bash-scripting-tutorial/bash-input.php">http://ryanstutorials.net/bash-scripting-tutorial/bash-input.php</a>. </span> </p>
+
+<h2 id="adding-user-input">Adding user input</h2>
+
+<p>We&#39;re going to add user input to our scripts from yesterday. </p>
+
+<p>To do this, we use the <code>read</code> command to accept the next line of input and save it as a variable.
+Instead of putting our GitHub username in the script where we want it to read out, this method will prompt for a username.</p>
+<div class="highlight"><pre><code class="language-" data-lang=""><span class="c">#!/bin/bash</span>
+<span class="c"># Say "Hello" to the world.</span>
+<span class="nb">echo</span> <span class="s2">"Hello, world!"</span>
+<span class="c"># Ask who the user is</span>
+<span class="nb">echo</span> <span class="s2">"Who are you?"</span>
+<span class="c"># Read GitHub username from input</span>
+<span class="nb">read </span>GHUSERNAME
+<span class="c"># Say "Hello" to me.</span>
+<span class="nb">echo</span> <span class="s2">"Hello, </span><span class="nv">$GHUSERNAME</span><span class="s2">!"</span>
+</code></pre></div>
+<p>Now if we run the script, it will pause and ask us for input:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">ubuntu:~/workspace$ ./hello-world.sh
+Hello, world!
+Who are you?
+</code></pre></div>
+<p>If I type my GitHub username and press enter, then Bash will read it and put it in the right place in the output. </p>
+<div class="highlight"><pre><code class="language-" data-lang="">jdmar3
+Hello, jdmar3!
+ubuntu:~/workspace$ 
+</code></pre></div>
+<h2 id="setting-a-variable">Setting a variable</h2>
+
+<p>We can also set the username we want to output before we run the second echo command. 
+It&#39;s best to set variables at the top of the file so that they are easily found. </p>
+
+<p>Here is an example: </p>
+<div class="highlight"><pre><code class="language-" data-lang=""><span class="c">#!/bin/bash</span>
+<span class="c"># Read GH username in as variable</span>
+<span class="nv">GHUSERNAME</span><span class="o">=</span>jdmar3
+<span class="c"># Say "Hello" to the world.</span>
+<span class="nb">echo</span> <span class="s2">"Hello, world!"</span>
+<span class="c"># Say "Hello" to me.</span>
+<span class="nb">echo</span> <span class="s2">"Hello, </span><span class="nv">$GHUSERNAME</span><span class="s2">!"</span>
+</code></pre></div>
+<p>If we run this the Bash will output the value we set in place of the variable name:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">ubuntu:~/workspace$ ./hello-world.sh
+Hello, world!
+Hello, jdmar3!
+ubuntu:~/workspace$ 
+</code></pre></div>
+<h2 id="accepting-a-variable-from-command-line-input">Accepting a variable from command line input</h2>
+
+<p>We can also specify a varialbe value in the command line itself. 
+To do this, we need to tell Bash to read what comes after the run command in as a variable, like this: </p>
+<div class="highlight"><pre><code class="language-" data-lang=""><span class="c">#!/bin/bash</span>
+<span class="c"># Read GH username</span>
+<span class="nv">GHUSERNAME</span><span class="o">=</span><span class="nv">$1</span>
+<span class="c"># Say "Hello" to the world.</span>
+<span class="nb">echo</span> <span class="s2">"Hello, world!"</span>
+<span class="c"># Say "Hello" to me.</span>
+<span class="nb">echo</span> <span class="s2">"Hello, </span><span class="nv">$GHUSERNAME</span><span class="s2">!"</span>
+</code></pre></div>
+<p>Now when we run the script, we will have to specify the username directly after the name of the script. </p>
+<div class="highlight"><pre><code class="language-" data-lang="">ubuntu:~/workspace$ ./hello-world.sh jdmar3
+Hello, world!
+Hello, jdmar3!
+ubuntu:~/workspace$ 
+</code></pre></div>
+<p>If you change the input, you will see it change in the output now:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">ubuntu:~/workspace$ ./hello-world.sh YOUR-GITHUB-USERNAME
+Hello, world!
+Hello, YOUR-GITHUB-USERNAME!
+ubuntu:~/workspace$ 
+</code></pre></div>
+<h1 id="rest-of-class-work-on-assignment-3">Rest of Class: Work on Assignment 3</h1>
+
+<p>You can use the techniques above to create a script to automate your document conversion workflow. 
+Use the assignment text to make sure that you have gotten each of the required parts to work properly. </p>
+
+
+<p>
+  <br/>
+  <ul class="tags">
+    <li><a href="/topics#scripting" class="tag">scripting</a></li><li><a href="/topics#Bash" class="tag">Bash</a></li><li><a href="/topics#Pandoc" class="tag">Pandoc</a></li>
+  </ul> 
+</p>
+    </article>
+    <span class="print-footer">Lab #3: Automation and Scripting - October 24, 2016 - </span>
+    <footer>
+  <div class="blognav">
+    
+      <a class="prev" href="/inls161fall2016/text/2016/10/19/website-hacking/">&laquo;&nbsp;<span class="smaller">Previous:</span>&nbsp;Optional: Website Hack Day</a>
+    
+    
+      <a class="next" href="/inls161fall2016/text/2016/10/26/catchup3/"><span class="smaller">Next:</span>&nbsp;Catchup Day&nbsp;&raquo;</a>
+    
+  </div>
+  <hr class="slender">
+  <ul class="footer-links">
+    
+    
+      <li>
+        <a href="http://elliotthauser.com" title="Instructor home page"><span class="ico-user"></span>&nbsp;Elliott Hauser</a>
+      </li>
+    
+    
+      <li>
+        <a href="mailto:eah13@email.unc.edu" title="Email instructor"><span class="ico-envelope"></span>&nbsp;eah13@email.unc.edu</a>
+      </li>
+    
+    
+      <li>
+        <span class="ico-clock"></span>&nbsp;3:35-4:50pm
+      </li>
+    
+    
+      <li>
+        <span class="ico-calendar"></span>&nbsp;MoWe
+      </li>
+    
+    
+      <li>
+        <span class="ico-library"></span>&nbsp;117 Manning Hall
+      </li>
+    
+    
+      <li>
+        <a href="https://sakai.unc.edu/portal/site/inls161s216" title="UNC Sakai site for this course"><span class="ico-target"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="https://github.com/inls161" title="GitHub organization for this course"><span class="ico-github"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="https://inls161.slack.com" title="Join the Slack conversations for this course"><span class="ico-slack"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="/feed" title="Add RSS feed"><span class="ico-rss"></span></a>
+      </li>
+      
+  </ul>
+<div class="credits">
+  <span>TOOLS FOR INFORMATION LITERACY &nbsp;&nbsp;|&nbsp;&nbsp; INLS161-002 Fall 2016
+    <br/> 
+  <span class="smaller">Tools and concepts for information literacy. Includes software use and maintenance, computer applications, and networked information systems.</span>
+  <br/><br/>
+  <span class="smaller"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_US">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 Unported License</a>.</span>
+  <br/>
+  <span class="smaller"><a href="/inls161fall2016/credits/">Content &copy; 2016 Elliott Hauser</a></span>
+</div>  
+</footer>
+  </body>
+</html>

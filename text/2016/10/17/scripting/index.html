@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Tools for Information Literacy&nbsp;|&nbsp;Introduction to scripting</title>
+  <meta name="description" content="Q&amp;AWednesday: optional Website hack day.  Come swankify your site and/or address my constructive criticism!Community Event writeups due via email.  Post ...">
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+    <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+  
+  <!-- Load Moment.js for dates if option set in /_data/optins.yml file-->
+  
+    <script type="text/javascript" src="//momentjs.com/downloads/moment.js"></script> 
+   
+  
+  
+    <script type="text/javascript" src="//storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/datejs/date.js"></script>
+  
+
+  <link rel="stylesheet" href="/inls161fall2016/css/tufte.css"> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css" />
+  <link rel="icon" href="/inls161fall2016/assets/img/favicon.ico" type="image/x-icon" />
+
+  
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+	<a href="/inls161fall2016/"><img class="badge" src="/inls161fall2016/assets/img/161icon.png" alt="UNC"></a>
+	
+	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+		    
+		      <a href="/inls161fall2016/">INLS 161</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/syllabus/">Syllabus</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/schedule/">Schedule</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/assignments/">Assignments</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/refsheets/">Reference</a>
+		    
+	    
+  	
+	</nav>
+</header>
+    <article class="group">
+<h1>Introduction to scripting</h1>
+
+
+
+<p class="subtitle"><span id="date">Monday, 17 October 2016</span><span class="smaller date contrast"></span></p>
+
+<script>
+var date = document.getElementById("span")[0];
+alert(p.childNodes[1].textContent)
+</script>
+
+<h1 id="q-amp-a">Q&amp;A</h1>
+
+<ul>
+<li>Wednesday: optional Website hack day.  Come swankify your site and/or address my constructive criticism!</li>
+<li>Community Event writeups due <strong>via email</strong>.  Post them to your website and send me the link I should look at by midnight Weds.  Many of you have made special sections or pages for your event writeups.  If you haven&#39;t, think about how to incorporate these into your site gracefully.</li>
+</ul>
+
+<p>Today we will learn how to convert our plaintext Markdown into a PDF. 
+To do this we will have to install some more software, which may take a while. </p>
+
+<p>In the mean time, we will cover some of the basics of scripting in order to be able to automate our workflows a little bit better. 
+<excerpt/></p>
+
+<h1 id="install-texlive">Install TeXLive</h1>
+
+<p>You&#39;ve probably already done this, but just in case:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">sudo apt-get install texlive
+</code></pre></div>
+<p>That will output a bunch of stuff and tell us how much the installation will take up on disk. 
+See if the number is smaller than your available space and then type <code>Y</code> and hit enter if you have enough space. 
+If not, we&#39;ll have to clear something out so you can install it. </p>
+
+<p>This may take a while. </p>
+
+<p>If that command does not work, it is likely because you need to update your software source repositories and upgrade your installed software packages. 
+You can do that with two commands:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">sudo apt-get update
+</code></pre></div>
+<p>This updates the sources. </p>
+
+<h1 id="scripting">Scripting</h1>
+
+<p>Scripting is fun when you get used to how it works. 
+It is also really useful for not having to repeat the same work over and over again. </p>
+
+<p>Creating scripts is often a trial and error process, though, and can feel frustrating (see below).</p>
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">What scripting feels like <a href="https://t.co/jYR9WQftIX">https://t.co/jYR9WQftIX</a></p>&mdash; SecuriTay (@SwiftOnSecurity) <a href="https://twitter.com/SwiftOnSecurity/status/749783791279939585">July 4, 2016</a></blockquote>
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<h2 id="how-to-do-it">How to do it?</h2>
+
+<p>In class today, we&#39;ll go over some basic scripting. 
+We&#39;ll use William Shotts&#39; tutorial, Writing Shell Scripts tutorial by William Shotts for next time.<label for='shell-scripts' class='margin-toggle sidenote-number'></label><input type='checkbox' id='shell-scripts' class='margin-toggle'/><span class='sidenote'>Shotts, William, Jr. “Writing Shell Scripts.” LinuxCommand.org. Accessed July 6, 2016. <a href="http://linuxcommand.org/lc3_writing_shell_scripts.php">http://linuxcommand.org/lc3_writing_shell_scripts.php</a>. </span> </p>
+
+<p>A basic Bash script is simply a list of commands in a file. It&#39;s as if you typed them line-by-line after each ones finishes. The lines in the file get executed sequentially and then at the end of the file Bash stops, or waits depending on what the file tells it to do. </p>
+
+<h3 id="execution">Execution</h3>
+
+<p>All shell scripts should be executable and specify what shell program will run them. 
+If this is not the case, then we have to call a shell in the command line in order to run. </p>
+
+<p>To create a basic Bash shell script, just touch a new file and give it the extension <code>.sh</code>:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">touch hello-world.sh
+</code></pre></div>
+<p>Then we&#39;ll make it executable:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">chmod +x hello-world.sh
+</code></pre></div>
+<p>This command sets the execute flag for user, group, and anyone in the permissions. 
+They should look like this if you list the files with long output (<code>ls -al</code>):</p>
+<div class="highlight"><pre><code class="language-" data-lang="">tommytester:~/workspace (master) $ ls -lah
+total 64K                                   
+drwxr-xr-x 3 cabox cabox 4.0K Jul  7 12:44 .
+drwxrwxr-x 5 cabox cabox 4.0K Jul  7 10:02 ..
+-rwxr-xr-x 1 cabox cabox  104 Jul  7 12:50 hello-world.sh 
+tommytester:~/workspace (master) $
+</code></pre></div>
+<p>We also need to add a &quot;shebang&quot; to our script to tell Bash how to execute this file. Inside the <code>hello-world.sh</code> file, put this on the first line:</p>
+<div class="highlight"><pre><code class="language-" data-lang=""><span class="c">#!/bin/bash</span>
+</code></pre></div>
+<p>Shebangs can also point to other things, like <code>python</code> or <code>ruby</code>.  Once you learn those languages you can make scripts with them exactly like this but with a special shebang.  The shebang will need to point to the Python or Ruby binary, which is usually in <code>/usr/bin/python</code> or <code>/usr/bin/ruby</code> so add that after your she (<code>#</code>) bang (<code>!</code>).</p>
+
+<h3 id="echo">Echo</h3>
+
+<p>Now, we&#39;re going to make this script say hello to the world and hello to us. 
+We do this by using the <code>echo</code> command, which outputs whatever you tell it as text to <code>STDOUT</code>. 
+Try it:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">echo "Hello, world!"
+</code></pre></div>
+<p>You should see this in the command line:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">tommytester:~/workspace (master) $ echo "Hello, world!"
+Hello, world!
+tommytester:~/workspace (master) $
+</code></pre></div>
+<p>Now we will add this command to our script.  Notice there&#39;s a <strong>comment</strong> above the command, telling the humans what&#39;s up.  The computer ignores comments: </p>
+<div class="highlight"><pre><code class="language-" data-lang=""><span class="c">#!/bin/bash</span>
+
+<span class="c"># Say "Hello, world!</span>
+<span class="nb">echo</span> <span class="s2">"Hello, world!"</span>
+</code></pre></div>
+<p>Now when we run this script, we will see the same output as from our earlier <code>echo</code> command on <code>STDOUT</code>:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">tommytester:~/workspace (master) $ ./hello-world.sh
+Hello, world!
+tommytester:~/workspace (master) $
+</code></pre></div>
+<p>Note the <code>./</code> in front of the script&#39;s filename in the above command. </p>
+
+<p>We have to do this in order to execute files and scripts that are not in our execute path. 
+The excecute path is just a list of directories from which we are allowed to execute files without jumping through some extra hoops. 
+To see your path, use the following command: </p>
+<div class="highlight"><pre><code class="language-" data-lang="">tommytester:~/workspace (master) $ echo $PATH 
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+tommytester:~/workspace (master) $
+</code></pre></div>
+<p>These are all the directories where the terminal will look when you try to run a program or script.  If something isn&#39;t in any of these directories, the <code>.</code> will tell the terminal to look in your current location. </p>
+
+<p>Finally, we want to add a &quot;Hello!&quot; to ourselves, and use our GitHub username. 
+We will add the same command as before, substituting our GitHub username for world, so that the script looks like this (I&#39;ve used my own name here):</p>
+<div class="highlight"><pre><code class="language-" data-lang=""><span class="c">#!/bin/bash</span>
+
+<span class="c"># Say "Hello, world!</span>
+<span class="nb">echo</span> <span class="s2">"Hello, world!"</span>
+<span class="c"># Say "Hello, YOU!</span>
+<span class="nb">echo</span> <span class="s2">"Hello, jdmar3!"</span>
+</code></pre></div>
+<p>Now if we run this, we will see all of this output:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">tommytester:~/workspace (master) $ ./hello-world.sh
+Hello, world!
+Hello, jdmar3!
+tommytester:~/workspace (master) $
+</code></pre></div>
+<h2 id="other-scripting-ideas">Other Scripting Ideas</h2>
+
+<p>Scripts can do anything you can do! For instance, you might make a script that takes you to a certain directory then lists the files there:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">cd ~/workspace/myproject
+echo "Entered ~/workspace/myproject.  Found these files and direcotries:"
+ls -al
+</code></pre></div>
+<p>Make some custom scripts that do thing you know how to do using the instructions above.  Play around with this.  As you&#39;ve probably guessed, next time we&#39;ll be writing some scripts to automate pandoc.</p>
+
+<h2 id="next-time">Next Time</h2>
+
+<p>If you finish early or need some ideas for your scripts, go through the resources below and try out the examples.  If you&#39;d like to get a jump on next time, go back through the class notes and try to automate some of our previous activities.</p>
+
+<p>We will pick up where we left off next time during lab and get to work creating our scripts for the next assignment. 
+Please review the tutorial on writing shell scripts again.<label for='shell-scripts' class='margin-toggle sidenote-number'></label><input type='checkbox' id='shell-scripts' class='margin-toggle'/><span class='sidenote'>Shotts, William, Jr. “Writing Shell Scripts.” LinuxCommand.org. Accessed July 6, 2016. <a href="http://linuxcommand.org/lc3_writing_shell_scripts.php">http://linuxcommand.org/lc3_writing_shell_scripts.php</a>. </span> 
+Also, we&#39;ll use another tutorial so that we can learn to create prompts for user input.<label for='user-input' class='margin-toggle sidenote-number'></label><input type='checkbox' id='user-input' class='margin-toggle'/><span class='sidenote'>Chadwick, Ryan. “User Input - Bash Scripting Tutorial.” Ryan’s Tutorials. <a href="http://ryanstutorials.net/bash-scripting-tutorial/bash-input.php">http://ryanstutorials.net/bash-scripting-tutorial/bash-input.php</a>. </span></p>
+
+
+<p>
+  <br/>
+  <ul class="tags">
+    <li><a href="/topics#Pandoc" class="tag">Pandoc</a></li><li><a href="/topics#PDF" class="tag">PDF</a></li><li><a href="/topics#LaTeX" class="tag">LaTeX</a></li><li><a href="/topics#Bash" class="tag">Bash</a></li><li><a href="/topics#Scripts" class="tag">Scripts</a></li>
+  </ul> 
+</p>
+    </article>
+    <span class="print-footer">Introduction to scripting - October 17, 2016 - </span>
+    <footer>
+  <div class="blognav">
+    
+      <a class="prev" href="/inls161fall2016/text/2016/10/12/single-multiple-outputs/">&laquo;&nbsp;<span class="smaller">Previous:</span>&nbsp;Single input, multiple outputs</a>
+    
+    
+      <a class="next" href="/inls161fall2016/text/2016/10/19/website-hacking/"><span class="smaller">Next:</span>&nbsp;Optional: Website Hack Day&nbsp;&raquo;</a>
+    
+  </div>
+  <hr class="slender">
+  <ul class="footer-links">
+    
+    
+      <li>
+        <a href="http://elliotthauser.com" title="Instructor home page"><span class="ico-user"></span>&nbsp;Elliott Hauser</a>
+      </li>
+    
+    
+      <li>
+        <a href="mailto:eah13@email.unc.edu" title="Email instructor"><span class="ico-envelope"></span>&nbsp;eah13@email.unc.edu</a>
+      </li>
+    
+    
+      <li>
+        <span class="ico-clock"></span>&nbsp;3:35-4:50pm
+      </li>
+    
+    
+      <li>
+        <span class="ico-calendar"></span>&nbsp;MoWe
+      </li>
+    
+    
+      <li>
+        <span class="ico-library"></span>&nbsp;117 Manning Hall
+      </li>
+    
+    
+      <li>
+        <a href="https://sakai.unc.edu/portal/site/inls161s216" title="UNC Sakai site for this course"><span class="ico-target"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="https://github.com/inls161" title="GitHub organization for this course"><span class="ico-github"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="https://inls161.slack.com" title="Join the Slack conversations for this course"><span class="ico-slack"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="/feed" title="Add RSS feed"><span class="ico-rss"></span></a>
+      </li>
+      
+  </ul>
+<div class="credits">
+  <span>TOOLS FOR INFORMATION LITERACY &nbsp;&nbsp;|&nbsp;&nbsp; INLS161-002 Fall 2016
+    <br/> 
+  <span class="smaller">Tools and concepts for information literacy. Includes software use and maintenance, computer applications, and networked information systems.</span>
+  <br/><br/>
+  <span class="smaller"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_US">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 Unported License</a>.</span>
+  <br/>
+  <span class="smaller"><a href="/inls161fall2016/credits/">Content &copy; 2016 Elliott Hauser</a></span>
+</div>  
+</footer>
+  </body>
+</html>

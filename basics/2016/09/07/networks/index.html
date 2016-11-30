@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Tools for Information Literacy&nbsp;|&nbsp;Networks</title>
+  <meta name="description" content="We&#39;ve discussed a bit about how servers and clients operate. Now we&#39;ll look at what happens when we put lots of servers and lots of clients together. ">
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+    <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+  
+  <!-- Load Moment.js for dates if option set in /_data/optins.yml file-->
+  
+    <script type="text/javascript" src="//momentjs.com/downloads/moment.js"></script> 
+   
+  
+  
+    <script type="text/javascript" src="//storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/datejs/date.js"></script>
+  
+
+  <link rel="stylesheet" href="/inls161fall2016/css/tufte.css"> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css" />
+  <link rel="icon" href="/inls161fall2016/assets/img/favicon.ico" type="image/x-icon" />
+
+  
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+	<a href="/inls161fall2016/"><img class="badge" src="/inls161fall2016/assets/img/161icon.png" alt="UNC"></a>
+	
+	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+		    
+		      <a href="/inls161fall2016/">INLS 161</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/syllabus/">Syllabus</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/schedule/">Schedule</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/assignments/">Assignments</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/refsheets/">Reference</a>
+		    
+	    
+  	
+	</nav>
+</header>
+    <article class="group">
+<h1>Networks</h1>
+
+
+
+<p class="subtitle"><span id="date">Wednesday, 7 September 2016</span><span class="smaller date contrast"></span></p>
+
+<script>
+var date = document.getElementById("span")[0];
+alert(p.childNodes[1].textContent)
+</script>
+
+<p>We&#39;ve discussed a bit about how servers and clients operate. 
+Now we&#39;ll look at what happens when we put lots of servers and lots of clients together. 
+<excerpt/></p>
+
+<h1 id="q-amp-a">Q&amp;A</h1>
+
+<ul>
+<li>I re-did the assignments page so I can control whether the links are visible to you.  Much simpler: see link, click it.  Don&#39;t see link: assignment not ready yet</li>
+<li>Git and Github Lab is coming up!  We&#39;ll meet here but be hands on all day.  It&#39;ll be fun.</li>
+<li>Make sure you&#39;re keeping up with readings, practicing on your own, and bringing your questions to class.<br></li>
+<li>Hope you had a nice long weekend. Questions?</li>
+</ul>
+
+<p>Quiz #1 Today!</p>
+
+<h1 id="everything-you-didn-39-t-know-you-needed-to-know-about-networks">Everything You Didn&#39;t Know you Needed to Know about Networks</h1>
+
+<p>A network is a relatively simple concept with some complex underlying technologies. 
+Each computer or device in a network can be referred to as a &quot;node.&quot; </p>
+
+<p>Information is transmitted through networks in something called a &quot;packet.&quot;</p>
+
+<p>Packets of information are sent from node to node through paths called &quot;routes.&quot;</p>
+
+<p>A &quot;router&quot; is a device that receives packets and sends them on to their destination. </p>
+
+<h2 id="types-of-networks-topology">Types of networks (topology)</h2>
+
+<p>Different networks have different physical or virtual arrangements of devices.<label for='nettypes' class='margin-toggle'> &#8853;</label><input type='checkbox' id='nettypes' class='margin-toggle'/><span class='marginnote'>Examples of different netwotk topologies<br/><br/><a href="https://upload.wikimedia.org/wikipedia/commons/9/97/NetworkTopologies.svg" target="_blank" ><img width="200px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/NetworkTopologies.svg/200px-NetworkTopologies.svg.png" alt="Types of networks" /></a> </span> </p>
+
+<p>Most of the networks that we deal with on a given day are star networks. 
+They might be connected to other star networks so that you will end up with a star of stars. 
+In these networks each device connects to a node and then that node sends them elsewhere on the network. 
+The node that is used to connect is usually either a router or switch of some kind. 
+Connections occur through a single path. 
+If a connection is lost, either through physical network failure or through software failure, it is not possible to re-establish the connection unless the route is restored. </p>
+
+<p>Most local area networks (LANs) operate in this way. </p>
+
+<p>Some networks allow any device to connect to any other device. 
+These are called mesh networks. </p>
+
+<p>A mesh network is self-healing, which means that if a connection is dropped between any two given devices, the same connection can be re-established through a different route. 
+These networks are not typically in use on LANs, but there is a very large one that we interact with on a near-continuous basis.</p>
+
+<h1 id="inter-networks">Inter-networks</h1>
+
+<p>Inter-networks have several layers. </p>
+
+<ol>
+<li>Link-layer: communication between hosts on a single network</li>
+<li>Internet layer: communication between networks </li>
+<li>Transport layer: communication between hosts</li>
+<li>Application layer: communication between processes</li>
+</ol>
+
+<p>The communication protocols that are used to govern how information is routed through these layers are called Transmission Control Protocol and Internet Protocol (TCP/IP).</p>
+
+<p>TCP/IP governs the way that all information is routed through networks. </p>
+
+<p>These protocols are how we derive addresses on networks. 
+Different networks have different modes of addressing, but they use a similar structure. 
+It looks something like this:</p>
+
+<p><code>192.168.1.1</code></p>
+
+<p>Each block of numbers in that string of numbers and dots is called a quad and can be used either to represent a device or a subnet. 
+The first three quads might represent subnets of subnets and the last represents a subnet of addresses. </p>
+
+<p>Each number can range from 0-255, meaning that it can address a space with 256 individual devices or subnets in the network. 
+The limit is due to the fact that each quad is actually a binary number which can address an 8-bit space. 
+8-bit means that in each quad there are 8 individual binary bits or on/off pairs that can be flipped to record the number. 
+This means that the address above actually reads like this in binary:</p>
+
+<p><code>11000000.10101000.00000001.00000001</code></p>
+
+<p>With this address structure, we can address 256<sup>4</sup>, or 256*256*256*256 = 4,294,967,296, addresses.<label for='256' class='margin-toggle'> &#8853;</label><input type='checkbox' id='256' class='margin-toggle'/><span class='marginnote'>Why 256 addresses?<br/><br/>Wilson, Gray. “The Story of 256.” <a href="http://256.com/">http://256.com/</a>. Last modified 2002. <a href="http://256.com/256.html">http://256.com/256.html</a>. </span></p>
+
+<p>Knowing the numbers in sequence allows for traffic to be routed from one subnet to another. 
+The whole string of numebrs together is the address for an individual host/node on the network. </p>
+
+<h2 id="names">Names</h2>
+
+<p>So how is it that when we type <code>http://www.unc.edu</code> into a browser navigation bar that we end up at UNC&#39;s website? </p>
+
+<p>This is achieved through something called Dynamic Name Service (DNS).</p>
+
+<p>DNS maps domain or host names onto IP addresses, which allows us to use human-readable names for places on a network. 
+We use this on the Internet so that we can type <code>unc.edu</code> instead of having to remember that UNC&#39;s webserver is located at <code>152.19.230.139</code>.</p>
+
+<p>DNS is hierarchical and uses a mesh in order to maintain service globally. 
+Most institutions run their own cacheing nameservers which allow faster LAN access to routing information for domain names. </p>
+
+<p>There are 13 &quot;root name servers&quot; globally that mirror each other.<label for='dnsroots' class='margin-toggle'> &#8853;</label><input type='checkbox' id='dnsroots' class='margin-toggle'/><span class='marginnote'>List of DNS root servers<br/><br/><a href="https://en.wikipedia.org/wiki/Root_name_server#Root_server_addresses" target="_blank">here</a> </span>
+When you make a change to the DNS information related to a site or host, it propagates through this network of root servers. </p>
+
+<p>When we type <code>unc.edu</code> into a browser or other network tool, a query is made against a DNS server somewhere and the DNS server then tells us where that domain is located physically (or in some cases virtually).
+Then a request is made to the nearest routing host on our network which sends the request to the next and to the next until it hits its destination. 
+When the request arrives at its intended target, that host responds by attempting to fulfill the request and route the information back to the origin of the request. </p>
+
+<p><em>Et voila!</em> It all happens in the blink of an eye.</p>
+
+<p>Next we will look at some methods for figuring out what is happening on a network during that blink. </p>
+
+<h1 id="network-tools">Network tools</h1>
+
+<p>Soon, we will explore networks a bit more and talk about some of the tools that we can and will use to better understand the networks around us. </p>
+
+<p>For the rest of the session today, we&#39;ll be exploring more using git and GitHub. </p>
+
+<h1 id="for-next-time">For Next Time</h1>
+
+<p>Though we will go over this in class, I would like you to review the &quot;Hello World&quot; GitHub Guide on your own time.<label for='hello' class='margin-toggle'> &#8853;</label><input type='checkbox' id='hello' class='margin-toggle'/><span class='marginnote'><strong>Reading:</strong> “Hello World.” GitHub Guides. Last modified April 7, 2016. Accessed June 23, 2016. <a href="https://guides.github.com/activities/hello-world/">https://guides.github.com/activities/hello-world/</a>. </span> </p>
+
+<p>We will use some of its principles in the upcoming lab to get ourselves set up for the next assignment: building a web page from (mostly) scratch.</p>
+
+
+<p>
+  <br/>
+  <ul class="tags">
+    <li><a href="/topics#networking" class="tag">networking</a></li><li><a href="/topics#networks" class="tag">networks</a></li><li><a href="/topics#inter-networks" class="tag">inter-networks</a></li><li><a href="/topics#GitHub" class="tag">GitHub</a></li>
+  </ul> 
+</p>
+    </article>
+    <span class="print-footer">Networks - September 7, 2016 - </span>
+    <footer>
+  <div class="blognav">
+    
+      <a class="prev" href="/inls161fall2016/basics/2016/08/31/git/">&laquo;&nbsp;<span class="smaller">Previous:</span>&nbsp;Version Control</a>
+    
+    
+      <a class="next" href="/inls161fall2016/basics/2016/09/12/git-and-github-lab/"><span class="smaller">Next:</span>&nbsp;Lab #1: Git and GitHub&nbsp;&raquo;</a>
+    
+  </div>
+  <hr class="slender">
+  <ul class="footer-links">
+    
+    
+      <li>
+        <a href="http://elliotthauser.com" title="Instructor home page"><span class="ico-user"></span>&nbsp;Elliott Hauser</a>
+      </li>
+    
+    
+      <li>
+        <a href="mailto:eah13@email.unc.edu" title="Email instructor"><span class="ico-envelope"></span>&nbsp;eah13@email.unc.edu</a>
+      </li>
+    
+    
+      <li>
+        <span class="ico-clock"></span>&nbsp;3:35-4:50pm
+      </li>
+    
+    
+      <li>
+        <span class="ico-calendar"></span>&nbsp;MoWe
+      </li>
+    
+    
+      <li>
+        <span class="ico-library"></span>&nbsp;117 Manning Hall
+      </li>
+    
+    
+      <li>
+        <a href="https://sakai.unc.edu/portal/site/inls161s216" title="UNC Sakai site for this course"><span class="ico-target"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="https://github.com/inls161" title="GitHub organization for this course"><span class="ico-github"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="https://inls161.slack.com" title="Join the Slack conversations for this course"><span class="ico-slack"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="/feed" title="Add RSS feed"><span class="ico-rss"></span></a>
+      </li>
+      
+  </ul>
+<div class="credits">
+  <span>TOOLS FOR INFORMATION LITERACY &nbsp;&nbsp;|&nbsp;&nbsp; INLS161-002 Fall 2016
+    <br/> 
+  <span class="smaller">Tools and concepts for information literacy. Includes software use and maintenance, computer applications, and networked information systems.</span>
+  <br/><br/>
+  <span class="smaller"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_US">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 Unported License</a>.</span>
+  <br/>
+  <span class="smaller"><a href="/inls161fall2016/credits/">Content &copy; 2016 Elliott Hauser</a></span>
+</div>  
+</footer>
+  </body>
+</html>

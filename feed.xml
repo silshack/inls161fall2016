@@ -1,7 +1,3 @@
----
-layout: null
-nav_exclude: true
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
@@ -1496,28 +1492,1286 @@ There is a ton of relevant information on this topic out in the Internet.&lt;/p&
       </item>
     
 =======
-    <title>{{ site.title | xml_escape }}</title>
-    <description>{{ site.description | xml_escape }}</description>
-    <link>{{ site.url }}{{ site.baseurl }}/</link>
-    <atom:link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
-    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
-    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
-    <generator>Jekyll v{{ jekyll.version }}</generator>
-    {% for post in site.posts limit:10 %}
+    <title>Tools for Information Literacy</title>
+    <description>Tools and concepts for information literacy. Includes software use and maintenance, computer applications, and networked information systems.</description>
+    <link>/inls161fall2016/</link>
+    <atom:link href="/inls161fall2016/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 30 Nov 2016 13:24:14 -0500</pubDate>
+    <lastBuildDate>Wed, 30 Nov 2016 13:24:14 -0500</lastBuildDate>
+    <generator>Jekyll v3.0.3</generator>
+    
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.content | xml_escape }}</description>
-        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-        <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
-        <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
-        {% for tag in post.tags %}
-        <category>{{ tag | xml_escape }}</category>
-        {% endfor %}
-        {% for cat in post.categories %}
-        <category>{{ cat | xml_escape }}</category>
-        {% endfor %}
+        <title>Wrap-up: what do we know now?</title>
+        <description>&lt;p&gt;Today we are going to wrap up the class and talk about the skills that you are taking away from this experience. 
+&lt;excerpt/&gt;&lt;/p&gt;
+
+&lt;p&gt;This information will be useful in the context of preparing a resume/CV or perhaps in conducting a job interview in which you are asked to talk about technical skills.&lt;/p&gt;
+
+&lt;h1 id=&quot;skills-and-tools&quot;&gt;Skills and tools&lt;/h1&gt;
+
+&lt;p&gt;I asked the class to identify the major skillsets that we engaged in learning this semester and recorded the output on the whiteboard.&lt;label for=&#39;skillsets&#39; class=&#39;margin-toggle&#39;&gt; &amp;#8853;&lt;/label&gt;&lt;input type=&#39;checkbox&#39; id=&#39;skillsets&#39; class=&#39;margin-toggle&#39;/&gt;&lt;span class=&#39;marginnote&#39;&gt;Students listed the skillsets they thought they had been exposed to.&lt;a href=&quot;/assets/img/learned-skillsets.jpg&quot;&gt;&lt;img src=&quot;/assets/img/learned-skillsets.jpg&quot; alt=&quot;Whiteboard image of skillset list&quot; /&gt;&lt;/a&gt; &lt;/span&gt; &lt;/p&gt;
+
+&lt;p&gt;I then followed this request by linking those skillsets to the tools used in engaging them. 
+The images represent the output from this discussion.&lt;label for=&#39;tools&#39; class=&#39;margin-toggle&#39;&gt; &amp;#8853;&lt;/label&gt;&lt;input type=&#39;checkbox&#39; id=&#39;tools&#39; class=&#39;margin-toggle&#39;/&gt;&lt;span class=&#39;marginnote&#39;&gt;Students also listed the tools used in engaging those skillsets.&lt;a href=&quot;/assets/img/learned-tools.jpg&quot;&gt;&lt;img src=&quot;/assets/img/learned-tools.jpg&quot; alt=&quot;Whiteboard image of tool list&quot; /&gt;&lt;/a&gt; &lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;Following this, I talked briefly about how these skillsets might be engaged by other SILS courses and tried to link them accordingly. These courses are either related directly to the skillset or they make use of the skillset in some significant way.&lt;/p&gt;
+
+&lt;p&gt;The table that follows organizes all of this information in a more straightforward manner (with some additions of mine). &lt;/p&gt;
+
+&lt;p&gt;&lt;label for=&#39;tab1&#39; class=&#39;margin-toggle&#39;&gt; &amp;#8853;&lt;/label&gt;&lt;input type=&#39;checkbox&#39; id=&#39;tab1&#39; class=&#39;margin-toggle&#39;/&gt;&lt;span class=&#39;marginnote&#39;&gt;&lt;em&gt;Table 1&lt;/em&gt;: Skillsets and tools covered by this course along with links to related SILS courses &lt;/span&gt;&lt;/p&gt;
+
+&lt;table&gt;&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th style=&quot;text-align: left&quot;&gt;Skillset&lt;/th&gt;
+&lt;th style=&quot;text-align: left&quot;&gt;Tools&lt;/th&gt;
+&lt;th style=&quot;text-align: left&quot;&gt;Other SILS Courses&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1.&lt;/td&gt;
+&lt;td style=&quot;text-align: left&quot;&gt;Troubleshooting&lt;/td&gt;
+&lt;td style=&quot;text-align: left&quot;&gt;Browser inspector; forums / online discussion; man pages / &lt;code&gt;--help&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align: left&quot;&gt;&lt;a href=&quot;https://sils.unc.edu/courses#382&quot;&gt;INLS 382&lt;/a&gt;; &lt;a href=&quot;https://sils.unc.edu/courses#582&quot;&gt;INLS 582&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2.&lt;/td&gt;
+&lt;td style=&quot;text-align: left&quot;&gt;Networking&lt;/td&gt;
+&lt;td style=&quot;text-align: left&quot;&gt;SSH; FTP; traceroute; nmap&lt;/td&gt;
+&lt;td style=&quot;text-align: left&quot;&gt;&lt;a href=&quot;https://sils.unc.edu/courses#382&quot;&gt;INLS 382&lt;/a&gt;; &lt;a href=&quot;https://sils.unc.edu/courses#582&quot;&gt;INLS 582&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3.&lt;/td&gt;
+&lt;td style=&quot;text-align: left&quot;&gt;Version control&lt;/td&gt;
+&lt;td style=&quot;text-align: left&quot;&gt;git; GitHub&lt;/td&gt;
+&lt;td style=&quot;text-align: left&quot;&gt;&lt;a href=&quot;https://sils.unc.edu/courses#560&quot;&gt;INLS 560&lt;/a&gt;; &lt;a href=&quot;https://sils.unc.edu/courses#572&quot;&gt;INLS 572&lt;/a&gt;; &lt;a href=&quot;https://sils.unc.edu/courses#573&quot;&gt;INLS 573&lt;/a&gt;; &lt;a href=&quot;https://sils.unc.edu/courses#672&quot;&gt;INLS 672&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4.&lt;/td&gt;
+&lt;td style=&quot;text-align: left&quot;&gt;Critical thinking&lt;/td&gt;
+&lt;td style=&quot;text-align: left&quot;&gt;Brains; discussion&lt;/td&gt;
+&lt;td style=&quot;text-align: left&quot;&gt;&lt;a href=&quot;https://sils.unc.edu/courses#151&quot;&gt;INLS 151&lt;/a&gt;; &lt;a href=&quot;https://sils.unc.edu/courses#200&quot;&gt;INLS 200&lt;/a&gt;; &lt;a href=&quot;https://sils.unc.edu/courses#318&quot;&gt;INLS 318&lt;/a&gt;; &lt;a href=&quot;https://sils.unc.edu/courses#382&quot;&gt;INLS 382&lt;/a&gt;; &lt;a href=&quot;https://sils.unc.edu/courses#582&quot;&gt;INLS 582&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;5.&lt;/td&gt;
+&lt;td style=&quot;text-align: left&quot;&gt;Data handling&lt;/td&gt;
+&lt;td style=&quot;text-align: left&quot;&gt;MySQL; Bash; CSV/TSV&lt;/td&gt;
+&lt;td style=&quot;text-align: left&quot;&gt;&lt;a href=&quot;https://sils.unc.edu/courses#523&quot;&gt;INLS 523&lt;/a&gt;; &lt;a href=&quot;https://sils.unc.edu/courses#623&quot;&gt;INLS 623&lt;/a&gt;; &lt;a href=&quot;https://sils.unc.edu/courses#624&quot;&gt;INLS 624&lt;/a&gt;; &lt;a href=&quot;https://sils.unc.edu/courses#626&quot;&gt;INLS 626&lt;/a&gt;; &lt;a href=&quot;https://sils.unc.edu/courses#756&quot;&gt;INLS 756&lt;/a&gt;; &lt;a href=&quot;https://sils.unc.edu/courses#760&quot;&gt;INLS 760&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;6.&lt;/td&gt;
+&lt;td style=&quot;text-align: left&quot;&gt;Web development / design&lt;/td&gt;
+&lt;td style=&quot;text-align: left&quot;&gt;Jekyll; GitHub pages; Reveal.js; Markdown; HTML5; CS3; JavaScript; Liquid&lt;/td&gt;
+&lt;td style=&quot;text-align: left&quot;&gt;&lt;a href=&quot;https://sils.unc.edu/courses#318&quot;&gt;INLS 318&lt;/a&gt;; &lt;a href=&quot;https://sils.unc.edu/courses#572&quot;&gt;INLS 572&lt;/a&gt;; &lt;a href=&quot;https://sils.unc.edu/courses#573&quot;&gt;INLS 573&lt;/a&gt;; &lt;a href=&quot;https://sils.unc.edu/courses#620&quot;&gt;INLS 620&lt;/a&gt;; &lt;a href=&quot;https://sils.unc.edu/courses#672&quot;&gt;INLS 672&lt;/a&gt;; &lt;a href=&quot;https://sils.unc.edu/courses#718&quot;&gt;INLS 718&lt;/a&gt;; &lt;a href=&quot;https://sils.unc.edu/courses#760&quot;&gt;INLS 760&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;7.&lt;/td&gt;
+&lt;td style=&quot;text-align: left&quot;&gt;Writing using markup languages&lt;/td&gt;
+&lt;td style=&quot;text-align: left&quot;&gt;Pandoc; Markdown; HTML5; Liquid/YAML&lt;/td&gt;
+&lt;td style=&quot;text-align: left&quot;&gt;&lt;a href=&quot;https://sils.unc.edu/courses#572&quot;&gt;INLS 572&lt;/a&gt;; &lt;a href=&quot;https://sils.unc.edu/courses#573&quot;&gt;INLS 573&lt;/a&gt;; &lt;a href=&quot;https://sils.unc.edu/courses#672&quot;&gt;INLS 672&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;8.&lt;/td&gt;
+&lt;td style=&quot;text-align: left&quot;&gt;Using remote / terminal shell commands&lt;/td&gt;
+&lt;td style=&quot;text-align: left&quot;&gt;Bash; sudo; other command line tools&lt;/td&gt;
+&lt;td style=&quot;text-align: left&quot;&gt;&lt;a href=&quot;https://sils.unc.edu/courses#572&quot;&gt;INLS 572&lt;/a&gt;; &lt;a href=&quot;https://sils.unc.edu/courses#382&quot;&gt;INLS 382&lt;/a&gt;; &lt;a href=&quot;https://sils.unc.edu/courses#573&quot;&gt;INLS 573&lt;/a&gt;; &lt;a href=&quot;https://sils.unc.edu/courses#582&quot;&gt;INLS 582&lt;/a&gt;; &lt;a href=&quot;https://sils.unc.edu/courses#672&quot;&gt;INLS 672&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;9.&lt;/td&gt;
+&lt;td style=&quot;text-align: left&quot;&gt;Scripting / automation&lt;/td&gt;
+&lt;td style=&quot;text-align: left&quot;&gt;Bash; MySQL&lt;/td&gt;
+&lt;td style=&quot;text-align: left&quot;&gt;&lt;a href=&quot;https://sils.unc.edu/courses#560&quot;&gt;INLS 560&lt;/a&gt;; &lt;a href=&quot;https://sils.unc.edu/courses#572&quot;&gt;INLS 572&lt;/a&gt;; &lt;a href=&quot;https://sils.unc.edu/courses#573&quot;&gt;INLS 573&lt;/a&gt;; &lt;a href=&quot;https://sils.unc.edu/courses#672&quot;&gt;INLS 672&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;10.&lt;/td&gt;
+&lt;td style=&quot;text-align: left&quot;&gt;Development -&amp;gt; production workflows&lt;/td&gt;
+&lt;td style=&quot;text-align: left&quot;&gt;Jekyll; Cloud9; GitHub&lt;/td&gt;
+&lt;td style=&quot;text-align: left&quot;&gt;&lt;a href=&quot;https://sils.unc.edu/courses#523&quot;&gt;INLS 523&lt;/a&gt;; &lt;a href=&quot;https://sils.unc.edu/courses#560&quot;&gt;INLS 560&lt;/a&gt;; &lt;a href=&quot;https://sils.unc.edu/courses#572&quot;&gt;INLS 572&lt;/a&gt;; &lt;a href=&quot;https://sils.unc.edu/courses#573&quot;&gt;INLS 573&lt;/a&gt;; &lt;a href=&quot;https://sils.unc.edu/courses#623&quot;&gt;INLS 623&lt;/a&gt;; &lt;a href=&quot;https://sils.unc.edu/courses#624&quot;&gt;INLS 624&lt;/a&gt;; &lt;a href=&quot;https://sils.unc.edu/courses#626&quot;&gt;INLS 626&lt;/a&gt;; &lt;a href=&quot;https://sils.unc.edu/courses#672&quot;&gt;INLS 672&lt;/a&gt;; &lt;a href=&quot;https://sils.unc.edu/courses#718&quot;&gt;INLS 718&lt;/a&gt;; &lt;a href=&quot;https://sils.unc.edu/courses#756&quot;&gt;INLS 756&lt;/a&gt;; &lt;a href=&quot;https://sils.unc.edu/courses#760&quot;&gt;INLS 760&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;11.&lt;/td&gt;
+&lt;td style=&quot;text-align: left&quot;&gt;Software management&lt;/td&gt;
+&lt;td style=&quot;text-align: left&quot;&gt;APT; Bash&lt;/td&gt;
+&lt;td style=&quot;text-align: left&quot;&gt;&lt;a href=&quot;https://sils.unc.edu/courses#523&quot;&gt;INLS 523&lt;/a&gt;; &lt;a href=&quot;https://sils.unc.edu/courses#560&quot;&gt;INLS 560&lt;/a&gt;; &lt;a href=&quot;https://sils.unc.edu/courses#572&quot;&gt;INLS 572&lt;/a&gt;; &lt;a href=&quot;https://sils.unc.edu/courses#573&quot;&gt;INLS 573&lt;/a&gt;; &lt;a href=&quot;https://sils.unc.edu/courses#623&quot;&gt;INLS 623&lt;/a&gt;; &lt;a href=&quot;https://sils.unc.edu/courses#624&quot;&gt;INLS 624&lt;/a&gt;; &lt;a href=&quot;https://sils.unc.edu/courses#626&quot;&gt;INLS 626&lt;/a&gt;; &lt;a href=&quot;https://sils.unc.edu/courses#672&quot;&gt;INLS 672&lt;/a&gt;; &lt;a href=&quot;https://sils.unc.edu/courses#718&quot;&gt;INLS 718&lt;/a&gt;; &lt;a href=&quot;https://sils.unc.edu/courses#756&quot;&gt;INLS 756&lt;/a&gt;; &lt;a href=&quot;https://sils.unc.edu/courses#760&quot;&gt;INLS 760&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+
+&lt;h1 id=&quot;during-the-exam-period&quot;&gt;During the exam period&lt;/h1&gt;
+
+&lt;p&gt;The exam period for this class is 4:00pm on Saturday, 10 December 2016. 
+You are all required to attend the exam session. 
+We will be viewing everyone&amp;#39;s presentations with Q&amp;amp;A to follow. &lt;/p&gt;
+
+&lt;p&gt;This should not take the entire time alotted, but plan for at least an hour or two to be safe. &lt;/p&gt;
+</description>
+        <pubDate>Wed, 07 Dec 2016 00:00:00 -0500</pubDate>
+        <link>/inls161fall2016/present/2016/12/07/what-do-we-know/</link>
+        <guid isPermaLink="true">/inls161fall2016/present/2016/12/07/what-do-we-know/</guid>
+        
+        <category>skillsets</category>
+        
+        <category>tools</category>
+        
+        
+        <category>Present</category>
+        
       </item>
-    {% endfor %}
+    
+      <item>
+        <title>Catchup Day</title>
+        <description>&lt;p&gt;The last pure work day!&lt;/p&gt;
+</description>
+        <pubDate>Mon, 05 Dec 2016 00:00:00 -0500</pubDate>
+        <link>/inls161fall2016/presentation/2016/12/05/catchup5/</link>
+        <guid isPermaLink="true">/inls161fall2016/presentation/2016/12/05/catchup5/</guid>
+        
+        <category>Catchup</category>
+        
+        
+        <category>Presentation</category>
+        
+      </item>
+    
+      <item>
+        <title>Adding audio for narration and video to your slides</title>
+        <description>&lt;p&gt;Today we are going to work with Audacity to create and edit some audio to embed in our presentations. 
+&lt;excerpt/&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;installing-audacity&quot;&gt;Installing Audacity&lt;/h1&gt;
+
+&lt;p&gt;Look for the correct installer at the download site for Audacity&amp;#39;s current version. 
+DMG for Mac and EXE for windows. &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.audacityteam.org/download/&quot;&gt;http://www.audacityteam.org/download/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Install the software as you normally would install something. &lt;/p&gt;
+
+&lt;p&gt;Specific instructions here, if you need to troubleshoot: &lt;a href=&quot;http://manual.audacityteam.org/o/man/faq_installation_and_plug_ins.html&quot;&gt;http://manual.audacityteam.org/o/man/faq_installation_and_plug_ins.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;installing-vorbis&quot;&gt;Installing Vorbis&lt;/h2&gt;
+
+&lt;p&gt;In order to keep our audio files small, we may need to install an encoder that Audacity will use to compress and wrap the files so that they download faster.&lt;/p&gt;
+
+&lt;p&gt;The Ogg Vorbis format (.ogg) is probably best for our purposes.
+It can be automatically read and played back by any web browser that is HTML5 compliant. 
+The codec is free and open-source software, which makes it more flexible than something like MP3, which is non-free.&lt;/p&gt;
+
+&lt;p&gt;If Audacity does not offer it as an option for export, then you can download and install it from here:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.vorbis.com/setup/&quot;&gt;http://www.vorbis.com/setup/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;recording-audio&quot;&gt;Recording audio&lt;/h1&gt;
+
+&lt;p&gt;Make sure that you have a microphone plugged and then open Audacity. &lt;/p&gt;
+
+&lt;p&gt;To record, press the record button (red circle) on the top bar or press SHIFT+R.&lt;label for=&#39;controls&#39; class=&#39;margin-toggle&#39;&gt; &amp;#8853;&lt;/label&gt;&lt;input type=&#39;checkbox&#39; id=&#39;controls&#39; class=&#39;margin-toggle&#39;/&gt;&lt;span class=&#39;marginnote&#39;&gt;&lt;a href=&quot;/inls161fall2016/assets/ref-images/audacity/controls.png&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;/inls161fall2016/assets/ref-images/audacity/controls.png&quot; alt=&quot;Audacity Controls&quot; /&gt;&lt;/a&gt; &lt;/span&gt; &lt;/p&gt;
+
+&lt;p&gt;To stop, press the SPACE BAR. &lt;/p&gt;
+
+&lt;p&gt;For playback of audio that you have just recorded, press the SPACE BAR again. &lt;/p&gt;
+
+&lt;p&gt;You can move backward and forward in the track by using the LEFT &amp;lt;- and RIGHT -&amp;gt; cursor keys. &lt;/p&gt;
+
+&lt;p&gt;It is a good idea to save as you go, so that you do not lose anything. &lt;/p&gt;
+
+&lt;p&gt;The file will save as an AUP file. 
+That is Audacity&amp;#39;s project file format. 
+It will allow you to open the whole project with all of your audio saved in it. &lt;/p&gt;
+
+&lt;p&gt;Look here for documentation about getting started recording your audio: &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://manual.audacityteam.org/o/quick_help.html&quot;&gt;http://manual.audacityteam.org/o/quick_help.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;recording-chunks-of-audio-for-each-slide&quot;&gt;Recording chunks of audio for each slide&lt;/h2&gt;
+
+&lt;p&gt;If you want to record audio for each slide event in an individual file, which is a good approach, simply record the audio and then when you are satisfied with it, export it as an OGG Vorbis file. &lt;/p&gt;
+
+&lt;p&gt;You can press CTRL+SHIFT+E or select &amp;quot;Export Audio...&amp;quot; from the &amp;quot;File&amp;quot; menu. 
+You&amp;#39;ll want to give the file a number so that you can keep them in order. &lt;/p&gt;
+
+&lt;p&gt;For example, call the file &amp;quot;01-first-slide.ogg&amp;quot; or something along those lines.&lt;label for=&#39;export&#39; class=&#39;margin-toggle&#39;&gt; &amp;#8853;&lt;/label&gt;&lt;input type=&#39;checkbox&#39; id=&#39;export&#39; class=&#39;margin-toggle&#39;/&gt;&lt;span class=&#39;marginnote&#39;&gt;&lt;a href=&quot;/inls161fall2016/assets/ref-images/audacity/export-audio.png&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;/inls161fall2016/assets/ref-images/audacity/export-audio.png&quot; alt=&quot;Audacity Export Audio&quot; /&gt;&lt;/a&gt; &lt;/span&gt; &lt;/p&gt;
+
+&lt;p&gt;Select &amp;quot;ogg Vorbis file&amp;quot; from the menu and then press save. &lt;/p&gt;
+
+&lt;p&gt;The dialog will prompt you to add tags. You can if you wish, but it is not necessary. &lt;/p&gt;
+
+&lt;p&gt;You can open a new project for each audio file. &lt;/p&gt;
+
+&lt;h2 id=&quot;recording-all-at-once-and-splitting-into-separate-files&quot;&gt;Recording all at once and splitting into separate files&lt;/h2&gt;
+
+&lt;p&gt;Once you have your presentation text in your slides, or if you want to read through your script and then break up the audio, you can do this by using a &amp;quot;label&amp;quot; track and the &amp;quot;Export Multiple...&amp;quot; function in Audacity. &lt;/p&gt;
+
+&lt;p&gt;In this method, you will record your whole presentation, and then split the track into smaller tracks with numbered filenames.&lt;label for=&#39;label-track1&#39; class=&#39;margin-toggle&#39;&gt; &amp;#8853;&lt;/label&gt;&lt;input type=&#39;checkbox&#39; id=&#39;label-track1&#39; class=&#39;margin-toggle&#39;/&gt;&lt;span class=&#39;marginnote&#39;&gt;&lt;a href=&quot;/inls161fall2016/assets/ref-images/audacity/label-track1.png&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;/inls161fall2016/assets/ref-images/audacity/label-track1.png&quot;  alt=&quot;Audacity Label Track&quot; /&gt;&lt;/a&gt; &lt;/span&gt;  &lt;/p&gt;
+
+&lt;p&gt;To add a label track click: Tracks &amp;gt; Add New &amp;gt; Label Track.&lt;/p&gt;
+
+&lt;p&gt;This is just a reference track for you to break the audio apart into multiple files.&lt;/p&gt;
+
+&lt;h3 id=&quot;labeling&quot;&gt;Labeling&lt;/h3&gt;
+
+&lt;p&gt;To set a label, click on the wave form in the track where you want the label to be and then press CTRL+B, write the name of the label and press enter. 
+You can edit labels by clicking on them in the label track.&lt;label for=&#39;label-track2&#39; class=&#39;margin-toggle&#39;&gt; &amp;#8853;&lt;/label&gt;&lt;input type=&#39;checkbox&#39; id=&#39;label-track2&#39; class=&#39;margin-toggle&#39;/&gt;&lt;span class=&#39;marginnote&#39;&gt;&lt;a href=&quot;/inls161fall2016/assets/ref-images/audacity/label-track2.png&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;/inls161fall2016/assets/ref-images/audacity/label-track2.png&quot; alt=&quot;Audacity Label Tracks&quot; /&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;Audacity Label Tracks Documentation: &lt;a href=&quot;http://manual.audacityteam.org/o/man/label_tracks.html&quot;&gt;http://manual.audacityteam.org/o/man/label_tracks.html&lt;/a&gt; &lt;/span&gt; &lt;/p&gt;
+
+&lt;p&gt;Make sure that you are thinking about where slides begin and end in your script. 
+The easiest way to do this is to record first and then listen. 
+As you listen ou can pause and move back and forth to get your selector in the right position before creating a label with CTRL+B. 
+Your labels should be positioned at the beginning of your desired audio clips. 
+Keep this in mind and make a label at the beginning of the track for the first slide&amp;#39;s audio. &lt;/p&gt;
+
+&lt;p&gt;If you want to lazy load your audio files in your slideshow, you can simply use the desired slide number as the label name, but you have to follow a specific naming convention. 
+Your label names should look similar to what follows&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;0.0 # Title slide
+1.0 # 1st slide after title slide
+2.0 # 2nd slide
+3.0 # 3rd slide
+3.1 # 3rd slide, basement level 1 (or fragment 1)
+4.0 # 4th slide
+5.0 # 5th slide
+...
+12.0 # 12th and final slide
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;When you have finished labeling. Select File &amp;gt; Export Multiple... and a dialog will pop up.&lt;label for=&#39;export-multiple&#39; class=&#39;margin-toggle&#39;&gt; &amp;#8853;&lt;/label&gt;&lt;input type=&#39;checkbox&#39; id=&#39;export-multiple&#39; class=&#39;margin-toggle&#39;/&gt;&lt;span class=&#39;marginnote&#39;&gt;&lt;a href=&quot;/inls161fall2016/assets/ref-images/audacity/export-multiple.png&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;/inls161fall2016/assets/ref-images/audacity/export-multiple.png&quot;  alt=&quot;Audacity Export Multiple&quot; /&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;Audacity Export Multiple Documentation: &lt;a href=&quot;http://manual.audacityteam.org/o/man/export_multiple.html&quot;&gt;http://manual.audacityteam.org/o/man/export_multiple.html&lt;/a&gt; &lt;/span&gt;  &lt;/p&gt;
+
+&lt;p&gt;You should select OGG Vorbis files and under &amp;quot;Name files:&amp;quot; select the middle option, &amp;quot;Numbering before Label/Track Name.&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;Choose an export location (you&amp;#39;ll be uploading these to Cloud9 or Github directly). &lt;/p&gt;
+
+&lt;p&gt;Then press export. &lt;/p&gt;
+
+&lt;p&gt;You will be presented with the same tag editing interface as mentioned above, except this time for each file. 
+So just press okay on that dialog until it is finished.&lt;label for=&#39;tags&#39; class=&#39;margin-toggle&#39;&gt; &amp;#8853;&lt;/label&gt;&lt;input type=&#39;checkbox&#39; id=&#39;tags&#39; class=&#39;margin-toggle&#39;/&gt;&lt;span class=&#39;marginnote&#39;&gt;&lt;a href=&quot;/inls161fall2016/assets/ref-images/audacity/tags.png&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;/inls161fall2016/assets/ref-images/audacity/tags.png&quot;  alt=&quot;Audacity ID3 Tags&quot; /&gt;&lt;/a&gt; &lt;/span&gt;  &lt;/p&gt;
+
+&lt;h1 id=&quot;putting-the-files-in-the-right-place&quot;&gt;Putting the files in the right place&lt;/h1&gt;
+
+&lt;p&gt;You should end up with a file list that looks something like this:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;1.0.ogg
+2.0.ogg
+3.0.ogg
+3.1.ogg
+4.0.ogg
+5.0.ogg
+...
+12.0.ogg
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The files should be relatively small. 
+They are just short clips. &lt;/p&gt;
+
+&lt;p&gt;Probably the easiest way to get these files into Cloud9 is to zip them up in a ZIP file and then upload them by right clicking on the correct directory in your tree. &lt;/p&gt;
+
+&lt;p&gt;Then unzip them into the directory where you want them using the unzip command. &lt;/p&gt;
+
+&lt;p&gt;Do &lt;code&gt;ls&lt;/code&gt; to see that the ZIP file is in the right place. &lt;/p&gt;
+
+&lt;p&gt;Then do:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;unzip audio.zip&lt;/code&gt; &lt;/p&gt;
+
+&lt;p&gt;In that same directory. 
+You will have to put the name of your ZIP file instead of &amp;quot;audio.zip.&amp;quot; &lt;/p&gt;
+
+&lt;p&gt;The files should unzip there and then you are ready to put links into your &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt; tags as mentioned above.&lt;/p&gt;
+
+&lt;h3 id=&quot;lazy-loading&quot;&gt;Lazy loading&lt;/h3&gt;
+
+&lt;p&gt;If you saved your files using the schema suggested above, the audio-slideshow plugin will load them automatically with the appropriate slide. &lt;/p&gt;
+
+&lt;p&gt;If you did not name them in this way, see below. &lt;/p&gt;
+
+&lt;h3 id=&quot;add-audio-to-section-tags&quot;&gt;Add audio to section tags&lt;/h3&gt;
+
+&lt;p&gt;Just to make sure that it is clear, the way that you add audio to a slide is by making your &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt; look like this:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;section&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-audio-src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;audio/SOME-AUDIO.ogg&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-background=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;#56A0D3&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt; 
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;h2&amp;gt;&lt;/span&gt;
+        SOME SLIDE TITLE
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/h2&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;
+        Some other text.
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/section&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The &lt;code&gt;data-audio-src&lt;/code&gt; takes care of adding the audio link so that it will play automatically. &lt;/p&gt;
+
+&lt;h1 id=&quot;optional-adding-an-autoplay-video-to-a-slide&quot;&gt;Optional: Adding an autoplay video to a slide&lt;/h1&gt;
+
+&lt;p&gt;Unfortunately, the YouTube autoplay feature for Reveal.js is broken at the moment because of a change to the YouTube API. 
+However, there is a workaround which involves converting/downloading YouTube videos as MP4s and then using the &lt;code&gt;video&lt;/code&gt; HTML5 element to handle them in a Reveal.js slide.&lt;/p&gt;
+
+&lt;p&gt;First, you have to download your video as an MP4. Not all MP4 converters work with HTML5 for some reason. I tested about 10 of them and most did not work very well. This one does:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.saveitoffline.com/&quot;&gt;http://www.saveitoffline.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;You just put the link to your YouTube video in there and then click the thing underneath the link box and then click to download 360p - MP4. &lt;/p&gt;
+
+&lt;p&gt;Once you have that, make a &amp;quot;video&amp;quot; directory in your workspace on Cloud9 and upload your video into it (remember that the filename cannot contain spaces). Then you need to structure your slide exactly like this, but change the following accordingly:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;VIDEONAME is the filename of your video file.&lt;/li&gt;
+&lt;li&gt;STARTTIME is the time in seconds that you want the video to start.&lt;/li&gt;
+&lt;li&gt;ENDTIME is the time in seconds that you want the video to end. &lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;&amp;lt;section&amp;gt;
+    &amp;lt;video data-audio-controls src=&quot;./video/VIDEONAME.mp4#t=STARTTIME,ENDTIME&quot; type=&quot;video/mp4&quot; width=&quot;100%&quot; /&amp;gt;
+  &amp;lt;/video&amp;gt;
+&amp;lt;/section&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now when you test this, it should autoplay through just like the audio embedded in the other slides. &lt;/p&gt;
+
+&lt;h1 id=&quot;demos-and-code-examples&quot;&gt;Demos and code examples&lt;/h1&gt;
+
+&lt;p&gt;Once you have your &lt;code&gt;index.html&lt;/code&gt; file converted and you want to polish up the final version of the presentation, you can start adding and changing backgrounds, fragments, adding audio, and other elements to the individual slides. &lt;/p&gt;
+
+&lt;p&gt;Think of the markdown file as a draft for content (&lt;code&gt;&amp;lt;aside class=&amp;quot;notes&amp;quot;&amp;gt;&lt;/code&gt;) and structure (headers indicate where each slide begins). &lt;/p&gt;
+
+&lt;p&gt;Use the reveal demo presentation to find slides with things that you would like to be able to do in your presentation: &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://lab.hakim.se/reveal-js/&quot;&gt;http://lab.hakim.se/reveal-js/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Then find the corresponding section in the source file for the demo to see the HTML for the element or attribute you wish to use: &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/hakimel/reveal.js/blob/master/demo.html&quot;&gt;https://github.com/hakimel/reveal.js/blob/master/demo.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Finally, consult the &lt;code&gt;README.md&lt;/code&gt; file in the base Reveal.js repo on GitHub. 
+It has A TON of really helpful info from simple stuff to very advanced things:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/hakimel/reveal.js/blob/master/README.md&quot;&gt;https://github.com/hakimel/reveal.js/blob/master/README.md&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We won&amp;#39;t cover all that Reveal can do, but you&amp;#39;ve got great skiulls of discovering and using new technologies.  Put them to use and learn the fun things this tool can do!&lt;/p&gt;
+
+&lt;h2 id=&quot;testing&quot;&gt;Testing&lt;/h2&gt;
+
+&lt;p&gt;Remember to commit and test your changes so you don&amp;#39;t lose anything. &lt;/p&gt;
+
+&lt;p&gt;To test locally, the easy way is to right-click &lt;code&gt;index.html&lt;/code&gt; and select Preview.  Or, for style points, use python&amp;#39;s SimpleHTTPServer. Run this from the root of your repo:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;python -m SimpleHTTPServer $PORT
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;To test on GitHub, make sure it is pushed to GitHub and that you&amp;#39;re pushing to the gh-pages branch. &lt;/p&gt;
+
+&lt;p&gt;You should then be able to go to an address that looks like the following, and see your presentation:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://YOUR-GITHUB-USERNAME.github.io/YOUR-PRESENTATION-REPONAME/&quot;&gt;http://YOUR-GITHUB-USERNAME.github.io/YOUR-PRESENTATION-REPONAME/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Et voila.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;next-time&quot;&gt;Next time&lt;/h1&gt;
+
+&lt;p&gt;We have arrived at the last normal session of class. Next time we&amp;#39;ll have a catchup day. In this session we will work on troubleshooting your presentations. &lt;/p&gt;
+
+&lt;p&gt;On the last day of class we&amp;#39;ll get retrospective and perhaps a little sentimental about how far we&amp;#39;ve come. And we&amp;#39;ll troubleshoot if there are any lingering problems. We will also talk as a group about the skillsets that you have gathered throughout this course. 
+This is an important discussion because it will orient you to the kinds of things that you can say about your skills on a resume or CV. &lt;/p&gt;
+
+&lt;p&gt;We will also discuss other future classes that you might want to take if you are interested in a particular aspect of this course. &lt;/p&gt;
+</description>
+        <pubDate>Wed, 30 Nov 2016 00:00:00 -0500</pubDate>
+        <link>/inls161fall2016/present/2016/11/30/recording-and-editing-audio/</link>
+        <guid isPermaLink="true">/inls161fall2016/present/2016/11/30/recording-and-editing-audio/</guid>
+        
+        <category>reveal.js</category>
+        
+        <category>presentations</category>
+        
+        <category>audio</category>
+        
+        <category>audacity</category>
+        
+        <category>video</category>
+        
+        <category>YouTube</category>
+        
+        <category>MP4</category>
+        
+        <category>Jekyll</category>
+        
+        
+        <category>Present</category>
+        
+      </item>
+    
+      <item>
+        <title>Reveal.js</title>
+        <description>&lt;p&gt;Today we will look at Reveal.js more closely and start working with it in your presentation teams. 
+We will also cover converting your text from Markdown into Reveal-ready HTML5 using our old friend, Pandoc.
+&lt;excerpt/&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;q-amp-a&quot;&gt;Q&amp;amp;A&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;I&amp;#39;m still sick and grading still isn&amp;#39;t finished. Sorry!&lt;/li&gt;
+&lt;li&gt;There is an error in the Assignment 6 instructions.  Most (all?) of you downloaded John&amp;#39;s version.  I made some updates, mostly deleting the Readme. Thanks to Git it should be easy to fix.
+
+&lt;ul&gt;
+&lt;li&gt;Check to see if your Readme has a bunch of instructions in it.  If so, you don&amp;#39;t have my updates and need to do the below.&lt;/li&gt;
+&lt;li&gt;Have &lt;strong&gt;one&lt;/strong&gt; partner &lt;code&gt;git pull https://github.com/eah13/task-6-be-presentable.git gh-pages&lt;/code&gt; to get the updates&lt;/li&gt;
+&lt;li&gt;Then, from the &lt;strong&gt;master&lt;/strong&gt; branch have that same partner &lt;code&gt;git branch -m gh-pages&lt;/code&gt; to change&lt;/li&gt;
+&lt;li&gt;Again, same partner: &lt;code&gt;git push origin gh-pages&lt;/code&gt; to push the updates you got from me&lt;/li&gt;
+&lt;li&gt;On github, go into settings and make &lt;code&gt;gh-pages&lt;/code&gt; the default branch if it isn&amp;#39;t already.&lt;/li&gt;
+&lt;li&gt;All other parnter(s) &lt;code&gt;git branch -m gh-pages&lt;/code&gt; from master to also rename the default branch, then &lt;code&gt;git pull origin gh-pages&lt;/code&gt; to get the updates.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Sorry for that.  All the stuff I did in my fork of John&amp;#39;s repo was supposed to prevent us from having to do all of that.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;getting-started&quot;&gt;Getting started&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Sit with your partner today&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;First we will need to get a few things in place in our workspaces. &lt;/p&gt;
+
+&lt;h2 id=&quot;making-sure-that-you-are-pushing-to-gh-pages&quot;&gt;Making sure that you are pushing to gh-pages&lt;/h2&gt;
+
+&lt;p&gt;If you do not do this, your reveal.js presentation will not show up at the correct address. &lt;/p&gt;
+
+&lt;p&gt;In my fork, I set &lt;code&gt;gh-pages&lt;/code&gt; as the default branch (and if you cloned the old repo, you fixed this above), so that&amp;#39;s what you should be on by default.  If you make new branches for testing, &lt;code&gt;git checkout gh-pages&lt;/code&gt; to come back home and, from &lt;code&gt;gh-pages&lt;/code&gt;, &lt;code&gt;git merge mynewbranch&lt;/code&gt; if you want to merge in your tested changes.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Second partner&lt;/strong&gt; (the one who didn&amp;#39;t create the initial repo) make sure you&amp;#39;ve &lt;strong&gt;pulled&lt;/strong&gt; any updates from your partner test this setup by running &lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;./build-presentation.sh example
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;to create a new index.html from &lt;code&gt;example.md&lt;/code&gt;.  Then add and commit those changes (remember to &lt;code&gt;git status&lt;/code&gt; to make sure you&amp;#39;e gotten everything), then &lt;code&gt;git pull&lt;/code&gt;.  You should see a site &lt;a href=&quot;https://tommytester.github.io/assignment-6/#/&quot;&gt;like this&lt;/a&gt; at first-partners-user-name.github.io/repo-name.  Congrats!  You&amp;#39;re hooked up to display your presentation via github.  As you go, you can &lt;strong&gt;push&lt;/strong&gt; to see what things look like.&lt;/p&gt;
+
+&lt;p&gt;Remember, we&amp;#39;ll be collaborating on this, so try to segment the locations each partner edits, &lt;strong&gt;pull&lt;/strong&gt; often, and resolve any conflicts git can&amp;#39;t figure out how to.&lt;/p&gt;
+
+&lt;h1 id=&quot;creating-and-converting-markdown-to-reveal-ready-html5&quot;&gt;Creating and converting markdown to Reveal-ready HTML5&lt;/h1&gt;
+
+&lt;p&gt;Once you have settled on a topic, have &lt;strong&gt;one partner&lt;/strong&gt; create a draft text of your presentation simliar to the &lt;code&gt;example.md&lt;/code&gt; file found in this directory. &lt;/p&gt;
+
+&lt;p&gt;You can name it whatever you like. &lt;/p&gt;
+
+&lt;h2 id=&quot;metadata&quot;&gt;Metadata&lt;/h2&gt;
+
+&lt;p&gt;You have to add the preamble at the top as follows (with your info substituted accordingly):&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;% TITLE
+% NAME
+% DATE
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This will generate your first slide, with the title, your name, and the date.&lt;/p&gt;
+
+&lt;h2 id=&quot;individual-slides-from-text&quot;&gt;Individual slides from text&lt;/h2&gt;
+
+&lt;p&gt;Each top level markdown header in the file will become a slide. 
+The text in the header will be included in the slide. 
+This is only a draft, though, so you can of course change this later. &lt;/p&gt;
+
+&lt;h2 id=&quot;speaker-notes&quot;&gt;Speaker notes&lt;/h2&gt;
+
+&lt;p&gt;The &lt;code&gt;&amp;lt;aside class=&amp;quot;notes&amp;quot;&amp;gt;&lt;/code&gt; tags should be used to wrap the long form text of your actual presentation. 
+These will show up in the speaker notes interface embedded in reveal.js.&lt;/p&gt;
+
+&lt;p&gt;This is also the text you will record. &lt;/p&gt;
+
+&lt;p&gt;Any text outside of the &lt;code&gt;&amp;lt;aside&amp;gt;&lt;/code&gt; tags will be shown on the screen in your actual presentation slides. &lt;/p&gt;
+
+&lt;p&gt;Again, you can change this later. &lt;/p&gt;
+
+&lt;h1 id=&quot;convert-your-presentation&quot;&gt;Convert your presentation&lt;/h1&gt;
+
+&lt;p&gt;I have taken the liberty of creating a template for you to make translating this into HTML5 a lot easier. &lt;/p&gt;
+
+&lt;p&gt;All you need to do is run Pandoc, as follows, on your markdown source file, once it is finished. &lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;pandoc -t revealjs --template=template-index.html -s --variable theme=&amp;quot;black&amp;quot; --variable transition=&amp;quot;slide&amp;quot; --variable revealjs-url=&amp;quot;./&amp;quot; YOUR-MARKDOWN-FILENAME.md -o index.html&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;This will give you the HTML5 you can work with in polishing your presentation. &lt;/p&gt;
+
+&lt;p&gt;You can also use the script that is in the repository named &lt;code&gt;build-presentation.sh&lt;/code&gt; if you change the varialbles appropriately. 
+The current version has the defaults as listed above. 
+To use it, inkove the script and supply it with the name of your markdown file with NO EXTENSION, like this:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;./build-presentation.sh MY-FILENAME
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This will output &lt;code&gt;index.html&lt;/code&gt; in the same directory. &lt;/p&gt;
+
+&lt;h1 id=&quot;push-amp-pull&quot;&gt;Push &amp;amp; Pull&lt;/h1&gt;
+
+&lt;p&gt;At this point the second partner has created a draft markdown file and built HTML from it.  Save, Add, Commit, and push those changes.  The other partner can now pull.&lt;/p&gt;
+
+&lt;h1 id=&quot;add-audio&quot;&gt;Add audio&lt;/h1&gt;
+
+&lt;p&gt;Once you have the HTML5 file for your presentation, you will need to add audio. &lt;/p&gt;
+
+&lt;p&gt;To get reveal.js to play that audio as a part of your slideshow, you simply need to add the data-audio-src attribute to the &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt; tag that was created in the conversion of your source file, like this:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;&amp;lt;section id=&quot;my-slide&quot; class=&quot;slide level1&quot; data-audio-src=&quot;audio/1.0.ogg&quot;&amp;gt;
+  &amp;lt;h2&amp;gt;
+    My slide
+  &amp;lt;/h2&amp;gt;
+&amp;lt;/section&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;That attribute specifies the relative path to the audio files that correspond to each of your slides. 
+You can also add audio to fragments. 
+We will look at some of this in class. &lt;/p&gt;
+
+&lt;h1 id=&quot;experiment-with-style&quot;&gt;Experiment with style.&lt;/h1&gt;
+
+&lt;p&gt;You can change a whole bunch of things about the style of individual slides. 
+You can add background images and video if you want. 
+It is possible to change the color and many other attributes as well. &lt;/p&gt;
+
+&lt;p&gt;You should experiment with all of this, but remember to use git to track your changes as you work. 
+Make a small change and then add and commit it using git, just like we have been doing. &lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;git add -v .
+git commit -a -m &quot;I made a small change&quot;
+git push
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Then test. If you don&amp;#39;t like the change, you can always roll it back. &lt;/p&gt;
+
+&lt;p&gt;If you do this, then you will be able to fix things easily if you break something by reverting your last commit. If you are testing locally, you don&amp;#39;t have to push your changes. Just commit them. You will still be able to roll them back using the git revert command.&lt;/p&gt;
+
+&lt;h1 id=&quot;when-all-else-fails&quot;&gt;When all else fails&lt;/h1&gt;
+
+&lt;p&gt;In the end, if you really get stuck, you can always start over again and convert from markdown. 
+This is the nuclear option, which you want to avoid if possible, but if you have made changes that you can&amp;#39;t remember and can&amp;#39;t get back to a working presentation, it&amp;#39;s always avaialable.&lt;/p&gt;
+
+&lt;h1 id=&quot;next-time&quot;&gt;Next time&lt;/h1&gt;
+
+&lt;p&gt;For next time, I want you to have a look at some documentation for Audacity and begin creating audio for your presentation.&lt;label for=&#39;audacity&#39; class=&#39;margin-toggle sidenote-number&#39;&gt;&lt;/label&gt;&lt;input type=&#39;checkbox&#39; id=&#39;audacity&#39; class=&#39;margin-toggle&#39;/&gt;&lt;span class=&#39;sidenote&#39;&gt;“Basic Recording and Editing with Audacity - All.” Instructables.com. &lt;a href=&quot;http://www.instructables.com/id/Basic-recording-and-editing-with-Audacity/&quot;&gt;http://www.instructables.com/id/Basic-recording-and-editing-with-Audacity/&lt;/a&gt;. &lt;/span&gt; 
+You do not need sophisticated equipment to record audio. 
+You can record on any smartphone or laptop now. &lt;/p&gt;
+
+&lt;p&gt;This video should help you get started;&lt;/p&gt;
+
+&lt;div class=&quot;video-container&quot;&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/2gM12DIIwA0&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;If you install Audacity on your personal laptops, you can use it to record and edit your audio directly. 
+You can download audacity and read more documentation on the audacity homepage.&lt;label for=&#39;audacity-home&#39; class=&#39;margin-toggle&#39;&gt; &amp;#8853;&lt;/label&gt;&lt;input type=&#39;checkbox&#39; id=&#39;audacity-home&#39; class=&#39;margin-toggle&#39;/&gt;&lt;span class=&#39;marginnote&#39;&gt;Welcome to Audacity. &lt;a href=&quot;http://www.audacityteam.org&quot;&gt;http://www.audacityteam.org&lt;/a&gt; &lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;We will work together on editing audio in class next time. Don&amp;#39;t go too far in creating all of your audio: you&amp;#39;ll need your text finalized so you won&amp;#39;t have to re-do it a lot.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 28 Nov 2016 00:00:00 -0500</pubDate>
+        <link>/inls161fall2016/present/2016/11/28/reveal-basics/</link>
+        <guid isPermaLink="true">/inls161fall2016/present/2016/11/28/reveal-basics/</guid>
+        
+        <category>reveal.js</category>
+        
+        <category>presentations</category>
+        
+        <category>pandoc</category>
+        
+        
+        <category>Present</category>
+        
+      </item>
+    
+      <item>
+        <title>Presentation Basics</title>
+        <description>&lt;p&gt;Today we&amp;#39;re going to talk about what is wrong with presentations and presentation software as they have come to be used.
+&lt;excerpt/&gt;&lt;/p&gt;
+
+&lt;p&gt;Presentations in class or at conferences are a weapon used to inflict maximum torturous boredom on an audience of unsuspecting victims. &lt;/p&gt;
+
+&lt;p&gt;Slideshows are the main modality of such attacks. &lt;/p&gt;
+
+&lt;h2 id=&quot;powerpoint-karaoke&quot;&gt;PowerPoint Karaoke&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;  You will typically have to dodge lots of bullets.&lt;/li&gt;
+&lt;li&gt;  You will scale walls of illegible text, compressed so that it can fit on a screen. &lt;/li&gt;
+&lt;li&gt;  Presenters will read directly from their slides to you. &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This is all very bad.&lt;label for=&#39;worst&#39; class=&#39;margin-toggle sidenote-number&#39;&gt;&lt;/label&gt;&lt;input type=&#39;checkbox&#39; id=&#39;worst&#39; class=&#39;margin-toggle&#39;/&gt;&lt;span class=&#39;sidenote&#39;&gt;Purewal, Sarah Jacobsson. “The World’s Worst PowerPoint Presentations.” PC World. &lt;a href=&quot;http://www.pcworld.idg.com.au/slideshow/366369/world-worst-powerpoint-presentations/&quot;&gt;http://www.pcworld.idg.com.au/slideshow/366369/world-worst-powerpoint-presentations/&lt;/a&gt;. &lt;/span&gt; &lt;/p&gt;
+
+&lt;p&gt;The typical mode for preparing presentations these days seems to be oriented toward allowing anyone to give a presentation, provided that they have the slide deck in front of them. &lt;/p&gt;
+
+&lt;p&gt;The more cynical among us have come to call this exercise PowerPoint Karaoke. &lt;/p&gt;
+
+&lt;h2 id=&quot;the-problem&quot;&gt;The problem&lt;/h2&gt;
+
+&lt;p&gt;The problem is not PowerPoint itself.&lt;label for=&#39;death&#39; class=&#39;margin-toggle sidenote-number&#39;&gt;&lt;/label&gt;&lt;input type=&#39;checkbox&#39; id=&#39;death&#39; class=&#39;margin-toggle&#39;/&gt;&lt;span class=&#39;sidenote&#39;&gt;Kapterev, A. “Death by PowerPoint.” SlideShare. Last modified July 31, 2007. &lt;a href=&quot;http://www.slideshare.net/thecroaker/death-by-powerpoint&quot;&gt;http://www.slideshare.net/thecroaker/death-by-powerpoint&lt;/a&gt;. &lt;/span&gt; &lt;/p&gt;
+
+&lt;p&gt;PowerPoint is just a tool. &lt;/p&gt;
+
+&lt;p&gt;All tools can be used in various ways for good or ill. &lt;/p&gt;
+
+&lt;p&gt;A knife can be used in the kitchen to prepare food, which feeds people and makes them happy. 
+That same knife can also be used as a weapon. &lt;/p&gt;
+
+&lt;p&gt;Like with all of the other tools that we have used, the end product has to do with how we use them. 
+Our intentions drive what happens more than the tools we use. &lt;/p&gt;
+
+&lt;p&gt;A rather hilarious example we saw earlier in the class of how a major speech may have gone very differently, had the speaker been compelled to use PowerPoint in today&amp;#39;s typical style: &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.norvig.com/Gettysburg/index.htm&quot;&gt;The Gettysburg PowerPoint Presentation - Peter Norvig&lt;/a&gt; &lt;/p&gt;
+
+&lt;h1 id=&quot;edward-tufte&quot;&gt;Edward Tufte&lt;/h1&gt;
+
+&lt;p&gt;Edward Tufte is a statistician and artist and Professor Emeritus at Yale University. 
+If you ever have a chance to go to one of his workshops, you absolultely should do so. &lt;/p&gt;
+
+&lt;p&gt;Have a look through his website: &lt;a href=&quot;http://www.edwardtufte.com&quot;&gt;http://www.edwardtufte.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Tufte has led the charge for years that in order to communicate research and ideas, we need to pay close attention to aesthetics. &lt;/p&gt;
+
+&lt;p&gt;Beautifully designed communication is better at convincing others and transmitting knowledge than ugly or clunky communication. &lt;/p&gt;
+
+&lt;h2 id=&quot;the-cognitive-style-of-powerpoint&quot;&gt;The Cognitive Style of PowerPoint&lt;/h2&gt;
+
+&lt;p&gt;As we mentioned earlier, PowerPoint is not the problem. &lt;/p&gt;
+
+&lt;p&gt;We are the problem.&lt;label for=&#39;powerpoint&#39; class=&#39;margin-toggle sidenote-number&#39;&gt;&lt;/label&gt;&lt;input type=&#39;checkbox&#39; id=&#39;powerpoint&#39; class=&#39;margin-toggle&#39;/&gt;&lt;span class=&#39;sidenote&#39;&gt;Tufte, Edward R. The Cognitive Style of Powerpoint: Pitching Out Corrupts Within. Cheshire, Connecticut: Graphics Press, 2011. &lt;a href=&quot;http://users.ha.uth.gr/tgd/pt0501/09/Tufte.pdf&quot;&gt;http://users.ha.uth.gr/tgd/pt0501/09/Tufte.pdf&lt;/a&gt;. &lt;/span&gt; &lt;/p&gt;
+
+&lt;p&gt;We expect presentations to be boring and hideous, and so they are. &lt;/p&gt;
+
+&lt;p&gt;We expect that no one will pay attention to our boring and hideous presentations, and so they don&amp;#39;t. &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;  We are lazy. &lt;/li&gt;
+&lt;li&gt;  We don&amp;#39;t think that we can do any better. &lt;/li&gt;
+&lt;li&gt;  We are wrong about that. &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;And it is not our fault. &lt;/p&gt;
+
+&lt;p&gt;We have been trained and cajoled and led into doing things in the same way over and over and over again. &lt;/p&gt;
+
+&lt;p&gt;You all have the opportunity to be better, to do better. &lt;/p&gt;
+
+&lt;h1 id=&quot;the-lessig-method-of-presentations&quot;&gt;The Lessig Method of Presentations&lt;/h1&gt;
+
+&lt;p&gt;Lawrence Lessig&amp;#39;s presentation style is widely recognized as being among the best in the business right now.&lt;label for=&#39;lessig-method&#39; class=&#39;margin-toggle sidenote-number&#39;&gt;&lt;/label&gt;&lt;input type=&#39;checkbox&#39; id=&#39;lessig-method&#39; class=&#39;margin-toggle&#39;/&gt;&lt;span class=&#39;sidenote&#39;&gt;Reynolds, Garr. “The ‘Lessig Method’ of Presentation.” Presentation Zen. Last modified October 7, 2005. &lt;a href=&quot;http://presentationzen.blogs.com/presentationzen/2005/10/the_lessig_meth.html&quot;&gt;http://presentationzen.blogs.com/presentationzen/2005/10/the_lessig_meth.html&lt;/a&gt;. &lt;/span&gt; &lt;/p&gt;
+
+&lt;p&gt;We want to aim for this kind of scripted presentation for our final projects in this class. &lt;/p&gt;
+
+&lt;h2 id=&quot;getting-a-network-the-world-needs&quot;&gt;Getting a Network the World Needs&lt;/h2&gt;
+
+&lt;p&gt;Lessig talks on a wide variety of topics, but copyright is among his favorite. 
+This longish talk is an exemplary presentation. Video skim it when you have time.&lt;/p&gt;
+
+&lt;div class=&quot;video-container&quot;&gt;
+  &lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/Qk_5UccWm3o&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;video-container&quot;&gt;
+  &lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/piLXKUE_Bzo&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;video-container&quot;&gt;
+  &lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/ajv0Lxaqoys&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;video-container&quot;&gt;
+&lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/xSbWG2LFrOk&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;reveal-js&quot;&gt;Reveal.js&lt;/h2&gt;
+
+&lt;p&gt;As we saw earlier, John Marin has re-imagined the Gettysburg address using the tools we&amp;#39;ll learn for Assignment 6:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://johndmart.in/inls161-revealjs-template/#/&quot;&gt;The Gettysburg Reveal.js Presentation - John D. Martin III&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This presentation is an example of what is possible with reveal.js. 
+It is not even a terribly sophisticated example. &lt;/p&gt;
+
+&lt;h1 id=&quot;groups&quot;&gt;Groups&lt;/h1&gt;
+
+&lt;p&gt;Take &lt;code&gt;&amp;lt;5&lt;/code&gt; minutes to think individually about what topic you might like to tackle and determine if you&amp;#39;d like to work with someone specific on this project. I recommend &lt;em&gt;not&lt;/em&gt; working with someone specific, as being paired with a random person is more representative of what collaboration in a professional setting is like.  But, especially if you&amp;#39;re both interested in the same topic, working with someone specific might be beneficial.&lt;/p&gt;
+
+&lt;p&gt;Everyone who doesn&amp;#39;t pick a partner will be randomly assigned one and the rest of the class will be spent in groups.&lt;/p&gt;
+
+&lt;p&gt;By the beginning of next class, you should have created &amp;amp; cloned your repos!  This means doing everything under the &lt;strong&gt;One partner:&lt;/strong&gt; heading.  Don&amp;#39;t race ahead yet: spend any extra time on picking a topic and collecting links and media for your presentation.&lt;/p&gt;
+
+&lt;h1 id=&quot;next-time&quot;&gt;Next time&lt;/h1&gt;
+
+&lt;p&gt;Get into your groups and read over &lt;a href=&quot;/inls161fall2016/assignments/assignment&quot;&gt;assignment 6&lt;/a&gt;, pick a topic, and start to plan out your work together. I want you to review the materials above and come to class next time prepared to work in your presentation team. &lt;/p&gt;
+</description>
+        <pubDate>Mon, 21 Nov 2016 00:00:00 -0500</pubDate>
+        <link>/inls161fall2016/present/2016/11/21/presentation-basics/</link>
+        <guid isPermaLink="true">/inls161fall2016/present/2016/11/21/presentation-basics/</guid>
+        
+        <category>powerpoint</category>
+        
+        <category>reveal.js</category>
+        
+        <category>presentations</category>
+        
+        <category>Tufte</category>
+        
+        
+        <category>Present</category>
+        
+      </item>
+    
+      <item>
+        <title>Catchup Day</title>
+        <description>&lt;p&gt;We&amp;#39;ll spend most of the time on Assignment 5 today.&lt;/p&gt;
+
+&lt;p&gt;Only one more to go after this!&lt;/p&gt;
+
+&lt;h1 id=&quot;next-time&quot;&gt;Next time&lt;/h1&gt;
+
+&lt;p&gt;Next time we are going to begin talking about presentations and creating good presentation materials in earnest. &lt;/p&gt;
+
+&lt;p&gt;I would like you to read/deep skim Edward Tufte&amp;#39;s piece on the stupidity of PowerPoint.&lt;label for=&#39;powerpoint&#39; class=&#39;margin-toggle sidenote-number&#39;&gt;&lt;/label&gt;&lt;input type=&#39;checkbox&#39; id=&#39;powerpoint&#39; class=&#39;margin-toggle&#39;/&gt;&lt;span class=&#39;sidenote&#39;&gt;Tufte, Edward R. The Cognitive Style of Powerpoint: Pitching Out Corrupts Within. Cheshire, Connecticut: Graphics Press, 2011. &lt;a href=&quot;http://users.ha.uth.gr/tgd/pt0501/09/Tufte.pdf&quot;&gt;http://users.ha.uth.gr/tgd/pt0501/09/Tufte.pdf&lt;/a&gt;. &lt;/span&gt; &lt;/p&gt;
+
+&lt;h2 id=&quot;exemplars&quot;&gt;Exemplars&lt;/h2&gt;
+
+&lt;p&gt;I would also like you to view the following video of a talk by Lawrence Lessig.
+We will look at parts of this in class as well, but it would be good if you could sit down and view the whole thing over the course of the weekend.
+It exists in four parts linked below.&lt;/p&gt;
+
+&lt;div class=&quot;video-container&quot;&gt;
+  &lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/Qk_5UccWm3o&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;video-container&quot;&gt;
+  &lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/piLXKUE_Bzo&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;video-container&quot;&gt;
+  &lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/ajv0Lxaqoys&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;video-container&quot;&gt;
+&lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/xSbWG2LFrOk&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;reveal-js&quot;&gt;Reveal.js&lt;/h2&gt;
+
+&lt;p&gt;We will be using reveal.js to create presentations. 
+Please click through this demo presentation and see what is possible to do with it.&lt;label for=&#39;reveal&#39; class=&#39;margin-toggle sidenote-number&#39;&gt;&lt;/label&gt;&lt;input type=&#39;checkbox&#39; id=&#39;reveal&#39; class=&#39;margin-toggle&#39;/&gt;&lt;span class=&#39;sidenote&#39;&gt;El Hattab, Hakim. Reveal.js: The HTML5 Presentation Framework. &lt;a href=&quot;http://lab.hakim.se/reveal-js/#/&quot;&gt;http://lab.hakim.se/reveal-js/#/&lt;/a&gt;. &lt;/span&gt; 
+You can also view the source code for the demo presentation. 
+We will look at this together in detail. &lt;/p&gt;
+
+&lt;h2 id=&quot;thought-leaders-and-ted-talks&quot;&gt;Thought leaders and TED Talks&lt;/h2&gt;
+
+&lt;p&gt;You should also give the following video a watch.
+It will help put into perspective what is really happening when we watch TED Talks and similar presentations. &lt;/p&gt;
+
+&lt;div class=&quot;video-container&quot;&gt;
+  &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/_ZBKX-6Gz6A&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Wed, 16 Nov 2016 00:00:00 -0500</pubDate>
+        <link>/inls161fall2016/databases/2016/11/16/catchup4/</link>
+        <guid isPermaLink="true">/inls161fall2016/databases/2016/11/16/catchup4/</guid>
+        
+        <category>Catchup</category>
+        
+        
+        <category>Databases</category>
+        
+      </item>
+    
+      <item>
+        <title>From data to database</title>
+        <description>&lt;h1 id=&quot;mysql-in-bash-scripts&quot;&gt;MySQL in Bash scripts&lt;/h1&gt;
+
+&lt;p&gt;In today&amp;#39;s lab you are going to work in your teams to modify your questinonaire scripts to write your data into a MySQL database. 
+&lt;excerpt/&gt;&lt;/p&gt;
+
+&lt;p&gt;I would suggest looking at the the manual page for the MySQL client to see what you can do on the command line.&lt;label for=&#39;mysql-man&#39; class=&#39;margin-toggle sidenote-number&#39;&gt;&lt;/label&gt;&lt;input type=&#39;checkbox&#39; id=&#39;mysql-man&#39; class=&#39;margin-toggle&#39;/&gt;&lt;span class=&#39;sidenote&#39;&gt;“mysql(1): MySQL Tool.” Linux Man Page. Accessed July 15, 2016. &lt;a href=&quot;http://linux.die.net/man/1/mysql&quot;&gt;http://linux.die.net/man/1/mysql&lt;/a&gt;. &lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;You will be expected in class to be looking up other resources as well. 
+If you find something useful, share it with me and I will put links here.&lt;/p&gt;
+
+&lt;h1 id=&quot;using-mysql-on-cloud9&quot;&gt;Using Mysql on Cloud9&lt;/h1&gt;
+
+&lt;p&gt;Cloud9 has already set up a username and password for you.  Your password is blank and your username is your github username:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;mysql --user=tommytester
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You can then add whatever flags and arguments are needed for your scripts.  You may need to set a password for all your group&amp;#39;s users, and either way you&amp;#39;ll either need to create the same user for everyone in your group in mysql or ask the person running their script for their mysql username to customize the command.  Either approach is fine.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 14 Nov 2016 00:00:00 -0500</pubDate>
+        <link>/inls161fall2016/databases/2016/11/14/lab-from-data-to-databases/</link>
+        <guid isPermaLink="true">/inls161fall2016/databases/2016/11/14/lab-from-data-to-databases/</guid>
+        
+        <category>database</category>
+        
+        <category>tables</category>
+        
+        <category>queries</category>
+        
+        <category>SQL</category>
+        
+        <category>MySQL</category>
+        
+        <category>Bash</category>
+        
+        <category>scripting</category>
+        
+        
+        <category>Databases</category>
+        
+      </item>
+    
+      <item>
+        <title>Databases, tables, queries, and relationships</title>
+        <description>&lt;p&gt;Today we will continue with our discussion of databases and then learn ALL THE SQL. &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/learnallthesql.jpg&quot; alt=&quot;LEARN ALL THE SQL&quot;&gt;
+&lt;excerpt/&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;parts-of-a-database&quot;&gt;Parts of a database&lt;/h1&gt;
+
+&lt;h2 id=&quot;tables&quot;&gt;Tables&lt;/h2&gt;
+
+&lt;p&gt;The basic storage template in a database is a table. &lt;/p&gt;
+
+&lt;p&gt;This is simply a set of data arranged into columns and rows. 
+Just like with the data that we generated previously, the rows represent lists of information that are related to a specific thing. &lt;/p&gt;
+
+&lt;p&gt;The rows in our tables are called &amp;quot;records.&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;The columns then represent the types of information that we are organizing. &lt;/p&gt;
+
+&lt;p&gt;Tables on their own are fine for storing a collection of data, but what if we have a lot of repeating data that we do not want to have to store over and over again in the same table?&lt;/p&gt;
+
+&lt;h2 id=&quot;relationships&quot;&gt;Relationships&lt;/h2&gt;
+
+&lt;p&gt;The primary method of reducing this sort of data is by creating more tables and then defining relationships between them. 
+This is why we refer to this type of database as &amp;quot;relational.&amp;quot;&lt;label for=&#39;Harkins, Susan. “Relational Databases: Defining Relationships between Database Tables.” TechRepublic. Last modified April 30, 2003. http://www.techrepublic.com/article/relational-databases-defining-relationships-between-database-tables/.&lt;br/&gt;&lt;br/&gt;Harkins, Susan. “Relational Databases: The Inspiration behind the Theory.” TechRepublic. Last modified April 2, 2003. &lt;a href=&quot;http://www.techrepublic.com/article/relational-databases-the-inspiration-behind-the-theory/&quot;&gt;http://www.techrepublic.com/article/relational-databases-the-inspiration-behind-the-theory/&lt;/a&gt;.&lt;br/&gt;&lt;br/&gt;The whole TechRepublic series on relational databases is useful. It would be worthwhile to read all of it. &amp;#39; class=&amp;#39;margin-toggle sidenote-number&amp;#39;&amp;gt;&lt;/label&gt;&lt;input type=&#39;checkbox&#39; id=&#39;Harkins, Susan. “Relational Databases: Defining Relationships between Database Tables.” TechRepublic. Last modified April 30, 2003. http://www.techrepublic.com/article/relational-databases-defining-relationships-between-database-tables/.&lt;br/&gt;&lt;br/&gt;Harkins, Susan. “Relational Databases: The Inspiration behind the Theory.” TechRepublic. Last modified April 2, 2003. &lt;a href=&quot;http://www.techrepublic.com/article/relational-databases-the-inspiration-behind-the-theory/&quot;&gt;http://www.techrepublic.com/article/relational-databases-the-inspiration-behind-the-theory/&lt;/a&gt;.&lt;br/&gt;&lt;br/&gt;The whole TechRepublic series on relational databases is useful. It would be worthwhile to read all of it. &amp;#39; class=&amp;#39;margin-toggle&amp;#39;/&amp;gt;&lt;span class=&#39;sidenote&#39;&gt; &lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;There are three categories of relationship:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;One-to-One: Each record in a table has only one relationship to one other record in another table&lt;/li&gt;
+&lt;li&gt;One-to-Many: Each record (by primary key) in a table can have zero, one, or many relationships to records in other tables. &lt;/li&gt;
+&lt;li&gt;Many-to-Many: Each record in a table can have any number of (or zero) relationships to records in other tables. &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Can you think of any examples of relationships like this? &lt;/p&gt;
+
+&lt;h3 id=&quot;primary-keys&quot;&gt;Primary Keys&lt;/h3&gt;
+
+&lt;p&gt;A primary key, as mentioned above, is a designator associated with each record that distinguishes it from all other records. 
+When creating a table with a one-to-many relationship, you will need to create a primary key for each new record. &lt;/p&gt;
+
+&lt;p&gt;What are some possible pieces of existing information that might be used as a primary key?&lt;/p&gt;
+
+&lt;p&gt;What might be some problems with using an existing piece of information as a primary key?&lt;/p&gt;
+
+&lt;h2 id=&quot;queries&quot;&gt;Queries&lt;/h2&gt;
+
+&lt;p&gt;Queries take a set of instructions and use them to sort and categorize data across multiple variables and tables. &lt;/p&gt;
+
+&lt;p&gt;We will look at different possibilities for queries and try some together in class. &lt;/p&gt;
+
+&lt;p&gt;When we define relationships in the query designer, you&amp;#39;ll notice that there are different joins available to you. &lt;/p&gt;
+
+&lt;h2 id=&quot;joins&quot;&gt;Joins&lt;/h2&gt;
+
+&lt;p&gt;These are logical inclusion/exclusion criteria for your query at the table level. 
+It is a good idea to have some understanding of what they do on a logical level.&lt;label for=&#39;joins&#39; class=&#39;margin-toggle sidenote-number&#39;&gt;&lt;/label&gt;&lt;input type=&#39;checkbox&#39; id=&#39;joins&#39; class=&#39;margin-toggle&#39;/&gt;&lt;span class=&#39;sidenote&#39;&gt;Moffatt, C. L. “Visual Representation of SQL Joins.” CodeProject. &lt;a href=&quot;http://www.codeproject.com/Articles/33052/Visual-Representation-of-SQL-Joins&quot;&gt;http://www.codeproject.com/Articles/33052/Visual-Representation-of-SQL-Joins&lt;/a&gt;.&lt;br/&gt;&lt;br/&gt;This visual  guide can help you to better understand each join and what they do. &lt;/span&gt; &lt;/p&gt;
+
+&lt;p&gt;Today, we will only use right joins in our example queries. &lt;/p&gt;
+
+&lt;p&gt;Why would we do that? Which table is going to be on the Right?&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.w3schools.com/sql/img_rightjoin.gif&quot; alt=&quot;&quot;&gt;
+&lt;img src=&quot;http://www.w3schools.com/sql/img_leftjoin.gif&quot; alt=&quot;&quot;&gt;
+&lt;img src=&quot;http://www.w3schools.com/sql/img_innerjoin.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;sql-boot-camp-part-2&quot;&gt;SQL Boot Camp Part 2&lt;/h1&gt;
+
+&lt;h2 id=&quot;get-back-in&quot;&gt;Get back in&lt;/h2&gt;
+
+&lt;p&gt;Get back in to mysql.  From the bash command line:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;mysql-ctl cli
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;then, from mysql:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;USE booksinfo;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;We&amp;#39;re ready to pick up where we left off.&lt;/p&gt;
+
+&lt;h2 id=&quot;summary-queries&quot;&gt;Summary Queries&lt;/h2&gt;
+
+&lt;p&gt;Since we have our data in place from last time, let&amp;#39;s summarize it a bit. &lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;SELECT COUNT(*) FROM tblBook;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;What if we want to see the first ten rows in tblBook by Date?&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;SELECT * FROM tblBook ORDER BY Date LIMIT 10;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Let&amp;#39;s look at only books published after 1980;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;SELECT * FROM tblBook WHERE Date &amp;gt; 1980 ORDER BY Date;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;And count them:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;SELECT COUNT(*) FROM tblBook WHERE Date &amp;gt; 1980 ORDER BY Date;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;How about only books published in 1980?&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;SELECT * FROM tblBook WHERE Date = 1980 ORDER BY ShelfNumber;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Let&amp;#39;s find out how much our books cost:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;SELECT AVG(RetailPrice) FROM tblBook;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;SELECT MIN(RetailPrice) FROM tblBook;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;SELECT MAX(RetailPrice) FROM tblBook;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Let&amp;#39;s summarize all of that together.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sql&quot; data-lang=&quot;sql&quot;&gt;&lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; 
+&lt;span class=&quot;k&quot;&gt;AVG&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RetailPrice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;Average Price&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;MIN&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RetailPrice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;Lowest Price&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;MAX&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RetailPrice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;Highest Price&#39;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tblBook&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;join-queries&quot;&gt;Join Queries&lt;/h2&gt;
+
+&lt;p&gt;If we want to use the real power of tables, we need to &lt;code&gt;JOIN&lt;/code&gt; them, then search across them. I want to list out all the books in the list that were published by Oxford University Press. &lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;SELECT * FROM tblBook b RIGHT JOIN tblPub p ON b.PubID = p.ID WHERE p.Publisher = &#39;Oxford University Press&#39;;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;How many locations does OUP have? &lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;SELECT COUNT(*) FROM tblPub WHERE Publisher = &#39;Oxford University Press&#39;;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Where are they?&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;SELECT * FROM tblPub WHERE Publisher = &#39;Oxford University Press&#39;;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;What if I only want the books published by OUP&amp;#39;s US office? 
+I have to specify an additional criterion. &lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;SELECT * FROM tblBook b RIGHT JOIN tblPub p ON b.PubID = p.ID WHERE p.Publisher = &#39;Oxford University Press&#39; AND p.Country = &#39;US&#39;;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;I wonder if books cost more from the OUP GB location than from the OUP US location.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;SELECT AVG(RetailPrice) FROM tblBook b RIGHT JOIN tblPub p ON b.PubID = p.ID WHERE p.Publisher = &#39;Oxford University Press&#39; AND p.Country = &#39;GB&#39;;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;SELECT AVG(RetailPrice) FROM tblBook b RIGHT JOIN tblPub p ON b.PubID = p.ID WHERE p.Publisher = &#39;Oxford University Press&#39; AND p.Country = &#39;US&#39;;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&quot;output-from-mysql-queries-as-tables&quot;&gt;Output from MySQL queries as tables&lt;/h1&gt;
+
+&lt;p&gt;We can take any of the above queries and output the results to a table. &lt;/p&gt;
+
+&lt;p&gt;We need to add &lt;code&gt;CREATE TABLE qryName&lt;/code&gt; to the front of any of our query commands. &lt;/p&gt;
+
+&lt;p&gt;Here is an example using our price summary from above (Again do this all on one line):&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;CREATE TABLE qryPrices SELECT AVG(RetailPrice) AS &#39;Average Price&#39;, 
+                              MIN(RetailPrice) AS &#39;Lowest Price&#39;, 
+                              MAX(RetailPrice) AS &#39;Highest Price&#39; 
+                              FROM tblBook;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;See if it worked by listing the tables:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;show tables;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Look at what is in the new table:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;SELECT * FROM qryPrices;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;It should match the output from when you ran the query before. &lt;/p&gt;
+
+&lt;h2 id=&quot;output-from-mysql-queries-in-other-formats&quot;&gt;Output from MySQL queries in other formats&lt;/h2&gt;
+
+&lt;p&gt;We can output all of this stuff outside of our MySQL prompt shell (in a normal shell).&lt;/p&gt;
+
+&lt;p&gt;Let&amp;#39;s ask for the summary of book prices in HTML and then we can try some other queries if we have time. &lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;quit&lt;/code&gt; to exit the MySQL prompt.&lt;/p&gt;
+
+&lt;p&gt;Now you have exited from the MySql prompt.&lt;/p&gt;
+
+&lt;p&gt;This command will run the query in quotes:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;mysql -u tommytester -p -H -e &quot;SELECT AVG(RetailPrice) AS &#39;Average Price&#39;, MIN(RetailPrice) AS &#39;Lowest Price&#39;, MAX(RetailPrice) AS &#39;Highest Price&#39; FROM tblBook;&quot; booksinfo
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&quot;mysql-scripting&quot;&gt;MYSQL Scripting&lt;/h1&gt;
+
+&lt;p&gt;We&amp;#39;ve been typing all of these commands into a prompt. We can also make MySQL scripts!  This may come in handy if you have certain commands that you need to run multiple times.&lt;/p&gt;
+
+&lt;p&gt;Put this text into a file called &lt;code&gt;query.sql&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;USE booksinfo;
+SELECT AVG(RetailPrice) AS &#39;Average Price&#39;, MIN(RetailPrice) AS &#39;Lowest Price&#39;, MAX(RetailPrice) AS &#39;Highest Price&#39; FROM tblBook;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Then type&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;mysql -u tommytester -p &amp;lt; query.sql
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;from the command line to run your script. This is equivalent to the command above but using scripts may be useful if you&amp;#39;re going to be entering complex commands.  Also, remember that scripts can call other scripts!&lt;/p&gt;
+
+&lt;h1 id=&quot;exporting-and-importing&quot;&gt;Exporting and Importing&lt;/h1&gt;
+
+&lt;p&gt;To export your whole database so that you can use it elsewhere (i.e., transfer it to a different server) do the following command:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;mysqldump -u tommytester -p booksinfo &amp;gt; booksinfo.sql
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;If you want to then &lt;strong&gt;import&lt;/strong&gt; that same database somewhere else, the command is very similar. The direction changes, and instead of the specialized &lt;code&gt;mysqldump&lt;/code&gt; command, you use just the standard MySQL client command:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;mysql -u tommytester -p booksinfo &amp;lt; booksinfo.sql
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&quot;next-time&quot;&gt;Next time&lt;/h1&gt;
+
+&lt;p&gt;You are going to work in your groups to create a new script, based on your last assignment, that will write the data you have collected into a MySQL database. That assignment will be the focus of our lab session. &lt;/p&gt;
+</description>
+        <pubDate>Wed, 09 Nov 2016 00:00:00 -0500</pubDate>
+        <link>/inls161fall2016/databases/2016/11/09/database-tables-queries/</link>
+        <guid isPermaLink="true">/inls161fall2016/databases/2016/11/09/database-tables-queries/</guid>
+        
+        <category>database</category>
+        
+        <category>tables</category>
+        
+        <category>queries</category>
+        
+        <category>SQL</category>
+        
+        <category>MySQL</category>
+        
+        
+        <category>Databases</category>
+        
+      </item>
+    
+      <item>
+        <title>Database software and MySQL</title>
+        <description>&lt;p&gt;Today we will jump head-first into working with databases as an extension of our discussions earlier in the week about data.&lt;br&gt;
+&lt;excerpt/&gt;&lt;/p&gt;
+
+&lt;p&gt;A &amp;quot;database&amp;quot; is a collection of information, arranged or organized in some meaningful way so as to aid the retrieval of that information. 
+The types of information stored in databases vary based on the purpose and application. &lt;/p&gt;
+
+&lt;p&gt;When we refer to databases now, we usually mean electronic databases or DataBase Management Systems (DBMS). 
+However, databases can exist in a number of non-electonic forms (and have for much of human history).&lt;/p&gt;
+
+&lt;p&gt;What are some examples of non-electronic databases?&lt;/p&gt;
+
+&lt;h1 id=&quot;what-goes-into-a-database&quot;&gt;What goes into a database?&lt;/h1&gt;
+
+&lt;p&gt;Pieces of information, or objects, are stored in a database in a structured way. 
+The objects are sorted into classes according to type. 
+This approach is referred to as &amp;quot;object-oriented,&amp;quot; which we have briefly touched on over the course of the semester. &lt;/p&gt;
+
+&lt;p&gt;When data are entered into a database, each object, or chunk of information, is assigned a class that allows for sorting and recall. &lt;/p&gt;
+
+&lt;h2 id=&quot;how-does-the-information-go-in&quot;&gt;How does the information go in?&lt;/h2&gt;
+
+&lt;p&gt;There are a number of different ways to get data into a database. &lt;/p&gt;
+
+&lt;p&gt;We can import tables directly from files. 
+We can also input data one at a time using an entry form. 
+We will do both of these things over the next few days. &lt;/p&gt;
+
+&lt;p&gt;Today we will start by experimenting with opening the CSV we made the other day as a table. &lt;/p&gt;
+
+&lt;h2 id=&quot;electronic-dbms&quot;&gt;Electronic DBMS&lt;/h2&gt;
+
+&lt;p&gt;There are myriad choices for DMBS implementations. 
+A commonly used system is called MySQL, which is based in a database language called SQL (Structured Query Language). &lt;/p&gt;
+
+&lt;p&gt;You will also hear of NoSQL databases, such as MongoDB. 
+These use an entirely different internal logic to store and recall data that that of SQL-based systems. &lt;/p&gt;
+
+&lt;p&gt;There are a great many front-end user interfaces for these systems. 
+MSAccess has been used for years for all sorts of applications. &lt;/p&gt;
+
+&lt;p&gt;We will use the LibreOffice Base package. 
+It is an open-source analog to Access and will allow us to do the same things. 
+One major benefit of this is that we will be able to open our database without being locked to MSAccess. 
+At present, there is no way to open an Access DB in another program. 
+We wish to avoid that. &lt;/p&gt;
+
+&lt;h1 id=&quot;install-mysql&quot;&gt;Install MySQL&lt;/h1&gt;
+
+&lt;p&gt;We will install MySQL so that we can create and explore a database using the SQL shell in our Cloud9 workspaces.&lt;/p&gt;
+
+&lt;h1 id=&quot;new-workspace&quot;&gt;New Workspace&lt;/h1&gt;
+
+&lt;p&gt;Create an &lt;code&gt;assignment5&lt;/code&gt; workspace and update all packages:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;sudo apt-get update
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&quot;install-the-mysql-client-and-server-packages&quot;&gt;Install the MySQL client and server packages&lt;/h1&gt;
+
+&lt;p&gt;You probably already have all of these installed by default.  But just in case, here is how you&amp;#39;d install mysql on linux.&lt;/p&gt;
+
+&lt;p&gt;First we have to install one dependency, without which the install will fail:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;sudo apt-get install bsdutils
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Then install both the MySQL server and client packages in separate commands. &lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;sudo apt-get install mysql-server
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Then install the client:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;sudo apt-get install mysql-client
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&quot;sql-boot-camp-part-1&quot;&gt;SQL Boot Camp: Part 1&lt;/h1&gt;
+
+&lt;h2 id=&quot;get-some-data&quot;&gt;Get some data&lt;/h2&gt;
+
+&lt;p&gt;Let&amp;#39;s download some CSV files that I prepared with a list of books in them. &lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;wget http://inls161.johndmart.in/raw-material/tblBook.csv
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;wget http://inls161.johndmart.in/raw-material/tblPub.csv
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;enable-imports&quot;&gt;Enable imports&lt;/h2&gt;
+
+&lt;p&gt;Later we&amp;#39;re going to import some data. First we need to enable this.  Type:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;sudo nano /etc/mysql/my.cnf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Use your &lt;strong&gt;cursor&lt;/strong&gt; to go down to a line that says &lt;code&gt;[mysqld]&lt;/code&gt;.  Directly under that line, add this:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;secure-file-priv = &quot;&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Press &lt;code&gt;Ctrl-X&lt;/code&gt; to exit nano, the &lt;code&gt;Y&lt;/code&gt; to save and &lt;code&gt;Enter&lt;/code&gt; to confirm the file name.&lt;/p&gt;
+
+&lt;p&gt;Now we&amp;#39;ll restart Mysql:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;mysql-ctl restart
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;It&amp;#39;s very important to type everything exactly in configuration files.  If you run into something like &lt;code&gt;ERROR 1290 (HY000): The MySQL server is running with the --secure-file-priv option so it cannot execute this statement&lt;/code&gt; below, come back up here and do this again more carefully.&lt;/p&gt;
+
+&lt;h1 id=&quot;the-mysql-prompt&quot;&gt;The MySQL prompt&lt;/h1&gt;
+
+&lt;p&gt;Once we are all installed, use the &lt;code&gt;mysql-ctl&lt;/code&gt; command to get into the &lt;code&gt;mysql&amp;gt;&lt;/code&gt; prompt:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;mysql-ctl cli
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This specifies that you want the MySQL prompt (or &lt;strong&gt;c&lt;/strong&gt;ommand &lt;strong&gt;l&lt;/strong&gt;ine &lt;em&gt;**i&lt;/em&gt;*nterface). &lt;/p&gt;
+
+&lt;p&gt;Next let&amp;#39;s create a new DB. Make sure that your prompt looks like this:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;mysql&amp;gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;If it does, then you can type:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;CREATE DATABASE booksinfo;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Commands in the mysql&amp;gt; prompt are &lt;em&gt;case-sensitive,&lt;/em&gt; so pay attention to the case of the commands. &lt;/p&gt;
+
+&lt;p&gt;Let&amp;#39;s list our DBs:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;SHOW databases;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;We should see the DB with the name that we created in the list. Let&amp;#39;s move into it:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;USE booksinfo;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;add-tables&quot;&gt;Add tables&lt;/h2&gt;
+
+&lt;p&gt;Now we have to create two tables so that we can import data from our CSV files. The things inside the parentheses are&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;CREATE TABLE tblBook (ID INT, 
+                      Title VARCHAR(255), 
+                      Date INT, 
+                      RetailPrice DECIMAL(5,2), 
+                      Copies INT, 
+                      ShelfNumber VARCHAR(255), 
+                      PubID INT);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;CREATE TABLE tblPub (ID INT, 
+                     Publisher VARCHAR(255), 
+                     City VARCHAR(255), 
+                     State VARCHAR(255), 
+                     Country VARCHAR(255));
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;See what tables we have just created:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;SHOW tables;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Let&amp;#39;s import some tables from the files we downloaded earlier.  &lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;LOAD DATA INFILE &#39;/home/ubuntu/workspace/tblBook.csv&#39; INTO TABLE tblBook FIELDS TERMINATED BY &#39;,&#39; OPTIONALLY ENCLOSED BY &#39;&quot;&#39;;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This should give us some output. 
+If we notice a warning, type the following to view the warnings:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;SHOW WARNINGS;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;So, it looks like we have a missing date. 
+No big deal. 
+We&amp;#39;ll deal with that later. 
+Let&amp;#39;s import our other table. &lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;LOAD DATA INFILE &#39;/home/ubuntu/workspace/tblPub.csv&#39; INTO TABLE tblPub FIELDS TERMINATED BY &#39;,&#39; OPTIONALLY ENCLOSED BY &#39;&quot;&#39;;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Let&amp;#39;s see what is in our tables:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;SHOW COLUMNS FROM tblBook;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;SHOW COLUMNS FROM tblPub;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;We&amp;#39;ll notice that we have no key set for either table. 
+We need to do this, right?&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;ALTER TABLE tblBook ADD PRIMARY KEY (ID);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now look at the table again and see that it has changed:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;SHOW COLUMNS FROM tblBook;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now do the same for the other table:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;SHOW COLUMNS FROM tblPub;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;ALTER TABLE tblPub ADD PRIMARY KEY (ID);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;SHOW COLUMNS FROM tblPub;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You should see that the &lt;code&gt;ID&lt;/code&gt; column now has &lt;code&gt;Pri&lt;/code&gt; in its &lt;code&gt;Key&lt;/code&gt; field.&lt;/p&gt;
+
+&lt;h2 id=&quot;define-relationships&quot;&gt;Define relationships&lt;/h2&gt;
+
+&lt;p&gt;We need to tell MySQL that the PubID column in tblBook refers to the primary key in tblPub. This action is called a constraint and the reference is called a foreign key. &lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;ALTER TABLE tblBook ADD CONSTRAINT fk_PubID FOREIGN KEY (PubID) REFERENCES tblPub(ID) ON UPDATE NO ACTION;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Let&amp;#39;s look at our columns again:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;SHOW COLUMNS FROM tblBook;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You&amp;#39;ll notice that the &lt;code&gt;Key&lt;/code&gt; column now has &lt;code&gt;MUL&lt;/code&gt; for &lt;code&gt;PubID&lt;/code&gt;. 
+This means that we are using that column as an index as well as the primary key column. 
+This new index just happens to be non-unique. &lt;/p&gt;
+
+&lt;h1 id=&quot;get-this-right&quot;&gt;Get this right!&lt;/h1&gt;
+
+&lt;p&gt;If your tables, columns, etc don&amp;#39;t look &lt;em&gt;exactly&lt;/em&gt; like tommytesters, you may need to start over on your own to get it right.&lt;/p&gt;
+
+&lt;p&gt;To start over, make sure you&amp;#39;re in the mysql prompt (or get there again with &lt;code&gt;mysql-ctl cli&lt;/code&gt; and &lt;code&gt;USE booksinfo&lt;/code&gt;) and type &lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;DROP TABLE tblBook tblPub;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;to delete both tables. Then continue the instructions above from &lt;code&gt;USE booksinfo&lt;/code&gt; on.&lt;/p&gt;
+
+&lt;h1 id=&quot;for-next-time&quot;&gt;For next time&lt;/h1&gt;
+
+&lt;p&gt;Next time we will return to databases and discuss the conceptual and theoretical underpinnings of what we worked on today. 
+I would like you to read something about databases.&lt;label for=&#39;db&#39; class=&#39;margin-toggle sidenote-number&#39;&gt;&lt;/label&gt;&lt;input type=&#39;checkbox&#39; id=&#39;db&#39; class=&#39;margin-toggle&#39;/&gt;&lt;span class=&#39;sidenote&#39;&gt;“What Is a Database?” BBC Guides. &lt;a href=&quot;http://www.bbc.co.uk/guides/z8yk87h&quot;&gt;http://www.bbc.co.uk/guides/z8yk87h&lt;/a&gt;. &lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;We will look at other resources and tutorials in class as well. &lt;/p&gt;
+</description>
+        <pubDate>Mon, 07 Nov 2016 00:00:00 -0500</pubDate>
+        <link>/inls161fall2016/databases/2016/11/07/sql-bootcamp/</link>
+        <guid isPermaLink="true">/inls161fall2016/databases/2016/11/07/sql-bootcamp/</guid>
+        
+        <category>database</category>
+        
+        <category>SQL</category>
+        
+        <category>MySQL</category>
+        
+        
+        <category>Databases</category>
+        
+      </item>
+    
+      <item>
+        <title>Data cleaning and spreadsheet software</title>
+        <description>&lt;p&gt;Today we&amp;#39;re going to look at one common way of manipulating CSV and other data files: the spreadsheet. 
+&lt;excerpt/&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;csv-to-spreadsheet&quot;&gt;CSV to spreadsheet&lt;/h1&gt;
+
+&lt;p&gt;Spreadsheets appear to operate in a very simple manner, storing data in rows and columns just like any other table, but looks can be deceiving. &lt;/p&gt;
+
+&lt;p&gt;Just like with DOCX and ODT files when compared with plaintext files, spreadsheets hide a lot of metadata underneath what appears on the surface. &lt;/p&gt;
+
+&lt;p&gt;Unlike with the relationship between plaintext and interface-wrapped formatted text files, it is more difficult to get all of the information out of the spreadsheet. &lt;/p&gt;
+
+&lt;p&gt;As mentioned in the piece by Paul Ford, spreadsheets can hide a lot of things from us, including errors. 
+If our code to perform the same kinds of operations is visible to us, it is easier to check for errors. &lt;/p&gt;
+
+&lt;p&gt;That said, spreadsheets are a powerful tool and should be used in certain tasks in preference over other tools. &lt;/p&gt;
+
+&lt;p&gt;Once you have learned to do basic math in a spreadsheet, there is absolutely no reason to ever use a calculator (or calculator app) for instance.&lt;/p&gt;
+
+&lt;h1 id=&quot;caveats-and-pitfalls-of-using-spreadsheets&quot;&gt;Caveats and pitfalls of using spreadsheets&lt;/h1&gt;
+
+&lt;p&gt;This forum post is a good guide to things that you should be aware of when using spreadsheets:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://forum.openoffice.org/en/forum/viewtopic.php?t=39529&quot;&gt;https://forum.openoffice.org/en/forum/viewtopic.php?t=39529&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;It pertains to OpenOffice, which is the productivity suite that LibreOffice was forked from some years ago. 
+OpenOffice is now owned by Oracle and some of the community was not happy with licensing changes that had occured, so they jumped ship and moved their development to LibreOffice under the umbrella of the Open Document Foundation. 
+The software still operates similarly enough that the information is relevant to us. 
+This is because both suites use ODF at their core. &lt;/p&gt;
+
+&lt;p&gt;It will also be a good idea to have a look at the LibreOffice documentation to familiarize yourself with it as a reference: &lt;a href=&quot;https://www.libreoffice.org/get-help/documentation/&quot;&gt;https://www.libreoffice.org/get-help/documentation/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Finally, here is a compendium of all of the functions available to you in LibreOffice Calc: &lt;a href=&quot;https://help.libreoffice.org/Calc/Spreadsheet_Functions&quot;&gt;https://help.libreoffice.org/Calc/Spreadsheet_Functions&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;opening-a-csv-in-libreoffice-calc&quot;&gt;Opening a CSV in LibreOffice Calc&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Download one of your group&amp;#39;s large CSV files&lt;/li&gt;
+&lt;li&gt;Open it in LibreOffice Calc&lt;/li&gt;
+&lt;li&gt;Edit some of the fields&lt;/li&gt;
+&lt;li&gt;Save it as &amp;#39;gh-uname-office.csv&amp;#39;, inserting your username&lt;/li&gt;
+&lt;li&gt;Upload it to your cloud9 Workspace&lt;/li&gt;
+&lt;li&gt;Open it in Cloud9.  See, it&amp;#39;s just a plaintext file!  If you see gibberish you probably didn&amp;#39;t save as a CSV, so follow the above steps again.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;for-next-time&quot;&gt;For next time&lt;/h1&gt;
+
+&lt;p&gt;We&amp;#39;re going to break into databases next time and have a MySQL crash course. 
+I would like you to look over some basic MySQL tutorials on your own so that we are prepared to dig into this.&lt;label for=&#39;sql&#39; class=&#39;margin-toggle sidenote-number&#39;&gt;&lt;/label&gt;&lt;input type=&#39;checkbox&#39; id=&#39;sql&#39; class=&#39;margin-toggle&#39;/&gt;&lt;span class=&#39;sidenote&#39;&gt;Sverdlov, Etel. “A Basic MySQL Tutorial.” DigitalOcean. Last modified June 12, 2012. &lt;a href=&quot;https://www.digitalocean.com/community/tutorials/a-basic-mysql-tutorial&quot;&gt;https://www.digitalocean.com/community/tutorials/a-basic-mysql-tutorial&lt;/a&gt;. &lt;/span&gt; &lt;/p&gt;
+
+&lt;h1 id=&quot;rest-of-class&quot;&gt;Rest of Class&lt;/h1&gt;
+
+&lt;p&gt;Get into your groups and work on Assignment 4! It&amp;#39;s due Sunday at midnight.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 02 Nov 2016 00:00:00 -0400</pubDate>
+        <link>/inls161fall2016/data/2016/11/02/data-cleaning/</link>
+        <guid isPermaLink="true">/inls161fall2016/data/2016/11/02/data-cleaning/</guid>
+        
+        <category>CSV</category>
+        
+        <category>data</category>
+        
+        <category>spreadsheets</category>
+        
+        
+        <category>Data</category>
+        
+      </item>
+    
 >>>>>>> parent of 6506647... update gh-pages site on Wed Jul 13 11:27:54 EDT 2016
   </channel>
 </rss>

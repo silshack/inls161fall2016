@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Tools for Information Literacy&nbsp;|&nbsp;Single input, multiple outputs</title>
+  <meta name="description" content="Q&amp;AAssignment 3 is up!We&#39;ve briefly discussed Pandoc now and last time we got hands-on with it. Today we&#39;ll go over what we did in class last tim...">
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+    <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+  
+  <!-- Load Moment.js for dates if option set in /_data/optins.yml file-->
+  
+    <script type="text/javascript" src="//momentjs.com/downloads/moment.js"></script> 
+   
+  
+  
+    <script type="text/javascript" src="//storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/datejs/date.js"></script>
+  
+
+  <link rel="stylesheet" href="/inls161fall2016/css/tufte.css"> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css" />
+  <link rel="icon" href="/inls161fall2016/assets/img/favicon.ico" type="image/x-icon" />
+
+  
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+	<a href="/inls161fall2016/"><img class="badge" src="/inls161fall2016/assets/img/161icon.png" alt="UNC"></a>
+	
+	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+		    
+		      <a href="/inls161fall2016/">INLS 161</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/syllabus/">Syllabus</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/schedule/">Schedule</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/assignments/">Assignments</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/refsheets/">Reference</a>
+		    
+	    
+  	
+	</nav>
+</header>
+    <article class="group">
+<h1>Single input, multiple outputs</h1>
+
+
+
+<p class="subtitle"><span id="date">Wednesday, 12 October 2016</span><span class="smaller date contrast"></span></p>
+
+<script>
+var date = document.getElementById("span")[0];
+alert(p.childNodes[1].textContent)
+</script>
+
+<h1 id="q-amp-a">Q&amp;A</h1>
+
+<ul>
+<li>Assignment 3 is up!</li>
+</ul>
+
+<p>We&#39;ve briefly discussed Pandoc now and last time we got hands-on with it. Today we&#39;ll go over what we did in class last time, but a little slower.</p>
+
+<p>It bills itself as the &quot;Universal Document Converter.&quot; 
+This is reasonably true, but it might require some creative combinations of switches within Pandoc commands as well as multiple commands strung together or intermediate commands to get the desired output. </p>
+
+<p>The benefit of troubleshooting and understanding this process is that once we do, we can more easily optimize our conversions and automate them. 
+We&#39;ll talk more about this as we go forward. 
+<excerpt/></p>
+
+<h1 id="source-to-output-conversion">Source to output conversion</h1>
+
+<p>It is possible to use GUI tools to create and convert documents. 
+Support is somewhat limited, but in LibreOffice, we can at least create a PDF from our ODT and DOCX files. </p>
+
+<p>We can also manipulate the styles of the headers and other structural elements that we have assigned using Markdown in our GUI editors. </p>
+
+<p>One convenient effect of starting with plaintext marked up with Markdown is that we have those structural elements when we convert them into another format and then edit them elsewhere. It is certainly possible to start in the GUI editor and define the same things, but after becoming acquainted with Markdown, it should feel somewhat more burdensome to use the GUI. Arguably, it is. There is a great deal more that goes into a DOCX or an ODT file, structurally, than in a plaintext file with Markdown in it. </p>
+
+<p>We also have the disadvantage of only being able to operate on thost files in limited ways on headless or remote systems. </p>
+
+<p>If we keep plaintext at the core of our workflows and GUI editors toward the periphery, we will be served in the end as we will always have access to our work, on any system, without any huge barriers to editing and changing. </p>
+
+<h2 id="commands">Commands</h2>
+
+<p>We&#39;re going to practice some conversions using Pandoc today. We will also work in groups. </p>
+
+<p>First, we need to get some files. </p>
+
+<p>Fork and clone this repository into your Cloud9 workspace:</p>
+
+<p><a href="https://github.com/inls161/pandoc-practice">https://github.com/inls161/pandoc-practice</a></p>
+
+<p>Once you have the files in your Cloud9 workspace, I will show you some things in class and then in your groups you will answer and mark up the <code>example.md</code> file using the instructions in the file. </p>
+
+<h2 id="revisiting-the-constitution">Revisiting the Constitution</h2>
+
+<p>Let&#39;s convert markdown to PDF, via HTML.  The <code>&amp;&amp;</code> in the middle of this large command means &quot;and then&quot;.  It&#39;s equivalent to typing in each command sequentially but this way the second command will only execute if the first does, without errors. Plus it&#39;s all in one line.  </p>
+
+<p>We go into HTML first to preserve some of the table formatting.  If you have conversion errors in your documents, try stringing commands together like this.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">pandoc -S --title="THE CONSTITUTION OF THE UNITED STATES OF AMERICA, 1787" -o usconstitution.html usconstitution.md &amp;&amp; pandoc -S --toc -o usconstitution.pdf usconstitution.html
+</code></pre></div>
+<p>The above won&#39;t work, complaining that we don&#39;t have <code>pdflatex</code>.  This is part of a collection of tools called TeXLive. So now we get to use the APT package manager to install it:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">sudo apt-get install texlive
+</code></pre></div>
+<p>Type <code>which pdflatex</code> to verify it&#39;s now installed and run the command above.</p>
+
+<p>Last time we didn&#39;t have the template file to make a good looking ODT file.  Now we do:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">pandoc -S --reference-odt=apa.ott -o usconstitution-apa.odt usconstitution.md
+</code></pre></div>
+<p><strong><em>When you are finished with the questions in file:</em></strong> </p>
+
+<ol>
+<li>I want you to change the name of the file to your GitHub username. Tommy&#39;s would be <code>tommytester.md</code>.</li>
+<li>You will then work as a group to convert the file to HTML, DOCX, and ODT formats, per the instructions in class. I also want you to open the files on your lab computers so you can see what you have done. </li>
+<li>Then I want you to add, commit, and push your changes. </li>
+<li>Finally, you will create a pull request in GitHub to get these files back into my original repository.<br></li>
+</ol>
+
+<h2 id="basic-pandoc-commands-review">Basic Pandoc commands (Review)</h2>
+
+<p><label for='pandoc-commands' class='margin-toggle'> &#8853;</label><input type='checkbox' id='pandoc-commands' class='margin-toggle'/><span class='marginnote'>All Pandoc commands are documented here: <a href="http://pandoc.org/README.html">http://pandoc.org/README.html</a><br/><br/>A good set of example commands exists here: <a href="http://pandoc.org/demos.html">http://pandoc.org/demos.html</a> </span></p>
+
+<p>Convert a Markdown file to HTML:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">pandoc -o example.html example.md
+</code></pre></div>
+<p>Pandoc reads the filetype from the extension in normal usage. 
+If you want to convert a file directly from a URL, you will have to specify the filetype, like this:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">pandoc -f html -t markdown http://inls161.johndmart.in/syllabus/
+</code></pre></div>
+<p>You can make sure that certain things, like quotes and em-dashes, get read and formatted propery by specifying the &quot;Smart&quot; switch (a capital <code>-S</code> or <code>--smart</code>):</p>
+<div class="highlight"><pre><code class="language-" data-lang="">pandoc -S -o example.html example.md
+</code></pre></div>
+<p>There are a host of other commands in the documentation. Be sure to try them out. </p>
+
+<h2 id="specific-file-commands-review">Specific file commands (Review)</h2>
+
+<p>Convert your markdown to HTML:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">pandoc -o example.html example.md
+</code></pre></div>
+<p>If you wish to convert to a DOCX or ODT file:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">pandoc -o example.docx example.md
+</code></pre></div><div class="highlight"><pre><code class="language-" data-lang="">pandoc -o example.odt example.md
+</code></pre></div>
+<p>Filter a document through a template file (template file must already exist):</p>
+<div class="highlight"><pre><code class="language-" data-lang="">pandoc -S --reference-docx=FILE -o example.docx example.md
+</code></pre></div>
+<p>In the above command, you need to specify the location of the template file. 
+If it is a file called <code>template.docx</code> and is located in the same directory as your Markdown source, then the command will be:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">pandoc -S --reference-docx=./template.docx -o example.docx example.md
+</code></pre></div>
+<p>You can also use an ODT or OTT for reference:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">pandoc -S --reference-odt=./template.ott -o example.odt example.md
+</code></pre></div>
+<h1 id="for-next-time">For Next Time</h1>
+
+<p>Next time, we are going to learn one more output format and then learn how to script all of our outputs together so that we can save ourselves time. </p>
+
+<p>I would like you to go through the Writing Shell Scripts tutorial by William Shotts for next time.<label for='shell-scripts' class='margin-toggle sidenote-number'></label><input type='checkbox' id='shell-scripts' class='margin-toggle'/><span class='sidenote'>Shotts, William, Jr. “Writing Shell Scripts.” LinuxCommand.org. Accessed July 6, 2016. <a href="http://linuxcommand.org/lc3_writing_shell_scripts.php">http://linuxcommand.org/lc3_writing_shell_scripts.php</a>. </span> 
+This will show you the basics of scripting. 
+The scripts that we will write will be very, very simple, but it is good to have looked over this before we start. </p>
+
+
+<p>
+  <br/>
+  <ul class="tags">
+    <li><a href="/topics#pandoc" class="tag">pandoc</a></li><li><a href="/topics#text" class="tag">text</a></li><li><a href="/topics#conversion" class="tag">conversion</a></li><li><a href="/topics#LaTeX" class="tag">LaTeX</a></li>
+  </ul> 
+</p>
+    </article>
+    <span class="print-footer">Single input, multiple outputs - October 12, 2016 - </span>
+    <footer>
+  <div class="blognav">
+    
+      <a class="prev" href="/inls161fall2016/text/2016/10/10/text-conversion/">&laquo;&nbsp;<span class="smaller">Previous:</span>&nbsp;Text Conversion</a>
+    
+    
+      <a class="next" href="/inls161fall2016/text/2016/10/17/scripting/"><span class="smaller">Next:</span>&nbsp;Introduction to scripting&nbsp;&raquo;</a>
+    
+  </div>
+  <hr class="slender">
+  <ul class="footer-links">
+    
+    
+      <li>
+        <a href="http://elliotthauser.com" title="Instructor home page"><span class="ico-user"></span>&nbsp;Elliott Hauser</a>
+      </li>
+    
+    
+      <li>
+        <a href="mailto:eah13@email.unc.edu" title="Email instructor"><span class="ico-envelope"></span>&nbsp;eah13@email.unc.edu</a>
+      </li>
+    
+    
+      <li>
+        <span class="ico-clock"></span>&nbsp;3:35-4:50pm
+      </li>
+    
+    
+      <li>
+        <span class="ico-calendar"></span>&nbsp;MoWe
+      </li>
+    
+    
+      <li>
+        <span class="ico-library"></span>&nbsp;117 Manning Hall
+      </li>
+    
+    
+      <li>
+        <a href="https://sakai.unc.edu/portal/site/inls161s216" title="UNC Sakai site for this course"><span class="ico-target"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="https://github.com/inls161" title="GitHub organization for this course"><span class="ico-github"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="https://inls161.slack.com" title="Join the Slack conversations for this course"><span class="ico-slack"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="/feed" title="Add RSS feed"><span class="ico-rss"></span></a>
+      </li>
+      
+  </ul>
+<div class="credits">
+  <span>TOOLS FOR INFORMATION LITERACY &nbsp;&nbsp;|&nbsp;&nbsp; INLS161-002 Fall 2016
+    <br/> 
+  <span class="smaller">Tools and concepts for information literacy. Includes software use and maintenance, computer applications, and networked information systems.</span>
+  <br/><br/>
+  <span class="smaller"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_US">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 Unported License</a>.</span>
+  <br/>
+  <span class="smaller"><a href="/inls161fall2016/credits/">Content &copy; 2016 Elliott Hauser</a></span>
+</div>  
+</footer>
+  </body>
+</html>

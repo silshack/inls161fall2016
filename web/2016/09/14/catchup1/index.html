@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Tools for Information Literacy&nbsp;|&nbsp;Catchup Day #1</title>
+  <meta name="description" content="Phew!  Let&#39;s catch up on whatever&#39;s still fuzzy.Q&amp;AMake sure to contact me ahead of time if you&#39;ll be absent fro classAny questions?Today wil...">
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+    <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+  
+  <!-- Load Moment.js for dates if option set in /_data/optins.yml file-->
+  
+    <script type="text/javascript" src="//momentjs.com/downloads/moment.js"></script> 
+   
+  
+  
+    <script type="text/javascript" src="//storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/datejs/date.js"></script>
+  
+
+  <link rel="stylesheet" href="/inls161fall2016/css/tufte.css"> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css" />
+  <link rel="icon" href="/inls161fall2016/assets/img/favicon.ico" type="image/x-icon" />
+
+  
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+	<a href="/inls161fall2016/"><img class="badge" src="/inls161fall2016/assets/img/161icon.png" alt="UNC"></a>
+	
+	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+		    
+		      <a href="/inls161fall2016/">INLS 161</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/syllabus/">Syllabus</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/schedule/">Schedule</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/assignments/">Assignments</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/refsheets/">Reference</a>
+		    
+	    
+  	
+	</nav>
+</header>
+    <article class="group">
+<h1>Catchup Day #1</h1>
+
+
+
+<p class="subtitle"><span id="date">Wednesday, 14 September 2016</span><span class="smaller date contrast"></span></p>
+
+<script>
+var date = document.getElementById("span")[0];
+alert(p.childNodes[1].textContent)
+</script>
+
+<p>Phew!  Let&#39;s catch up on whatever&#39;s still fuzzy.</p>
+
+<h1 id="q-amp-a">Q&amp;A</h1>
+
+<ul>
+<li>Make sure to <strong>contact me ahead of time</strong> if you&#39;ll be absent fro class</li>
+<li>Any questions?</li>
+<li>Today will be a second lab-like class, but with more things to do and less instruction from me</li>
+<li>Work on your own, then when you&#39;re done I&#39;ll pair you up for a peer review.</li>
+</ul>
+
+<h1 id="fork-amp-clone">Fork &amp; Clone</h1>
+
+<p>This time, tommytester did a much better job testing things out for you.</p>
+
+<ol>
+<li>Go to <a href="https://github.com/inls161/jekyll-minimal-theme">https://github.com/inls161/jekyll-minimal-theme</a> and <strong>Fork</strong> the repository.</li>
+<li>Make a new <strong>Blank</strong> Cloud9 workspace called <code>minimal</code></li>
+<li>Clone your forked repository to your new Cloud9 workspace</li>
+<li>Install Jekyll with the command <code>gem install github-pages</code></li>
+<li><code>cd</code> into the new directory git made for you when you cloned</li>
+<li>run <code>jekyll serve --host $IP --port $PORT</code> </li>
+<li>click the URL that pops up in the terminal once your site is running</li>
+<li>Don&#39;t panic! You&#39;ll get a Not Found error.  Add <code>/jekyll-minimal-theme/</code> (with <strong>both</strong> slashes) after your url.  So tommy&#39;s final URL would be <code>http://minimal-tommytester.c9users.io/minimal/</code></li>
+<li>You&#39;re done! Click around to explore the site.</li>
+</ol>
+
+<h1 id="make-a-post">Make a Post</h1>
+
+<p>Today we&#39;re going to make our first Jekyll post. to do this, we&#39;ll need to create a new file in the <code>_posts</code> directory.  </p>
+
+<p>You&#39;ll notice a pattern with the files here: they&#39;re all titled <code>YYYY-MM-DD-title-goes-here.md</code>.  Right click or <code>touch</code> to create a file that has today&#39;s date and a title, something like this: <code>2016-09-14-first-post.md</code>.  Remember, this needs to be inside the <code>_posts</code> folder.</p>
+
+<p>Open up 2015-01-31-welcome.md in Cloud9.  Remember the YAML header we discussed last time? This gives Jekyll critical information about how the post should be built.  The one in welcome looks like this:</p>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="nn">---</span>
+<span class="s">layout</span><span class="pi">:</span> <span class="s">post</span>
+<span class="s">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Welcome</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">jekyll-minimal-theme</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">Another</span><span class="nv"> </span><span class="s">Minimal</span><span class="nv"> </span><span class="s">Jekyll</span><span class="nv"> </span><span class="s">Theme"</span>
+<span class="nn">---</span></code></pre></figure>
+
+<p>Open up your new post and make a similar header, but with a different title.  Below the <code>---</code>, type some text.  Check out your site and verify that you can see your new post.</p>
+
+<h1 id="add-amp-commit-3-posts">Add &amp; Commit 3 posts.</h1>
+
+<p>You&#39;ve already made one post.  Make a total of three and then save, add &amp; commit them into at least <strong>three separate commits</strong>. It&#39;s OK to have more than three if you need to change them for some reason, but make sure to view them as you&#39;re making them so your commits are as clean as possible (the final versions) as possible.</p>
+
+<h1 id="change-your-styles">Change your styles</h1>
+
+<p>In the <code>css/_settings.scss</code> file you&#39;ll find some color variables that you can easily change.  Experiment with different colors to find a scheme you like best.  You can find a list of colors&#39; hex values and CSS color names <a href="https://trinket.io/docs/colors">here</a>.  Make it look cool or crazy, but not ugly.</p>
+
+<p>Save, add and commit these changes.</p>
+
+<h1 id="push-your-commits">Push your commits</h1>
+
+<p>Push your commits to github with <code>git push origin gh-pages</code>.  We&#39;re not pushing to master since I renamged the branch to gh-pages this time.</p>
+
+<h1 id="view-your-site">View your site</h1>
+
+<p>Go to [username].github.io/jekyll-minimal-theme and see your live site! If your site isn&#39;t loading, go to github.com/[username]/jekyll-minimal-theme and click on &#39;Commits&#39;. You should see the commits you pushed there and a green checkmark next to the last commit.  If you see a red X, hover over it and call me over for help.</p>
+
+<h1 id="peer-review">Peer review</h1>
+
+<p>As you finish you&#39;ll be paired up for a peer review.  For this, go to your partner&#39;s site and github site.  <a href="mailto:eah13@email.unc.edu">Email me</a> with the following information:</p>
+
+<p>(Copy and paste this list and put the info under each question)</p>
+
+<ul>
+<li>Your partner&#39;s github username</li>
+<li>Your partner&#39;s github repo URL</li>
+<li>Your partner&#39;s github site URL</li>
+<li>Did your partner add three posts?</li>
+<li>Did your partner have three separate commits for those posts?</li>
+<li>Did your partner customize the colors of the site? Did it look cool?<br></li>
+<li>Were the color changes in their own commit?</li>
+<li>Your github username</li>
+<li>Is there anything that was difficult for you in this exercise? Anything you still don&#39;t understand?</li>
+<li>If you didn&#39;t finish <strong>your</strong> site in time, what delayed you? How can you get faster in the future?</li>
+</ul>
+
+<p>It&#39;s OK to talk with your partner with their site and for you to answer each others&#39; questions.</p>
+
+<p>This is due by midnight tonight but you should be able to get it done in class.  If your partner isn&#39;t done by the end of class, still go ahead and fill out the above info.</p>
+
+
+<p>
+  <br/>
+  <ul class="tags">
+    <li><a href="/topics#Catchup" class="tag">Catchup</a></li>
+  </ul> 
+</p>
+    </article>
+    <span class="print-footer">Catchup Day #1 - September 14, 2016 - </span>
+    <footer>
+  <div class="blognav">
+    
+      <a class="prev" href="/inls161fall2016/basics/2016/09/12/git-and-github-lab/">&laquo;&nbsp;<span class="smaller">Previous:</span>&nbsp;Lab #1: Git and GitHub</a>
+    
+    
+      <a class="next" href="/inls161fall2016/web/2016/09/19/websites-and-markup/"><span class="smaller">Next:</span>&nbsp;Websites, Markup, and Markdown&nbsp;&raquo;</a>
+    
+  </div>
+  <hr class="slender">
+  <ul class="footer-links">
+    
+    
+      <li>
+        <a href="http://elliotthauser.com" title="Instructor home page"><span class="ico-user"></span>&nbsp;Elliott Hauser</a>
+      </li>
+    
+    
+      <li>
+        <a href="mailto:eah13@email.unc.edu" title="Email instructor"><span class="ico-envelope"></span>&nbsp;eah13@email.unc.edu</a>
+      </li>
+    
+    
+      <li>
+        <span class="ico-clock"></span>&nbsp;3:35-4:50pm
+      </li>
+    
+    
+      <li>
+        <span class="ico-calendar"></span>&nbsp;MoWe
+      </li>
+    
+    
+      <li>
+        <span class="ico-library"></span>&nbsp;117 Manning Hall
+      </li>
+    
+    
+      <li>
+        <a href="https://sakai.unc.edu/portal/site/inls161s216" title="UNC Sakai site for this course"><span class="ico-target"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="https://github.com/inls161" title="GitHub organization for this course"><span class="ico-github"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="https://inls161.slack.com" title="Join the Slack conversations for this course"><span class="ico-slack"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="/feed" title="Add RSS feed"><span class="ico-rss"></span></a>
+      </li>
+      
+  </ul>
+<div class="credits">
+  <span>TOOLS FOR INFORMATION LITERACY &nbsp;&nbsp;|&nbsp;&nbsp; INLS161-002 Fall 2016
+    <br/> 
+  <span class="smaller">Tools and concepts for information literacy. Includes software use and maintenance, computer applications, and networked information systems.</span>
+  <br/><br/>
+  <span class="smaller"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_US">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 Unported License</a>.</span>
+  <br/>
+  <span class="smaller"><a href="/inls161fall2016/credits/">Content &copy; 2016 Elliott Hauser</a></span>
+</div>  
+</footer>
+  </body>
+</html>

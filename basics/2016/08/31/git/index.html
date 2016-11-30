@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Tools for Information Literacy&nbsp;|&nbsp;Version Control</title>
+  <meta name="description" content="Q&amp;ACongratulations!  You have completed assignment 1.Thank you for being on time.Assignment 2 will be much more difficult. Do not start it yet- there&#39...">
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+    <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+  
+  <!-- Load Moment.js for dates if option set in /_data/optins.yml file-->
+  
+    <script type="text/javascript" src="//momentjs.com/downloads/moment.js"></script> 
+   
+  
+  
+    <script type="text/javascript" src="//storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/datejs/date.js"></script>
+  
+
+  <link rel="stylesheet" href="/inls161fall2016/css/tufte.css"> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css" />
+  <link rel="icon" href="/inls161fall2016/assets/img/favicon.ico" type="image/x-icon" />
+
+  
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+	<a href="/inls161fall2016/"><img class="badge" src="/inls161fall2016/assets/img/161icon.png" alt="UNC"></a>
+	
+	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+		    
+		      <a href="/inls161fall2016/">INLS 161</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/syllabus/">Syllabus</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/schedule/">Schedule</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/assignments/">Assignments</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/refsheets/">Reference</a>
+		    
+	    
+  	
+	</nav>
+</header>
+    <article class="group">
+<h1>Version Control</h1>
+
+
+
+<p class="subtitle"><span id="date">Wednesday, 31 August 2016</span><span class="smaller date contrast"></span></p>
+
+<script>
+var date = document.getElementById("span")[0];
+alert(p.childNodes[1].textContent)
+</script>
+
+<h2 id="q-amp-a">Q&amp;A</h2>
+
+<ul>
+<li>Congratulations!  You have completed assignment 1.</li>
+<li>Thank you for being on time.</li>
+<li>Assignment 2 will be much more difficult. Do not start it yet- there&#39;s lots ore to learn before you can complete it.</li>
+</ul>
+
+<h2 id="discussion">Discussion</h2>
+
+<ul>
+<li>What did you learn that you thought was cool?</li>
+<li>What questions do you have unanswered?</li>
+</ul>
+
+<p>Version control systems allow us to track and see the changes to a given document or set of files over time. 
+This can be useful in situations where you wish to roll back changes or identify the point of origin for something problematic. </p>
+
+<p>It is also helpful when you are collaborating and want to be able to keep track of the work being done and changes being made by a group of people. </p>
+
+<p>Version control can exist in a standalone system or it can be networked and distributed. 
+<excerpt/></p>
+
+<h2 id="version-control-is-like-track-changes">Version Control is like Track Changes</h2>
+
+<p>One expression of version control that we are probably all familiar with is the &quot;Track Changes&quot; function in MSOffice. 
+It works if one person is using it to track changes between writing session. 
+It also might work if two people are exchanging a document and each making changes when they have the document in their possession. 
+Each handoff operates like a physical handoff in this case. </p>
+
+<p>But when you try to track changes with two people and then merge those documents, things become tricky. 
+Which changes take precedence? 
+How do you merge them together when you have both rewritten the same sentence? </p>
+
+<p>The process of merging becomes very difficult, very quickly and since the design of that interface wants to hide what is going on underneath, you might miss something and end up with a document that you did not mean to leave or leave something out accidentally. </p>
+
+<h2 id="version-control-is-like-manual-autosave-on-steroids">Version Control is like Manual Autosave on Steroids</h2>
+
+<p>Another collaboration system that you&#39;re probably familiar with is the realtime collaboration in Google Docs.  This uses a powerful software design called <a href="https://en.wikipedia.org/wiki/Operational_transformation">Operational Transformation</a> to integrate your edits with mine without conflicts, even if there are delays in the network we&#39;re collaborating over.  All along it&#39;s autosaving our work so we can roll back to previous versions.</p>
+
+<p>This is a perfect way to collaborate on an essay, since your section won&#39;t prevent my section from compiling or running.  But on a program, our sections might be totally different or require extra work to make them compatible.  So instead of real-time collaboration, we use version control to save our changes to the code into small bits manually, which are then can be integrated much like our changes to a Google Doc.  But instead of guessing like Google Docs does, if we both make a change in version control, we merge the changes manually to make sure that the final version still works as expected.</p>
+
+<h2 id="software-source-code">Software source code</h2>
+
+<p>In the software development world, there are a number of these version control systems that allow development teams to make small, incremental changes to the source code for a piece of software without losing work, breaking each others code, or stepping on each others fingers. </p>
+
+<p>The basic idea is that when you wish to make changes to a set of source code files, you have to check them out. 
+This is just like checking out a library book, except that there are an infinite number of copies available and you can write on the pages. 
+The object that you check out is called a repository. 
+When you check it out, you get the source code files themselves, but you also get a whole bunch of metadata about them. 
+The metadata includes information about when and how changes and merges have been made to the files as well as any user-generated information. </p>
+
+<p>Once checked out, you can make changes to the source files and then compile or test to make sure that your changes work. 
+Then, once tested, you check them back in. 
+Sometimes, the check-in process is fully automated, meaning that no human has to look to make sure that your changes make sense. 
+Other time, the check-in needs to be verified. 
+There are compelling reasons to use either of these scenarios. </p>
+
+<p>In such systems, each commit, or incremental change, is registered with a unique identifier. 
+This means that the change is tracked and cannot be confused with any other change at any other time. </p>
+
+<p>When multiple parties are working on the same code, merging can be confusing, unless the changes are properly tracked. 
+Version control systems allow us to make sure that merges go as smoothly as possible and to merge manually when neeeded. </p>
+
+<h2 id="distributed-version-control">Distributed version control</h2>
+
+<p>In a fully distributed version control system (DVCS), multiple copies of the same repository can exist on different systems with different operators and still be elegantly reconciled as the same object. 
+This means that work can be conducted asynchronously and then merged together later. 
+Then length of time and amount of work done on each copy will have an effect on how easy or difficult it will be to merge the source back together. 
+It is likely that if a long time occurs between merges, there will be some issues that crop up, particularly if a lot of changes are made. </p>
+
+<p>It is a good idea to keep your repositories up-to-date. 
+It also acts as an easy back up system, if you are storing the repository off-site somewhere. </p>
+
+<h3 id="distributed-version-control-for-document-processing">Distributed version control for document processing</h3>
+
+<p>Version control of this kind is not just for software development. 
+It is possible to use it to manage your own workflow in creating and editing documents. 
+It also works for managing different versions of datasets, from raw data to clean, ready-to-analyze data. </p>
+
+<p>In this course, we are going to use such a system to manage and back up our work.  </p>
+
+<p>You should have read an article in preparation for this session about Git.<label for='githacker' class='margin-toggle sidenote-number'></label><input type='checkbox' id='githacker' class='margin-toggle'/><span class='sidenote'>Wynn, Joseph. “A Hacker’s Guide to Git.” Wildly Innacurate. Last modified May 25, 2014. <a href="http://wildlyinaccurate.com/a-hackers-guide-to-git/">http://wildlyinaccurate.com/a-hackers-guide-to-git/</a>. </span> 
+We will disscuss the fundamental concepts about version control contained in that article. </p>
+
+<p>Then, for the rest of today&#39;s class we are going to experiment with the version control systems that we will operate on and learn how to get our information into them and manage it once it is there.</p>
+
+<h1 id="git">git</h1>
+
+<p>We will use Git as our version control system in this class. 
+Git has an interesting past and was developed out of necessity. </p>
+
+<blockquote>
+<p><strong>A Short History of Git</strong></p>
+
+<p>As with many great things in life, Git began with a bit of creative destruction and fiery controversy.</p>
+
+<p>The Linux kernel is an open source software project of fairly large scope. For most of the lifetime of the Linux kernel maintenance (1991–2002), changes to the software were passed around as patches and archived files. In 2002, the Linux kernel project began using a proprietary DVCS called BitKeeper.</p>
+
+<p>In 2005, the relationship between the community that developed the Linux kernel and the commercial company that developed BitKeeper broke down, and the tool’s free-of-charge status was revoked. This prompted the Linux development community (and in particular Linus Torvalds, the creator of Linux) to develop their own tool based on some of the lessons they learned while using BitKeeper. Some of the goals of the new system were as follows:</p>
+
+<p>Speed</p>
+
+<p>Simple design</p>
+
+<p>Strong support for non-linear development (thousands of parallel branches)</p>
+
+<p>Fully distributed</p>
+
+<p>Able to handle large projects like the Linux kernel efficiently (speed and data size)</p>
+
+<p>Since its birth in 2005, Git has evolved and matured to be easy to use and yet retain these initial qualities. It’s incredibly fast, it’s very efficient with large projects, and it has an incredible branching system for non-linear development.<label for='git-history' class='margin-toggle sidenote-number'></label><input type='checkbox' id='git-history' class='margin-toggle'/><span class='sidenote'>Chacon, Scott, and Ben Straub. “A Short History of Git.” In ProGit. New York, New York: Apress, 2014. <a href="https://git-scm.com/book/en/v2/Getting-Started-A-Short-History-of-Git">https://git-scm.com/book/en/v2/Getting-Started-A-Short-History-of-Git</a>. </span></p>
+</blockquote>
+
+<p>So, the development of Git is tied to the development of the Linux kernel, but it doesn&#39;t end there. 
+It has come to be used in millions of projects and development workflows. 
+Its versatility has also inspired people to develop new layers of interaction to work with it. 
+We will discuss and explore one of those today and then use it for the rest of the semester. </p>
+
+<p>First, though, lets explore Git, starting with the elegantly designed <a href="http://rogerdudler.github.io/git-guide/">Git: The Simple Guide</a> by Roger Dudler.</p>
+
+<p>A more advanced and quite elegant Git tutorial is available here: <a href="https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-config">Git Tutorials and Training - Atlassian</a>.</p>
+
+<h1 id="github">GitHub</h1>
+
+<p>GitHub is a platform that allows for users to keep copies of their open source, plaintext repositories online, in a single centralized location. 
+It also adds a social interaction layer to the process of managing version-controlled source files. </p>
+
+<p>It is useful for (and used by) software development projects as well as other plaintext-based projects, such as collaborative authoring of books and articles. </p>
+
+<p>It is particularly good for keeping track of projects that involve both plaintext source code or markup and files related to work that will be published using that code. </p>
+
+<p>Today we are going to learn to set up a repository locally</p>
+
+<p>Next time we will learn to push it to GitHub. 
+We will also learn to set up a repository remotely on GitHub and then copy it locally. </p>
+
+<p>Please read up on the basics of GitHub in preparation for next time&#39;s session.<label for='github-beginners' class='margin-toggle sidenote-number'></label><input type='checkbox' id='github-beginners' class='margin-toggle'/><span class='sidenote'><strong>Reading:</strong> Orsini, Lauren. “GitHub For Beginners: Don’t Get Scared, Get Started.” ReadWrite. Last modified September 30, 2013. <a href="http://readwrite.com/2013/09/30/understanding-github-a-journey-for-beginners-part-1/">http://readwrite.com/2013/09/30/understanding-github-a-journey-for-beginners-part-1/</a>. </span> 
+The article in the notes has much the same information as some of the other articles and books referenced in our course site, but it strings the different parts together and makes for a useful review resource.</p>
+
+
+<p>
+  <br/>
+  <ul class="tags">
+    <li><a href="/topics#version control" class="tag">version-control</a></li><li><a href="/topics#git" class="tag">git</a></li><li><a href="/topics#shell commands" class="tag">shell-commands</a></li>
+  </ul> 
+</p>
+    </article>
+    <span class="print-footer">Version Control - August 31, 2016 - </span>
+    <footer>
+  <div class="blognav">
+    
+      <a class="prev" href="/inls161fall2016/basics/2016/08/29/clients-servers/">&laquo;&nbsp;<span class="smaller">Previous:</span>&nbsp;Clients and Servers</a>
+    
+    
+      <a class="next" href="/inls161fall2016/basics/2016/09/07/networks/"><span class="smaller">Next:</span>&nbsp;Networks&nbsp;&raquo;</a>
+    
+  </div>
+  <hr class="slender">
+  <ul class="footer-links">
+    
+    
+      <li>
+        <a href="http://elliotthauser.com" title="Instructor home page"><span class="ico-user"></span>&nbsp;Elliott Hauser</a>
+      </li>
+    
+    
+      <li>
+        <a href="mailto:eah13@email.unc.edu" title="Email instructor"><span class="ico-envelope"></span>&nbsp;eah13@email.unc.edu</a>
+      </li>
+    
+    
+      <li>
+        <span class="ico-clock"></span>&nbsp;3:35-4:50pm
+      </li>
+    
+    
+      <li>
+        <span class="ico-calendar"></span>&nbsp;MoWe
+      </li>
+    
+    
+      <li>
+        <span class="ico-library"></span>&nbsp;117 Manning Hall
+      </li>
+    
+    
+      <li>
+        <a href="https://sakai.unc.edu/portal/site/inls161s216" title="UNC Sakai site for this course"><span class="ico-target"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="https://github.com/inls161" title="GitHub organization for this course"><span class="ico-github"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="https://inls161.slack.com" title="Join the Slack conversations for this course"><span class="ico-slack"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="/feed" title="Add RSS feed"><span class="ico-rss"></span></a>
+      </li>
+      
+  </ul>
+<div class="credits">
+  <span>TOOLS FOR INFORMATION LITERACY &nbsp;&nbsp;|&nbsp;&nbsp; INLS161-002 Fall 2016
+    <br/> 
+  <span class="smaller">Tools and concepts for information literacy. Includes software use and maintenance, computer applications, and networked information systems.</span>
+  <br/><br/>
+  <span class="smaller"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_US">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 Unported License</a>.</span>
+  <br/>
+  <span class="smaller"><a href="/inls161fall2016/credits/">Content &copy; 2016 Elliott Hauser</a></span>
+</div>  
+</footer>
+  </body>
+</html>

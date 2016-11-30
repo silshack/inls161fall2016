@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Tools for Information Literacy&nbsp;|&nbsp;Developing and Deploying</title>
+  <meta name="description" content="Today we&#39;re going to take the first steps toward actually getting our website up and running. We will also use this opportunity to discuss the developmen...">
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+    <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+  
+  <!-- Load Moment.js for dates if option set in /_data/optins.yml file-->
+  
+    <script type="text/javascript" src="//momentjs.com/downloads/moment.js"></script> 
+   
+  
+  
+    <script type="text/javascript" src="//storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/datejs/date.js"></script>
+  
+
+  <link rel="stylesheet" href="/inls161fall2016/css/tufte.css"> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css" />
+  <link rel="icon" href="/inls161fall2016/assets/img/favicon.ico" type="image/x-icon" />
+
+  
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+	<a href="/inls161fall2016/"><img class="badge" src="/inls161fall2016/assets/img/161icon.png" alt="UNC"></a>
+	
+	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+		    
+		      <a href="/inls161fall2016/">INLS 161</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/syllabus/">Syllabus</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/schedule/">Schedule</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/assignments/">Assignments</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/refsheets/">Reference</a>
+		    
+	    
+  	
+	</nav>
+</header>
+    <article class="group">
+<h1>Developing and Deploying</h1>
+
+
+
+<p class="subtitle"><span id="date">Monday, 26 September 2016</span><span class="smaller date contrast"></span></p>
+
+<script>
+var date = document.getElementById("span")[0];
+alert(p.childNodes[1].textContent)
+</script>
+
+<p>Today we&#39;re going to take the first steps toward actually getting our website up and running. 
+We will also use this opportunity to discuss the development &gt; testing &gt; deployment workflow. 
+<excerpt/></p>
+
+<p>We&#39;ll be using Barry Clark&#39;s tutorial as a reference, so you&#39;ll want to have that pulled up in a separate window so that you can switch back and forth to it. </p>
+
+<h2 id="q-amp-a">Q&amp;A</h2>
+
+<ul>
+<li>Assignment 2 is now posted</li>
+<li>For code questions outside of class, Share your C9 workspace with me so I can see it.</li>
+<li>Your post for today should be about what you&#39;ve learned in the class so far and any reflections you have.  If you didn&#39;t do that,
+don&#39;t panic, just fix it.  If you did do that, you&#39;re one step closer to being done with Assignment 2 :)</li>
+</ul>
+
+<h2 id="pair-up">Pair Up!</h2>
+
+<p>Show your partner:</p>
+
+<ul>
+<li>Your c9users.io site with post</li>
+<li>Your commit(s) making the post on Cloud9</li>
+<li>Your commit(s) on Github.com</li>
+<li>Your post on github.io</li>
+</ul>
+
+<p>Together: quickly compile any questions you aren&#39;t able to resolve together.</p>
+
+<h2 id="testing">Testing</h2>
+
+<p>Now that you have your config set accordingly, then you should be able to look at your site at <code>http://YOUR-GITHUB-USERNAME.github.io</code>. 
+Don&#39;t worry if it doesn&#39;t work or if something looks weird. 
+Nothing is broken in those cases, you&#39;ll just need to troublshoot to figure out what is wrong. This is part of the developmet workflow. </p>
+
+<h1 id="more-on-how-jekyll-works">More on How Jekyll Works</h1>
+
+<p>Let&#39;s look into more about how Jekyll works together. <code>_posts</code>, <code>_layouts</code>, <code>_includes</code> oh my!</p>
+
+<h1 id="if-you-have-a-scss-file">If You Have a SCSS File</h1>
+
+<p>Now that we know how Jekyll works, you know that it builds everything into the <code>_site</code> directory. We
+Can use this to our advantage.</p>
+
+<p>SCSS stands for <strong>Syntactic Cascading Style Sheets</strong>. It is a more powerful and compact language that gets <strong>compiled</strong>
+into CSS.  Jekyll does this for us.  If you&#39;d like to keep your site in SCSS and take it upon yourself to understand it,
+more power to ya! But we won&#39;t cover the differences.  This quick tutorial will let you change your SCSS into CSS and just 
+edit it from there.  <em>Only follow these instruction if you have a SCSS file. If you don&#39;t, relax and understand what we&#39;re up to</em>*</p>
+
+<ul>
+<li>Find <code>_site/css/style.css</code> (it may be in a slightly different place depending on your theme). This is the compiled version
+of your SCSS if you have it.</li>
+<li>Drag that file into your <code>/css</code> folder (or wherever CSS is for you)</li>
+<li>Delete your .scss file(s)</li>
+</ul>
+
+<p>You&#39;re done! Now you can edit your CSS directly.</p>
+
+<h1 id="an-intro-to-development">An Intro to Development</h1>
+
+<p>A &quot;development workflow&quot; has several stages that happen in order.<label for='ghflow' class='margin-toggle sidenote-number'></label><input type='checkbox' id='ghflow' class='margin-toggle'/><span class='sidenote'>“Understanding the GitHub Flow.” GitHub Guides. Last modified December 12, 2013. <a href="https://guides.github.com/introduction/flow/">https://guides.github.com/introduction/flow/</a>. </span> 
+We have been gearing up to think about our work in this context. </p>
+
+<p>A typical development workflow might conceptually look like this:</p>
+
+<ol>
+<li>Create new branch of source code for new feature</li>
+<li>Work on code for new feature in new branch </li>
+<li>Test feature and make fixes if necessary</li>
+<li>Run with feature in testing environment to ensure that feature works</li>
+<li>Get feedback about new feature and integrate suggestions if necessary</li>
+<li>Merge new feature into main workflow</li>
+<li>New feature is live in production</li>
+</ol>
+
+<h1 id="next-time">Next time</h1>
+
+<p>We&#39;re going to learn next time how to incorporate branching, testing, and merging by setting up a development workflow like the one described above. </p>
+
+<p>To prepare for this, I would like you to read the Gist linked in the margin, but I would also like you to do some searching online about how different developers managed their workflows. {sidenote &#39;workflow&#39; &#39;<strong>Reading:</strong> blackfalcon. “Git Basics - a General Workflow.” Gist. Accessed June 29, 2016. <a href="https://gist.github.com/blackfalcon/8428401.&#x27;">https://gist.github.com/blackfalcon/8428401.&#39;</a>}
+To this end you might Google things like &quot;development workflow&quot; or &quot;project development.&quot;
+See what you can find - there are a lot of different ways that teams and companies do these things. </p>
+
+
+<p>
+  <br/>
+  <ul class="tags">
+    <li><a href="/topics#git" class="tag">git</a></li><li><a href="/topics#GitHub" class="tag">GitHub</a></li><li><a href="/topics#Jekyll" class="tag">Jekyll</a></li><li><a href="/topics#development" class="tag">development</a></li><li><a href="/topics#workflow" class="tag">workflow</a></li>
+  </ul> 
+</p>
+    </article>
+    <span class="print-footer">Developing and Deploying - September 26, 2016 - </span>
+    <footer>
+  <div class="blognav">
+    
+      <a class="prev" href="/inls161fall2016/web/2016/09/21/jekyll-css-html/">&laquo;&nbsp;<span class="smaller">Previous:</span>&nbsp;Visual styling for the web</a>
+    
+    
+      <a class="next" href="/inls161fall2016/web/2016/09/28/branching-and-merging/"><span class="smaller">Next:</span>&nbsp;Branching and Merging&nbsp;&raquo;</a>
+    
+  </div>
+  <hr class="slender">
+  <ul class="footer-links">
+    
+    
+      <li>
+        <a href="http://elliotthauser.com" title="Instructor home page"><span class="ico-user"></span>&nbsp;Elliott Hauser</a>
+      </li>
+    
+    
+      <li>
+        <a href="mailto:eah13@email.unc.edu" title="Email instructor"><span class="ico-envelope"></span>&nbsp;eah13@email.unc.edu</a>
+      </li>
+    
+    
+      <li>
+        <span class="ico-clock"></span>&nbsp;3:35-4:50pm
+      </li>
+    
+    
+      <li>
+        <span class="ico-calendar"></span>&nbsp;MoWe
+      </li>
+    
+    
+      <li>
+        <span class="ico-library"></span>&nbsp;117 Manning Hall
+      </li>
+    
+    
+      <li>
+        <a href="https://sakai.unc.edu/portal/site/inls161s216" title="UNC Sakai site for this course"><span class="ico-target"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="https://github.com/inls161" title="GitHub organization for this course"><span class="ico-github"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="https://inls161.slack.com" title="Join the Slack conversations for this course"><span class="ico-slack"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="/feed" title="Add RSS feed"><span class="ico-rss"></span></a>
+      </li>
+      
+  </ul>
+<div class="credits">
+  <span>TOOLS FOR INFORMATION LITERACY &nbsp;&nbsp;|&nbsp;&nbsp; INLS161-002 Fall 2016
+    <br/> 
+  <span class="smaller">Tools and concepts for information literacy. Includes software use and maintenance, computer applications, and networked information systems.</span>
+  <br/><br/>
+  <span class="smaller"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_US">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 Unported License</a>.</span>
+  <br/>
+  <span class="smaller"><a href="/inls161fall2016/credits/">Content &copy; 2016 Elliott Hauser</a></span>
+</div>  
+</footer>
+  </body>
+</html>

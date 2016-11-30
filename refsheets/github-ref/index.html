@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Tools for Information Literacy&nbsp;|&nbsp;GitHub Reference Sheet</title>
+  <meta name="description" content="Tools and concepts for information literacy. Includes software use and maintenance, computer applications, and networked information systems.">
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+    <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+  
+  <!-- Load Moment.js for dates if option set in /_data/optins.yml file-->
+  
+    <script type="text/javascript" src="//momentjs.com/downloads/moment.js"></script> 
+   
+  
+  
+    <script type="text/javascript" src="//storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/datejs/date.js"></script>
+  
+
+  <link rel="stylesheet" href="/inls161fall2016/css/tufte.css"> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css" />
+  <link rel="icon" href="/inls161fall2016/assets/img/favicon.ico" type="image/x-icon" />
+
+  
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+	<a href="/inls161fall2016/"><img class="badge" src="/inls161fall2016/assets/img/161icon.png" alt="UNC"></a>
+	
+	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+  	
+		
+		    
+		      <a href="/inls161fall2016/">INLS 161</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/syllabus/">Syllabus</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/schedule/">Schedule</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/assignments/">Assignments</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/inls161fall2016/refsheets/">Reference</a>
+		    
+	    
+  	
+	</nav>
+</header>
+    <article class="group">
+<h1 id="github-reference-sheet">GitHub Reference Sheet</h1>
+
+<h2 id="set-up-a-github-repository">Set up a GitHub repository</h2>
+
+<p>When you log into GitHub, you will see your dashboard. 
+Click the green button that says, &quot;New repository.&quot;</p>
+
+<p><img src="/inls161fall2016/refsheets/ref-images/button.png" alt="New repository"></p>
+
+<p>You will be taken to a screen that asks for some information. </p>
+
+<p><img src="/inls161fall2016/refsheets/ref-images/screenshot-add-repo.png" alt="New repository interface"></p>
+
+<p>Several important things to consider:</p>
+
+<ol>
+<li>Give the repository a name that makes it easily identifiable to you.</li>
+<li>In your description, explain the purpose of the repository&#39;s contents succinctly. </li>
+<li>Consider whether you want the contents of your repository to be publicly available or not. </li>
+<li>You should initialize your repo with a README. This lets you say something more about the contents of the repository. It also serves as the landing page for anyone who happens to visit your repo&#39;s address. </li>
+<li>If you are programming or writing in a specific progamming language, choose it in the .gitignore dropdown.</li>
+<li>Choose a license. You can always change or update it later. For more information about choosing the appropriate license, check out <a href="http://choosealicense.com/">this link</a>. </li>
+</ol>
+
+<p>Press the button to create the repository. </p>
+
+<h2 id="edit-in-github">Edit in GitHub</h2>
+
+<p><img src="/inls161fall2016/refsheets/ref-images/screenshot-repo-interface.png" alt="Repository interface"></p>
+
+<p>The interface once in GitHub is relatively straightforward. 
+To edit a file, click the name of the file and it will take you to the intreface for individual files. 
+Then click the pencil icon. </p>
+
+<p><img src="/inls161fall2016/refsheets/ref-images/edit.png" alt="Edit file"></p>
+
+<p>You can change the text inside the file and then add a commit message at the bottom of the page (just like committing changes with Git).</p>
+
+<p><img src="/inls161fall2016/refsheets/ref-images/commit.png" alt="Commit changes"></p>
+
+<h2 id="clone-repository">Clone repository</h2>
+
+<p>To clone the repository, select and copy the text in the box illustrated below: </p>
+
+<p><img src="/inls161fall2016/refsheets/ref-images/clone.png" alt="Clone"></p>
+
+<p>Then go to Cloud9 and open a terminal in your DevBox. </p>
+
+<p>Type the following and then paste in the URL of the repository that you have copied to the clipboard. </p>
+
+<p><code>git clone</code> </p>
+
+<p>Press enter to run the command and clone the repo. 
+Once you have a command prompt again, you can descend into the directory (<code>cd CLONED-DIRECTORY</code>). </p>
+
+<p>Make whatever changes you like the repo. 
+Add a file. 
+Edit something. 
+Make sure to use <code>git add</code> and <code>git commit</code> as we have previously covered in the <a href="/refsheets/git-ref">Git Reference Sheet</a>. </p>
+
+<h2 id="updating-your-repo-on-github">Updating your repo on GitHub</h2>
+
+<p>When you have made and committed changes locally, you can push those changes to your remote repository on GitHub. </p>
+
+<p>Make sure that you are somewhere within the directory that represents your repository on your local system. 
+Then do: </p>
+
+<p><code>git push</code></p>
+
+<p>If Git caught the URL of the repo when you cloned it, you will be asked to input your GitHub username and password. 
+The password is masked, so you will not be able to see it when you are typing, but don&#39;t worry, it is there. </p>
+
+    </article>
+    <span class="print-footer">GitHub Reference Sheet - </span>
+    <footer>
+  <div class="blognav">
+    
+    
+  </div>
+  <hr class="slender">
+  <ul class="footer-links">
+    
+    
+      <li>
+        <a href="http://elliotthauser.com" title="Instructor home page"><span class="ico-user"></span>&nbsp;Elliott Hauser</a>
+      </li>
+    
+    
+      <li>
+        <a href="mailto:eah13@email.unc.edu" title="Email instructor"><span class="ico-envelope"></span>&nbsp;eah13@email.unc.edu</a>
+      </li>
+    
+    
+      <li>
+        <span class="ico-clock"></span>&nbsp;3:35-4:50pm
+      </li>
+    
+    
+      <li>
+        <span class="ico-calendar"></span>&nbsp;MoWe
+      </li>
+    
+    
+      <li>
+        <span class="ico-library"></span>&nbsp;117 Manning Hall
+      </li>
+    
+    
+      <li>
+        <a href="https://sakai.unc.edu/portal/site/inls161s216" title="UNC Sakai site for this course"><span class="ico-target"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="https://github.com/inls161" title="GitHub organization for this course"><span class="ico-github"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="https://inls161.slack.com" title="Join the Slack conversations for this course"><span class="ico-slack"></span></a>
+      </li>
+    
+    
+      <li>
+        <a href="/feed" title="Add RSS feed"><span class="ico-rss"></span></a>
+      </li>
+      
+  </ul>
+<div class="credits">
+  <span>TOOLS FOR INFORMATION LITERACY &nbsp;&nbsp;|&nbsp;&nbsp; INLS161-002 Fall 2016
+    <br/> 
+  <span class="smaller">Tools and concepts for information literacy. Includes software use and maintenance, computer applications, and networked information systems.</span>
+  <br/><br/>
+  <span class="smaller"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_US">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 Unported License</a>.</span>
+  <br/>
+  <span class="smaller"><a href="/inls161fall2016/credits/">Content &copy; 2016 Elliott Hauser</a></span>
+</div>  
+</footer>
+  </body>
+</html>
